@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
+  
   <object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
-	  <part Name="Description" Short="A turtle person." />
+	<part Name="Description" Short="A turtle person." />
     <part Name="Render" DisplayName="Shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
+	<stat Name="Level" Value="20" />
+	<stat Name="Hitpoints" Value="600" />
+	<tag Name="Role" Value="Tank" />
+	<stat Name="AV" Value="5" />
+	<mutation Name="Carapace" Level="10" />
+	<tag Name="DynamicObjectsTable:Water_Creatures" />
   </object>
+  
+  <object Name="Great Saltback" Load="Merge">
+	<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
+  </object>
+  
+  
 </objects>
