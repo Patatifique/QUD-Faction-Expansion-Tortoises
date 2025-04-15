@@ -6,6 +6,7 @@
     <part Name="Render" DisplayName="Shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
 	<stat Name="Level" Value="20" />
 	<stat Name="Hitpoints" Value="600" />
+	<stat Name="ColdResistance" Value="100" />
 	<tag Name="Role" Value="Tank" />
 	<stat Name="AV" Value="5" />
 	<mutation Name="Carapace" Level="10" />
@@ -14,6 +15,7 @@
   
   <object Name="Great Saltback" Load="Merge">
 	<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
+	<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Great Saltback Corpse" />
   </object>
   
   
