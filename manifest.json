@@ -1,0 +1,9 @@
+{
+    "id": "Brothers_Tortoises",
+    "title": "Faction Update: Tortoises",
+    "description": "Updates the 'tortoises' faction by adding updating sprites, adding more creatures, loot and a short quest in the salt dunes.",
+    "version": "1.0",
+    "author": "Balthichou, Patatifique",
+    "tags": "Faction",
+    "PreviewImage": "tortoises-preview.png"
+} 
