@@ -3,7 +3,7 @@
   
   <object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
 	<part Name="Description" Short="A turtle person." />
-    <part Name="Render" DisplayName="Shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
+    <part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
 	<stat Name="Level" Value="20" />
 	<stat Name="Hitpoints" Value="600" />
 	<stat Name="ColdResistance" Value="100" />
@@ -11,8 +11,13 @@
 	<stat Name="AV" Value="5" />
 	<mutation Name="Carapace" Level="10" />
 	<mutation Name="NightVision" Level="4" />
+	<part Name="Aquatic" />
+    <skill Name="Endurance_Swimming" />
+	<part Name="SpawnWithLiquid" />
 	<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" />
+	<tag Name="DynamicObjectsTable:Saltmarsh_Creatures" />
 	<tag Name="DynamicObjectsTable:Water_Creatures" />
+	<tag Name="PlacementHint" Value="Aquatic" />
   </object>
   
   <object Name="Brothers_Tortoises_Shaile_Bite" Inherits="Bite">
