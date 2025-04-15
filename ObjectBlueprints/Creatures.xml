@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
   <object Name="Brothers_Tortoises_Shaile_Tortoise" Inherits="BaseTortoise">
+	  <part Name="Description" Short="A turtle person." />
+    <part Name="Render" DisplayName="Shaile" Tile="Creatures/shaile.png" ColorString="&amp;O" DetailColor="Y" />
   </object>
 </objects>
