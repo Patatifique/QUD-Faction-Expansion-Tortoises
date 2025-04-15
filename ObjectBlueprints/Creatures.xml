@@ -10,7 +10,16 @@
 	<tag Name="Role" Value="Tank" />
 	<stat Name="AV" Value="5" />
 	<mutation Name="Carapace" Level="10" />
+	<mutation Name="NightVision" Level="4" />
+	<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" />
 	<tag Name="DynamicObjectsTable:Water_Creatures" />
+  </object>
+  
+  <object Name="Brothers_Tortoises_Shaile_Bite" Inherits="Bite">
+    <part Name="Render" DisplayName="{{icy|icy jaws}}" />
+    <part Name="MeleeWeapon" BaseDamage="2d2" />
+    <part Name="ElementalDamage" Damage="1d10+19" Attributes="Cold" />
+    <tag Name="Gender" Value="plural" />
   </object>
   
   <object Name="Great Saltback" Load="Merge">
