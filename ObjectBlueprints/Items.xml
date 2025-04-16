@@ -3,7 +3,7 @@
   <object Name="Brothers_Tortoises_Tortoise Shield" Inherits="BaseShield">
     <part Name="Render" DisplayName="tortoise shield" Tile="Items/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
     <part Name="Shield" AV="4" DV="-3" WornOn="Hand" />
-    <part Name="Description" Short="Tortoise shield cause you killed a tortoise :(." />
+    <part Name="Description" Short="Repurposed and retooled, this shell holds the untold promise of avoiding a fate similar to its once-owner." />
     <part Name="Commerce" Value="50" />
 	<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
     <part Name="Physics" Weight="20" Organic="true"/>

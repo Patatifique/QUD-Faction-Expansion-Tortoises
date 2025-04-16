@@ -2,10 +2,10 @@
 <objects>
   
   <object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
-	<part Name="Description" Short="A turtle person." />
+	<part Name="Description" Short="Volutes of frozen mist seep in-between polished scutes, water clotting affixed to the creek-dweller." />
     <part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
 	<stat Name="Level" Value="20" />
-	<stat Name="Hitpoints" Value="600" />
+	<stat Name="Hitpoints" Value="80" />
 	<stat Name="ColdResistance" Value="100" />
 	<tag Name="Role" Value="Tank" />
 	<stat Name="AV" Value="5" />
@@ -21,10 +21,10 @@
   </object>
   
   <object Name="Brothers_Tortoises_Shaile_Bite" Inherits="Bite">
-    <part Name="Render" DisplayName="{{icy|icy jaws}}" />
+    <part Name="Render" DisplayName="{{icy|icy teeth}}" />
     <part Name="MeleeWeapon" BaseDamage="2d2" />
-    <part Name="ElementalDamage" Damage="1d10+19" Attributes="Cold" />
-    <tag Name="Gender" Value="plural" />
+    <part Name="ElementalDamage" Damage="1d10+5" Attributes="Cold" />
+	<tag Name="Gender" Value="plural" />
   </object>
   
   <object Name="Great Saltback" Load="Merge">
@@ -38,13 +38,13 @@
   
   <object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
     <part Name="Render" DisplayName="irritable tortoise corpse" />
-    <part Name="Food" Message="Out of the mountain of shell a few strips of salt-coffined meat preserve. (il faudra ecrire une description pour les irritable tortoise corpse parceque ils en avait pas donc pour linstant c'est la meme que les saltbacks)." />
-    <part Name="Description" Short="Here an ossified world-shell gives shade to the hot puffing life of the overearth. Yeast colonizes the lip of its cloud-spanning rim and sizzles. (pareil)" />
-    <part Name="Physics" Weight="40000" />
-    <part Name="Commerce" Value="1000" />
-    <tag Name="Tier" Value="8" />
+    <part Name="Food" Message="Thin ribbons of chewy meat remind one of the irascible disposition of this shell's once-owner." />
+    <part Name="Description" Short="A massive cracked tortoise shell, fills the mind with unanswered pondering as to what lays within." />
+    <part Name="Physics" Weight="50" />
+    <part Name="Commerce" Value="5" />
+    <tag Name="Tier" Value="2" />
 	<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Tortoise Shield" />    
-    <tag Name="Role" Value="Epic" />
+    <tag Name="DynamicObjectsTable:Corpses" />
   </object>
   
   
