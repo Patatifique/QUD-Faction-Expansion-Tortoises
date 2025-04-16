@@ -2,12 +2,13 @@
 <objects>
   <object Name="Brothers_Tortoises_Tortoise Shield" Inherits="BaseShield">
     <part Name="Render" DisplayName="tortoise shield" Tile="Items/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
-    <part Name="Shield" AV="4" DV="-3" WornOn="Arm" />
+    <part Name="Shield" AV="4" DV="-3" WornOn="Hand" />
     <part Name="Description" Short="Tortoise shield cause you killed a tortoise :(." />
-    <part Name="Commerce" Value="5" />
-	  <tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
-    <tag Name="Tier" Value="2" />
-    <part Name="Physics" Weight="20" />
+    <part Name="Commerce" Value="50" />
+	<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
+    <part Name="Physics" Weight="20" Organic="true"/>
+	<removepart Name="Metal" />
+	<tag Name="Tier" Value="2" />
   </object>
 
 </objects>

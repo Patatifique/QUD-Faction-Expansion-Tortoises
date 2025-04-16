@@ -32,5 +32,20 @@
 	<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Great Saltback Corpse" />
   </object>
   
+  <object Name="IrritableTortoise" Load="Merge">
+	 <part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_IrritableTortoise Corpse" />
+  </object>
+  
+  <object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
+    <part Name="Render" DisplayName="irritable tortoise corpse" />
+    <part Name="Food" Message="Out of the mountain of shell a few strips of salt-coffined meat preserve. (il faudra ecrire une description pour les irritable tortoise corpse parceque ils en avait pas donc pour linstant c'est la meme que les saltbacks)." />
+    <part Name="Description" Short="Here an ossified world-shell gives shade to the hot puffing life of the overearth. Yeast colonizes the lip of its cloud-spanning rim and sizzles. (pareil)" />
+    <part Name="Physics" Weight="40000" />
+    <part Name="Commerce" Value="1000" />
+    <tag Name="Tier" Value="8" />
+	<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Tortoise Shield" />    
+    <tag Name="Role" Value="Epic" />
+  </object>
+  
   
 </objects>
