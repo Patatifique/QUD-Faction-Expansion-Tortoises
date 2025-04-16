@@ -11,7 +11,7 @@
 	<stat Name="AV" Value="5" />
 	<mutation Name="Carapace" Level="10" />
 	<mutation Name="NightVision" Level="4" />
-	<mutation Name="Freezing Gas Generation" Level="2" />
+	<mutation Name="Brothers_Tortoises_FreezingGasGeneration" Level="2" />
 	<part Name="Aquatic" />
     <skill Name="Endurance_Swimming" />
 	<part Name="SpawnWithLiquid" />
