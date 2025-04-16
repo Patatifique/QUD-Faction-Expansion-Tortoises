@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Brothers_Tortoises_FreezingGas" Inherits="CryoGas">
+    <part Name="Render" DisplayName="freezing gas" />
+	<part Name="Description" Short="New description for freezing gas." />
+    <tag Name="GasGenerationName" Value="Freezing Gas Generation" />    	
+  </object>
+
+</objects>

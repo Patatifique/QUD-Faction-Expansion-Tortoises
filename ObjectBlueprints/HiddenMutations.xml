@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <mutations Hidden="true" ExcludeFromPool="true">
   <category Name="Physical">
-    <mutation Name="Cryogenic Mist Generation" Cost="3" MaxSelected="1" Class="Brothers_Tortoises_CryoGasGeneration" BearerDescription="those who expel freezing gas" Tile="Mutations/gas_generation.bmp" />
+    <mutation Name="Freezing Gas Generation" Cost="3" MaxSelected="1" Class="Brothers_Tortoises_FreezingGasGeneration" BearerDescription="those who expel freezing gas" Tile="Mutations/gas_generation.bmp" />
   </category>
 </mutations>
