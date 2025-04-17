@@ -1,53 +1,65 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
-  
-  <object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
-	<part Name="Description" Short="Volutes of frozen mist seep in-between polished scutes, water clotting affixed to the creek-dweller." />
-    <part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
-	<stat Name="Level" Value="20" />
-	<stat Name="Hitpoints" Value="80" />
-	<stat Name="ColdResistance" Value="100" />
-	<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
-	<tag Name="Role" Value="Tank" />
-	<stat Name="AV" Value="5" />
-	<mutation Name="Carapace" Level="10" />
-	<mutation Name="NightVision" Level="4" />
-	<mutation Name="Brothers_Tortoises_FreezingGasGeneration" Level="2" />
-	<part Name="Aquatic" />
-    <skill Name="Endurance_Swimming" />
-	<part Name="SpawnWithLiquid" />
-	<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" />
-	<tag Name="DynamicObjectsTable:Saltmarsh_Creatures" />
-	<tag Name="DynamicObjectsTable:Water_Creatures" />
-	<tag Name="PlacementHint" Value="Aquatic" />
-  </object>
-  
-  <object Name="Brothers_Tortoises_Shaile_Bite" Inherits="Bite">
-    <part Name="Render" DisplayName="{{icy|icy teeth}}" />
-    <part Name="MeleeWeapon" BaseDamage="2d2" />
-    <part Name="ElementalDamage" Damage="1d10+5" Attributes="Cold" />
-	<tag Name="Gender" Value="plural" />
-  </object>
-  
-  <object Name="Great Saltback" Load="Merge">
-	<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
-	<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Great Saltback Corpse" />
-  </object>
-  
-  <object Name="IrritableTortoise" Load="Merge">
-	 <part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_IrritableTortoise Corpse" />
-  </object>
-  
-  <object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
-    <part Name="Render" DisplayName="irritable tortoise corpse" />
-    <part Name="Food" Message="Thin ribbons of chewy meat remind one of the irascible disposition of this shell's once-owner." />
-    <part Name="Description" Short="A massive cracked tortoise shell, fills the mind with unanswered pondering as to what lays within." />
-    <part Name="Physics" Weight="50" />
-    <part Name="Commerce" Value="5" />
-    <tag Name="Tier" Value="2" />
-	<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Tortoise Shield" />    
-    <tag Name="DynamicObjectsTable:Corpses" />
-  </object>
-  
-  
+
+	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
+		<part Name="Description" Short="Volutes of frozen mist seep in-between polished scutes, water clotting affixed to the creek-dweller." />
+		<part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
+		<stat Name="Level" Value="20" />
+		<stat Name="Hitpoints" Value="80" />
+		<stat Name="ColdResistance" Value="100" />
+		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
+		<tag Name="Role" Value="Tank" />
+		<stat Name="AV" Value="5" />
+		<mutation Name="Carapace" Level="10" />
+		<mutation Name="NightVision" Level="4" />
+		<mutation Name="Brothers_Tortoises_FreezingGasGeneration" Level="2" />
+		<part Name="Aquatic" />
+		<skill Name="Endurance_Swimming" />
+		<part Name="SpawnWithLiquid" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" />
+		<tag Name="DynamicObjectsTable:Saltmarsh_Creatures" />
+		<tag Name="DynamicObjectsTable:Water_Creatures" />
+		<tag Name="PlacementHint" Value="Aquatic" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_Shaile Corpse" />
+	</object>
+
+	<object Name="Brothers_Tortoises_Shaile_Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="{{icy|icy teeth}}" />
+		<part Name="MeleeWeapon" BaseDamage="2d2" />
+		<part Name="ElementalDamage" Damage="1d10+5" Attributes="Cold" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+
+	<object Name="Great Saltback" Load="Merge">
+		<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Great Saltback Corpse" />
+	</object>
+
+	<object Name="IrritableTortoise" Load="Merge">
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_IrritableTortoise Corpse" />
+	</object>
+
+	<object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
+		<part Name="Render" DisplayName="irritable tortoise corpse" />
+		<part Name="Food" Message="Thin ribbons of chewy meat remind one of the irascible disposition of this shell's once-owner." />
+		<part Name="Description" Short="A massive cracked tortoise shell, fills the mind with unanswered pondering as to what lays within." />
+		<part Name="Physics" Weight="50" />
+		<part Name="Commerce" Value="5" />
+		<tag Name="Tier" Value="2" />
+		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Tortoise Shield" />
+		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
+
+	<object Name="Brothers_Tortoises_Shaile Corpse" Inherits="Animal Corpse">
+		<part Name="Render" DisplayName="{{C|shaile}} corpse" />
+		<part Name="Food" Message="desc food" />
+		<part Name="Description" Short="desc" />
+		<part Name="Physics" Weight="70" />
+		<part Name="Commerce" Value="20" />
+		<tag Name="Tier" Value="4" />
+		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Shaile Scale Cloak" />
+		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
+
+
 </objects>
