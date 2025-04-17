@@ -12,6 +12,18 @@
 	<part Name="AddsRep" Faction="Tortoises" Value="-100" />
   </object>
   
+  <object Name="Brothers_Tortoises_Saltback Pavise" Inherits="BaseShield">
+    <part Name="Render" DisplayName="saltback pavise" Tile="Items/saltbackpavise.png" RenderString="t" ColorString="&amp;Y" DetailColor="y" />
+    <part Name="Shield" AV="6" DV="-4" WornOn="Hand" />
+    <part Name="Description" Short="desc" />
+    <part Name="Commerce" Value="250" />
+	<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
+    <part Name="Physics" Weight="25" Organic="true"/>
+	<removepart Name="Metal" />
+	<tag Name="Tier" Value="5" />
+	<part Name="AddsRep" Faction="Tortoises" Value="-100" />
+  </object>
+  
   <object Name="Brothers_Tortoises_Shaile Scale Cloak" Inherits="BaseCloak">
     <part Name="Armor" AV="0" DV="1" Ego="1" Cold="15" Heat="15" WornOn="Back" />
     <part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/shailecloak.png" DetailColor="C" />

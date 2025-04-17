@@ -20,6 +20,7 @@
 		<tag Name="DynamicObjectsTable:Saltmarsh_Creatures" />
 		<tag Name="DynamicObjectsTable:Water_Creatures" />
 		<tag Name="PlacementHint" Value="Aquatic" />
+		<tag Name="LairAmbientBed" Value="Sounds/Ambiences/amb_creature_fish" />
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_Shaile Corpse" />
 	</object>
 
@@ -59,6 +60,10 @@
 		<tag Name="Tier" Value="4" />
 		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Shaile Scale Cloak" />
 		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
+	
+	<object Name="Great Saltback Corpse" Load="Merge">
+		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Saltback Pavise" />
 	</object>
 
 
