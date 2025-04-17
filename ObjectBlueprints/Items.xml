@@ -9,6 +9,18 @@
     <part Name="Physics" Weight="20" Organic="true"/>
 	<removepart Name="Metal" />
 	<tag Name="Tier" Value="2" />
+	<part Name="AddsRep" Faction="Tortoises" Value="-100" />
+  </object>
+  
+  <object Name="Brothers_Tortoises_Shaile Scale Cloak" Inherits="BaseCloak">
+    <part Name="Armor" AV="0" DV="1" Ego="1" Cold="15" Heat="15" WornOn="Back" />
+    <part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/shailecloak.png" DetailColor="C" />
+    <part Name="Commerce" Value="300" />
+    <part Name="Description" Short="Shail cloak desc" />
+    <part Name="Physics" Weight="6" Organic="true" />
+    <tag Name="Tier" Value="4" />
+	<tag Name="EquipSound" Value="sfx_equip_armor_organic" />
+    <part Name="AddsRep" Faction="Tortoises" Value="-100" />
   </object>
 
 </objects>
