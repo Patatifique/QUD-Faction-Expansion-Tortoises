@@ -3,7 +3,7 @@
 
 	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
 		<part Name="Description" Short="Volutes of frozen mist seep in-between polished scutes, water clotting affixed to the creek-dweller." />
-		<part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;0" DetailColor="c" />
+		<part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<stat Name="Level" Value="20" />
 		<stat Name="Hitpoints" Value="80" />
 		<stat Name="ColdResistance" Value="100" />
@@ -17,7 +17,6 @@
 		<skill Name="Endurance_Swimming" />
 		<part Name="SpawnWithLiquid" />
 		<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" />
-		<tag Name="DynamicObjectsTable:Saltmarsh_Creatures" />
 		<tag Name="DynamicObjectsTable:Water_Creatures" />
 		<tag Name="PlacementHint" Value="Aquatic" />
 		<tag Name="LairAmbientBed" Value="Sounds/Ambiences/amb_creature_fish" />
