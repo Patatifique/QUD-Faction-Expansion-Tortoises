@@ -4,6 +4,7 @@ using XRL.World.Parts;
 namespace XRL.World.Parts
 {
     [Serializable]
+    // New part used for the shaile pet, touching it reduces the temperature of the actor
     public class Chilltouch : IPart
     {
         public override bool WantEvent(int ID, int cascade)
