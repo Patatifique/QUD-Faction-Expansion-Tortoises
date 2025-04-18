@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
-
+	<!--Creatures-->
+	<!--Shailes-->
 	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
 		<part Name="Description" Short="Volutes of frozen mist seep in-between polished scutes, water clotting affixed to the creek-dweller." />
 		<part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;Y" DetailColor="c" />
@@ -30,6 +31,30 @@
 		<tag Name="Gender" Value="plural" />
 	</object>
 
+	<object Name="Brothers_Tortoises_Baby Shaile" Inherits="BaseTortoise">
+		<part Name="Render" DisplayName="baby {{C|shaile}}" Tile="Creatures/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Corpse" CorpseChance="0" />
+		<stat Name="Hitpoints" Value="50" />
+		<part Name="Brain" Hostile="True" Factions="Tortoises-100" />
+		<stat Name="ColdResistance" Value="100" />
+		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
+		<stat Name="Level" Value="5" />
+		<stat Name="AV" Value="4" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" Number="1" />
+		<part Name="Description" Short="Chill guy." />
+		<tag Name="Role" Value="Tank" />
+		
+		<!--pet stuff-->
+		<part Name="Chilltouch" />
+		<part Name="Pettable" />
+		<tag Name="PetResponse" Value="feels very cold to the touch." />
+		<tag Name="StartingPet" />
+		<tag Name="NoXP" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+
+	</object>
+	
+	<!-- Other Tortoises-->
 	<object Name="Great Saltback" Load="Merge">
 		<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Great Saltback Corpse" />
@@ -39,6 +64,9 @@
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_IrritableTortoise Corpse" />
 	</object>
 
+
+
+	<!--Corpses-->
 	<object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="irritable tortoise corpse" />
 		<part Name="Food" Message="Thin ribbons of chewy meat remind one of the irascible disposition of this shell's once-owner." />
@@ -60,6 +88,7 @@
 		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Shaile Scale Cloak" />
 		<tag Name="DynamicObjectsTable:Corpses" />
 	</object>
+
 	
 	<object Name="Great Saltback Corpse" Load="Merge">
 		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Saltback Pavise" />
