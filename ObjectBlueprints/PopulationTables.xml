@@ -3,7 +3,7 @@
 
  <population Name="WaterCreatures" Load="Merge">
     <group Name="Creatures" Load="Merge">
-      <object Weight="5" Number="1d3" Blueprint="Brothers_Tortoises_Shaile" />
+      <object Weight="5" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
     </group>
  </population>
  
@@ -15,7 +15,7 @@
  
 
   <population Name="RiversZoneGlobals" Load="Merge">
-    <object Chance="35" Number="1d3" Blueprint="Brothers_Tortoises_Shaile" />
+    <object Chance="35" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
   </population>
 
 </populations>
