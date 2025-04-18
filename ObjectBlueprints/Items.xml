@@ -15,7 +15,7 @@
   <object Name="Brothers_Tortoises_Saltback Pavise" Inherits="BaseShield">
     <part Name="Render" DisplayName="saltback pavise" Tile="Items/saltbackpavise.png" RenderString="t" ColorString="&amp;Y" DetailColor="y" />
     <part Name="Shield" AV="6" DV="-4" WornOn="Hand" />
-    <part Name="Description" Short="desc" />
+    <part Name="Description" Short="Vertipacked scutes from a saltback shell, held together by raw ingenuity: a feldspar rampart." />
     <part Name="Commerce" Value="250" />
 	<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
     <part Name="Physics" Weight="25" Organic="true"/>
@@ -28,7 +28,7 @@
     <part Name="Armor" AV="0" DV="1" Ego="1" Cold="15" Heat="15" WornOn="Back" />
     <part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/shailecloak.png" DetailColor="C" />
     <part Name="Commerce" Value="300" />
-    <part Name="Description" Short="Shail cloak desc" />
+    <part Name="Description" Short="Nettings of brinestalk and elastyne support cascading teal scutes, their inner side crisp even to flume-stained fingers." />
     <part Name="Physics" Weight="6" Organic="true" />
     <tag Name="Tier" Value="4" />
 	<tag Name="EquipSound" Value="sfx_equip_armor_organic" />

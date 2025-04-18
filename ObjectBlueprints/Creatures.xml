@@ -53,8 +53,8 @@
 
 	<object Name="Brothers_Tortoises_Shaile Corpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="{{C|shaile}} corpse" />
-		<part Name="Food" Message="desc food" />
-		<part Name="Description" Short="desc" />
+		<part Name="Food" Message="It feels like chewing on limp ice." />
+		<part Name="Description" Short="Even now cold mist creeps along the ground, memory-tendrils of a bygone being." />
 		<part Name="Physics" Weight="70" />
 		<part Name="Commerce" Value="20" />
 		<tag Name="Tier" Value="4" />

@@ -2,7 +2,7 @@
 <objects>
   <object Name="Brothers_Tortoises_FreezingGas" Inherits="CryoGas">
     <part Name="Render" DisplayName="freezing gas" />
-	<part Name="Description" Short="New description for freezing gas." />
+	<part Name="Description" Short="Moisture crystalized into floating flakes, vaporized rime tensing up flesh and membranes." />
     <tag Name="GasGenerationName" Value="Freezing Gas Generation" />    	
   </object>
 
