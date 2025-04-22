@@ -2,7 +2,7 @@
 <objects>
 
 	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
-		<part Name="Description" Short="Volutes of frozen mist seep in-between polished scutes, water clotting affixed to the creek-dweller." />
+		<part Name="Description" Short="Volutes of frozen mist seep in-between =pronouns.possessive= polished scutes, water clotting affixed to the creek-dweller." />
 		<part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<stat Name="Level" Value="20" />
 		<stat Name="Hitpoints" Value="80" />
