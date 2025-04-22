@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
+    <node ID="Start">
+      <text>
+        This is the start of the conversation.
+      </text>
+      <choice ID="Choice1Cracks" GotoID="Choice1">What's up?</choice>
+      <choice ID="Choice2Cracks" GotoID="Choice2">Do you like hunting tortoises?</choice>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+    <node ID="Choice1">
+      <text>
+        The sky.
+      </text>
+      <choice GotoID="Start">I've more to ask.</choice>
+      <choice GotoID="End">Live and drink, priest.</choice>
+    </node>
+    <node ID="Choice2">
+      <text>
+		Honestly yeah.
+      </text>
+	  <choice ID="Choice3Cracks" GotoID="Choice3"> Are you sure?</choice>
+      <choice GotoID="Start">I've more to ask.</choice>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+	 <node ID="Choice3">
+      <text>
+		Pretty sure yeah.
+      </text>
+      <choice GotoID="Start">I've more to ask.</choice>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>
