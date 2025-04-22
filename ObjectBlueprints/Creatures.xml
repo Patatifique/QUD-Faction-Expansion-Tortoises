@@ -4,7 +4,7 @@
 	<!--Shailes-->
 	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
 		<part Name="Description" Short="Volutes of frozen mist seep in-between =pronouns.possessive= polished scutes, water clotting affixed to the creek-dweller." />
-		<part Name="Render" DisplayName="shaile" Tile="Creatures/shaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/shaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<stat Name="Level" Value="20" />
 		<stat Name="Hitpoints" Value="80" />
 		<stat Name="ColdResistance" Value="100" />
@@ -32,7 +32,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_Baby Shaile" Inherits="BaseTortoise">
-		<part Name="Render" DisplayName="baby {{C|shaile}}" Tile="Creatures/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
 		<part Name="Brain" Hostile="True" Factions="Tortoises-100" />
@@ -41,15 +41,19 @@
 		<stat Name="Level" Value="5" />
 		<stat Name="AV" Value="4" />
 		<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" Number="1" />
-		<part Name="Description" Short="Chill guy." />
+		<part Name="Description" Short="Jutting out of rippling softshell is a single rotound head on a swivel. =pronouns.Subjective= checks =pronouns.possessive= surroundings, looking for unfortunate crawlfigures whose chitinous appendages crunch comfortably between beaked jaws." />
 		<tag Name="Role" Value="Tank" />
 		
 		<!--pet stuff-->
 		<part Name="Chilltouch" />
 		<part Name="Pettable" />
-		<tag Name="PetResponse" Value="feels very cold to the touch." />
+		<tag Name="PetResponse" Value="nudges you icily,hiccups misty rime on you,sneezes ice shards at you" />
+		<property Name="Story" Value="Baby Shaile Story" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Baby Shaile" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
+		<tag Name="Gender" Value="male" />
+		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 
 	</object>
@@ -98,8 +102,8 @@
 	
 	<!--NPCs-->
 	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="Issachari Rifler">
-		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/poacher.png" RenderString="h" ColorString="&amp;y" />
-		<part Name="Titles" Primary="not a cool dude." />
+		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/poacher.png" RenderString="h" ColorString="&amp;Y" />
+		<part Name="Titles" Primary="Issachari hunter" />
 		<part Name="Description" Short="gunguy desc" />
 		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Issachari-100" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
@@ -110,7 +114,7 @@
 		<part Name="GivesRep" />
 		<tag Name="NoHateFactions" Value="Mechanimists,Pariahs,Wardens" />
 		<tag Name="NoSleep" />
-		<tag Name="Gender" Value="male" />
+		<tag Name="Gender" Value="female" />
 		<xtagGrammar Proper="true" />
 		<xtagWaterRitual NoJoin="true" />
 		<inventoryobject Blueprint="Sandals" Number="1" />

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conversations>
+  
   <conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
     <node ID="Start">
       <text>
@@ -32,4 +33,18 @@
       <choice GotoID="End">Live and drink.</choice>
     </node>
   </conversation>
+  
+  <conversation ID="Brothers_Tortoises_Baby Shaile">
+    <node ID="Start">
+      <text>
+         {{emote|*Ortolo settles on the ground.*}}~
+         {{emote|*Ortolo snaps at dust particles.*}}~
+         {{emote|*Cold mist leaks from Ortolo's shell.*}}~
+         {{emote|*Ortolo sneezes snowflakes.*}}~
+         {{emote|*Ortolo retracts into =pronouns.possessive= shell.*}}~
+      </text>
+      <choice GotoID="End">Live and drink, frosty hatchling.</choice>
+    </node>
+  </conversation>
+  
 </conversations>
