@@ -68,7 +68,23 @@
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_IrritableTortoise Corpse" />
 	</object>
 
-
+	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
+		<part Name="Render" DisplayName="walking dune" Tile="Creatures/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
+		<part Name="Corpse" CorpseChance="90"/>
+		<part Name="Brain" Factions="Tortoises-100" Hostile="false" Calm="True"/>
+		<tag Name="NoHateFactions" Value="Birds,Unshelled Reptiles,Prey,Mollusks" />
+		<stat Name="AV" Value="17" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="Strength" Boost="2" />
+		<stat Name="Agility" Boost="-3" />
+		<stat Name="Hitpoints" Value="900" />
+		<stat Name="Level" Value="31" />
+		<part Name="Description" Short="Desc." />
+		<inventoryobject Blueprint="Saltback_Stomp" Number="1" />
+		<tag Name="Role" Value="Tank" />
+		<tag Name="Gigantic" />
+		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing The Salt Dunes" Step="Find a walking dune" />
+	</object>
 
 	<!--Corpses-->
 	<object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
@@ -131,5 +147,6 @@
 		<inventoryobject Blueprint="Spraybottle" Number="2" />
 		<inventoryobject Blueprint="Convalessence Phial" Number="2" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<tag Name="QuestGiver" Value="Combing The Salt Dunes" />
 	</object>
 </objects>
