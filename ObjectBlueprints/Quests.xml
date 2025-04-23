@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<quests>
+	<quest Name="Combing The Salt Dunes" System="CombingTheSaltDunesSystem"
+	   Accomplishment="At the behest of a hindren pariah, you traveled to the hidden village of Bey Lah to investigate a mystery."
+	   Hagiograph="Benevolent =name= agreed to meddle in the affairs of the meadow at the behest of a deerfolk pariah. The sultan reigns with kindheartedness!"
+	   HagiographCategory="MeetsWithCounselors"
+	   Gospel="At &lt;spice.time.partsOfDay.!random&gt; under a &lt;spice.commonPhrases.strange.!random.article&gt; and meadowed sky, the hindren of Bey Lah saw an image on the horizon that looked like a great looking glass. It was =name=, and once =player.subjective= arrived, the hindren built a monument to =player.objective= and thenceforth called =player.objective= the Looking Glass Kendren.">
+
+		<step Name="Locate the Saltback Graveyard" XP="1500">
+			<text>Follow a walking dune to its final resting place.</text>
+		</step>
+
+	</quest>
+</quests>
