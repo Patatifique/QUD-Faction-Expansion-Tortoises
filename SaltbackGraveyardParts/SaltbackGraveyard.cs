@@ -20,7 +20,7 @@ namespace Tortoises.Brothers
             builder.AddSecret(
                 zoneID,
                 "the location of the Saltback Graveyard",
-                new string[] { "settlement", "tortoises" },
+                new string[] { "settlement", "tortoises","saltbackgraveyard" },
                 "Settlements",
                 "$saltbackgraveyard"
             );

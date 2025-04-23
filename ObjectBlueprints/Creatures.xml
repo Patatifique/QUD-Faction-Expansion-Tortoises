@@ -71,7 +71,7 @@
 	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="walking dune" Tile="Creatures/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
 		<part Name="Corpse" CorpseChance="90"/>
-		<part Name="Brain" Factions="Tortoises-100" Hostile="false" Calm="True"/>
+		<part Name="Brain" Factions="Tortoises-100, Unshelled Retpiles-100" Hostile="false" Calm="True"/>
 		<tag Name="NoHateFactions" Value="Birds,Unshelled Reptiles,Prey,Mollusks" />
 		<stat Name="AV" Value="17" />
 		<stat Name="DV" Value="-10" />
@@ -84,6 +84,7 @@
 		<tag Name="Role" Value="Tank" />
 		<tag Name="Gigantic" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing The Salt Dunes" Step="Find a walking dune" />
+		<part Name="AiPilgrimGraveyard" TargetObject="FakeStiltWell" Chance="100"/>
 	</object>
 
 	<!--Corpses-->

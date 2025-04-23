@@ -18,7 +18,12 @@
       Name="Finish_CombingTheSaltDunes_EnterTheSaltbackGraveyard">
     </object>
   </cell>
-  <cell X="14" Y="0"></cell>
+	<cell X="14" Y="0">
+
+		<object
+		Name="FakeStiltWell">
+		</object>
+	</cell>
   <cell X="15" Y="0"></cell>
   <cell X="16" Y="0"></cell>
   <cell X="17" Y="0"></cell>

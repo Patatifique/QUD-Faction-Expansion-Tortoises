@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="FakeStiltWell" Inherits="MountedFurniture">
+    <part Name="Physics" Weight="2000" Takeable="false" Solid="false" IsReal="false" FlameTemperature="99999" VaporTemperature="1500" />
+    <part Name="Description" Short="Sphinx scenes of post-Edification glamour are arrayed in gold and sunken relief around the lip of the black marble fount. The tracery of its bright veins spikes the eye but, downwell, recedes into a starless depth." />
+    <part Name="Render" DisplayName="fake sacred well" Tile="Items/sw_well.bmp" DetailColor="k" RenderString="007" ColorString="&amp;W^K" />
+    <part Name="Interesting" Radius="1" />
+    <stat Name="AV" Value="30" />
+    <stat Name="Hitpoints" Value="4000" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="ExcavatoryTerrainFeature" />
+	  <stag Name="Contemporary" />
+	  <tag Name="IncludeInDynamicSemanticTables" />
+  </object>
+</objects>
