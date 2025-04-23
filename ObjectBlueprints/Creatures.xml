@@ -70,7 +70,7 @@
 
 	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="walking dune" Tile="Creatures/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
-		<part Name="Corpse" CorpseChance="90"/>
+		<part Name="Corpse" CorpseChance="0"/>
 		<part Name="Brain" Factions="Tortoises-100" Hostile="false" Calm="True"/>
 		<tag Name="NoHateFactions" Value="Birds,Unshelled Reptiles,Prey,Mollusks" />
 		<stat Name="AV" Value="17" />
@@ -80,6 +80,7 @@
 		<stat Name="Hitpoints" Value="900" />
 		<stat Name="Level" Value="31" />
 		<part Name="Description" Short="Desc." />
+		<mutation Name="MentalMirror" Level="4" />
 		<inventoryobject Blueprint="Saltback_Stomp" Number="1" />
 		<tag Name="Role" Value="Tank" />
 		<tag Name="Gigantic" />
@@ -120,32 +121,23 @@
 	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="Issachari Rifler">
 		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/poacher.png" RenderString="h" ColorString="&amp;Y" />
 		<part Name="Titles" Primary="Issachari hunter" />
-		<part Name="Description" Short="gunguy desc" />
+		<part Name="Description" Short="Saltflakes pepper a wind-carved face, =pronouns.possessive= eyes squinting against the glaring Salt Sun and Beetle Moon. A threadbare and patched-up jubbah conceal weathered skin and loaded bandoleer." />
 		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Issachari-100" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
-		<skill Name="Physic_StaunchWounds" />
-		<skill Name="Physic_Nostrums" />
-		<skill Name="Physic_Apothecary" />
-		<skill Name="Physic_AmputateLimb" />
+		<skill Name="Rifle_DrawABead" />
+		<skill Name="Rifle_SteadyHands" />
+		<skill Name="CookingAndGathering_Butchery" />
 		<part Name="GivesRep" />
 		<tag Name="NoHateFactions" Value="Mechanimists,Pariahs,Wardens" />
 		<tag Name="NoSleep" />
 		<tag Name="Gender" Value="female" />
 		<xtagGrammar Proper="true" />
 		<xtagWaterRitual NoJoin="true" />
+		<inventoryobject Blueprint="Sniper Rifle" Number="1" />
+		<inventoryobject Blueprint="Lead Slug" Number="24" />
+		<inventoryobject Blueprint="Dagger" Number="1" />
 		<inventoryobject Blueprint="Sandals" Number="1" />
-		<inventoryobject Blueprint="Slate Frock" Number="1" />
-		<inventoryobject Blueprint="Vinewafer" Number="2-3" />
-		<inventoryobject Blueprint="Waterskin" Number="1-2" />
-		<inventoryobject Blueprint="Bandage" Number="2-4" />
-		<inventoryobject Blueprint="HoneyWaterskin" Number="0-1" />
-		<inventoryobject Blueprint="Yuckwheat Stem" Number="2-3" />
-		<inventoryobject Blueprint="Witchwood Bark" Number="2-3" />
-		<inventoryobject Blueprint="Hoarshroom" Number="1" Chance="50" />
-		<inventoryobject Blueprint="Humble Pie" Number="0-1" />
-		<inventoryobject Blueprint="SalveTonic" Number="0-1" />
-		<inventoryobject Blueprint="Spraybottle" Number="2" />
-		<inventoryobject Blueprint="Convalessence Phial" Number="2" />
+		<inventoryobject Blueprint="Puma Chitin Vest" Number="1" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="QuestGiver" Value="Combing The Salt Dunes" />
 	</object>
