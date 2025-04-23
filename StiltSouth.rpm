@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Map Width="80" Height="25" Load="Merge">
-    <cell X="44" Y="22">
+    <cell X="46" Y="22">
         <object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell"></object>
     </cell>
 </Map>
