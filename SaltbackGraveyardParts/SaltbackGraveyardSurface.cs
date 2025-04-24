@@ -29,7 +29,7 @@ namespace XRL.World.Parts
                 JournalMapNote mapNote = JournalAPI.GetMapNote(this.RevealSecret);
                 if (mapNote != null && !mapNote.Revealed)
                 {
-                    JournalAPI.AddAccomplishment("You discovered the hidden Saltback Graveyard.", "<spice.commonPhrases.intrepid.!random.capitalize> =name= discovered the Saltback Graveyard, once thought lost to the sands of time.", $"<spice.commonPhrases.allThroughout.!random.capitalize> =year=, =name= followed tortoises. {The.Player.GetPronounProvider().CapitalizedSubjective} became known as the saviour of Saltbacks.", muralCategory: MuralCategory.VisitsLocation);
+                    JournalAPI.AddAccomplishment("You discovered the hidden Saltback Graveyard.", "<spice.commonPhrases.intrepid.!random.capitalize> =name= discovered the Saltback Graveyard, once thought lost to the sands of time.", $"<spice.commonPhrases.allThroughout.!random.capitalize> =year=, =name= followed migrating saltbacks through Moghra'yi. {The.Player.GetPronounProvider().CapitalizedSubjective} became known as the Saltbacked Pilgrim.", muralCategory: MuralCategory.VisitsLocation);
                     JournalAPI.RevealMapNote(mapNote);
                 }
             }
