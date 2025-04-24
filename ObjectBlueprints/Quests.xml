@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <quests>
-	<quest Name="Combing The Salt Dunes" System="CombingTheSaltDunesSystem"
-	   Accomplishment="At the behest of a hindren pariah, you traveled to the hidden village of Bey Lah to investigate a mystery."
-	   Hagiograph="Benevolent =name= agreed to meddle in the affairs of the meadow at the behest of a deerfolk pariah. The sultan reigns with kindheartedness!"
-	   HagiographCategory="MeetsWithCounselors"
-	   Gospel="At &lt;spice.time.partsOfDay.!random&gt; under a &lt;spice.commonPhrases.strange.!random.article&gt; and meadowed sky, the hindren of Bey Lah saw an image on the horizon that looked like a great looking glass. It was =name=, and once =player.subjective= arrived, the hindren built a monument to =player.objective= and thenceforth called =player.objective= the Looking Glass Kendren.">
+	<quest Name="Combing the Salt Dunes" System="CombingTheSaltDunesSystem"
+	   Accomplishment="You found the final resting place of great saltback tortoises."
+	   Hagiograph="In the month of =month= of =year=, wise =name= kneeled by fading giants and sang a solemn dirge in their honor."
+	   HagiographCategory="VisitsLocation"
+	   Gospel="Wandering through salt valleys, =name= came upon a great funeral ceremony for the kings and queens of saltbacks. There =name= sang for three days and three nights a mournful dirge so fair and true the Sun and Moon weeped in unison.">
 
-		<step Name="Find a walking dune" Optional="true">
-			<text>In the Salt Dunes, find a walking dune to follow it.</text>
+		<step Name="Find a Walking Dune" Optional="true">
+			<text>In the Great Salt Desert, find a walking dune and follow it.</text>
 		</step>
+		
 		<step Name="Locate the Saltback Graveyard" XP="1500">
-			<text>Find the walking dunes final resting place.</text>
+			<text>Find the saltbacks' final resting place somewhere in the Great Salt Desert.</text>
 		</step>
 
 	</quest>

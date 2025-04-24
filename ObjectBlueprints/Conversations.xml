@@ -2,40 +2,43 @@
 <conversations>
   
   	<!--Poacher dialogue-->
+	
   <conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
-    <node ID="Start">
-      <text>
-        This is the start of the conversation.
-      </text>
-      <choice ID="Choice1Cracks" GotoID="Choice1">What's up?</choice>
-      <choice ID="Choice2Cracks" GotoID="Choice2">Do you like hunting tortoises?</choice>
-      <choice GotoID="End">Live and drink.</choice>
+    
+	<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
+		<text>
+			You don't have the quest.				
+		</text>
+		<choice Target="GiveQuest">Gimme a quest.</choice>
+		<choice GotoID="End">Live and drink.</choice>		
+	</node>
+	
+	<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
+		<text>
+			You have the quest.
+		</text>
+		<choice GotoID="End">Live and drink.</choice>
     </node>
-    <node ID="Choice1">
-      <text>
-        The sky.
-      </text>
-      <choice GotoID="Start">I've more to ask.</choice>
-      <choice GotoID="End">Live and drink, priest.</choice>
+	
+	<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+		<text>
+			You have already done the quest.
+		</text>
+		<choice GotoID="End">Live and drink.</choice>
     </node>
-    <node ID="Choice2">
-      <text>
-		Honestly yeah.
-      </text>
-	  <choice ID="Choice3Cracks" GotoID="Choice3"> Are you sure?</choice>
-      <choice GotoID="Start">I've more to ask.</choice>
-      <choice GotoID="End">Live and drink.</choice>
+	
+	<node ID="GiveQuest">
+		<text>
+			Here's a quest.
+		</text>
+	<choice GotoID="Start">Actually nevermind let's talk about something else.</choice>
+	<choice GotoID="End" StartQuest="Combing the Salt Dunes">I will. Live and drink, queen.</choice>
     </node>
-	 <node ID="Choice3">
-      <text>
-		Pretty sure yeah.
-      </text>
-      <choice GotoID="Start">I've more to ask.</choice>
-      <choice GotoID="End">Live and drink.</choice>
-    </node>
+    
   </conversation>
   
   	<!--Pet dialogue-->
+	
   <conversation ID="Brothers_Tortoises_Baby Shaile">
     <node ID="Start">
       <text>
