@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <quests>
 	<quest Name="Combing the Salt Dunes" System="CombingTheSaltDunesSystem"
 	   Accomplishment="You found the final resting place of great saltback tortoises."
@@ -9,10 +10,41 @@
 		<step Name="Find a Walking Dune" Optional="true">
 			<text>In the Great Salt Desert, find a walking dune and follow it.</text>
 		</step>
-		
+
 		<step Name="Locate the Saltback Graveyard" XP="1500">
 			<text>Find the saltbacks' final resting place somewhere in the Great Salt Desert.</text>
 		</step>
 
+		<step Name="Report Back to Cracks-the-Saltback-Shell" XP="1500">
+			<text>Return to Cracks-the-Saltback-Shell and report your findings.</text>
+		</step>
 	</quest>
+
+	<quest Name="The Scute Child"
+	   Accomplishment="You ventured into the graveyard and uncovered a secret about its location."
+	   Hagiograph="=name=, the keeper of secrets, chose to protect the graveyard's mysteries, earning the trust of its guardians."
+	   HagiographCategory="VisitsLocation"
+	   Gospel="In the shadow of the graveyard, =name= made a choice that would echo through the ages: to guard the sanctity of the resting place.">
+
+		<step Name="Consult with Warden Qoruda" Optional="true" XP="250">
+			<text>Speak with Warden Qoruda to gain insight into the Saltbacks Graveyard.</text>
+		</step>
+
+		<step Name="Keep the Graveyard’s Location Secret" XP="500">
+			<text>Choose to keep the location of the Saltback Graveyard a secret, ensuring its sanctity remains intact.</text>
+		</step>
+
+	</quest>
+	<quest Name="Return to Qoruda"
+	   Accomplishment="You returned to the Saltback Graveyard and fulfilled your duty."
+	   Hagiograph="=name= retraced their steps to the sacred graveyard, honoring their promise to the guardians."
+	   HagiographCategory="VisitsLocation"
+	   Gospel="=name=, bound by their word, returned to the Saltback Graveyard, ensuring the legacy of the saltbacks endured.">
+
+		<step Name="Return to the Saltback Graveyard" XP="250">
+			<text>Travel back to the Saltback Graveyard and report to Warden Qoruda.</text>
+		</step>
+
+	</quest>
+
 </quests>
