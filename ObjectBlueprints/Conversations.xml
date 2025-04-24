@@ -5,11 +5,21 @@
 	
   <conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
     
+	<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+		<text>
+			You have already done the quest.
+		</text>
+		<choice GotoID="End">Live and drink.</choice>
+    </node>
+	
 	<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
 		<text>
-			You don't have the quest.				
+			{{emote|*squints eyes.*}} You're standing in my shade, lack-salt.				
 		</text>
-		<choice Target="GiveQuest">Gimme a quest.</choice>
+		<choice Target="Rifle">That's a nice rifle you've got.</choice>
+		<choice Target="Shade">What makes it your shade?</choice>
+		<choice Target="Activity">What are you even doing here?</choice>
+			<choice Target="GiveQuest">Gimme a quest.</choice>
 		<choice GotoID="End">Live and drink.</choice>		
 	</node>
 	
@@ -20,9 +30,30 @@
 		<choice GotoID="End">Live and drink.</choice>
     </node>
 	
-	<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+	<node ID="Rifle">
 		<text>
-			You have already done the quest.
+			Thanks.
+		</text>
+		<choice GotoID="End">Live and drink.</choice>
+    </node>
+	
+	<node ID="Shade">
+		<text>
+			No.
+		</text>
+		<choice GotoID="End">Live and drink.</choice>
+    </node>
+	
+	<node ID="Activity">
+		<text>
+			Chilling.
+		</text>
+		<choice GotoID="End">Live and drink.</choice>
+    </node>
+	
+	<node ID="Salt">
+		<text>
+			Whatever you say.
 		</text>
 		<choice GotoID="End">Live and drink.</choice>
     </node>
