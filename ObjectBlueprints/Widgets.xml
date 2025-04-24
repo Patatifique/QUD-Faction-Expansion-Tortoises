@@ -12,6 +12,6 @@
 
   -->
 	<object Name="Finish_CombingTheSaltDunes_EnterTheSaltbackGraveyard" Inherits="Widget">
-		<part Name="QuestStepFinisher" Trigger="Created" Quest="Combing The Salt Dunes" Step="Locate the Saltback Graveyard" />
+		<part Name="QuestStepFinisher" Trigger="Created" Quest="Combing the Salt Dunes" Step="Locate the Saltback Graveyard" />
 	</object>
 </objects>

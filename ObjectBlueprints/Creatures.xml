@@ -84,7 +84,7 @@
 		<inventoryobject Blueprint="Saltback_Stomp" Number="1" />
 		<tag Name="Role" Value="Tank" />
 		<tag Name="Gigantic" />
-		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing The Salt Dunes" Step="Find a walking dune" />
+		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing the Salt Dunes" Step="Find a Walking Dune" />
 		<part Name="AiPilgrimGraveyard" TargetObject="FakeStiltWell" Chance="100"/>
 	</object>
 
@@ -140,6 +140,6 @@
 		<inventoryobject Blueprint="Sandals" Number="1" />
 		<inventoryobject Blueprint="Puma Chitin Vest" Number="1" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-		<tag Name="QuestGiver" Value="Combing The Salt Dunes" />
+		<tag Name="QuestGiver" Value="Combing the Salt Dunes" />
 	</object>
 </objects>
