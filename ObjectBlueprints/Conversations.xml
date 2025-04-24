@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conversations>
-  
-  	<!--Poacher dialogue-->
+	
+
+	<!--Poacher dialogue-->
 	
   <conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
     
@@ -67,8 +68,43 @@
     </node>
     
   </conversation>
-  
-  	<!--Pet dialogue-->
+
+
+	<!--Tortoise Warden dialogue-->
+	<conversation ID="Brothers_Tortoises_WardenQoruda">
+		<node ID="Start">
+			<text>
+				This is the start of the conversation.
+			</text>
+			<choice ID="Choice1Qoruda" GotoID="Choice1">What's up?</choice>
+			<choice ID="Choice2Qoruda" GotoID="Choice2">Do you like protecting tortoises?</choice>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		<node ID="Choice1">
+			<text>
+				The sky.
+			</text>
+			<choice GotoID="Start">I've more to ask.</choice>
+			<choice GotoID="End">Live and drink, priest.</choice>
+		</node>
+		<node ID="Choice2">
+			<text>
+				Honestly yeah.
+			</text>
+			<choice ID="Choice3Qoruda" GotoID="Choice3"> Are you sure?</choice>
+			<choice GotoID="Start">I've more to ask.</choice>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		<node ID="Choice3">
+			<text>
+				Pretty sure yeah.
+			</text>
+			<choice GotoID="Start">I've more to ask.</choice>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+	</conversation>
+
+	<!--Pet dialogue-->
 	
   <conversation ID="Brothers_Tortoises_Baby Shaile">
     <node ID="Start">
