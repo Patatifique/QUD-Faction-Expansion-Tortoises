@@ -142,4 +142,41 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="QuestGiver" Value="Combing the Salt Dunes" />
 	</object>
+
+	<object Name="Brothers_Tortoises_Warden Qoruda" Inherits="NPC">
+		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
+		<part Name="Honorifics" Primary="Warden" />
+		<part Name="Description" Short="wardendesc" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_WardenQoruda" />
+		<part Name="Brain" Wanders="false" Factions="Wardens-100" />
+		<stat Name="Strength" sValue="23" />
+		<stat Name="Agility" sValue="24" />
+		<stat Name="Toughness" sValue="24" />
+		<stat Name="Intelligence" sValue="16" />
+		<stat Name="Willpower" sValue="22" />
+		<stat Name="Ego" sValue="18" />
+		<stat Name="Hitpoints" Value="250" />
+		<inventoryobject Blueprint="Carbide Shield" Number="1" />
+		<inventoryobject Blueprint="Cudgel4" Number="1" />
+		<inventoryobject Blueprint="Waterskin" Number="3" />
+		<inventoryobject Blueprint="Carbide Plate Armor" Number="1" />
+		<inventoryobject Blueprint="Carbide Boots" Number="1" />
+		<inventoryobject Blueprint="Carbide Gauntlets" Number="1" />
+		<inventoryobject Blueprint="Scarlet Shawl" Number="1" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Shield" />
+		<skill Name="Shield_Block" />
+		<skill Name="Shield_Slam" />
+		<mutation Name="TemporalFugue" Level="7" />
+		<mutation Name="Teleportation" Level="1" />
+		<mutation Name="HeightenedSpeed" Level="6" />
+		<stat Name="Level" Value="30" />
+		<tag Name="Genotype" Value="Mutated Human" />
+		<part Name="GivesRep" />
+		<tag Name="NoHateFactions" Value="Tortoises" />
+		<tag Name="Gender" Value="male" />
+		<xtagGrammar Proper="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<xtagWaterRitual NoJoin="true" />
+	</object>
 </objects>
