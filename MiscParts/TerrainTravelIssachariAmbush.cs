@@ -27,11 +27,11 @@ namespace XRL.World.Parts
                 // Dont want this to happen if IDKFA cheat is on
                 if (The.Core.IDKFA)
                     return false;
-                // Make sure the player has pissed off the proacher
+                // Make sure the player has pissed off the poacher
                 if (The.Game.HasQuest("Return to Qoruda"))
                 {
                     // Check that the player has not yet been ambushed
-                    if (The.Game.HasStringGameState("HaveBeenAmbushedByProacher"))
+                    if (The.Game.HasStringGameState("HaveBeenAmbushedByPoacher"))
                         return false;
 
 
@@ -48,7 +48,7 @@ namespace XRL.World.Parts
                     if (The.Player.ApplyEffect((Effect)new Lost(InitialZone: str, World: zoneWorld)))
                     {
                         // set the already ambushed flag
-                        The.Game.SetStringGameState("HaveBeenAmbushedByProacher", str);
+                        The.Game.SetStringGameState("HaveBeenAmbushedByPoacher", str);
                         //regular lost logic
                         Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
                         zone.CheckWeather();
