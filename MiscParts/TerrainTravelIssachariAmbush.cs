@@ -31,7 +31,7 @@ namespace XRL.World.Parts
                 if (The.Game.HasQuest("Return to Qoruda"))
                 {
                     // Check that the player has not yet been ambushed
-                    if (The.Game.HasStringGameState("HaveBeenAmbushed"))
+                    if (The.Game.HasStringGameState("HaveBeenAmbushedByProacher"))
                         return false;
 
 
@@ -48,7 +48,7 @@ namespace XRL.World.Parts
                     if (The.Player.ApplyEffect((Effect)new Lost(InitialZone: str, World: zoneWorld)))
                     {
                         // set the already ambushed flag
-                        The.Game.SetStringGameState("HaveBeenAmbushed", str);
+                        The.Game.SetStringGameState("HaveBeenAmbushedByProacher", str);
                         //regular lost logic
                         Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
                         zone.CheckWeather();
