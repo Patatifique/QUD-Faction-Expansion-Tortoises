@@ -84,8 +84,9 @@
 		</node>
 		<node ID="Choice1">
 			<text>
-				The sky.
+				Hey you know what here is the graveyard location.
 			</text>
+			<part Name="RevealGraveyardLocation"></part>
 			<choice GotoID="Start">I've more to ask.</choice>
 			<choice GotoID="End">Live and drink, priest.</choice>
 		</node>
