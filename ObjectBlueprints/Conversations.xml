@@ -4,73 +4,75 @@
 
 	<!--Poacher dialogue-->
 	
-  <conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
+	<conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
     
-	<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
-		<text>
-			You have already done the quest.
-		</text>
-		<choice GotoID="End">Live and drink.</choice>
-    </node>
+		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+			<text>
+				You have already done the quest.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
 	
-	<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
-		<text>
-			{{emote|*squints eyes.*}} You're standing in my shade, lack-salt.				
-		</text>
-		<choice Target="Rifle">That's a nice rifle you've got.</choice>
-		<choice Target="Shade">What makes it your shade?</choice>
-		<choice Target="Activity">What are you even doing here?</choice>
-			<choice Target="GiveQuest">Gimme a quest.</choice>
-		<choice GotoID="End">Live and drink.</choice>		
-	</node>
-	
-	<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
-		<text>
-			You have the quest.
-		</text>
-		<choice GotoID="End">Live and drink.</choice>
-    </node>
-	
-	<node ID="Rifle">
-		<text>
-			Thanks.
-		</text>
-		<choice GotoID="End">Live and drink.</choice>
-    </node>
-	
-	<node ID="Shade">
-		<text>
-			No.
-		</text>
-		<choice GotoID="End">Live and drink.</choice>
-    </node>
-	
-	<node ID="Activity">
-		<text>
-			Chilling.
-		</text>
-		<choice GotoID="End">Live and drink.</choice>
-    </node>
-	
-	<node ID="Salt">
-		<text>
-			Whatever you say.
-		</text>
-		<choice GotoID="End">Live and drink.</choice>
-    </node>
-	
-	<node ID="GiveQuest">
-		<text>
-			Here's a quest.
-		</text>
-	<choice GotoID="Start">Actually nevermind let's talk about something else.</choice>
-	<choice GotoID="End" StartQuest="Combing the Salt Dunes">I will. Live and drink, queen.</choice>
-    </node>
+		<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
+			<text>
+				{{emote|*squints eyes.*}} You're standing in my shade, lack-salt.				
+			</text>
+			<choice Target="Rifle">That's a nice rifle you've got.</choice>
+			<choice Target="Shade">What makes it your shade?</choice>
+			<choice Target="Activity">What are you even doing here?</choice>
+			<choice Target="Salt" IfHaveLiquid="salt">I'm not lack-salt; I have some right there.</choice>
+			<choice Target="GiveQuest">I'm in need of work. Do you have any that needs doing?</choice>
+			<choice GotoID="End">Live and drink.</choice>		
+		</node>
+		
+		<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
+			<text>
+				You have the quest.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		
+		<node ID="Rifle">
+			<text>
+				Thanks.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		
+		<node ID="Shade">
+			<text>
+				No.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		
+		<node ID="Activity">
+			<text>
+				Chilling.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		
+		<node ID="Salt">
+			<text>
+				Whatever you say.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+		
+		<node ID="GiveQuest">
+			<text>
+				Here's a quest.
+			</text>
+		<choice GotoID="Start">Actually nevermind let's talk about something else.</choice>
+		<choice GotoID="End" StartQuest="Combing the Salt Dunes">I will. Live and drink, queen.</choice>
+		</node>
     
   </conversation>
 
 
 	<!--Tortoise Warden dialogue-->
+	
 	<conversation ID="Brothers_Tortoises_WardenQoruda">
 		<node ID="Start">
 			<text>
@@ -107,17 +109,45 @@
 
 	<!--Pet dialogue-->
 	
-  <conversation ID="Brothers_Tortoises_Baby Shaile">
-    <node ID="Start">
-      <text>
-         {{emote|*Ortolo settles on the ground.*}}~
-         {{emote|*Ortolo snaps at dust particles.*}}~
-         {{emote|*Cold mist leaks from Ortolo's shell.*}}~
-         {{emote|*Ortolo sneezes snowflakes.*}}~
-         {{emote|*Ortolo retracts into =pronouns.possessive= shell.*}}~
-      </text>
-      <choice GotoID="End">Live and drink, frosty hatchling.</choice>
-    </node>
-  </conversation>
+	<conversation ID="Brothers_Tortoises_Baby Shaile">
+		
+		<node ID="Start">
+		  <text>
+			 {{emote|*Ortolo settles on the ground.*}}~
+			 {{emote|*Ortolo snaps at dust particles.*}}~
+			 {{emote|*Cold mist leaks from Ortolo's shell.*}}~
+			 {{emote|*Ortolo sneezes snowflakes.*}}~
+			 {{emote|*Ortolo retracts into =pronouns.possessive= shell.*}}~
+		  </text>
+		  <choice GotoID="End">Live and drink, frosty hatchling.</choice>
+		</node>
+	
+	</conversation>
+  
+  <!--walking dune dialogue-->
+	
+	<conversation ID="Brothers_Tortoises_Walking Dune">
+		
+		<node ID="Start">
+			<text>
+				{{emote|*keeps walking silently.*}}
+			</text>
+			<choice GotoID="Graveyard">
+				<text>O great giant, I am a friend to shellbeareres everywhere. What is your destination?</text>
+				<part Name="RequireReputation" Faction="Tortoises" Level="Loved" />
+			</choice>
+			<choice GotoID="End">Live and drink, wandering giant.</choice>
+		</node>
+		
+		<node ID="Graveyard">
+			<text>
+				{{emote|*the gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
+			</text>
+			<choice GotoID="End">
+			<part Name="RevealGraveyardLocation" />
+			<text>I see. Live and drink until then, pilgrim.</text></choice>
+		</node>
+	
+	</conversation>
   
 </conversations>

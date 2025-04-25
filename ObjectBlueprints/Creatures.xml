@@ -79,11 +79,12 @@
 		<stat Name="Agility" Boost="-3" />
 		<stat Name="Hitpoints" Value="900" />
 		<stat Name="Level" Value="31" />
-		<part Name="Description" Short="Desc." />
+		<part Name="Description" Short="Deep grooves run on age-stained leather, scutes peeling from a weathered shelldome. Gargantuan limbs scatter saltdust with each hammering step, a constant soothing walkrythm that will only end when =pronouns.subjective= reaches =pronouns.possessive= final resting place." />
 		<mutation Name="MentalMirror" Level="4" />
 		<inventoryobject Blueprint="Saltback_Stomp" Number="1" />
 		<tag Name="Role" Value="Tank" />
 		<tag Name="Gigantic" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing the Salt Dunes" Step="Find a Walking Dune" />
 		<part Name="AiPilgrimGraveyard" TargetObject="FakeStiltWell" Chance="100"/>
 	</object>
