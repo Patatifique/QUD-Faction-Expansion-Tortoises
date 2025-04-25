@@ -143,7 +143,9 @@
 			<text>
 				{{emote|*the gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
 			</text>
-			<choice GotoID="End">I see. Live and drink until then, pilgrim.</choice>
+			<choice GotoID="End">
+			<part Name="RevealGraveyardLocation" />
+			<text>I see. Live and drink until then, pilgrim.</text></choice>
 		</node>
 	
 	</conversation>
