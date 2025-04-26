@@ -15,12 +15,14 @@
 	
 		<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
 			<text>
-				{{emote|*The Issachari squints at you.*}} You're standing in my shade, lack-salt.				
+				{{emote|*The Issachari squints at you.*}}
+				
+				You're standing in my shade, lack-salt.				
 			</text>
 			<choice Target="Rifle">That's a nice rifle you've got.</choice>
 			<choice Target="Shade">What makes it your shade?</choice>
 			<choice Target="Activity">What are you even doing here?</choice>
-			<choice Target="Salt" IfHaveLiquid="salt">I'm not lack-salt; I have some right there.</choice>
+			<choice Target="Salt" IfHaveLiquid="salt">I'm not a lack-salt; I have some right there.</choice>
 			<choice Target="GiveQuest">I'm in need of work. Do you have any that needs doing?</choice>
 			<choice GotoID="End">Live and drink, huntress.</choice>		
 		</node>
@@ -34,7 +36,9 @@
 		
 		<node ID="Rifle">
 			<text>
-				{{emote|*The Issachari lays her weapon accross her knees.*}} And what do you know of our rifling traditions, lack-salt?	
+				{{emote|*The Issachari lays her weapon accross her knees.*}} 
+				
+				And what do you know of our rifling traditions, lack-salt?	
 			</text>
 			<choice GotoID="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
 			<choice GotoID="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
@@ -42,7 +46,9 @@
 		
 		<node ID="ThingOrTwo">
 			<text>
-				{{emote|*The Issachari grips her weapon tighter.*}} Nothing worth wasting speechwater over. State your purpose, lack-salt.	
+				{{emote|*The Issachari grips her weapon tighter.*}} 
+				
+				Nothing worth wasting speechwater over. State your purpose, lack-salt.	
 			</text>
 			<choice GotoID="Start">I was about to.</choice>
 			<choice GotoID="End">Sorry for bothering you. Live and drink, grumpy huntress.</choice>
@@ -50,7 +56,9 @@
 		
 		<node ID="NotMuch">
 			<text>
-				{{emote|*The Issachari relaxes somewhat.*}} At least you prove honest, lack-salt. This is my own creation, fit for hunting the Moghra'yi giants.	
+				{{emote|*The Issachari relaxes somewhat.*}} 
+				
+				At least you prove honest, lack-salt. This is my own creation, fit for hunting the Moghra'yi giants.	
 			</text>
 			<choice GotoID="Start">Thank you for enlightening me. I had other questions.</choice>
 			<choice GotoID="End">Very impressive. Live and drink, gunsmith huntress.</choice>
@@ -66,7 +74,9 @@
 		
 		<node ID="Activity">
 			<text>
-				{{emote|*The Issachari pulls her veil higher on her face as to preserve moisture.*}} Wasting speechwater.
+				{{emote|*The Issachari pulls her veil higher on her face as to preserve moisture.*}} 
+				
+				Wasting speechwater.
 			</text>
 			<choice GotoID="Insist">I must insist, please. I do not often cross the path of talkative Issachari.</choice>
 			<choice GotoID="End">I'll help you save some, then. Live and drink.</choice>
@@ -82,7 +92,9 @@
 		
 		<node ID="Salt">
 			<text>
-				{{emote|*The Issachari's smile reaches above her veil.*}} Do you now? Salt isn't enough to make you *not* a lack-salt, lack-salt.
+				{{emote|*The Issachari's smile reaches above her veil.*}} 
+				
+				Do you now? Salt isn't enough to make you *not* a lack-salt, lack-salt.
 			</text>
 			<choice GotoID="ItIs">It sort of is, though. Hence the name.</choice>
 			<choice GotoID="LackSalt">Isn't it? What would be enough then?</choice>
