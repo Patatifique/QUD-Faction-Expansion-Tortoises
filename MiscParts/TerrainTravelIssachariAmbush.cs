@@ -3,6 +3,7 @@ using XRL.Rules;
 using XRL.UI;
 using XRL.World.Effects;
 using XRL.World.ZoneBuilders;
+using XRL.World.ZoneParts;
 
 #nullable disable
 namespace XRL.World.Parts
@@ -56,6 +57,20 @@ namespace XRL.World.Parts
                         int num = (int)Popup.ShowBlock("You are ambushed by Issachari hunters!");
                         The.ZoneManager.ProcessGoToPartyLeader();
                         The.Player.FireEvent(Event.New("AfterLost", "FromCell", (object)currentCell));
+
+                        // Add Issachari ambushers
+                        Cell currentCellPostLost = The.Player.CurrentCell;
+                        Cell spawnCellAmbushersBase = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(6);
+                        for (int a = 0; a < 3; a++)
+                        {
+                            Cell spawnCellAmbushers = spawnCellAmbushersBase.GetRandomLocalAdjacentCellAtRadius(2);
+                            if (spawnCellAmbushers != null)
+                            {
+                                spawnCellAmbushers.AddObject(GameObject.Create("Banner-Knight Templar"));
+                            }
+                        }
+
+
                         return false;
                     }
                 }
