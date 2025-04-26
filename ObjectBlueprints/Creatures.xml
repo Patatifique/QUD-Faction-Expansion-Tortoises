@@ -140,6 +140,7 @@
 		<inventoryobject Blueprint="Dagger" Number="1" />
 		<inventoryobject Blueprint="Sandals" Number="1" />
 		<inventoryobject Blueprint="Puma Chitin Vest" Number="1" />
+		<inventoryobject Blueprint="Issachari Sun Veil" Number="1" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="QuestGiver" Value="Combing the Salt Dunes" />
 	</object>
@@ -160,24 +161,22 @@
 		<inventoryobject Blueprint="Carbide Shield" Number="1" />
 		<inventoryobject Blueprint="Cudgel4" Number="1" />
 		<inventoryobject Blueprint="Waterskin" Number="3" />
-		<inventoryobject Blueprint="Carbide Plate Armor" Number="1" />
 		<inventoryobject Blueprint="Carbide Boots" Number="1" />
 		<inventoryobject Blueprint="Carbide Gauntlets" Number="1" />
-		<inventoryobject Blueprint="Scarlet Shawl" Number="1" />
+		<inventoryobject Blueprint="Wide-brimmed Hat" Number="1" />
 		<skill Name="Cudgel_Expertise" />
 		<skill Name="Shield" />
 		<skill Name="Shield_Block" />
 		<skill Name="Shield_Slam" />
-		<mutation Name="TemporalFugue" Level="7" />
-		<mutation Name="Teleportation" Level="1" />
-		<mutation Name="HeightenedSpeed" Level="6" />
+		<mutation Name="Carapace" Level="7" />
+		<mutation Name="MentalMirror" Level="1" />
+		<mutation Name="HeightenedStrength" Level="6" />
 		<stat Name="Level" Value="30" />
 		<tag Name="Genotype" Value="Mutated Human" />
 		<part Name="GivesRep" />
-		<tag Name="NoHateFactions" Value="Tortoises" />
+		<tag Name="staticFaction1" Value="Tortoises,friend,garding their resting place" />
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-		<xtagWaterRitual NoJoin="true" />
 	</object>
 </objects>
