@@ -15,14 +15,14 @@
 	
 		<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
 			<text>
-				{{emote|*squints eyes.*}} You're standing in my shade, lack-salt.				
+				{{emote|*The Issachari squints at you.*}} You're standing in my shade, lack-salt.				
 			</text>
 			<choice Target="Rifle">That's a nice rifle you've got.</choice>
 			<choice Target="Shade">What makes it your shade?</choice>
 			<choice Target="Activity">What are you even doing here?</choice>
 			<choice Target="Salt" IfHaveLiquid="salt">I'm not lack-salt; I have some right there.</choice>
 			<choice Target="GiveQuest">I'm in need of work. Do you have any that needs doing?</choice>
-			<choice GotoID="End">Live and drink.</choice>		
+			<choice GotoID="End">Live and drink, huntress.</choice>		
 		</node>
 		
 		<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
@@ -34,30 +34,80 @@
 		
 		<node ID="Rifle">
 			<text>
-				Thanks.
+				{{emote|*The Issachari lays her weapon accross her knees.*}} And what do you know of our rifling traditions, lack-salt?	
 			</text>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
+			<choice GotoID="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
+		</node>
+		
+		<node ID="ThingOrTwo">
+			<text>
+				{{emote|*The Issachari grips her weapon tighter.*}} Nothing worth wasting speechwater over. State your purpose, lack-salt.	
+			</text>
+			<choice GotoID="Start">I was about to.</choice>
+			<choice GotoID="End">Sorry for bothering you. Live and drink, grumpy huntress.</choice>
+		</node>
+		
+		<node ID="NotMuch">
+			<text>
+				{{emote|*The Issachari relaxes somewhat.*}} At least you prove honest, lack-salt. This is my own creation, fit for hunting the Moghra'yi giants.	
+			</text>
+			<choice GotoID="Start">Thank you for enlightening me. I had other questions.</choice>
+			<choice GotoID="End">Very impressive. Live and drink, gunsmith huntress.</choice>
 		</node>
 		
 		<node ID="Shade">
 			<text>
-				No.
+				The early dawnglider gets the worm. Make greater haste across Moghra'yi next time, lack-salt, and you may just secure yourself some shade.
 			</text>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="Start">I will. If you allow it, huntress, I have other questions.</choice>
+			<choice GotoID="End">I see. Live and drink, huntress.</choice>
 		</node>
 		
 		<node ID="Activity">
 			<text>
-				Chilling.
+				{{emote|*The Issachari pulls her veil higher on her face as to preserve moisture.*}} Wasting speechwater.
 			</text>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="Insist">I must insist, please. I do not often cross the path of talkative Issachari.</choice>
+			<choice GotoID="End">I'll help you save some, then. Live and drink.</choice>
+		</node>
+		
+		<node ID="Insist">
+			<text>
+				And for good reason. But I'll entertain your question: I have come to trade the spoils of hunting.
+			</text>
+			<choice GotoID="Start">Makes sense. If I can waste some more water, I had other questions.</choice>
+			<choice GotoID="End">I will not bother you then. Live and drink, huntress.</choice>
 		</node>
 		
 		<node ID="Salt">
 			<text>
-				Whatever you say.
+				{{emote|*The Issachari's smile reaches above her veil.*}} Do you now? Salt isn't enough to make you *not* a lack-salt, lack-salt.
 			</text>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="ItIs">It sort of is, though. Hence the name.</choice>
+			<choice GotoID="LackSalt">Isn't it? What would be enough then?</choice>
+		</node>
+		
+		<node ID="ItIs">
+			<text>
+				Whatever you say, lack-salt.
+				
+				{{emote|*The Issachari settles more comfortably, unbothered.*}}
+			</text>
+			<choice GotoID="Start">Since there is no changing your opinion, I have other questions.</choice>
+			<choice GotoID="End">I tire of this. Live and drink.</choice>
+		</node>
+		
+		<node ID="ItIs">
+			<text>
+				Not asking that question would be a start. 
+				
+				{{emote|*The Issachari seems to ponder for a while before choosing her next words carefully.*}}
+				
+				Behold the red-and-white next time you cross Moghra'yi and maybe you might ensalten yourself yet.
+			</text>
+			<choice GotoID="Start">Since there is no changing your opinion, I have other questions.</choice>
+			<choice GotoID="End">I see. Live and drink, ensaltened huntress.</choice>
 		</node>
 		
 		<node ID="GiveQuest">
