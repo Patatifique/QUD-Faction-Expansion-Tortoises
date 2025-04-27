@@ -118,7 +118,7 @@
 				
 				Behold the red-and-white next time you cross Moghra'yi and maybe you might ensalten yourself yet.
 			</text>
-			<choice GotoID="Start">Since there is no changing your opinion, I have other questions.</choice>
+			<choice GotoID="Start">I will. If you allow it, I have other questions.</choice>
 			<choice GotoID="End">I see. Live and drink, ensaltened huntress.</choice>
 		</node>
 		
