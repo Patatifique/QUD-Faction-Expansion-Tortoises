@@ -13,6 +13,19 @@
 			<choice GotoID="End">Live and drink.</choice>
 		</node>
 	
+	<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
+			<text>
+				{{emote|*The Issachari takes her eyes off her weapon.*}}
+
+				Have you come bearing news of the Saltback Graveyard, lack-salt?
+			</text>
+			<choice IfFinishedQuestStep="Combing the Salt Dunes~Locate the Saltback Graveyard" GotoID="QuestChoice">About the Saltback Graveyard...</choice>
+			<choice GotoID="Remind">Remind me why you want to find this place again?</choice>
+			<choice GotoID="Unfair">Why is it I'm the one looking for this place why you smoke the hookah here?</choice>
+			<choice GotoID="RifleQuest">No. But is this the rifle you use to take down saltbacks?</choice>
+			<choice GotoID="End">Not yet, but I will. Live and drink, huntress.</choice>
+		</node>
+	
 		<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
 			<text>
 				{{emote|*The Issachari squints at you.*}}
@@ -23,15 +36,8 @@
 			<choice Target="Shade">What makes it your shade?</choice>
 			<choice Target="Activity">What are you even doing here?</choice>
 			<choice Target="Salt" IfHaveLiquid="salt">I'm not a lack-salt; I have some right there.</choice>
-			<choice Target="GiveQuest">I'm in need of work. Do you have any that needs doing?</choice>
+			<choice Target="Work">I'm in need of work. Do you have any that needs doing?</choice>
 			<choice GotoID="End">Live and drink, huntress.</choice>		
-		</node>
-		
-		<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
-			<text>
-				You have the quest.
-			</text>
-			<choice GotoID="End">Live and drink.</choice>
 		</node>
 		
 		<node ID="Rifle">
@@ -58,7 +64,7 @@
 			<text>
 				{{emote|*The Issachari relaxes somewhat.*}} 
 				
-				At least you prove honest, lack-salt. This is my own creation, fit for hunting the Moghra'yi giants.	
+				At least you prove honest, lack-salt. This is my own creation, fit for hunting Moghra'yi giants.	
 			</text>
 			<choice GotoID="Start">Thank you for enlightening me. I had other questions.</choice>
 			<choice GotoID="End">Very impressive. Live and drink, gunsmith huntress.</choice>
@@ -86,7 +92,7 @@
 			<text>
 				And for good reason. But I'll entertain your question: I have come to trade the spoils of hunting.
 			</text>
-			<choice GotoID="Start">Makes sense. If I can waste some more water, I had other questions.</choice>
+			<choice GotoID="Start">Makes sense. If I can waste some more speechwater, I had other questions.</choice>
 			<choice GotoID="End">I will not bother you then. Live and drink, huntress.</choice>
 		</node>
 		
@@ -110,7 +116,7 @@
 			<choice GotoID="End">I tire of this. Live and drink.</choice>
 		</node>
 		
-		<node ID="ItIs">
+		<node ID="LackSalt">
 			<text>
 				Not asking that question would be a start. 
 				
@@ -122,14 +128,148 @@
 			<choice GotoID="End">I see. Live and drink, ensaltened huntress.</choice>
 		</node>
 		
+		<node ID="Work">
+			<text>
+				{{emote|*The Issachari's brow furrows as she considers your words.*}}
+				
+				It all depends on you, lack-salt. Do you cower from the sun? Is pacing Moghra'yi too much to bear?
+			</text>
+		<choice GotoID="GiveQuest">No to both of those: I am a seasoned traveler.</choice>
+		<choice GotoID="End">I nearly ran out of water already, no way I'm heading there again.</choice>
+		</node>
+		
 		<node ID="GiveQuest">
 			<text>
-				Here's a quest.
+				If you say so, lack-salt, there may be something you could help with. Have you ever came across an old saltback? Tales say, when they feel the pull of their end drawing close, they leave their kind and travel to their final resting place.
+				
+				{{emote|*The Issachari leans forward.*}}
+				
+				This is what I'm after, lack-salt. The fabled Saltback Graveyard.
 			</text>
-		<choice GotoID="Start">Actually nevermind let's talk about something else.</choice>
-		<choice GotoID="End" StartQuest="Combing the Salt Dunes">I will. Live and drink, queen.</choice>
+		<choice GotoID="GiveQuest2">Why do you even want to find this place?</choice>
+		<choice GotoID="Start">I need some time to consider this. In the meantime, could we talk about something else?</choice>
+		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough; live and drink, huntress.</choice>
 		</node>
     
+		<node ID="GiveQuest2">
+			<text>
+				{{emote|*The Issachari rolls her eyes under salt-flaked brows.*}}
+				
+				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the deads have any use for it. Find the place – if it exists – and I'll make sure to reward you handsomely. What say you?
+			</text>
+		<choice GotoID="Start">I will think this over, but I have other questions for you.</choice>
+		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough – live and drink, huntress.</choice>
+		<choice GotoID="End">I will not help you rob the dead – live and drink, for now.</choice>
+		</node>
+	
+		<node ID="Remind">
+			<text>
+				{{emote|*The Issachari shuts her eyes for a moment, gathering patience.*}}
+				
+				Scutes. Bones. For the taking. Write it down if you must, lack-salt, but stop wasting my speechwater over this.
+			</text>
+			<choice GotoID="Start">I will not forget it this time, I promise. Just another question before I go.</choice>
+			<choice GotoID="End">Thank you for the reminder, but I should get going. Live and drink, huntress.</choice>
+		</node>
+		
+		<node ID="Unfair">
+			<text>
+				No one's forcing you, lack-salt. Pick a direction and walk, for all I care. 
+				
+				{{emote|*The Issachari redirects her attention to her rifle.*}}
+			</text>
+			<choice GotoID="Start">This does not sound safe. I have a few other questions for you.</choice>
+			<choice GotoID="End">I will do just that. Live and drink, huntress.</choice>
+		</node>
+	
+		<node ID="RifleQuest">
+			<text>
+				{{emote|*The Issachari carefully chooses her next words.*}}
+				
+				Among other things, lack-salt. Why do you ask?
+			</text>
+			<choice GotoID="Gift">I was wondering what it would take to get one of those.</choice>
+			<choice GotoID="End">Sheer curiosity. Live and drink, sharpshooter.</choice>
+		</node>
+	
+		<node ID="Gift">
+			<text>
+				{{emote|*A smile spreads on the Issachari's wind-carved face.*}}
+				
+				Tell you what, lack-salt: you find the Saltback Graveyard and I'll gift you one of my hunting weapons.
+			</text>
+			<choice GotoID="Start">I will hold you to that. I had another question, if you don't mind.</choice>
+			<choice GotoID="End">Motivation enough – I will return with the Graveyard's location. In the meantime, live and drink.</choice>
+		</node>
+
+		<node ID="QuestChoice">
+			<text>
+				{{emote|*The Issachari leans forward, her intense gaze on you.*}}
+				
+				... Yes?
+			</text>
+			<choice GotoID="Found">I may have found it.</choice>
+			<choice GotoID="Lie">{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</choice>
+			<choice GotoID="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
+		</node>
+
+		<node ID="Found">
+			<text>
+				{{emote|*The Issachari's eyes go wide, and her veil nearly slips from her face.*}}
+				
+				Have you? Where is it?
+			</text>
+			<choice GotoID="Found2">Nestled between wind-carved dunes. {{W|*show her the exact location on your map*}}</choice>
+			<choice GotoID="QuestChoice">On second thought, I may be mistaken...</choice>
+		</node>
+
+		<node ID="Found2" AllowEscape="false">
+			<text>
+				{{emote|*The Issachari nods enthusiastically, already planning her next move.*}}
+				
+				Yes, yes, that's perfect! As promised, lack-salt, here is your payment. Make good use of it.
+			</text>
+			<choice GotoID="End">Thank you for this, huntress. Live and drink.</choice>
+		</node>
+		
+		<node ID="Lie">
+			<text>
+				{{emote|*The Issachari sits back, visibly disappointed.*}}
+				
+				Just because you didn't find it does not mean it isn't there, lack-salt. Moghra'yi has a way of hiding secrets from unsavvy eyes.
+			</text>
+			<choice GotoID="Lie2">I have spent weeks combing the salt dunes. Disrespect me if you wish, huntress, but do not doubt me.</choice>
+			<choice GotoID="QuestChoice">I should look closer then...</choice>
+		</node>
+
+		<node ID="Lie2" AllowEscape="false">
+			<text>
+				{{emote|*The Issachari considers you for a moment before speaking up again.*}}
+				
+				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
+			</text>
+			<choice GotoID="End">Be seeing you. Live and drink.</choice>
+		</node>
+		
+		<node ID="Protect">
+			<text>
+				{{emote|*The Issachari tenses up.*}}
+				
+				Choose your next words very carefully, lack-salt.
+			</text>
+			<choice GotoID="Protect2">The only caution to be had is yours, Issachari. I warn you: profane the saltbacks' resting grounds and let your blood soak the salt dunes.</choice>
+			<choice GotoID="QuestChoice">Protection? What protection? I misspoke.</choice>
+		</node>
+
+		<node ID="Protect2" AllowEscape="false">
+			<text>
+				{{emote|*The Issachari's words are laced with venom.*}}
+				
+				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
+			</text>
+			<choice GotoID="End">As your people say: stay warm and stay dry, huntress.</choice>
+		</node>
+		
   </conversation>
 
 
@@ -201,9 +341,9 @@
 			<choice GotoID="End">Live and drink, wandering giant.</choice>
 		</node>
 		
-		<node ID="Graveyard">
+		<node ID="Graveyard" AllowEscape="false">
 			<text>
-				{{emote|*the gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
+				{{emote|*The gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
 			</text>
 			<choice GotoID="End">
 			<part Name="RevealGraveyardLocation" />
