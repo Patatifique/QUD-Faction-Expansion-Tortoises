@@ -148,7 +148,7 @@
 	<object Name="Brothers_Tortoises_Warden Qoruda" Inherits="NPC">
 		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
 		<part Name="Honorifics" Primary="Warden" />
-		<part Name="Description" Short="wardendesc" />
+		<part Name="Description" Short="Hunched spine cracks under a natural shelldome as saltflies flock to numbing shade cast by a wide-brimmed cap. Leathery skin cracks and flakes where it meets backing keratin, hairtufts properly groomed and trimed short. =pronouns.Subjective= rests for a while, =pronouns.possessive= eyes surveying =pronouns.possessive= surroundings and the avertable horizon." />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_WardenQoruda" />
 		<part Name="Brain" Wanders="false" Factions="Wardens-100" />
 		<stat Name="Strength" sValue="23" />

@@ -8,10 +8,38 @@
     
 		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
 			<text>
-				You have already done the quest.
+				{{emote|*The Issachari does not bother meeting your gaze.*}} 
+				
+				We have nothing more to say to each other, lack-salt.
 			</text>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="Reward">I have make good use of your gift. Is there any way to get another one?</choice>
+			<choice GotoID="Ambush">Issachari using weapon bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
+			<choice GotoID="End">As you say. Live and drink.</choice>
 		</node>
+	
+		<node ID="Reward">
+			<text>
+				{{emote|*The Issachari looks up.*}} 
+				
+				Good for you to recognize the worth of the red-and-white, but this was my only gift. Stay...
+
+				{{emote|*The Issachari closes her mouth mid-sentence, only to speak up softly.*}} 
+				
+				Walk in the shade, lack-salt.
+			</text>
+			<choice GotoID="Start">Just one more thing, if you please.</choice>
+			<choice GotoID="End">Live and drink – and walk in the shade, huntress.</choice>
+		</node>
+
+		<node ID="Ambush">
+			<text>
+				{{emote|*The Issachari grins, focused on cleaning her weapon.*}} 
+				
+				I owe you nothing, lack-salt. And I trust you will not disturb the Stiltgrounds, so pick a direction and walk.	
+			</text>
+			<choice GotoID="Start">I will not. I have more of your speechwater to waste.</choice>
+			<choice GotoID="End">You trust your life on a risky wager, huntress. Live and drink – for now.</choice>
+		</node>		
 	
 	<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
 			<text>
@@ -267,7 +295,7 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice GotoID="End">As your people say: stay warm and stay dry, huntress.</choice>
+			<choice GotoID="End">As your people say: stay warm and stay dry.</choice>
 		</node>
 		
   </conversation>
