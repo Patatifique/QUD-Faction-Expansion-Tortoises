@@ -70,7 +70,7 @@ namespace XRL.World.Parts
                         // This is where we set the Population to spawn
                         List<PopulationResult> party = PopulationManager.Generate("Brothers_Tortoises_Issachari Ambushers");
 
-                        // NEW: create a list to track used spawn cells
+                        // create a list to track used spawn cells
                         List<Cell> usedSpawnCells = new List<Cell>();
 
                         foreach (PopulationResult result in party)
