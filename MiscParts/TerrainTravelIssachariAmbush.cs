@@ -67,26 +67,35 @@ namespace XRL.World.Parts
                         // Get the current cell after the player has been lost
                         Cell currentCellPostLost = The.Player.CurrentCell;
 
-                        // Useless for version that spawns around the player
-                        Cell spawnCellAmbushersBase = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(6);
-
                         // This is where we set the Population to spawn
                         List<PopulationResult> party = PopulationManager.Generate("Brothers_Tortoises_Issachari Ambushers");
+
+                        // NEW: create a list to track used spawn cells
+                        List<Cell> usedSpawnCells = new List<Cell>();
 
                         foreach (PopulationResult result in party)
                         {
                             for (int i = 0; i < result.Number; i++)
                             {
-                                // Version that spawns away (commented out for now)
-                                // Cell spawnCellAmbushers = spawnCellAmbushersBase.GetRandomLocalAdjacentCellAtRadius(2);
+                                // Try to find a free cell
+                                Cell spawnCellAmbushers = null;
+                                for (int attempt = 0; attempt < 20; attempt++) // Try up to 20 times
+                                {
+                                    Cell candidate = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(Stat.Random(4, 6));
+                                    if (candidate != null && !usedSpawnCells.Contains(candidate))
+                                    {
+                                        spawnCellAmbushers = candidate;
+                                        break;
+                                    }
+                                }
 
-                                //Version that spawns around the player
-                                Cell spawnCellAmbushers = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(6);
                                 if (spawnCellAmbushers != null)
                                 {
+                                    usedSpawnCells.Add(spawnCellAmbushers); // Mark this cell as used
+
                                     GameObject spawned = GameObject.Create(result.Blueprint);
                                     spawnCellAmbushers.AddObject(spawned);
-                                    //Make Player Hater
+                                    // Make Player Hater
                                     spawned.Brain.Allegiance.Add("Playerhater", 500);
                                 }
                             }
