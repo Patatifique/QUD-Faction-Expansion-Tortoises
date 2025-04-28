@@ -343,12 +343,12 @@
 	
 		<node ID="Start" IfFinishedQuestStep="The Scute Child~Consult with Warden Qoruda">
 			<text>
-				keep the secret pls
+				keep secret pls
 			</text>
-			<choice GotoID="Saltbacks">I have never seen so many saltbacks in the same place.</choice>		
-			<choice GotoID="Warden">I was not expecting a warden here.</choice>
-			<choice GotoID="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
-			<choice Target="Poacher" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice GotoID="Saltbacks">soltbocks</choice>		
+			<choice GotoID="Warden">why warden</choice>
+			<choice GotoID="Sick">lmao coughyboy</choice>
+			<choice Target="Poacher2" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
 			<choice GotoID="End">Live and drink, warden.</choice>
 		</node>
 	
@@ -362,9 +362,44 @@
 			<choice GotoID="Saltbacks">I have never seen so many saltbacks in the same place.</choice>		
 			<choice GotoID="Warden">I was not expecting a warden here.</choice>
 			<choice GotoID="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
-			<choice Target="Poacher" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice Target="Poacher" IfHaveQuest="Combing the Salt Dunes">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
 			<choice GotoID="End">Maybe later. Live and drink, warden.</choice>
 		</node>
+
+		<node ID="Saltbacks">
+			<text>
+				tortles
+			</text>	
+			<choice GotoID="Start">cool.</choice>			
+			<choice GotoID="End">libndink.</choice>
+
+		<node ID="Warden">
+			<text>
+				me
+			</text>	
+			<choice GotoID="Start">cool.</choice>			
+			<choice GotoID="End">libndink.</choice>
+			
+		<node ID="Sick">
+			<text>
+				kinda
+			</text>	
+			<choice GotoID="Start">cool.</choice>			
+			<choice GotoID="End">libndink.</choice>
+
+		<node ID="Poacher">
+			<text>
+				meanie
+			</text>	
+			<choice GotoID="Start">cool.</choice>			
+			<choice GotoID="End">libndink.</choice>		
+
+		<node ID="Poacher2">
+			<text>
+				meanie²
+			</text>	
+			<choice GotoID="Start">cool.</choice>			
+			<choice GotoID="End">libndink.</choice>	
 
 		<node ID="Graveyard" AllowEscape="false">
 			<text>
@@ -386,8 +421,22 @@
 
 			In that case, you will find there is still a fight in these old bones yet!
 			</text>
+			<choice GotoID="Scared">Wait! I misspoke. Please forgive my pride, warden.</choice>
 			<choice GotoID="End">
 				<text>Bring it on!</text>
+				<part Name="StartFight" />
+			</choice>
+		</node>
+		
+		<node ID="Scared" AllowEscape="false">
+			<text>
+			{{emote|*The warden squints at you, letting his weapon down - albeit only slightly.*}}
+
+			You play dangerous games, =name=. Not all wardens have my patience.
+			</text>
+			<choice GotoID="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
+			<choice GotoID="End">
+				<text>Not all wardens are decrepit wrecks either - it's gotta be my lucky day.</text>
 				<part Name="StartFight" />
 			</choice>
 		</node>
@@ -409,7 +458,7 @@
 				
 				{{emote|*The warden is caught by a coughing fit again, his frame shaken by dry hacking.*}}
 				
-				... You are astute not to make promises without a full picture, =name=. Look around you: saltbacks come here to expire, leaving a final mark on Qud before passing away. Where you might only see bones, the shellbacked eye sees a cultural legacy.
+				... You are astute not to make promises without a full picture, =name=. Look around you: saltbacks come here to expire, leaving a final mark on Qud before passing away. Where you might only see bones, the shellbacked eye wonders at cultural legacy.
 			</text>	
 			<choice GotoID="WillNot" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I see, warden. Rest assured: this place is safe.</choice>
 			<choice GotoID="NoPromise" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
