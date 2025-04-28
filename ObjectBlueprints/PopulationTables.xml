@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <populations>
-
+<!--Existing Populations modification to include new Creatures-->
  <population Name="WaterCreatures" Load="Merge">
     <group Name="Creatures" Load="Merge">
       <object Weight="5" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
@@ -17,5 +17,31 @@
   <population Name="RiversZoneGlobals" Load="Merge">
     <object Chance="35" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
   </population>
+
+
+	<!--Ambush Population for the Issachari Ambush-->
+
+	<population Name="Brothers_Tortoises_IssachariPartyAmbush">
+		<group Name="Creatures" Style="pickeach">
+			<object Chance="50" Number="1-3" Blueprint="Issachari Raider" />
+			<object Chance="90" Number="1-4" Blueprint="Issachari Rifler" />
+			<object Chance="5" Number="1-2" Blueprint="Issachari Rifler" />
+		</group>
+	</population>
+	
+	
+	<!--Main Ambush Population-->
+	<population Name="Brothers_Tortoises_Issachari Ambushers">
+		<group Name="Contents" Style="pickeach">
+			<!--General Commander, will always be there (for now cracks the saltback shell, can be changed later-->
+			<object Number="1" Blueprint="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
+			<!--Rest of the party gets chosen here-->
+			<group Name="Types" Style="pickeach">
+				<group Name="Raiders" Style="pickeach">
+					<table Number="3" Name="Brothers_Tortoises_IssachariPartyAmbush" />
+				</group>
+			</group>
+		</group>
+	</population>
 
 </populations>
