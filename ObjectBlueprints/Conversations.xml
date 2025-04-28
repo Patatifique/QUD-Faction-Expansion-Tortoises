@@ -316,7 +316,6 @@
 			<text>
 				Hey you know what here is the graveyard location.
 			</text>
-			<part Name="RevealGraveyardLocation"></part>
 			<choice GotoID="Start">I've more to ask.</choice>
 			<choice GotoID="End">Live and drink, priest.</choice>
 		</node>
@@ -369,13 +368,12 @@
 			<choice GotoID="End">Live and drink, wandering giant.</choice>
 		</node>
 		
-		<node ID="Graveyard" AllowEscape="false">
+		<node ID="Graveyard">
 			<text>
 				{{emote|*The gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
 			</text>
-			<choice GotoID="End">
 			<part Name="RevealGraveyardLocation" />
-			<text>I see. Live and drink until then, pilgrim.</text></choice>
+			<choice GotoID="End">I see. Live and drink until then, pilgrim.</choice>
 		</node>
 	
 	</conversation>

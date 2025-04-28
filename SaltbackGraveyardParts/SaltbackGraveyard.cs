@@ -19,7 +19,7 @@ namespace Tortoises.Brothers
             // Add a dynamic secret for Saltback Graveyard
             builder.AddSecret(
                 zoneID,
-                "the location of the Saltback Graveyard",
+                "the Saltback Graveyard",
                 new string[] { "settlement", "tortoises","saltbackgraveyard" },
                 "Settlements",
                 "$saltbackgraveyard"

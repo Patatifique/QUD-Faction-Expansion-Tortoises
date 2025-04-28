@@ -29,7 +29,7 @@ namespace XRL.World.Parts
                 this.ParentObject.Render.DetailColor = "W";
                 this.ParentObject.Render.RenderString = "#";
                 this.ParentObject.HasProperName = true;
-                this.ParentObject.GetPart<Description>().Short = "Some Description";
+                this.ParentObject.GetPart<Description>().Short = "Nestled between windshaped dunes, a concealed valley holds an ocean of bones, a testament to the fleetingness of life in Qud.";
                 this.ParentObject.GetPart<TerrainTravel>()?.ClearEncounters();
                 this.ParentObject.SetStringProperty("OverlayColor", "&W");
                 if (this.secretId != null)
