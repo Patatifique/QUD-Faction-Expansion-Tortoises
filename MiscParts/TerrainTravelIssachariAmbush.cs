@@ -4,6 +4,7 @@ using XRL.UI;
 using XRL.World.Effects;
 using XRL.World.ZoneBuilders;
 using XRL.World.ZoneParts;
+using System.Collections.Generic;
 
 #nullable disable
 namespace XRL.World.Parts
@@ -25,6 +26,10 @@ namespace XRL.World.Parts
         {
             if (E.ID == "CheckLostChance")
             {
+                // 1 in 4 chance
+                if (Stat.Random(1, 4) != 1)
+                    return false;
+
                 // Dont want this to happen if IDKFA cheat is on
                 if (The.Core.IDKFA)
                     return false;
@@ -59,14 +64,31 @@ namespace XRL.World.Parts
                         The.Player.FireEvent(Event.New("AfterLost", "FromCell", (object)currentCell));
 
                         // Add Issachari ambushers
+                        // Get the current cell after the player has been lost
                         Cell currentCellPostLost = The.Player.CurrentCell;
+
+                        // Useless for version that spawns around the player
                         Cell spawnCellAmbushersBase = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(6);
-                        for (int a = 0; a < 3; a++)
+
+                        // This is where we set the Population to spawn
+                        List<PopulationResult> party = PopulationManager.Generate("Brothers_Tortoises_Issachari Ambushers");
+
+                        foreach (PopulationResult result in party)
                         {
-                            Cell spawnCellAmbushers = spawnCellAmbushersBase.GetRandomLocalAdjacentCellAtRadius(2);
-                            if (spawnCellAmbushers != null)
+                            for (int i = 0; i < result.Number; i++)
                             {
-                                spawnCellAmbushers.AddObject(GameObject.Create("Banner-Knight Templar"));
+                                // Version that spawns away (commented out for now)
+                                // Cell spawnCellAmbushers = spawnCellAmbushersBase.GetRandomLocalAdjacentCellAtRadius(2);
+
+                                //Version that spawns around the player
+                                Cell spawnCellAmbushers = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(6);
+                                if (spawnCellAmbushers != null)
+                                {
+                                    GameObject spawned = GameObject.Create(result.Blueprint);
+                                    spawnCellAmbushers.AddObject(spawned);
+                                    //Make Player Hater
+                                    spawned.Brain.Allegiance.Add("Playerhater", 500);
+                                }
                             }
                         }
 
