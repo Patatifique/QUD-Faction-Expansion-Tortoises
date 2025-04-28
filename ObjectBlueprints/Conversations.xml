@@ -41,7 +41,7 @@
 			<choice GotoID="End">You trust your life on a risky wager, huntress. Live and drink – for now.</choice>
 		</node>		
 	
-	<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
+		<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
 			<text>
 				{{emote|*The Issachari takes her eyes off her weapon.*}}
 
