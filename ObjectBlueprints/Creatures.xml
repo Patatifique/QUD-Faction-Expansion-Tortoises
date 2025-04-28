@@ -122,19 +122,20 @@
 	<!--NPCs-->
 	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="Issachari Rifler">
 		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/poacher.png" RenderString="h" ColorString="&amp;Y" />
-		<part Name="Titles" Primary="Issachari huntress" />
+		<part Name="Titles" Primary="Issachari pariah" />
 		<part Name="Description" Short="Saltflakes pepper a wind-carved face, =pronouns.possessive= eyes squinting against the glaring Salt Sun and Beetle Moon. Threadbare patched-up jubbah and traditional Issachari veil conceal weathered skin and loaded bandoleer." />
-		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Issachari-100" />
+		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Pariahs-100" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
 		<skill Name="Rifle_DrawABead" />
 		<skill Name="Rifle_SteadyHands" />
 		<skill Name="CookingAndGathering_Butchery" />
 		<part Name="GivesRep" />
 		<tag Name="NoHateFactions" Value="Mechanimists,Pariahs,Wardens" />
+		<tag Name="staticFaction1" Value="Issachari,friend,crafting hunting weapons" />
 		<tag Name="NoSleep" />
 		<tag Name="Gender" Value="female" />
 		<xtagGrammar Proper="true" />
-		<xtagWaterRitual NoJoin="true" />
+		<xtagWaterRitual NoJoin="true" SellSkill="false" />
 		<inventoryobject Blueprint="Sniper Rifle" Number="1" />
 		<inventoryobject Blueprint="Lead Slug" Number="24" />
 		<inventoryobject Blueprint="Dagger" Number="1" />

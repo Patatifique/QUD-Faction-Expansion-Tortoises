@@ -33,7 +33,7 @@
 
 		<node ID="Ambush">
 			<text>
-				{{emote|*The Issachari grins, focused on cleaning her weapon.*}} 
+				{{emote|*The Issachari grins knowingly behind her veil, focused on cleaning her weapon.*}} 
 				
 				I owe you nothing, lack-salt. And I trust you will not disturb the Stiltgrounds, so pick a direction and walk.	
 			</text>
@@ -64,8 +64,37 @@
 			<choice Target="Shade">What makes it your shade?</choice>
 			<choice Target="Activity">What are you even doing here?</choice>
 			<choice Target="Salt" IfHaveLiquid="salt">I'm not a lack-salt; I have some right there.</choice>
+			<choice Target="Pariah">Why are you called "pariah" when you still bear the red-and-white?.</choice>
 			<choice Target="Work">I'm in need of work. Do you have any that needs doing?</choice>
 			<choice GotoID="End">Live and drink, huntress.</choice>		
+		</node>
+
+		<node ID="Pariah">
+			<text>
+				{{emote|*The Issachari picks her words carefully.*}} 
+				
+				Season your speechwater with thinkwater, lack-salt. Do you see many Issachari in the Stiltgrounds?	
+			</text>
+			<choice GotoID="Seen">I think I've seen one or two?</choice>
+			<choice GotoID="NotSeen">Come to think of it, I haven't seen any lately.</choice>
+		</node>
+		
+		<node ID="Seen">
+			<text>
+				{{emote|*The Issachari rolls her eyes above the hem of her veil but stays silent.*}}	
+			</text>
+			<choice GotoID="Start">Alright. I had other questions.</choice>
+			<choice GotoID="End">Huh. Live and drink, pariah.</choice>
+		</node>
+		
+		<node ID="NotSeen">
+			<text>
+				{{emote|*The Issachari leans forward in a conspiring way.*}}
+				
+				Well, in that case I am "pariah" for as long as I am in the Stiltgrounds. Makes trading easier, see?
+			</text>
+			<choice GotoID="Start">I see. If you do not mind, I had other questions.</choice>
+			<choice GotoID="End">A canny plan. Live and drink, "pariah".</choice>
 		</node>
 		
 		<node ID="Rifle">
@@ -174,7 +203,7 @@
 				
 				This is what I'm after, lack-salt. The fabled Saltback Graveyard.
 			</text>
-		<choice GotoID="GiveQuest2">Why do you even want to find this place?</choice>
+		<choice GotoID="GiveQuest2">Why would you even want to find this place?</choice>
 		<choice GotoID="Start">I need some time to consider this. In the meantime, could we talk about something else?</choice>
 		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough; live and drink, huntress.</choice>
 		</node>
@@ -304,36 +333,106 @@
 	<!--Tortoise Warden dialogue-->
 	
 	<conversation ID="Brothers_Tortoises_WardenQoruda">
+
+		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+			<text>
+				Quest is done.
+			</text>
+			<choice GotoID="End">Live and drink.</choice>
+		</node>
+	
+		<node ID="Start" IfFinishedQuestStep="The Scute Child~Consult with Warden Qoruda">
+			<text>
+				keep the secret pls
+			</text>
+			<choice GotoID="Saltbacks">I have never seen so many saltbacks in the same place.</choice>		
+			<choice GotoID="Warden">I was not expecting a warden here.</choice>
+			<choice GotoID="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
+			<choice Target="Poacher" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice GotoID="End">Live and drink, warden.</choice>
+		</node>
+	
 		<node ID="Start">
 			<text>
-				This is the start of the conversation.
-			</text>
-			<choice ID="Choice1Qoruda" GotoID="Choice1">What's up?</choice>
-			<choice ID="Choice2Qoruda" GotoID="Choice2">Do you like protecting tortoises?</choice>
-			<choice GotoID="End">Live and drink.</choice>
+				{{emote|*The warden beckons you closer between two coughing fits.*}}
+				
+				Come closer, traveler, and rest a moment in the shade. I am Warden Qoruda, although such designations matter little in this place.
+			</text>			
+			<choice GotoID="Graveyard">You have my thanks, warden. I am =name=. What is this place?</choice>
+			<choice GotoID="Saltbacks">I have never seen so many saltbacks in the same place.</choice>		
+			<choice GotoID="Warden">I was not expecting a warden here.</choice>
+			<choice GotoID="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
+			<choice Target="Poacher" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice GotoID="End">Maybe later. Live and drink, warden.</choice>
 		</node>
-		<node ID="Choice1">
+
+		<node ID="Graveyard" AllowEscape="false">
 			<text>
-				Hey you know what here is the graveyard location.
-			</text>
-			<choice GotoID="Start">I've more to ask.</choice>
-			<choice GotoID="End">Live and drink, priest.</choice>
+				{{emote|*The warden wipes his lower lip.*}}
+				
+				A resting place, =name=, where all elder saltback come in their final moments. I am surprised you even found it, if I may be so honest.
+				
+				{{emote|*The warden slowly straighten his back, standing tall despite his age.*}}
+				
+				I trust you have not come to disturb its solemnity.
+			</text>	
+			<choice GotoID="NoTrouble">Be it by luck or by fate I have found my way here, but will respect the place's sanctity, warden.</choice>			
+			<choice GotoID="Trouble">I've come for trouble: out of my way, old man.</choice>
 		</node>
-		<node ID="Choice2">
+		
+		<node ID="Trouble" AllowEscape="false">
 			<text>
-				Honestly yeah.
+			{{emote|*The warden grips his hammer tightly.*}}
+
+			In that case, you will find there is still a fight in these old bones yet!
 			</text>
-			<choice ID="Choice3Qoruda" GotoID="Choice3"> Are you sure?</choice>
-			<choice GotoID="Start">I've more to ask.</choice>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="End">
+				<text>Bring it on!</text>
+				<part Name="StartFight" />
+			</choice>
 		</node>
-		<node ID="Choice3">
+		
+		<node ID="NoTrouble" AllowEscape="false">
 			<text>
-				Pretty sure yeah.
-			</text>
-			<choice GotoID="Start">I've more to ask.</choice>
-			<choice GotoID="End">Live and drink.</choice>
+				{{emote|*The warden relaxes somewhat, age returning to his stance as quickly as it left it.*}}
+				
+				Your wisdom is commendable, =name=. I can only trust that you will not foolishly spread word of this place.
+			</text>	
+			<choice GotoID="WhyNot">Why would I not? Why must this place stay hidden?</choice>			
+			<choice GotoID="WillNot" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I will not, warden - you have my word.</choice>
+			<choice GotoID="NoPromise" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I can make no such promise, warden.</choice>
 		</node>
+		
+		<node ID="WhyNot" AllowEscape="false">
+			<text>
+				You are astu-
+				
+				{{emote|*The warden is caught by a coughing fit again, his frame shaken by dry hacking.*}}
+				
+				... You are astute not to make promises without a full picture, =name=. Look around you: saltbacks come here to expire, leaving a final mark on Qud before passing away. Where you might only see bones, the shellbacked eye sees a cultural legacy.
+			</text>	
+			<choice GotoID="WillNot" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I see, warden. Rest assured: this place is safe.</choice>
+			<choice GotoID="NoPromise" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
+		</node>
+		
+		<node ID="WillNot">
+			<text>
+				{{emote|*The warden nods slowly.*}}
+
+				Thank you =name=. Live and drink, traveler.
+			</text>	
+			<choice GotoID="End">Live and drink, venerable warden.</choice>
+		</node>
+		
+		<node ID="NoPromise">
+			<text>
+				{{emote|*The warden frowns and shakes his head, chasing saltflies away.*}}
+				
+				I cannot hold you responsible of an offense not yet committed, and can only hope you find wisdom in your time, =name=. Still, live and drink nonetheless.
+			</text>	
+			<choice GotoID="End">Live and drink, warden.</choice>
+		</node>		
+
 	</conversation>
 
 	<!--Pet dialogue-->

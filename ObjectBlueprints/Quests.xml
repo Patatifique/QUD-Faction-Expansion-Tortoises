@@ -7,8 +7,8 @@
 	   HagiographCategory="VisitsLocation"
 	   Gospel="Wandering through salt valleys, =name= came upon a great funeral ceremony for the kings and queens of saltbacks. There =name= sang for three days and three nights a mournful dirge so fair and true the Sun and Moon weeped in unison.">
 
-		<step Name="Find a Walking Dune" Optional="true">
-			<text>In the Great Salt Desert, find a walking dune and either follow it or discover its destination.</text>
+		<step Name="Find a Walking Dune" Optional="true" XP="250">
+			<text>In the Great Salt Desert, find a walking dune and either follow it or enquire of its destination.</text>
 		</step>
 
 		<step Name="Locate the Saltback Graveyard" XP="1500">
@@ -20,7 +20,7 @@
 		</step>
 	</quest>
 
-	<quest Name="The Scute Child"
+	<quest Name="The Scute Child">
 
 		<step Name="Consult with Warden Qoruda" Optional="true" XP="250">
 			<text>Speak with Warden Qoruda to gain insight into the Saltbacks Graveyard.</text>
