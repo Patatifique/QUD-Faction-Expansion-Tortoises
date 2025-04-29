@@ -372,6 +372,7 @@
 			</text>	
 			<choice GotoID="Start">cool.</choice>			
 			<choice GotoID="End">libndink.</choice>
+		</node>
 
 		<node ID="Warden">
 			<text>
@@ -379,28 +380,32 @@
 			</text>	
 			<choice GotoID="Start">cool.</choice>			
 			<choice GotoID="End">libndink.</choice>
-			
+		</node>
+		
 		<node ID="Sick">
 			<text>
 				kinda
 			</text>	
 			<choice GotoID="Start">cool.</choice>			
 			<choice GotoID="End">libndink.</choice>
-
+		</node>
+		
 		<node ID="Poacher">
 			<text>
 				meanie
 			</text>	
 			<choice GotoID="Start">cool.</choice>			
 			<choice GotoID="End">libndink.</choice>		
-
+		</node>
+		
 		<node ID="Poacher2">
 			<text>
 				meanie²
 			</text>	
 			<choice GotoID="Start">cool.</choice>			
 			<choice GotoID="End">libndink.</choice>	
-
+		</node>
+		
 		<node ID="Graveyard" AllowEscape="false">
 			<text>
 				{{emote|*The warden wipes his lower lip.*}}
