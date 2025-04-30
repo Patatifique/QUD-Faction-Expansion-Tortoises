@@ -23,26 +23,26 @@ namespace XRL.World.Conversations.Parts
             if (!string.IsNullOrEmpty(Stat))
             {
                 GameObject subject = The.Player;
-                Fulfilled = subject.Stat(Stat) >= Value;
+                this.Fulfilled = subject.Stat(Stat) >= Value;
             }
             return base.HandleEvent(E);
         }
 
         public override bool HandleEvent(EnterElementEvent E)
         {
-            return Fulfilled;
+            return this.Fulfilled;
         }
 
         public override bool HandleEvent(GetChoiceTagEvent E)
         {
-            char ch = Fulfilled ? 'C' : 'r';
+            char ch = this.Fulfilled ? 'C' : 'r';
             E.Tag = $"{{{{{ch}|[{Stat} ≥ {Value}]}}}}";
             return false;
         }
 
         public override bool HandleEvent(ColorTextEvent E)
         {
-            if (Fulfilled)
+            if (this.Fulfilled)
                 return base.HandleEvent(E);
             E.Color = "K";
             return false;
