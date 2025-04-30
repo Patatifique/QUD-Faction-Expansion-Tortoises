@@ -1012,7 +1012,11 @@
 	<cell X="37" Y="12"></cell>
 	<cell X="38" Y="12"></cell>
 	<cell X="39" Y="12"></cell>
-	<cell X="40" Y="12"></cell>
+	<cell X="40" Y="12">
+		<object 
+			Name="Brothers_Tortoises_Warden Qoruda">
+		</object>
+	</cell>
 	<cell X="41" Y="12"></cell>
 	<cell X="42" Y="12"></cell>
 	<cell X="43" Y="12"></cell>
