@@ -266,7 +266,10 @@
 				... Yes?
 			</text>
 			<choice GotoID="Found">I may have found it.</choice>
-			<choice GotoID="Lie">{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</choice>
+			<choice GotoID="Lie">
+				<text>{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</text>
+				<part Name="RequireStat" Stat="Ego" Value="17" />
+			</choice>
 			<choice GotoID="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
 		</node>
 
