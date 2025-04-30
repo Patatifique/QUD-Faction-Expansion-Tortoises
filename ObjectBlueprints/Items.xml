@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
+	<!--Butcherables-->
 	<object Name="Brothers_Tortoises_Tortoise Shield" Inherits="BaseShield">
 		<part Name="Render" DisplayName="tortoise shield" Tile="Items/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
 		<part Name="Shield" AV="4" DV="-3" WornOn="Hand" />
@@ -34,8 +35,22 @@
 		<tag Name="EquipSound" Value="sfx_equip_armor_organic" />
 		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
 	</object>
+	
+	<!--Others-->
+	<object Name="Brothers_Tortoises_Honorary Shell" Inherits="BaseCloak">
+		<part Name="Render" DisplayName="honorary shell" Tile="Items/wardenshell.png" RenderString="]" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Armor" AV="2" DV="-1" Cold="10" Heat="10" WornOn="Back" />
+		<part Name="Description" Short="Symbol of rare esteem, this item is awarded to those who look at github commits." />
+		<part Name="Commerce" Value="200" />
+		<part Name="Physics" Weight="20" Organic="true" />
+		<tag Name="Tier" Value="5" />
+		<tag Name="Role" Value="Rare" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+		<tag Name="EquipSound" Value="sfx_equip_armor_organic" />
+		<part Name="AddsRep" Faction="Tortoises" Value="200" />
+	</object>
 
-	<!--Guns-->
+	<!--Guns and Ammos-->
 	<object Name="Brothers_Tortoises_Saltback Culverin" Inherits="Musket">
 		<part Name="Render" DisplayName="saltback culverin" Tile="Items/poacherrifle.png" ColorString="&amp;Y" DetailColor="r" />
 		<part Name="Commerce" Value="350" />
@@ -60,7 +75,7 @@
 		<part Name="MagazineAmmoLoader" ProjectileObject="Brothers_Tortoises_ProjectileSaltbackMagnumBall" AmmoPart="AmmoSlug" MaxAmmo="6" />
 		<part Name="Description" Short="Desc" />
 		<part Name="MakersMark" Mark="&#8776;" Color="R" CrafterName="Cracks-the-Saltback-Shell" />
-		<part Name="TinkerItem" Bits="002" CanDisassemble="true" CanBuild="false" />
+		<part Name="TinkerItem" Bits="0005" CanDisassemble="true" CanBuild="false" />
 		<tag Name="NoSparkingQuest" />
 		<tag Name="Tier" Value="4" />
 		<tag Name="Role" Value="Rare" />
@@ -73,4 +88,5 @@
 	<object Name="Brothers_Tortoises_ProjectileSaltbackMagnumBall" Inherits="BaseLeadSlugProjectile">
 		<part Name="Projectile" BasePenetration="0" BaseDamage="1d8" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
+	
 </objects>
