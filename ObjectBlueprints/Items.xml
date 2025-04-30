@@ -40,11 +40,12 @@
 	<object Name="Brothers_Tortoises_Honorary Shell" Inherits="BaseCloak">
 		<part Name="Render" DisplayName="honorary shell" Tile="Items/wardenshell.png" RenderString="]" ColorString="&amp;Y" DetailColor="w" />
 		<part Name="Armor" AV="2" DV="-1" Cold="10" Heat="10" WornOn="Back" />
-		<part Name="Description" Short="Symbol of rare esteem, this item is awarded to those who look at github commits." />
+		<part Name="Description" Short="Discarded scutes hug a plastifer frame, arranged in a declaration of esteem to all shellbacked pilgrims." />
 		<part Name="Commerce" Value="200" />
 		<part Name="Physics" Weight="20" Organic="true" />
 		<tag Name="Tier" Value="5" />
 		<tag Name="Role" Value="Rare" />
+		<tag Name="NoSparkingQuest" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 		<tag Name="EquipSound" Value="sfx_equip_armor_organic" />
 		<part Name="AddsRep" Faction="Tortoises" Value="200" />
@@ -57,9 +58,9 @@
 		<part Name="Physics" Weight="15" />
 		<part Name="MissileWeapon" Skill="Rifle" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
 		<part Name="MagazineAmmoLoader" ProjectileObject="Brothers_Tortoises_ProjectileSaltbackCulverinBall" AmmoPart="AmmoSlug" MaxAmmo="1" />
-		<part Name="Description" Short="Desc" />
+		<part Name="Description" Short="Issachari know-how has warped steel in a killing shape, a far-flung fang sunk deep in shellbacked prey." />
 		<part Name="MakersMark" Mark="&#8776;" Color="R" CrafterName="Cracks-the-Saltback-Shell" />
-		<part Name="TinkerItem" Bits="002" CanDisassemble="true" CanBuild="false" />
+		<part Name="TinkerItem" Bits="0015" CanDisassemble="true" CanBuild="false" />
 		<tag Name="NoSparkingQuest" />
 		<tag Name="Tier" Value="4" />
 		<tag Name="Role" Value="Rare" />
@@ -73,7 +74,7 @@
 		<part Name="Physics" Weight="5" />
 		<part Name="MissileWeapon" AnimationDelay="0" Skill="Pistol" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="4" RangeIncrement="6" />
 		<part Name="MagazineAmmoLoader" ProjectileObject="Brothers_Tortoises_ProjectileSaltbackMagnumBall" AmmoPart="AmmoSlug" MaxAmmo="6" />
-		<part Name="Description" Short="Desc" />
+		<part Name="Description" Short="Slugged as numbers on a dice, ceremonial Issachari armament ponders the mind: do you feel lucky, lack-salt?" />
 		<part Name="MakersMark" Mark="&#8776;" Color="R" CrafterName="Cracks-the-Saltback-Shell" />
 		<part Name="TinkerItem" Bits="0005" CanDisassemble="true" CanBuild="false" />
 		<tag Name="NoSparkingQuest" />
@@ -85,6 +86,7 @@
 	<object Name="Brothers_Tortoises_ProjectileSaltbackCulverinBall" Inherits="BaseLeadSlugProjectile">
 		<part Name="Projectile" BasePenetration="0" BaseDamage="1d10" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
+	
 	<object Name="Brothers_Tortoises_ProjectileSaltbackMagnumBall" Inherits="BaseLeadSlugProjectile">
 		<part Name="Projectile" BasePenetration="0" BaseDamage="1d8" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
