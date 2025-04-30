@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
-  <object Name="SaltbackGraveyardSurface" Inherits="Widget">
-    <part Name="SaltbackGraveyardSurface" />
-  </object>
+	<object Name="SaltbackGraveyardSurface" Inherits="Widget">
+		<part Name="SaltbackGraveyardSurface" />
+	</object>
 
 	<!--
 
@@ -14,4 +14,9 @@
 	<object Name="Finish_CombingTheSaltDunes_EnterTheSaltbackGraveyard" Inherits="Widget">
 		<part Name="QuestStepFinisher" Trigger="Created" Quest="Combing the Salt Dunes" Step="Locate the Saltback Graveyard" />
 	</object>
+
+	<object Name="Start_TheScuteChild_EnterTheSaltbackGraveyard" Inherits="Widget">
+		<part Name="QuestStarter" Trigger="Created" Quest="The Scute Child" />
+	</object>
+
 </objects>
