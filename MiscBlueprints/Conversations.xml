@@ -13,7 +13,7 @@
 				We have nothing more to say to each other, lack-salt.
 			</text>
 			<choice IfNotHaveQuest="Return to Warden Qoruda" GotoID="Reward">I have made good use of your gift. Is there any way to get another weapon?</choice>
-			<choice GotoID="Ambush">Issachari using weapon bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
+			<choice GotoID="Ambush" IfHaveState="HaveBeenAmbushedByPoacher">Issachari using weapon bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
 			<choice GotoID="End">As you say. Live and drink.</choice>
 		</node>
 	
@@ -312,11 +312,31 @@
 				
 				Yes, yes, that's perfect! As promised, lack-salt, here is your payment. Make good use of it.
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell">
-			<text>Thank you for this, huntress. Live and drink.</text>
+			<choice GotoID="Found3" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell">
+			<text>Thank you for this. What will you do now?</text>
 			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
 			</choice>
 		</node>
+		
+		<node ID="Found3" AllowEscape="false">
+			<text>				
+				What shall I do?
+				
+				{{emote|*The Issachari snorts derisively.*}}
+				
+				There is much preparation ahead, lack-salt. But we shall strip it bare, fashion armor out of scute and bones and trade the rest. Walk in the shade, lack-salt.
+				
+				{{emote|*The Issachari curtly nods in your direction.*}}
+			</text>
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">
+			<text>Walk in the shade, huntress.</text>
+			</choice>
+		</node>	
+		
+		
+					<text>Thank you for this, huntress. Live and drink.</text>
+
+		
 		
 		<node ID="Lie">
 			<text>
