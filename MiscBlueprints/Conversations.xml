@@ -228,7 +228,6 @@
 			</text>
 		<choice GotoID="GiveQuest2">Why would you even want to find this place?</choice>
 		<choice GotoID="Start">I need some time to consider this. In the meantime, could we talk about something else?</choice>
-		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough - live and drink, huntress.</choice>
 		</node>
     
 		<node ID="GiveQuest2">
@@ -237,8 +236,7 @@
 				
 				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the deads have any use for it. Find the place – if it exists – and I'll make sure to reward you handsomely. What say you?
 			</text>
-		<choice GotoID="Start">I will think this over, but I have other questions for you.</choice>
-		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough – live and drink, huntress.</choice>
+		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough - I shall be back soon.</choice>
 		<choice GotoID="End">I will not help you rob the dead – live and drink, for now.</choice>
 		</node>
 	
@@ -328,15 +326,8 @@
 				
 				{{emote|*The Issachari curtly nods in your direction.*}}
 			</text>
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">
-			<text>Walk in the shade, huntress.</text>
-			</choice>
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">Walk in the shade, huntress.</choice>
 		</node>	
-		
-		
-					<text>Thank you for this, huntress. Live and drink.</text>
-
-		
 		
 		<node ID="Lie">
 			<text>
@@ -354,9 +345,7 @@
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
-			<text>Be seeing you. Live and drink.</text>
-			</choice>
+			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">Be seeing you. Live and drink.</choice>
 		</node>
 		
 		<node ID="Protect">
@@ -375,9 +364,7 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
-			<text>As your people say: stay warm and stay dry.</text>
-			</choice>
+			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">As your people say: stay warm and stay dry.</choice>
 		</node>
 		
   </conversation>
@@ -387,24 +374,127 @@
 	
 	<conversation ID="Brothers_Tortoises_WardenQoruda">
 
-		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+		<node ID="Start" IfFinishedQuest="Return to Warden Qoruda">
 			<text>
-				Quest is done.
+			{{emote|*The warden lifts the brim of his hat with a thumb.*}}
+
+			Greetings =name=! You shall always be welcome on these grounds.
 			</text>
+			<choice GotoID="Now">What shall you do now, warden?</choice>
 			<choice GotoID="End">Live and drink.</choice>
 		</node>
-	
+
+		<node ID="Now">
+			<text>
+				{{emote|*The warden stiffles a cough.*}}
+				
+				What do you mean, "now"?
+			</text>	
+			<choice GotoID="Safe">Is this place not safe now?</choice>			
+			<choice GotoID="End">Nothing, actually. Live and drink, warden.</choice>
+		</node>
+
+		<node ID="Safe">
+			<text>
+				{{emote|*The warden's cough worsens, barely allowing for a few words.*}}
+				
+				Greed will always attract the unscrupulous here, =name=. And thus I, its warden, will always be there.
+			</text>	
+			<choice GotoID="Start">At least you have a few calm months ahead. I had other questions, if you do not mind.</choice>			
+			<choice GotoID="End">That is a bit sad, actually. Live and drink, warden.</choice>
+		</node>
+		
+		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+			<text>
+				{{emote|*Another coughing fit shakes the warden's frame.*}}
+				
+				Do you come with news from beyond the Moghra'yi?
+			</text>
+			<choice GotoID="Loyal" IfHaveQuest="Return to Warden Qoruda">These burial grounds are safe from the Issachari for now, warden.</choice>
+			<choice GotoID="Betrayed" IfNotHaveQuest="Return to Warden Qoruda">The Issachari shall have this place. Out of my way, old man.</choice>
+			<choice GotoID="End">Not now, warden. Live and drink.</choice>
+		</node>
+
+		<node ID="Loyal" AllowEscape="false">
+			<text>
+				{{emote|*As you recount the details of what happened, the warden's shoulders relax somewhat.*}}
+				
+				Mightily done, =name=, mightily done. There is no thanking you enough for what you have done.
+			</text>	
+			<choice GotoID="Reward" CompleteQuestStep="Return to Warden Qoruda~Return to the Saltback Graveyard">I could not bear to imagine this place looted, warden.</choice>			
+			<choice GotoID="Reward" CompleteQuestStep="Return to Warden Qoruda~Return to the Saltback Graveyard">Guess I dislike tortoises less than Issachari, in the end.</choice>
+		</node>
+		
+		<node ID="Reward" AllowEscape="false">
+			<text>
+				{{emote|*The warden nods, deep in thoughts.*}}
+				
+				Whatever your reasons may be, =name=, you have done this place a great service, and shall be appropriately rewarded.
+				
+				{{emote|*The warden starts rummaging through his belongings.*}}
+			</text>	
+			<choice GotoID="Reward1">There's really no need for it to be...</choice>			
+			<choice GotoID="Reward1">I just hope it will be...</choice>
+		</node>	
+		
+		<node ID="Reward1" AllowEscape="false">
+			<text>
+				{{emote|*The warden keeps rummaging, trinkets and baubles rolling on the ground.*}}
+			</text>	
+			<choice GotoID="Reward2">... any sort of...</choice>			
+			<choice GotoID="Reward2">... at least some kind of...</choice>
+		</node>	
+
+		
+		<node ID="Reward2" AllowEscape="false">
+			<text>
+				{{emote|*A diminutive jerboa escapes from the warden's surrounding, leaping on his shell in indignation before slipping away, unnoticed by the venerable fighter.*}}
+			</text>	
+			<choice GotoID="Reward3">... expensive reward?</choice>			
+			<choice GotoID="Reward3">... worthless junk?</choice>
+		</node>	
+
+		<node ID="Reward3" AllowEscape="false">
+			<text>
+				{{emote|*Eventually, the warden produces an assemblage in the shape of a tortoise shell, mounted on a sturdy harness.*}}
+				
+				There, =name=. This shell was worn by saltback carers when I first took watch. Shellbacked memories still recognize it as a garment of honor and station.
+			</text>	
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">
+				<text>Thank you, warden. I shall try to be worthy of it. Live and drink.</text>
+				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
+			</choice>			
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">
+				<text>... Well at least something came out of it all. Live and drink, warden.</text>
+				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
+			</choice>
+		</node>	
+
 		<node ID="Start" IfFinishedQuestStep="The Scute Child~Consult with Warden Qoruda">
 			<text>
-				keep secret pls
+				{{emote|*The warden wipes the corners of his mouth.*}}
+				
+				Greetings, =name=. I hope my trust in you is not misplaced.
 			</text>
-			<choice GotoID="Saltbacks">soltbocks</choice>		
-			<choice GotoID="Warden">why warden</choice>
-			<choice GotoID="Sick">lmao coughyboy</choice>
+			<choice GotoID="Saltbacks">I dare not imagine what those saltbacks could do, if enraged.</choice>		
+			<choice GotoID="Warden">I still am amazed to find a warden here.</choice>
+			<choice GotoID="Sick">Has your cough not gotten any better, warden?</choice>
 			<choice Target="Poacher2" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
 			<choice GotoID="End">Live and drink, warden.</choice>
 		</node>
 	
+		<node ID="Betrayed" AllowEscape="false">
+			<text>
+				{{emote|*Rage fills the warden's eyes, and spittles flies out of his mouth as he takes up arms.*}}
+				
+				Fool! Your blood shall stain this land forever!
+			</text>	
+			<choice GotoID="End">
+				<text>At long last, a fight!</text>
+				<part Name="StartFight" />
+			</choice>
+		</node>
+		
 		<node ID="Start">
 			<text>
 				{{emote|*The warden beckons you closer between two coughing fits.*}}
@@ -421,42 +511,86 @@
 
 		<node ID="Saltbacks">
 			<text>
-				tortles
+				{{emote|*The warden smiles faintly.*}}
+				
+				Majestic creatures, are they not? This is where their final steps lead - their stomping helps me find sleep, sometimes.
 			</text>	
-			<choice GotoID="Start">cool.</choice>			
-			<choice GotoID="End">libndink.</choice>
+			<choice GotoID="Start">Before that, I have more questions to ask.</choice>			
+			<choice GotoID="End">Maybe I will go get some rest myself. Live and drink.</choice>
 		</node>
 
 		<node ID="Warden">
 			<text>
-				me
+				{{emote|*The warden's chuckle turns into a dry, hacking cough before he can speak up again.*}}
+				
+				Oh? More lived here, erstwhile - there was a time the saltbacks could find carers here, to ease their final days.
+				
+				{{emote|*The warden's gaze seems lost in reminiscence, looking through you.*}}
 			</text>	
-			<choice GotoID="Start">cool.</choice>			
-			<choice GotoID="End">libndink.</choice>
+			<choice GotoID="Left">What happened, warden? I see none here but you and the elder saltbacks.</choice>			
+			<choice GotoID="End">I will do like them and leave, then. Live and drink.</choice>
+		</node>
+		
+		<node ID="Left">
+			<text>
+				{{emote|*The warden shakes his head, shedding the last remnants of a memory long past.*}}
+				
+				Time happened. They left, and soon I will leave too. It will only be the saltbacks, then.
+			</text>	
+			<choice GotoID="Old">You would leave? Where?</choice>			
+			<choice GotoID="End">Sorry about that, but I must go. Live and drink.</choice>
+		</node>
+		
+		<node ID="Old">
+			<text>
+				{{emote|*The warden's smile seems more wretched than joyful.*}}
+				
+				The question would be "when", traveler.
+				
+				{{emote|*Another coughing fit shakes his massive frame.*}}
+			</text>	
+			<choice GotoID="Sick">You are coughing something fierce. Are you alright?</choice>			
+			<choice GotoID="End">I'll take a few steps back, just in case. Live and drink.</choice>
 		</node>
 		
 		<node ID="Sick">
 			<text>
-				kinda
+				I'm alr-
+				
+				{{emote|*Another coughing fit contradicts the half-uttered lie.*}}
+				
+				... Even the Harvest Sun sets in the evening, traveler. And it is near sundown for me.
 			</text>	
-			<choice GotoID="Start">cool.</choice>			
-			<choice GotoID="End">libndink.</choice>
+			<choice GotoID="Help">Is there anything I can do?</choice>			
+			<choice GotoID="End">I won't take more of your time then. Live and drink.</choice>
+		</node>
+
+		<node ID="Help">
+			<text>
+				There is no remedy against old age, traveler.
+			</text>	
+			<choice GotoID="Start">I am sorry. I have other questions if you will allow me, warden.</choice>			
+			<choice GotoID="End">Live and drink then - honey, preferably.</choice>
 		</node>
 		
-		<node ID="Poacher">
+		<node ID="Poacher" AllowEscape="false">
 			<text>
-				meanie
+				{{emote|*The warden's gaze meet yours, unperturbed.*}}
+				
+				And why would you do such a thing? This is a place of peace for fading saltbacks. Disturb its solemnity at your own risks, stranger.
 			</text>	
-			<choice GotoID="Start">cool.</choice>			
-			<choice GotoID="End">libndink.</choice>		
+			<choice GotoID="NoTrouble">I can see that. Maybe I should reconsider the words of the Issachari then.</choice>			
+			<choice GotoID="Trouble">The risks are all yours, warden - your corpse will not stand out from the others.</choice>		
 		</node>
 		
 		<node ID="Poacher2">
 			<text>
-				meanie²
+				{{emote|*The warden's breath is slow and measured, albeit wheezing.*}}
+				
+				Of her? Nothing, =name=, but I know of people like her. They would leave nothing here but salt and tears, if given the opportunity. Be wise, and keep this place's location secret.				
 			</text>	
-			<choice GotoID="Start">cool.</choice>			
-			<choice GotoID="End">libndink.</choice>	
+			<choice GotoID="Start">I will do my best. I had other questions, warden.</choice>			
+			<choice GotoID="End">Live and drink, warden.</choice>	
 		</node>
 		
 		<node ID="Graveyard" AllowEscape="false">
@@ -480,7 +614,7 @@
 			In that case, you will find there is still a fight in these old bones yet!
 			</text>
 			<choice GotoID="Scared">Wait! I misspoke. Please forgive my pride, warden.</choice>
-			<choice GotoID="End">
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">
 				<text>Bring it on!</text>
 				<part Name="StartFight" />
 			</choice>
@@ -493,7 +627,7 @@
 			You play dangerous games, =name=. Not all wardens have my patience.
 			</text>
 			<choice GotoID="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
-			<choice GotoID="End">
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">
 				<text>Not all wardens are decrepit wrecks either - it's gotta be my lucky day.</text>
 				<part Name="StartFight" />
 			</choice>
@@ -506,8 +640,8 @@
 				Your wisdom is commendable, =name=. I can only trust that you will not foolishly spread word of this place.
 			</text>	
 			<choice GotoID="WhyNot">Why would I not? Why must this place stay hidden?</choice>			
-			<choice GotoID="WillNot" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I will not, warden - you have my word.</choice>
-			<choice GotoID="NoPromise" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I can make no such promise, warden.</choice>
+			<choice GotoID="WillNot">I will not, warden - you have my word.</choice>
+			<choice GotoID="NoPromise">I can make no such promise, warden.</choice>
 		</node>
 		
 		<node ID="WhyNot" AllowEscape="false">
@@ -518,8 +652,21 @@
 				
 				... You are astute not to make promises without a full picture, =name=. Look around you: saltbacks come here to expire, leaving a final mark on Qud before passing away. Where you might only see bones, the shellbacked eye wonders at cultural legacy.
 			</text>	
-			<choice GotoID="WillNot" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">I see, warden. Rest assured: this place is safe.</choice>
-			<choice GotoID="NoPromise" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
+			<choice GotoID="Carapace">
+				<text>I am shellbacked myself, warden. Maybe I will come here in my later days, spend time in the shade.</text>
+				<part Name="RequirePart" Part="Carapace" Render="Mutation: Carapace" />
+			</choice>
+			<choice GotoID="WillNot">I see, warden. Rest assured: this place is safe.</choice>
+			<choice GotoID="NoPromise">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
+		</node>
+		
+		<node ID="Carapace">
+			<text>
+				{{emote|*The warden smiles faintly.*}}
+
+				Maybe you will, =name=. Maybe you will.
+			</text>	
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">In the meantime, live and drink, warden.</choice>
 		</node>
 		
 		<node ID="WillNot">
@@ -528,7 +675,7 @@
 
 				Thank you =name=. Live and drink, traveler.
 			</text>	
-			<choice GotoID="End">Live and drink, venerable warden.</choice>
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Live and drink, venerable warden.</choice>
 		</node>
 		
 		<node ID="NoPromise">
@@ -537,7 +684,7 @@
 				
 				I cannot hold you responsible of an offense not yet committed, and can only hope you find wisdom in your time, =name=. Still, live and drink nonetheless.
 			</text>	
-			<choice GotoID="End">Live and drink, warden.</choice>
+			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Live and drink, warden.</choice>
 		</node>		
 
 	</conversation>
