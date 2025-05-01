@@ -34,6 +34,7 @@ namespace Tortoises.Brothers
 
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
             zoneManager.SetZoneProperty(zoneID, "SkipTerrainBuilders", true);
+            zoneManager.AddZoneBuilder(zoneID, 6000, "SaltDunes");
             zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "SaltbackGraveyard.rpm");
             zoneManager.AddZonePostBuilder(zoneID, "Music", "Track", "Music/Stilt");
             zoneManager.AddZonePostBuilder(zoneID, "AddWidgetBuilder", "Blueprint", "SaltbackGraveyardSurface");
@@ -42,7 +43,6 @@ namespace Tortoises.Brothers
             zoneManager.SetZoneName(zoneID, "Saltback Graveyard", Proper: true);
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
 
-            // Optional: Add the location to a generated locations list
             var locationInfo = new GeneratedLocationInfo
             {
                 name = "Saltback Graveyard",
