@@ -127,6 +127,10 @@
 		<part Name="Titles" Primary="Issachari pariah" />
 		<part Name="Description" Short="Saltflakes pepper a wind-carved face, =pronouns.possessive= eyes squinting against the glaring Salt Sun and Beetle Moon. Threadbare patched-up jubbah and traditional Issachari veil conceal weathered skin and loaded bandoleer." />
 		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Pariahs-100" />
+		<stat Name="AV" Value="3" />
+		<stat Name="Level" Value="19" />
+		<stat Name="Hitpoints" Value="36" />
+		<stat Name="Agility" sValue="26" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
 		<skill Name="Rifle_DrawABead" />
 		<skill Name="Rifle_SteadyHands" />
@@ -182,4 +186,55 @@
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
+
+	<object Name="Brothers_Tortoises_Skins-the-Dawnglider" Inherits="Issachari Rifler">
+		<part Name="Render" DisplayName="{{M|Skins-the-Dawnglider, legendary Issachari hunter}}" Tile="Creatures/hunterpistol.png" RenderString="h" ColorString="&amp;M" />
+		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal steel cylinders, snarling a disastrous proposition." />
+		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
+		<stat Name="AV" Value="3" />
+		<stat Name="Level" Value="19" />
+		<stat Name="Hitpoints" Value="36" />
+		<stat Name="Agility" sValue="26" />
+		<skill Name="Pistol_SteadyHands" />
+		<skill Name="Pistol_WeakSpotter" />
+		<skill Name="CookingAndGathering_Butchery" />
+		<part Name="GivesRep" />
+		<tag Name="staticFaction1" Value="Birds,disliked,leading hunting parties against them" />
+		<tag Name="NoSleep" />
+		<tag Name="Gender" Value="female" />
+		<xtagGrammar Proper="true" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Saltback Magnum" Number="1" />
+		<inventoryobject Blueprint="Lead Slug" Number="24" />
+		<inventoryobject Blueprint="Dagger" Number="1" />
+		<inventoryobject Blueprint="Sandals" Number="1" />
+		<inventoryobject Blueprint="Slate Frock" Number="1" />
+		<inventoryobject Blueprint="Issachari Sun Veil" Number="1" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+	
+	<object Name="Brothers_Tortoises_Quarters-the-Kraken" Inherits="Issachari Rifler">
+		<part Name="Render" DisplayName="{{M|Quarters-the-Kraken, legendary Issachari hunter}}" Tile="Creatures/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
+		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
+		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
+		<stat Name="AV" Value="3" />
+		<stat Name="Level" Value="19" />
+		<stat Name="Hitpoints" Value="36" />
+		<stat Name="Agility" sValue="26" />
+		<skill Name="Rifle_DrawABead" />
+		<skill Name="Rifle_SteadyHands" />
+		<skill Name="CookingAndGathering_Butchery" />
+		<part Name="GivesRep" />
+		<tag Name="staticFaction1" Value="Prey,disliked,taking down Moghra'yi giants" />
+		<tag Name="NoSleep" />
+		<tag Name="Gender" Value="male" />
+		<xtagGrammar Proper="true" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Saltback Culverin" Number="1" />
+		<inventoryobject Blueprint="Lead Slug" Number="24" />
+		<inventoryobject Blueprint="Dagger" Number="1" />
+		<inventoryobject Blueprint="Sandals" Number="1" />
+		<inventoryobject Blueprint="Slate Frock" Number="1" />
+		<inventoryobject Blueprint="Issachari Sun Veil" Number="1" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
 </objects>
