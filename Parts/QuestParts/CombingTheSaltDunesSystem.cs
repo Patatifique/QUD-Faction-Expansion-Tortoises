@@ -11,7 +11,7 @@ namespace XRL.World.Quests
             ZoneManager.instance.GetZone("JoppaWorld").BroadcastEvent("SaltbackGraveyardReveal");
             if (!The.Game.HasQuest("The Scute Child"))
                 return;
-            The.Game.CompleteQuest("Combing the Salt Dunes");
+            The.Game.FinishQuestStep("Combing the Salt Dunes", "Locate the Saltback Graveyard");
         }
 
         public override GameObject GetInfluencer() =>
