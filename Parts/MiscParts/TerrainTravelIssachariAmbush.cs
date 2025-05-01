@@ -34,7 +34,7 @@ namespace XRL.World.Parts
                 if (The.Core.IDKFA)
                     return false;
                 // Make sure the player has pissed off the poacher
-                if (The.Game.HasQuest("Return to Qoruda"))
+                if (The.Game.GetBooleanGameState("HatedByPoacher"))
                 {
                     // Check that the player has not yet been ambushed
                     if (The.Game.HasStringGameState("HaveBeenAmbushedByPoacher"))

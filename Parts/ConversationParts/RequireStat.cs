@@ -1,5 +1,5 @@
 // This is a new conversation part for checking player stats in conversations.
-//Usage in xml is as follows: <part Name="RequireStat" Stat="stat checked" Value="value wanted" />
+// Usage in xml is as follows: <part Name="RequireStat" Stat="stat checked" Value="value wanted" />
 
 namespace XRL.World.Conversations.Parts
 {
