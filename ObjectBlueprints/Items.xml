@@ -80,6 +80,7 @@
 		<tag Name="NoSparkingQuest" />
 		<tag Name="Tier" Value="4" />
 		<tag Name="Role" Value="Rare" />
+		<tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Rifles/sfx_missile_poacher_rifle_fire" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 	</object>
 

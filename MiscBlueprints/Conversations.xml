@@ -12,7 +12,7 @@
 				
 				We have nothing more to say to each other, lack-salt.
 			</text>
-			<choice GotoID="Reward">I have make good use of your gift. Is there any way to get another one?</choice>
+			<choice IfNotHaveQuest="Return to Warden Qoruda" GotoID="Reward">I have made good use of your gift. Is there any way to get another weapon?</choice>
 			<choice GotoID="Ambush">Issachari using weapon bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
 			<choice GotoID="End">As you say. Live and drink.</choice>
 		</node>
@@ -63,8 +63,8 @@
 			<choice Target="Rifle">That's a nice rifle you've got.</choice>
 			<choice Target="Shade">What makes it your shade?</choice>
 			<choice Target="Activity">What are you even doing here?</choice>
-			<choice Target="Salt" IfHaveLiquid="salt">I'm not a lack-salt; I have some right there.</choice>
-			<choice Target="Pariah">Why are you called "pariah" when you still bear the red-and-white?.</choice>
+			<choice Target="Salt" IfHaveLiquid="salt">I'm not a lack-salt: I have some right there.</choice>
+			<choice Target="Pariah">Why are you called "pariah" when you still bear the red-and-white?</choice>
 			<choice Target="Work">I'm in need of work. Do you have any that needs doing?</choice>
 			<choice GotoID="End">Live and drink, huntress.</choice>		
 		</node>
@@ -103,8 +103,31 @@
 				
 				And what do you know of our rifling traditions, lack-salt?	
 			</text>
+			<choice GotoID="Knowledgeable">
+				<text>I can strip, clean and reassemble an Issachari rifle under the Beetle Moon.</text>
+				<part Name="RequirePart" Part="Rifle_SteadyHands" Render="Bow and Rifle: Steady Hands" />
+			</choice>
+			<choice GotoID="Knowledgeable">
+				<text>I favor lighter weapons, but still consider myself a diligent student of lead slugs.</text>
+				<part Name="RequirePart" Part="Pistol_SteadyHands" Render="Pistol: Steady Hand" />
+			</choice>
+			<choice GotoID="Knowledgeable">
+				<text>Only that I wish they were put to use on heavier armament.</text>
+				<part Name="RequirePart" Part="HeavyWeapons_StrappingShoulders" Render="Heavy Weapons: Strapping Shoulders" />
+			</choice>
 			<choice GotoID="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
 			<choice GotoID="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
+		</node>
+
+		<node ID="Knowledgeable">
+			<text>
+				{{emote|*The Issachari seems taken aback by your knowledge.*}} 
+				
+				Is that so? In any case, this one here is my doing. Powerful enough to pierce even the hardest shells without trouble.	
+			</text>
+			<choice GotoID="Work">What would it take to obtain such a weapon?</choice>
+			<choice GotoID="Start">Impressive. I had other questions.</choice>
+			<choice GotoID="End">I see. I will let you to your craft then - live and drink.</choice>
 		</node>
 		
 		<node ID="ThingOrTwo">
@@ -205,7 +228,7 @@
 			</text>
 		<choice GotoID="GiveQuest2">Why would you even want to find this place?</choice>
 		<choice GotoID="Start">I need some time to consider this. In the meantime, could we talk about something else?</choice>
-		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough; live and drink, huntress.</choice>
+		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough - live and drink, huntress.</choice>
 		</node>
     
 		<node ID="GiveQuest2">
@@ -268,7 +291,7 @@
 			<choice GotoID="Found">I may have found it.</choice>
 			<choice GotoID="Lie">
 				<text>{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</text>
-				<part Name="RequireStat" Stat="Ego" Value="17" />
+				<part Name="RequireStat" Stat="Ego" Value="20" />
 			</choice>
 			<choice GotoID="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
 		</node>
@@ -289,7 +312,10 @@
 				
 				Yes, yes, that's perfect! As promised, lack-salt, here is your payment. Make good use of it.
 			</text>
-			<choice GotoID="End">Thank you for this, huntress. Live and drink.</choice>
+			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell">
+			<text>Thank you for this, huntress. Live and drink.</text>
+			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
+			</choice>
 		</node>
 		
 		<node ID="Lie">
@@ -308,7 +334,9 @@
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice GotoID="End">Be seeing you. Live and drink.</choice>
+			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
+			<text>Be seeing you. Live and drink.</text>
+			</choice>
 		</node>
 		
 		<node ID="Protect">
@@ -327,7 +355,9 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice GotoID="End">As your people say: stay warm and stay dry.</choice>
+			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
+			<text>As your people say: stay warm and stay dry.</text>
+			</choice>
 		</node>
 		
   </conversation>
@@ -521,6 +551,10 @@
 				<text>O great giant, I am a friend to shellbeareres everywhere. What is your destination?</text>
 				<part Name="RequireReputation" Faction="Tortoises" Level="Loved" />
 			</choice>
+			<choice GotoID="Graveyard2">
+				<text>If you wish to make your trip safely, decrepit giant, you will reveal your destination to me.</text>
+				<part Name="RequirePart" Part="Persuasion_MenacingStare" Render="Persuation: Menacing Stare" />
+			</choice>
 			<choice GotoID="End">Live and drink, wandering giant.</choice>
 		</node>
 		
@@ -531,7 +565,15 @@
 			<part Name="RevealGraveyardLocation" />
 			<choice GotoID="End">I see. Live and drink until then, pilgrim.</choice>
 		</node>
-	
+
+		<node ID="Graveyard2">
+			<text>
+				{{emote|*In a moment of panic, the gigantic saltback quickly presses foreheads with you, and clarity strikes your mind: a long pilgrimage to a place of death.*}}
+			</text>
+			<part Name="RevealGraveyardLocation" />
+			<choice GotoID="End">This will do.</choice>
+		</node>
+		
 	</conversation>
   
 </conversations>
