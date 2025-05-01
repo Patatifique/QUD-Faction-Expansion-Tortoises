@@ -313,6 +313,7 @@
 			<choice GotoID="Found3" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell">
 			<text>Thank you for this. What will you do now?</text>
 			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
+			<part Name="ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
 			</choice>
 		</node>
 		
@@ -345,7 +346,10 @@
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">Be seeing you. Live and drink.</choice>
+			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
+				<text>Be seeing you. Live and drink.</text>
+				<part Name="ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
+			</choice>
 		</node>
 		
 		<node ID="Protect">
@@ -364,7 +368,10 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">As your people say: stay warm and stay dry.</choice>
+			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
+				<text>As your people say: stay warm and stay dry.</text>
+				<part Name="ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
+			</choice>
 		</node>
 		
   </conversation>
