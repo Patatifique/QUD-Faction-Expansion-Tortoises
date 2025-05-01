@@ -1,0 +1,11 @@
+Faction Expansion: Tortoises
+
+- Concept and Design: Balthichou & Patatifique
+- C# Coding: Patatifique
+- Spritework: Balthichou
+- Writing: Balthichou
+- XML Formatting: Patatifique
+
+Third party assets used:
+
+- Saltback culverin/magnum firing sound effect: 

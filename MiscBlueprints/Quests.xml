@@ -26,8 +26,8 @@
 			<text>Speak with Warden Qoruda to gain insight into the Saltbacks Graveyard.</text>
 		</step>
 
-		<step Name="Keep the Graveyard’s Location Secret" XP="500">
-			<text>Guard the location of the Saltback Graveyard, ensuring its sanctity remains intact.</text>
+		<step Name="Decide the Fate of the Saltback Graveyard" XP="500">
+			<text>Guard the location of the Saltback Graveyard, ensuring its sanctity remains intact, or reveal it to self-serving hunters.</text>
 		</step>
 
 	</quest>
