@@ -228,7 +228,7 @@
 	</object>
 	
 	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="Issachari Rifler">
-		<part Name="Render" DisplayName="{{M|Quarters-the-Kraken, legendary Issachari hunter}}" Tile="Creatures/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
+		<part Name="Render" DisplayName="{{M|Quarters-the-Salt-Kraken, legendary Issachari hunter}}" Tile="Creatures/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
