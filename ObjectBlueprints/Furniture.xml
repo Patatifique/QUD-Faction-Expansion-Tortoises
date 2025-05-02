@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
   
-  <object Name="FakeStiltWell" Inherits="MountedFurniture">
+  <object Name="Brothers_Tortoises_Big Stele" Inherits="MountedFurniture">
     <part Name="Physics" Weight="2000" Takeable="false" Solid="true" FlameTemperature="99999" VaporTemperature="1500" />
     <part Name="Description" Short="Shellbacked glyphs carved into saltstone recount histories of travel and pilgrimage. Contemplating the coarse plane, the arms of time recede until gaze faces the early scutes of Qud." />
     <part Name="Render" DisplayName="funerary stele" Tile="Terrain/tile_bigstele.png" DetailColor="C" RenderString="007" ColorString="&amp;Y" />

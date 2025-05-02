@@ -86,7 +86,7 @@
 		<tag Name="Gigantic" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing the Salt Dunes" Step="Find a Walking Dune" />
-		<part Name="AiPilgrimGraveyard" TargetObject="FakeStiltWell" Chance="100"/>
+		<part Name="AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
 		<tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
 		<tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="6" />
 	</object>
