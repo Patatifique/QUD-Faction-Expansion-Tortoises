@@ -21,7 +21,7 @@ namespace XRL.World.Parts
         public int GraveyardZx = 10;
         public string GraveyardZoneID = The.Game.GetStringGameState("SaltbackGraveyardZoneID");
         public string GraveyardEntranceZoneID = The.Game.GetStringGameState("SaltbackGraveyardZoneID");
-        public string TargetObject = "FakeStillWell";
+        public string TargetObject = "Brothers_Tortoises_Big Stele";
         public string MapNoteAttributes;
         public int Chance = 100;
         public bool Ignore;
