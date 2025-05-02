@@ -40,7 +40,7 @@
 		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
 		<stat Name="Level" Value="5" />
 		<stat Name="AV" Value="4" />
-		<inventoryobject Blueprint="Brothers_Tortoises_Shaile_Bite" Number="1" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Baby_Shaile_Bite" Number="1" />
 		<part Name="Description" Short="Jutting out of rippling softshell is a single rotound head on a swivel. =pronouns.Subjective= checks =pronouns.possessive= surroundings, looking for unfortunate crawlfigures whose chitinous appendages crunch comfortably between beaked jaws." />
 		<tag Name="Role" Value="Tank" />
 		
@@ -56,6 +56,12 @@
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 
+	</object>
+
+
+	<object Name="Brothers_Tortoises_Baby_Shaile_Bite" Inherits="Brothers_Tortoises_Shaile_Bite">
+		<part Name="MeleeWeapon" BaseDamage="2d2" />
+		<part Name="ElementalDamage" Damage="1d2" Attributes="Cold" />
 	</object>
 	
 	<!-- Other Tortoises-->
@@ -138,7 +144,7 @@
 		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Pariahs-100" />
 		<stat Name="AV" Value="3" />
 		<stat Name="Level" Value="19" />
-		<stat Name="Hitpoints" Value="36" />
+		<stat Name="Hitpoints" Value="58" />
 		<stat Name="Agility" sValue="26" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
 		<skill Name="Rifle_DrawABead" />
@@ -202,7 +208,7 @@
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
 		<stat Name="Level" Value="19" />
-		<stat Name="Hitpoints" Value="36" />
+		<stat Name="Hitpoints" Value="72" />
 		<stat Name="Agility" sValue="26" />
 		<skill Name="Pistol_SteadyHands" />
 		<skill Name="Pistol_WeakSpotter" />
@@ -221,13 +227,13 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_Tortoises_Quarters-the-Kraken" Inherits="Issachari Rifler">
+	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="Issachari Rifler">
 		<part Name="Render" DisplayName="{{M|Quarters-the-Kraken, legendary Issachari hunter}}" Tile="Creatures/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
 		<stat Name="Level" Value="19" />
-		<stat Name="Hitpoints" Value="36" />
+		<stat Name="Hitpoints" Value="72" />
 		<stat Name="Agility" sValue="26" />
 		<skill Name="Rifle_DrawABead" />
 		<skill Name="Rifle_SteadyHands" />
