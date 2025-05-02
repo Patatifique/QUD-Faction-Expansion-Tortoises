@@ -70,7 +70,7 @@
 
 	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="walking dune" Tile="Creatures/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
-		<part Name="Corpse" CorpseChance="0"/>
+		<part Name="Corpse" CorpseChance="90" CorpseBlueprint="Brothers_Tortoises_Walking Dune Corpse" />
 		<part Name="Brain" Factions="Tortoises-100, Unshelled Retpiles-100" Hostile="false" Calm="True"/>
 		<tag Name="NoHateFactions" Value="Birds,Unshelled Reptiles,Prey,Mollusks" />
 		<stat Name="AV" Value="17" />
@@ -119,7 +119,16 @@
 		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Saltback Pavise" />
 	</object>
 
-
+	<object Name="Brothers_Tortoises_Walking Dune Corpse" Inherits="Animal Corpse">
+		<part Name="Render" DisplayName="walking dune corpse" />
+		<part Name="Food" Message="Delving in these venerable canyons allows for some dry meat foraging." />
+		<part Name="Description" Short="Lo! Beneath the scute mountains there lays a cavern, saltflies nesting in keratine grooves." />
+		<part Name="Physics" Weight="40000" />
+		<part Name="Commerce" Value="1500" />
+		<tag Name="Tier" Value="8" />    
+		<tag Name="Role" Value="Epic" />
+		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
 	
 	<!--NPCs-->
 	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="Issachari Rifler">
