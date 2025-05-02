@@ -1,0 +1,18 @@
+[h1]Brother's Modding Library[/h1]
+This mod countains various parts and features used most notably in the Faction Expansion: Tortoises mod, as well as any other of our upcoming mods. You will find below a non-exhaustive list of the mod's content.
+
+[h2]New Conversation Parts[/h2]
+The mod countains several new parts that can be called in any .xml conversation. You will find in the mod's files a sample conversation countaining various example of how said parts can be used.
+
+[h3]RequirePart[/h3]
+Although the game already has the IfHavePart predicate that only displays a dialogue option if you have the relevant part (be it mutation or skill), the RequirePart conversation part will actually display the dialogue option greyed out if you lack the relevant part, as well as the needed part in brackets.
+
+This is similar to the RequireReputation part already used by the game in the Earl of Omnonporch quest, letting you secure the Spindle if your reputaiton with the Consortium of Phyta is greater than 600.
+
+[h3]RequireStat[/h3]
+Similarly to the game's RequireReputation or this mod's RequirePart, RequireStat lets you display dialogue options that require a minimum attribute to select. If that minimum is not met, the option will be greyed out.
+
+The game's definition of an attribute extends the usage of this part to Level, AV, DV, MA or even the various elemental resistances.
+
+[h3]ModifyReputation[/h3]
+This part allows for manipulation of reputations through dialogue options. Up to two separate reputations can be either increased or decreased with a single dialogue option.
