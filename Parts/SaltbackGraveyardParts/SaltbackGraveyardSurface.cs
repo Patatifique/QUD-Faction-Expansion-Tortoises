@@ -26,7 +26,7 @@ namespace XRL.World.Parts
             {
                 The.Game.SetIntGameState(this.RevealKey, 1);
                 ZoneManager.instance.GetZone("JoppaWorld").BroadcastEvent("SaltbackGraveyardReveal");
-                The.Game.SetStringGameState("GraveyardKnown", str);
+                The.Game.SetStringGameState("GraveyardKnown", "1");
                 JournalMapNote mapNote = JournalAPI.GetMapNote(this.RevealSecret);
                 if (mapNote != null && !mapNote.Revealed)
                 {

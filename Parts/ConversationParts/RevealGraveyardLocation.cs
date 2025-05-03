@@ -1,3 +1,5 @@
+using Qud.API;
+using System;
 using XRL.World;
 
 namespace XRL.World.Conversations.Parts
@@ -14,7 +16,7 @@ namespace XRL.World.Conversations.Parts
         public override bool HandleEvent(EnteredElementEvent E)
         {
             ZoneManager.instance.GetZone("JoppaWorld").BroadcastEvent("SaltbackGraveyardReveal");
-            The.Game.SetStringGameState("GraveyardKnown", str);
+            The.Game.SetStringGameState("GraveyardKnown", "1");
             return base.HandleEvent(E);
         }
     }
