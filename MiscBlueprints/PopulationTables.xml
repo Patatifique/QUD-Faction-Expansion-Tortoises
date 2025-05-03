@@ -25,7 +25,7 @@
 	</population>
 
 	<population Name="SaltDesertZoneGlobals" Load="Merge">
-		<object Number="2d2" Chance="3" Blueprint="Brothers_Tortoises_Walking Dune" />
+		<object Number="2d2" Chance="5" Blueprint="Brothers_Tortoises_Walking Dune" />
 	</population>
 
 
