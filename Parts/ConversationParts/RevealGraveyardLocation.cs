@@ -14,7 +14,7 @@ namespace XRL.World.Conversations.Parts
         public override bool HandleEvent(EnteredElementEvent E)
         {
             ZoneManager.instance.GetZone("JoppaWorld").BroadcastEvent("SaltbackGraveyardReveal");
-            The.Game.SetBooleanGameState("GraveyardKnown", true);
+            The.Game.SetStringGameState("GraveyardKnown", str);
             return base.HandleEvent(E);
         }
     }
