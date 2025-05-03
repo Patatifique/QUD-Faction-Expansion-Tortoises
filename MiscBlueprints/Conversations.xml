@@ -48,6 +48,7 @@
 				Have you come bearing news of the Saltback Graveyard, lack-salt?
 			</text>
 			<choice IfFinishedQuestStep="Combing the Salt Dunes~Locate the Saltback Graveyard" GotoID="QuestChoice">About the Saltback Graveyard...</choice>
+			<choice IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Combing the Salt Dunes~Locate the Saltback Graveyard" GotoID="IKnow">I know where the Saltback Graveyard is.</choice>
 			<choice GotoID="Remind">Remind me why you want to find this place again?</choice>
 			<choice GotoID="Unfair">Why is it I'm the one looking for this place why you smoke the hookah here?</choice>
 			<choice GotoID="RifleQuest">No. But is this the rifle you use to take down saltbacks?</choice>
@@ -280,6 +281,35 @@
 			<choice GotoID="End">Motivation enough – I will return with the Graveyard's location. In the meantime, live and drink.</choice>
 		</node>
 
+		<node ID="IKnow">
+			<text>
+				{{emote|*The Issachari's eyebrows shoot up.*}} 
+				
+				And how do you know?
+			</text>
+			<choice GotoID="BeenThere">I have my ways, huntress.</choice>
+			<choice GotoID="BeenThere">... A tortoise told me?</choice>
+		</node>
+
+		<node ID="BeenThere">
+			<text>
+				{{emote|*The Issachari sighs heavily behind her veil.*}} 
+				
+				Have you even been there, lack-salt?	
+			</text>
+			<choice GotoID="Go">...</choice>
+			<choice GotoID="End">I'm on my way there, actually. Live and drink.</choice>
+		</node>
+
+		<node ID="Go">
+			<text>				
+				I would rather you check the reality of rumors before wasting speechwater, lack-salt.	
+				
+				{{emote|*The Issachari reports her attention back to her weapon.*}} 
+			</text>
+			<choice GotoID="End">I will make sure the Saltback Graveyard exists, then. Live and drink.</choice>
+		</node>
+		
 		<node ID="QuestChoice">
 			<text>
 				{{emote|*The Issachari leans forward, her intense gaze on you.*}}
@@ -721,11 +751,11 @@
 			<text>
 				{{emote|*keeps walking silently.*}}
 			</text>
-			<choice GotoID="Graveyard">
-				<text>O great giant, I am a friend to shellbeareres everywhere. What is your destination?</text>
+			<choice GotoID="Graveyard" IfNotHaveState="GraveyardKnown">
+				<text>O great giant, I am a friend to shellbearerers everywhere. What is your destination?</text>
 				<part Name="RequireReputation" Faction="Tortoises" Level="Loved" />
 			</choice>
-			<choice GotoID="Graveyard2">
+			<choice GotoID="Graveyard2" IfNotHaveState="GraveyardKnown">
 				<text>If you wish to make your trip safely, decrepit giant, you will reveal your destination to me.</text>
 				<part Name="RequirePart" Part="Persuasion_MenacingStare" Render="Persuation: Menacing Stare" />
 			</choice>
