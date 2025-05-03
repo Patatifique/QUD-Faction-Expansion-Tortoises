@@ -81,7 +81,7 @@ namespace XRL.World.Parts
                                 Cell spawnCellAmbushers = null;
                                 for (int attempt = 0; attempt < 20; attempt++) // Try up to 20 times
                                 {
-                                    Cell candidate = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(Stat.Random(4, 6));
+                                    Cell candidate = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(Stat.Random(4, 8));
                                     if (candidate != null && !usedSpawnCells.Contains(candidate))
                                     {
                                         spawnCellAmbushers = candidate;

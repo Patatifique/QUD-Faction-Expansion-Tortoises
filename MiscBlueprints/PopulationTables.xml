@@ -43,8 +43,16 @@
 	<!--Main Ambush Population-->
 	<population Name="Brothers_Tortoises_Issachari Ambushers">
 		<group Name="Contents" Style="pickeach">
-			<!--General Commander, will always be there (for now cracks the saltback shell, can be changed later-->
-			<object Number="1" Blueprint="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
+			<!--General Commander, will always be there, either gunner, rifler or a very small chance for both-->
+			<group Name="Commander" Style="pickone">
+				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_Quarters-the-Salt-Kraken" />
+				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_Skins-the-Dawnglider" />
+				<group Chance="10" Name="UnluckyParty" Style="pickeach">
+					<object Number="1" Blueprint="Brothers_Tortoises_Quarters-the-Salt-Kraken" />
+					<object Number="1" Blueprint="Brothers_Tortoises_Skins-the-Dawnglider" />
+				</group>
+			</group>
+			
 			<!--Rest of the party gets chosen here-->
 			<group Name="Types" Style="pickeach">
 				<group Name="Raiders" Style="pickeach">
