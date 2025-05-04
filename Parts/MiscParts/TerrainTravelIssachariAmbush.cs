@@ -59,7 +59,7 @@ namespace XRL.World.Parts
                         Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
                         zone.CheckWeather();
                         The.Player.SystemMoveTo(zone.GetPullDownLocation(The.Player));
-                        int num = (int)Popup.ShowBlock("Silhouettes sporting the Issachari red-and-white pop out of the salt where they laid ni ambush! Their leader wields an impressive weapon bearing a familiar mark.");
+                        int num = (int)Popup.ShowBlock("Silhouettes sporting the Issachari red-and-white pop out of the salt where they laid in ambush! Their leader wields an impressive weapon bearing a familiar mark.");
                         The.ZoneManager.ProcessGoToPartyLeader();
                         The.Player.FireEvent(Event.New("AfterLost", "FromCell", (object)currentCell));
 
