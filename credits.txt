@@ -8,4 +8,4 @@ Faction Expansion: Tortoises
 
 Third party assets used:
 
-- Saltback culverin/magnum firing sound effect: 
+- Saltback culverin/magnum firing sound effect: https://freesound.org/people/straget/sounds/410552/
