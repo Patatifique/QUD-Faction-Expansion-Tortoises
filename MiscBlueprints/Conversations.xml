@@ -106,15 +106,15 @@
 			</text>
 			<choice GotoID="Knowledgeable">
 				<text>I can strip, clean and reassemble an Issachari rifle under the Beetle Moon.</text>
-				<part Name="RequirePart" Part="Rifle_SteadyHands" Render="Bow and Rifle: Steady Hands" />
+				<part Name="Brothers_RequirePart" Part="Rifle_SteadyHands" Render="Bow and Rifle: Steady Hands" />
 			</choice>
 			<choice GotoID="Knowledgeable">
 				<text>I favor lighter weapons, but still consider myself a diligent student of lead slugs.</text>
-				<part Name="RequirePart" Part="Pistol_SteadyHands" Render="Pistol: Steady Hand" />
+				<part Name="Brothers_RequirePart" Part="Pistol_SteadyHands" Render="Pistol: Steady Hand" />
 			</choice>
 			<choice GotoID="Knowledgeable">
 				<text>Only that I wish they were put to use on heavier armament.</text>
-				<part Name="RequirePart" Part="HeavyWeapons_StrappingShoulders" Render="Heavy Weapons: Strapping Shoulders" />
+				<part Name="Brothers_RequirePart" Part="HeavyWeapons_StrappingShoulders" Render="Heavy Weapons: Strapping Shoulders" />
 			</choice>
 			<choice GotoID="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
 			<choice GotoID="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
@@ -319,7 +319,7 @@
 			<choice GotoID="Found">I may have found it.</choice>
 			<choice GotoID="Lie">
 				<text>{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</text>
-				<part Name="RequireStat" Stat="Ego" Value="20" />
+				<part Name="Brothers_RequireStat" Stat="Ego" Value="20" />
 			</choice>
 			<choice GotoID="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
 		</node>
@@ -343,7 +343,7 @@
 			<choice GotoID="Found3" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell">
 			<text>Thank you for this. What will you do now?</text>
 			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
-			<part Name="ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
+			<part Name="Brothers_ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
 			</choice>
 		</node>
 		
@@ -378,7 +378,7 @@
 			</text>
 			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
 				<text>Be seeing you. Live and drink.</text>
-				<part Name="ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
+				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
 			</choice>
 		</node>
 		
@@ -400,7 +400,7 @@
 			</text>
 			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
 				<text>As your people say: stay warm and stay dry.</text>
-				<part Name="ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
+				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
 			</choice>
 		</node>
 		
@@ -691,7 +691,7 @@
 			</text>	
 			<choice GotoID="Carapace">
 				<text>I am shellbacked myself, warden. Maybe I will come here in my later days, spend time in the shade.</text>
-				<part Name="RequirePart" Part="Carapace" Render="Mutation: Carapace" />
+				<part Name="Brothers_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
 			</choice>
 			<choice GotoID="WillNot">I see, warden. Rest assured: this place is safe.</choice>
 			<choice GotoID="NoPromise">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
@@ -757,7 +757,7 @@
 			</choice>
 			<choice GotoID="Graveyard2" IfNotHaveState="GraveyardKnown">
 				<text>If you wish to make your trip safely, decrepit giant, you will reveal your destination to me.</text>
-				<part Name="RequirePart" Part="Persuasion_MenacingStare" Render="Persuation: Menacing Stare" />
+				<part Name="Brothers_RequirePart" Part="Persuasion_MenacingStare" Render="Persuation: Menacing Stare" />
 			</choice>
 			<choice GotoID="End">Live and drink, wandering giant.</choice>
 		</node>
