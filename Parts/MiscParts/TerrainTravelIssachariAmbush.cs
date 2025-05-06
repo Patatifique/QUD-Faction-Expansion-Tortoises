@@ -9,7 +9,6 @@ using System.Collections.Generic;
 #nullable disable
 namespace XRL.World.Parts
 {
-
     [Serializable]
     public class TerrainTravelIssachariAmbush : IPart
     {
@@ -26,83 +25,81 @@ namespace XRL.World.Parts
         {
             if (E.ID == "CheckLostChance")
             {
-                // 1 in 4 chance
-                if (Stat.Random(1, 4) != 1)
-                    return false;
-
                 // Dont want this to happen if IDKFA cheat is on
                 if (The.Core.IDKFA)
                     return false;
-                // Make sure the player has pissed off the poacher
-                if (The.Game.GetBooleanGameState("HatedByPoacher"))
+
+                // 1 in 4 chance
+                if (Stat.Random(1, 4) == 1)
                 {
-                    // Check that the player has not yet been ambushed
-                    if (The.Game.HasStringGameState("HaveBeenAmbushedByPoacher"))
-                        return false;
 
-
-                    Cell currentCell = The.Player.CurrentCell;
-                    string zoneWorld = currentCell.ParentZone.GetZoneWorld();
-                    int x = currentCell.X;
-                    int y = currentCell.Y;
-                    int ZoneX = Stat.Random(0, 2);
-                    int ZoneY = Stat.Random(0, 2);
-                    int ZoneZ = 10;
-                    string str = ZoneID.Assemble(zoneWorld, x, y, ZoneX, ZoneY, ZoneZ);
-
-                    // apply effect
-                    if (The.Player.ApplyEffect((Effect)new Lost(InitialZone: str, World: zoneWorld)))
+                    // Make sure the player has pissed off the poacher
+                    if (The.Game.GetBooleanGameState("HatedByPoacher"))
                     {
-                        // set the already ambushed flag
-                        The.Game.SetStringGameState("HaveBeenAmbushedByPoacher", str);
-                        //regular lost logic
-                        Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
-                        zone.CheckWeather();
-                        The.Player.SystemMoveTo(zone.GetPullDownLocation(The.Player));
-                        int num = (int)Popup.ShowBlock("Silhouettes sporting the Issachari red-and-white pop out of the salt where they laid in ambush! Their leader wields an impressive weapon bearing a familiar mark.");
-                        The.ZoneManager.ProcessGoToPartyLeader();
-                        The.Player.FireEvent(Event.New("AfterLost", "FromCell", (object)currentCell));
-
-                        // Add Issachari ambushers
-                        // Get the current cell after the player has been lost
-                        Cell currentCellPostLost = The.Player.CurrentCell;
-
-                        // This is where we set the Population to spawn
-                        List<PopulationResult> party = PopulationManager.Generate("Brothers_Tortoises_Issachari Ambushers");
-
-                        // create a list to track used spawn cells
-                        List<Cell> usedSpawnCells = new List<Cell>();
-
-                        foreach (PopulationResult result in party)
+                        // Check that the player has not yet been ambushed
+                        if (!The.Game.HasStringGameState("HaveBeenAmbushedByPoacher"))
                         {
-                            for (int i = 0; i < result.Number; i++)
+                            Cell currentCell = The.Player.CurrentCell;
+                            string zoneWorld = currentCell.ParentZone.GetZoneWorld();
+                            int x = currentCell.X;
+                            int y = currentCell.Y;
+                            int ZoneX = Stat.Random(0, 2);
+                            int ZoneY = Stat.Random(0, 2);
+                            int ZoneZ = 10;
+                            string str = ZoneID.Assemble(zoneWorld, x, y, ZoneX, ZoneY, ZoneZ);
+
+                            // apply effect
+                            if (The.Player.ApplyEffect((Effect)new Lost(InitialZone: str, World: zoneWorld)))
                             {
-                                // Try to find a free cell
-                                Cell spawnCellAmbushers = null;
-                                for (int attempt = 0; attempt < 20; attempt++) // Try up to 20 times
+                                // set the already ambushed flag
+                                The.Game.SetStringGameState("HaveBeenAmbushedByPoacher", str);
+                                //regular lost logic
+                                Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
+                                zone.CheckWeather();
+                                The.Player.SystemMoveTo(zone.GetPullDownLocation(The.Player));
+                                int num = (int)Popup.ShowBlock("Silhouettes sporting the Issachari red-and-white pop out of the salt where they laid in ambush! Their leader wields an impressive weapon bearing a familiar mark.");
+                                The.ZoneManager.ProcessGoToPartyLeader();
+                                The.Player.FireEvent(Event.New("AfterLost", "FromCell", (object)currentCell));
+
+                                // Add Issachari ambushers
+                                // Get the current cell after the player has been lost
+                                Cell currentCellPostLost = The.Player.CurrentCell;
+
+                                // This is where we set the Population to spawn
+                                List<PopulationResult> party = PopulationManager.Generate("Brothers_Tortoises_Issachari Ambushers");
+
+                                // create a list to track used spawn cells
+                                List<Cell> usedSpawnCells = new List<Cell>();
+
+                                foreach (PopulationResult result in party)
                                 {
-                                    Cell candidate = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(Stat.Random(4, 8));
-                                    if (candidate != null && !usedSpawnCells.Contains(candidate))
+                                    for (int i = 0; i < result.Number; i++)
                                     {
-                                        spawnCellAmbushers = candidate;
-                                        break;
+                                        // Try to find a free cell
+                                        Cell spawnCellAmbushers = null;
+                                        for (int attempt = 0; attempt < 20; attempt++) // Try up to 20 times
+                                        {
+                                            Cell candidate = currentCellPostLost.GetRandomLocalAdjacentCellAtRadius(Stat.Random(4, 8));
+                                            if (candidate != null && !usedSpawnCells.Contains(candidate))
+                                            {
+                                                spawnCellAmbushers = candidate;
+                                                break;
+                                            }
+                                        }
+
+                                        if (spawnCellAmbushers != null)
+                                        {
+                                            usedSpawnCells.Add(spawnCellAmbushers); // Mark this cell as used
+
+                                            GameObject spawned = GameObject.Create(result.Blueprint);
+                                            spawnCellAmbushers.AddObject(spawned);
+                                            // Make Player Hater
+                                            spawned.Brain.Allegiance.Add("Playerhater", 500);
+                                        }
                                     }
-                                }
-
-                                if (spawnCellAmbushers != null)
-                                {
-                                    usedSpawnCells.Add(spawnCellAmbushers); // Mark this cell as used
-
-                                    GameObject spawned = GameObject.Create(result.Blueprint);
-                                    spawnCellAmbushers.AddObject(spawned);
-                                    // Make Player Hater
-                                    spawned.Brain.Allegiance.Add("Playerhater", 500);
                                 }
                             }
                         }
-
-
-                        return false;
                     }
                 }
             }

@@ -8,6 +8,7 @@
 		<stat Name="Level" Value="20" />
 		<stat Name="Hitpoints" Value="80" />
 		<stat Name="ColdResistance" Value="100" />
+		<part Name="Brain" Hostile="True" Factions="Tortoises-100" />
 		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
 		<tag Name="Role" Value="Tank" />
 		<stat Name="AV" Value="5" />
@@ -35,7 +36,7 @@
 		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
-		<part Name="Brain" Hostile="True" Factions="Tortoises-100" />
+		<part Name="Brain" Hostile="false" Factions="Tortoises-100" />
 		<stat Name="ColdResistance" Value="100" />
 		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
 		<stat Name="Level" Value="5" />
