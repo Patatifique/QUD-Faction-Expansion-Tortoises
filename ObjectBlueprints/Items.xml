@@ -35,7 +35,20 @@
 		<tag Name="EquipSound" Value="sfx_equip_armor_organic" />
 		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
 	</object>
-	
+
+	<object Name="Brothers_Tortoises_Verdant Sallet" Inherits="BaseHelmet">
+		<part Name="Armor" AV="2" DV="1" WornOn="Head" />
+		<part Name="Render" DisplayName="{{leafy|verdant sallet}}" Tile="Items/verdantsallet.png" ColorString="&amp;w" DetailColor="g" RenderString="]" />
+		<part Name="Commerce" Value="85" />
+		<part Name="Description" Short="Growth over a fragment of domed shell fashions a wearable gardegives a self-impression o grow over a domed layer of wearable topsoil." />
+		<part Name="Physics" Weight="6" Organic="true" />
+		<part Name="Yurtmat" />
+		<tag Name="Tier" Value="4" />
+		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
+		<tag Name="EquipSound" Value="sfx_equip_armor_planty" />
+        <tag Name="LivePlant" />
+	</object>
+  
 	<!--Others-->
 	<object Name="Brothers_Tortoises_Honorary Shell" Inherits="BaseCloak">
 		<part Name="Render" DisplayName="honorary shell" Tile="Items/wardenshell.png" RenderString="]" ColorString="&amp;Y" DetailColor="w" />

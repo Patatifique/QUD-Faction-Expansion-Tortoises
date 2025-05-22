@@ -13,9 +13,14 @@
 		</group>
 	</population>
 
-
 	<population Name="RiversZoneGlobals" Load="Merge">
 		<object Chance="35" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
+	</population>
+
+	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+		<object Weight="2" Number="2-4" Blueprint="Brothers_Tortoises_VerdantBanana" />
+		<object Weight="2" Number="2-4" Blueprint="Brothers_Tortoises_VerdantApple" />
+		<object Weight="2" Number="2-4" Blueprint="Brothers_Tortoises_VerdantSpinefruit" />
 	</population>
 
 	<population Name="SaltDuneCreatures" Load="Merge">
