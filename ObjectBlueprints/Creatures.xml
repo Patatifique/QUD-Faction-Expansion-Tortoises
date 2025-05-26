@@ -75,7 +75,7 @@
 	</object>
 	
 	<object Name="Brothers_Tortoises_Verdant_Bite" Inherits="Bite">
-		<part Name="MeleeWeapon" BaseDamage="5d3" Skill="Cudgel" />
+		<part Name="MeleeWeapon" BaseDamage="4d3" Skill="Cudgel" />
 	</object>	
 	
 	<object Name="Brothers_Tortoises_VerdantBanana" Inherits="Brothers_Tortoises_VerdantBase">
@@ -97,6 +97,33 @@
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Grown aggressively on fractus trinks, sunlight is imprisoned in purple spines." />
 	    <part Name="Harvestable" OnSuccess="Spine Fruit" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;WM" RipeTileColor="&amp;g" RipeDetailColor="M" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+	</object>
+
+
+	<!--Pulshell-->
+	
+	<object Name="Brothers_Tortoises_Pulshell" Inherits="BaseRobot">
+		<part Name="Body" Anatomy="TreadedRobot" />
+		<part Name="Render" Tile="creatures/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" />
+		<part Name="Description" Short="=pronouns.Subjective= trundles in serenity, metallic shell latticed with humming coils, distorting compass needles. Scrap flocks in presence of an animated figure that once collected it for flushing, now aimless." />
+		<part Name="Brain" Factions="Robots-100" Hostile="false" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="High-Powered Magnet" />
+		<tag Name="Gender" Value="neuter" />
+		<mutation Name="MagneticPulse" Level="3" />
+		<tag Name="Species" Value="wheeled robot" />
+		<tag Name="ExcludeFromVillagePopulations" />
+		<tag Name="NoLibrarian" />
+		<tag Name="DynamicObjectsTable:Ruins_Creatures" />    
+		<stat Name="Hitpoints" Value="45" />
+		<stat Name="AV" Value="10" />
+		<stat Name="Level" Value="12" />
+		<stat Name="Speed" Value="60" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Pulshell_Slam" />
+	</object>
+		
+	<object Name="Brothers_Tortoises_Pulshell_Slam" Inherits="NaturalFist">
+		<part Name="Render" DisplayName="frontal slam" Tile="Creatures/natural-weapon-bands.bmp" ColorString="&amp;C" />
+		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Strength" Slot="Head" />
 	</object>
 	
 	<!-- Other Tortoises-->
@@ -128,6 +155,7 @@
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing the Salt Dunes" Step="Find a Walking Dune" />
 		<part Name="AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
+		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 
 	<!--Corpses-->
