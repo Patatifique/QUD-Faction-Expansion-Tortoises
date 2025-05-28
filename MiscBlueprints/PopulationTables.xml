@@ -13,9 +13,14 @@
 		</group>
 	</population>
 
-
 	<population Name="RiversZoneGlobals" Load="Merge">
 		<object Chance="35" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
+	</population>
+
+	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+		<object Weight="2" Number="2-4" Blueprint="Brothers_Tortoises_VerdantBanana" />
+		<object Weight="2" Number="2-4" Blueprint="Brothers_Tortoises_VerdantApple" />
+		<object Weight="2" Number="2-4" Blueprint="Brothers_Tortoises_VerdantSpinefruit" />
 	</population>
 
 	<population Name="SaltDuneCreatures" Load="Merge">
@@ -28,6 +33,41 @@
 		<object Number="2d2" Chance="5" Blueprint="Brothers_Tortoises_Walking Dune" />
 	</population>
 
+	<population Name="Garbage Bots" Load="Merge">
+		<object Chance="15" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />
+	</population>
+
+	<population Name="RuinsZoneGlobals-Robots" Load="Merge">
+		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+	</population>
+	
+	<population Name="RuinsZoneGlobals-Creatures" Load="Merge">
+		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+	</population>
+	
+	<population Name="Tier3RuinsCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+		</group>
+	</population>
+	
+	<population Name="Tier3RuinsRobots" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+		</group>
+	</population>
+
+	<population Name="Tier4RuinsCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+		</group>
+	</population>
+	
+	<population Name="Tier4RuinsRobots" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+		</group>
+	</population>
 
 	<!--Ambush Population for the Issachari Ambush-->
 

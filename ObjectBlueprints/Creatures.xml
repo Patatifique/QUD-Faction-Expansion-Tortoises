@@ -59,10 +59,71 @@
 
 	</object>
 
+	<!--Verdant domes-->
+	
+	<object Name="Brothers_Tortoises_VerdantBase" Inherits="BaseTortoise">
+		<stat Name="Level" Value="25" />
+		<stat Name="Hitpoints" Value="90" />
+		<part Name="Brain" Hostile="false" Factions="Tortoises-100" />
+		<tag Name="Role" Value="Tank" />
+		<stat Name="AV" Value="5" />
+		<mutation Name="Carapace" Level="10" />
+		<mutation Name="NightVision" Level="4" />
+		<mutation Name="PhotosyntheticSkin" Level="1" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Verdant_Bite" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_Tortoises_Verdant Dome Corpse" />
+	</object>
+	
+	<object Name="Brothers_Tortoises_Verdant_Bite" Inherits="Bite">
+		<part Name="MeleeWeapon" BaseDamage="4d3" Skill="Cudgel" />
+	</object>	
+	
+	<object Name="Brothers_Tortoises_VerdantBanana" Inherits="Brothers_Tortoises_VerdantBase">
+		<part Name="Render" Tile="creatures/verdantdomebanana.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="W" />
+		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Hanging low on a hunched trunk, sunlight is imprisoned in golden ripeness." />
+	    <part Name="Harvestable" OnSuccess="Banana" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;W" RipeTileColor="&amp;g" RipeDetailColor="W" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
+		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+	</object>
+	
+		<object Name="Brothers_Tortoises_VerdantApple" Inherits="Brothers_Tortoises_VerdantBase">
+		<part Name="Render" Tile="creatures/verdantdomeapple.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="R" />
+		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Hanging proudly on fractal branches, sunlight is imprisoned in crimson hydration." />
+	    <part Name="Harvestable" OnSuccess="Starapple" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;R" RipeTileColor="&amp;g" RipeDetailColor="R" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
+		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+	</object>
+	
+		<object Name="Brothers_Tortoises_VerdantSpinefruit" Inherits="Brothers_Tortoises_VerdantBase">
+		<part Name="Render" Tile="creatures/verdantdomespinefruit.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="M" />
+		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Grown aggressively on fractus trinks, sunlight is imprisoned in purple spines." />
+	    <part Name="Harvestable" OnSuccess="Spine Fruit" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;WM" RipeTileColor="&amp;g" RipeDetailColor="M" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
+		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+	</object>
 
-	<object Name="Brothers_Tortoises_Baby_Shaile_Bite" Inherits="Brothers_Tortoises_Shaile_Bite">
-		<part Name="MeleeWeapon" BaseDamage="2d2" />
-		<part Name="ElementalDamage" Damage="1d2" Attributes="Cold" />
+
+	<!--Pulshell-->
+	
+	<object Name="Brothers_Tortoises_Pulshell" Inherits="BaseRobot">
+		<part Name="Body" Anatomy="TreadedRobot" />
+		<part Name="Render" Tile="creatures/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" />
+		<part Name="Description" Short="=pronouns.Subjective= trundles in serenity, metallic shell latticed with humming coils, distorting compass needles. Scrap flocks in presence of an animated figure that once collected it for flushing, now aimless." />
+		<part Name="Brain" Factions="Robots-100" Hostile="false" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="High-Powered Magnet" />
+		<tag Name="Gender" Value="neuter" />
+		<mutation Name="MagneticPulse" Level="3" />
+		<tag Name="Species" Value="wheeled robot" />
+		<tag Name="ExcludeFromVillagePopulations" />
+		<tag Name="NoLibrarian" />
+		<tag Name="DynamicObjectsTable:Ruins_Creatures" />    
+		<stat Name="Hitpoints" Value="45" />
+		<stat Name="AV" Value="10" />
+		<stat Name="Level" Value="12" />
+		<stat Name="Speed" Value="60" />
+		<inventoryobject Blueprint="Brothers_Tortoises_Pulshell_Slam" />
+	</object>
+		
+	<object Name="Brothers_Tortoises_Pulshell_Slam" Inherits="NaturalFist">
+		<part Name="Render" DisplayName="frontal slam" Tile="Creatures/natural-weapon-bands.bmp" ColorString="&amp;C" />
+		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Strength" Slot="Head" />
 	</object>
 	
 	<!-- Other Tortoises-->
@@ -94,8 +155,7 @@
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing the Salt Dunes" Step="Find a Walking Dune" />
 		<part Name="AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
-		<tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
-		<tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="6" />
+		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 
 	<!--Corpses-->
@@ -121,6 +181,16 @@
 		<tag Name="DynamicObjectsTable:Corpses" />
 	</object>
 
+	<object Name="Brothers_Tortoises_Verdant Dome Corpse" Inherits="Animal Corpse">
+		<part Name="Render" DisplayName="{{g|verdant dome}} corpse" />
+		<part Name="Food" Message="Fruity goodness soaks the tongue." />
+		<part Name="Description" Short="Life creeps forth from the shell to conquer arable flesh." />
+		<part Name="Physics" Weight="70" />
+		<part Name="Commerce" Value="20" />
+		<tag Name="Tier" Value="4" />
+		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Verdant Sallet" />
+		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
 	
 	<object Name="Great Saltback Corpse" Load="Merge">
 		<part Name="Butcherable" OnSuccess="Brothers_Tortoises_Saltback Pavise" />
