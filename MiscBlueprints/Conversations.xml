@@ -757,7 +757,7 @@
 			</choice>
 			<choice GotoID="Graveyard2" IfNotHaveState="GraveyardKnown">
 				<text>If you wish to make your trip safely, decrepit giant, you will reveal your destination to me.</text>
-				<part Name="Brothers_RequirePart" Part="Persuasion_MenacingStare" Render="Persuation: Menacing Stare" />
+				<part Name="Brothers_RequirePart" Part="Persuasion_MenacingStare" Render="Persuasion: Menacing Stare" />
 			</choice>
 			<choice GotoID="End">Live and drink, wandering giant.</choice>
 		</node>
