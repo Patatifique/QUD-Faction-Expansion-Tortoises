@@ -139,7 +139,7 @@
 	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="walking dune" Tile="Creatures/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
 		<part Name="Corpse" CorpseChance="90" CorpseBlueprint="Brothers_Tortoises_Walking Dune Corpse" />
-		<part Name="Brain" Factions="Tortoises-100, Unshelled Retpiles-100" Hostile="false" Calm="True"/>
+		<part Name="Brain" Factions="Tortoises-100,Unshelled Reptiles-100" Hostile="false" Calm="True"/>
 		<tag Name="NoHateFactions" Value="Birds,Unshelled Reptiles,Prey,Mollusks" />
 		<stat Name="AV" Value="17" />
 		<stat Name="DV" Value="-10" />
