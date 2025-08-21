@@ -62,6 +62,7 @@
 	<!--Verdant domes-->
 	
 	<object Name="Brothers_Tortoises_VerdantBase" Inherits="BaseTortoise">
+		<tag Name="BaseObject" Value="*noinherit" />
 		<stat Name="Level" Value="25" />
 		<stat Name="Hitpoints" Value="90" />
 		<part Name="Brain" Hostile="false" Factions="Tortoises-100" />
@@ -268,6 +269,7 @@
 		<tag Name="Genotype" Value="Mutated Human" />
 		<part Name="GivesRep" />
 		<tag Name="staticFaction1" Value="Tortoises,friend,garding their resting place" />
+		<tag Name="NoHateFactions" Value="Tortoises" />
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
