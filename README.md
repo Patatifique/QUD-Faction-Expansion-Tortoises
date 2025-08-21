@@ -1,3 +1,1 @@
-This repository contains the source for the Faction Update mod by Balthichou and Patatifique
-
-For now it is only focused on the Turtoises update.
+This repository contains the source for the Tortoises Faction Expansion mod by Balthichou and Patatifique
