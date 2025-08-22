@@ -130,7 +130,7 @@
 	<!-- Other Tortoises-->
 	<object Name="Great Saltback" Load="Merge">
 		<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
-		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Great Saltback Corpse" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Great Saltback Corpse" />
 	</object>
 
 	<object Name="IrritableTortoise" Load="Merge">
