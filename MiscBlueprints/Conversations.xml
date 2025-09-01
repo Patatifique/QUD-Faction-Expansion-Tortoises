@@ -485,7 +485,7 @@
 		
 		<node ID="Reward2" AllowEscape="false">
 			<text>
-				{{emote|*A diminutive jerboa escapes from the warden's surrounding, leaping on his shell in indignation before slipping away, unnoticed by the venerable fighter.*}}
+				{{emote|*A diminutive jerboa escapes from the warden's belongings, leaping on his shell in indignation before slipping away, unnoticed by the venerable fighter.*}}
 			</text>	
 			<choice GotoID="Reward3">... expensive reward?</choice>			
 			<choice GotoID="Reward3">... worthless junk?</choice>
