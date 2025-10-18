@@ -71,7 +71,7 @@ namespace XRL.World.Parts
                 this.GraveyardZoneID = randomElement.ZoneID;
                 this.GraveyardEntranceZoneID = randomElement.ZoneID;
             }
-            this.ParentObject.Brain.PushGoal((GoalHandler)new GoOnAPilgrimage(this.GraveyardWx, this.GraveyardWy, this.GraveyardXx, this.GraveyardYx, this.GraveyardZx, this.TargetObject, this.GraveyardZoneID, this.GraveyardEntranceZoneID));
+            this.ParentObject.Brain.PushGoal((GoalHandler)new GoOnAGraveyardPilgrimage(this.GraveyardWx, this.GraveyardWy, this.GraveyardXx, this.GraveyardYx, this.GraveyardZx, this.TargetObject, this.GraveyardZoneID, this.GraveyardEntranceZoneID));
             return true;
         }
     }
