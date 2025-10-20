@@ -18,9 +18,9 @@
 	</population>
 
 	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
-		<object Weight="1" Number="2-4" Blueprint="Brothers_Tortoises_VerdantBanana" />
-		<object Weight="1" Number="2-4" Blueprint="Brothers_Tortoises_VerdantApple" />
-		<object Weight="1" Number="2-4" Blueprint="Brothers_Tortoises_VerdantSpinefruit" />
+		<object Weight="1" Number="1-3" Blueprint="Brothers_Tortoises_VerdantBanana" />
+		<object Weight="1" Number="1-2" Blueprint="Brothers_Tortoises_VerdantApple" />
+		<object Weight="1" Number="1-2" Blueprint="Brothers_Tortoises_VerdantSpinefruit" />
 	</population>
 
 	<population Name="SaltDuneCreatures" Load="Merge">
