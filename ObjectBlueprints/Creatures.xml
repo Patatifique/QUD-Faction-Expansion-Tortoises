@@ -95,7 +95,7 @@
 	
 		<object Name="Brothers_Tortoises_VerdantSpinefruit" Inherits="Brothers_Tortoises_VerdantBase">
 		<part Name="Render" Tile="creatures/verdantdomespinefruit.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="M" />
-		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Grown aggressively on fractus trinks, sunlight is imprisoned in purple spines." />
+		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Grown aggressively on fractus trunks, sunlight is imprisoned in purple spines." />
 	    <part Name="Harvestable" OnSuccess="Spine Fruit" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;WM" RipeTileColor="&amp;g" RipeDetailColor="M" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
 	</object>
