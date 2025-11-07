@@ -11,9 +11,9 @@ namespace XRL.World.Parts.Mutation
         {
         }
 
-        public override int GetReleaseDuration(int Level) => Level + 2;
+        public override int GetReleaseDuration(int Level) => Level + 1;
 
-        public override int GetReleaseCooldown(int Level) => 40;
+        public override int GetReleaseCooldown(int Level) => 100;
 
         public override string GetReleaseAbilityName() => "Release Freezing Gas";
     }
