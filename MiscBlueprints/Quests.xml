@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <quests>
-	<quest Name="Combing the Salt Dunes" System="CombingTheSaltDunesSystem"
+	<quest ID="Brothers_TortoisesPoacherQuest" Name="Combing the Salt Dunes" System="CombingTheSaltDunesSystem"
 	   Accomplishment="You found the final resting place of great saltback tortoises."
 	   Hagiograph="In the month of =month= of =year=, wise =name= kneeled by fading giants and sang a solemn dirge in their honor."
 	   HagiographCategory="VisitsLocation"
 	   Gospel="Wandering through salt valleys, =name= came upon a great funeral ceremony for the kings and queens of saltbacks. There =name= sang for three days and three nights a mournful dirge so fair and true the Sun and Moon weeped in unison.">
 
-		<step Name="Find a Walking Dune" Optional="true" XP="250">
+		<step ID="WalkingDune" Name="Find a Walking Dune" Optional="true" XP="250">
 			<text>In the Great Salt Desert, find a walking dune and either follow it or enquire of its destination.</text>
 		</step>
 
-		<step Name="Locate the Saltback Graveyard" XP="1500">
+		<step ID="Visit" Name="Locate the Saltback Graveyard" XP="1500">
 			<text>Find and visit the saltbacks' final resting place somewhere in the Great Salt Desert.</text>
 		</step>
 
-		<step Name="Report Back to Cracks-the-Saltback-Shell" XP="1500">
+		<step ID="Debrief" Name="Report Back to Cracks-the-Saltback-Shell" XP="1500">
 			<text>Return to Cracks-the-Saltback-Shell and report your findings.</text>
 		</step>
 	</quest>
 
-	<quest Name="The Scute Child">
+	<quest ID="Brothers_TortoisesWardenQuest" Name="The Scute Child">
 
-		<step Name="Consult with Warden Qoruda" Optional="true" XP="250">
+		<step ID="Briefing" Name="Consult with Warden Qoruda" Optional="true" XP="250">
 			<text>Speak with Warden Qoruda to gain insight into the Saltbacks Graveyard.</text>
 		</step>
 
-		<step Name="Decide the Fate of the Saltback Graveyard" XP="500">
+		<step ID="Choice" Name="Decide the Fate of the Saltback Graveyard" XP="500">
 			<text>Guard the location of the Saltback Graveyard, ensuring its sanctity remains intact, or reveal it to self-serving hunters.</text>
 		</step>
 
 	</quest>
 	
-	<quest Name="Return to Warden Qoruda"
+	<quest ID="Brothers_TortoisesRewardQuest" Name="Return to Warden Qoruda"
 	   Accomplishment="You vowed to protect the location of the saltback's final resting place."
 	   Hagiograph="=name=, Keeper of Secrets, opted to protect the location of sacred places everywhere, and became forever known as Custodian of Salt Mausoleums."
 	   HagiographCategory="VisitsLocation"
 	   Gospel="In the shadow of empty shelldomes, solemn =name= led a fierce battle to protect tortoises. Before leaving, =player.subjective= tasked =player.possessive= firstborn Qoruda to watch over the memorial erected in =player.possessive= memory.">
 
-		<step Name="Return to the Saltback Graveyard" XP="250">
+		<step ID="Reward" Name="Return to the Saltback Graveyard" XP="250">
 			<text>Travel back to the Saltback Graveyard and inform Warden Qoruda of your deeds.</text>
 		</step>
 

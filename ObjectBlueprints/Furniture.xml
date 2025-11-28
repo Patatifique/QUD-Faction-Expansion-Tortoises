@@ -4,7 +4,7 @@
   <object Name="Brothers_Tortoises_Big Stele" Inherits="MountedFurniture">
     <part Name="Physics" Weight="2000" Takeable="false" Solid="true" FlameTemperature="99999" VaporTemperature="1500" />
     <part Name="Description" Short="Shellbacked glyphs carved into saltstone recount histories of travel and pilgrimage. Contemplating the coarse plane, the arms of time recede until gaze faces the early scutes of Qud." />
-    <part Name="Render" DisplayName="funerary stele" Tile="Terrain/tile_bigstele.png" DetailColor="C" RenderString="007" ColorString="&amp;Y" />
+    <part Name="Render" DisplayName="funerary stele" Tile="Terrain/tortoises/tile_bigstele.png" DetailColor="C" RenderString="007" ColorString="&amp;Y" />
     <part Name="Interesting" Radius="1" />
     <stat Name="AV" Value="20" />
     <stat Name="Hitpoints" Value="6000" />
@@ -18,7 +18,7 @@
   
   <object Name="Brothers_Tortoises_Big_Bones1" Inherits="MountedFurniture">
     <part Name="Physics" Weight="2000" Takeable="false" Solid="false" FlameTemperature="99999" VaporTemperature="1500" />
-	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tile_bigbones1" />
+	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tortoises/tile_bigbones1" />
     <part Name="Description" Short="A forest of calcified history sprouts from the ground, sheltering saltflies. No fruits do they bear but loh, in their shade new life may yet be planted." />
     <stat Name="AV" Value="16" />
     <stat Name="Hitpoints" Value="100" />
@@ -28,22 +28,22 @@
   </object>
  
   <object Name="Brothers_Tortoises_Big_Bones2" Inherits="Brothers_Tortoises_Big_Bones1">
-	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tile_bigbones2" />
+	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tortoises/tile_bigbones2" />
   </object>
   
   <object Name="Brothers_Tortoises_Big_Bones3" Inherits="Brothers_Tortoises_Big_Bones1">
-	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tile_bigbones3" />
+	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tortoises/tile_bigbones3" />
   </object>
  
   <object Name="Brothers_Tortoises_Big_Bones4" Inherits="Brothers_Tortoises_Big_Bones1">
-	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tile_bigbones4" />
+	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tortoises/tile_bigbones4" />
   </object>
 
   <object Name="Brothers_Tortoises_Big_Bones5" Inherits="Brothers_Tortoises_Big_Bones1">
-	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tile_bigbones5" />
+	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tortoises/tile_bigbones5" />
   </object>
 
    <object Name="Brothers_Tortoises_Big_Bones6" Inherits="Brothers_Tortoises_Big_Bones1">
-	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tile_bigbones6" />
+	<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" Tile="Terrain/tortoises/tile_bigbones6" />
   </object>  
 </objects>

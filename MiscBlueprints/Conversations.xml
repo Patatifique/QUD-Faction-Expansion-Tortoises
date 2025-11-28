@@ -6,13 +6,13 @@
 	
 	<conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
     
-		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+		<node ID="Start" IfFinishedQuest="Brothers_TortoisesPoacherQuest">
 			<text>
 				{{emote|*The Issachari does not bother meeting your gaze.*}} 
 				
 				We have nothing more to say to each other, lack-salt.
 			</text>
-			<choice IfNotHaveQuest="Return to Warden Qoruda" GotoID="Reward">I have made good use of your gift. Is there any way to get another weapon?</choice>
+			<choice IfNotHaveQuest="Brothers_TortoisesRewardQuest" GotoID="Reward">I have made good use of your gift. Is there any way to get another weapon?</choice>
 			<choice GotoID="Ambush" IfHaveState="HaveBeenAmbushedByPoacher">Issachari using weapon bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
 			<choice GotoID="End">As you say. Live and drink.</choice>
 		</node>
@@ -41,21 +41,21 @@
 			<choice GotoID="End">You trust your life on a risky wager, huntress. Live and drink – for now.</choice>
 		</node>		
 	
-		<node ID="Start" IfHaveActiveQuest="Combing the Salt Dunes">
+		<node ID="Start" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">
 			<text>
 				{{emote|*The Issachari takes her eyes off her weapon.*}}
 
 				Have you come bearing news of the Saltback Graveyard, lack-salt?
 			</text>
-			<choice IfFinishedQuestStep="Combing the Salt Dunes~Locate the Saltback Graveyard" GotoID="QuestChoice">About the Saltback Graveyard...</choice>
-			<choice IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Combing the Salt Dunes~Locate the Saltback Graveyard" GotoID="IKnow">I know where the Saltback Graveyard is.</choice>
+			<choice IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" GotoID="QuestChoice">About the Saltback Graveyard...</choice>
+			<choice IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" GotoID="IKnow">I know where the Saltback Graveyard is.</choice>
 			<choice GotoID="Remind">Remind me why you want to find this place again?</choice>
 			<choice GotoID="Unfair">Why is it I'm the one looking for this place why you smoke the hookah here?</choice>
 			<choice GotoID="RifleQuest">No. But is this the rifle you use to take down saltbacks?</choice>
 			<choice GotoID="End">Not yet, but I will. Live and drink, huntress.</choice>
 		</node>
 	
-		<node ID="Start" IfNotHaveQuest="Combing the Salt Dunes">
+		<node ID="Start" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">
 			<text>
 				{{emote|*The Issachari squints at you.*}}
 				
@@ -237,7 +237,7 @@
 				
 				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the deads have any use for it. Find the place – if it exists – and I'll make sure to reward you handsomely. What say you?
 			</text>
-		<choice GotoID="End" StartQuest="Combing the Salt Dunes">Find the Saltback Graveyard, got it. Simple enough - I shall be back soon.</choice>
+		<choice GotoID="End" StartQuest="Brothers_TortoisesPoacherQuest">Find the Saltback Graveyard, got it. Simple enough - I shall be back soon.</choice>
 		<choice GotoID="End">I will not help you rob the dead – live and drink, for now.</choice>
 		</node>
 	
@@ -340,7 +340,7 @@
 				
 				Yes, yes, that's perfect! As promised, lack-salt, here is your payment. Make good use of it.
 			</text>
-			<choice GotoID="Found3" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell">
+			<choice GotoID="Found3" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief">
 			<text>Thank you for this. What will you do now?</text>
 			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
 			<part Name="Brothers_ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
@@ -357,7 +357,7 @@
 				
 				{{emote|*The Issachari curtly nods in your direction.*}}
 			</text>
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">Walk in the shade, huntress.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
 		</node>	
 		
 		<node ID="Lie">
@@ -366,7 +366,7 @@
 				
 				Just because you didn't find it does not mean it isn't there, lack-salt. Moghra'yi has a way of hiding secrets from unsavvy eyes.
 			</text>
-			<choice GotoID="Lie2">I have spent weeks combing the salt dunes. Disrespect me if you wish, huntress, but do not doubt me.</choice>
+			<choice GotoID="Lie2">I have spent weeks Brothers_TortoisesPoacherQuest. Disrespect me if you wish, huntress, but do not doubt me.</choice>
 			<choice GotoID="QuestChoice">I should look closer then...</choice>
 		</node>
 
@@ -376,7 +376,7 @@
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
 				<text>Be seeing you. Live and drink.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
 			</choice>
@@ -398,7 +398,7 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Combing the Salt Dunes~Report Back to Cracks-the-Saltback-Shell" StartQuest="Return to Warden Qoruda">
+			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
 				<text>As your people say: stay warm and stay dry.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
 			</choice>
@@ -411,7 +411,7 @@
 	
 	<conversation ID="Brothers_Tortoises_WardenQoruda">
 
-		<node ID="Start" IfFinishedQuest="Return to Warden Qoruda">
+		<node ID="Start" IfFinishedQuest="Brothers_TortoisesRewardQuest">
 			<text>
 			{{emote|*The warden lifts the brim of his hat with a thumb.*}}
 
@@ -441,14 +441,14 @@
 			<choice GotoID="End">That is a bit sad, actually. Live and drink, warden.</choice>
 		</node>
 		
-		<node ID="Start" IfFinishedQuest="Combing the Salt Dunes">
+		<node ID="Start" IfFinishedQuest="Brothers_TortoisesPoacherQuest">
 			<text>
 				{{emote|*Another coughing fit shakes the warden's frame.*}}
 				
 				Do you come with news from beyond the Moghra'yi?
 			</text>
-			<choice GotoID="Loyal" IfHaveQuest="Return to Warden Qoruda">These burial grounds are safe from the Issachari for now, warden.</choice>
-			<choice GotoID="Betrayed" IfNotHaveQuest="Return to Warden Qoruda">The Issachari shall have this place. Out of my way, old man.</choice>
+			<choice GotoID="Loyal" IfHaveQuest="Brothers_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
+			<choice GotoID="Betrayed" IfNotHaveQuest="Brothers_TortoisesRewardQuest">The Issachari shall have this place. Out of my way, old man.</choice>
 			<choice GotoID="End">Not now, warden. Live and drink.</choice>
 		</node>
 
@@ -458,8 +458,8 @@
 				
 				Mightily done, =name=, mightily done. There is no thanking you enough for what you have done.
 			</text>	
-			<choice GotoID="Reward" CompleteQuestStep="Return to Warden Qoruda~Return to the Saltback Graveyard">I could not bear to imagine this place looted, warden.</choice>			
-			<choice GotoID="Reward" CompleteQuestStep="Return to Warden Qoruda~Return to the Saltback Graveyard">Guess I dislike tortoises less than Issachari, in the end.</choice>
+			<choice GotoID="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">I could not bear to imagine this place looted, warden.</choice>			
+			<choice GotoID="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">Guess I dislike tortoises less than Issachari, in the end.</choice>
 		</node>
 		
 		<node ID="Reward" AllowEscape="false">
@@ -497,17 +497,17 @@
 				
 				There, =name=. This shell was worn by saltback carers when I first took watch. Shellbacked memories still recognize it as a garment of honor and station.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
 				<text>Thank you, warden. I shall try to be worthy of it. Live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
 			</choice>			
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Decide the Fate of the Saltback Graveyard">
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
 				<text>... Well at least something came out of it all. Live and drink, warden.</text>
 				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
 			</choice>
 		</node>	
 
-		<node ID="Start" IfFinishedQuestStep="The Scute Child~Consult with Warden Qoruda">
+		<node ID="Start" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">
 			<text>
 				{{emote|*The warden wipes the corners of his mouth.*}}
 				
@@ -516,7 +516,7 @@
 			<choice GotoID="Saltbacks">I dare not imagine what those saltbacks could do, if enraged.</choice>		
 			<choice GotoID="Warden">I still am amazed to find a warden here.</choice>
 			<choice GotoID="Sick">Has your cough not gotten any better, warden?</choice>
-			<choice Target="Poacher2" IfHaveQuest="Combing the Salt Dunes">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice Target="Poacher2" IfHaveQuest="Brothers_TortoisesPoacherQuest">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
 			<choice GotoID="End">Live and drink, warden.</choice>
 		</node>
 	
@@ -542,7 +542,7 @@
 			<choice GotoID="Saltbacks">I have never seen so many saltbacks in the same place.</choice>		
 			<choice GotoID="Warden">I was not expecting a warden here.</choice>
 			<choice GotoID="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
-			<choice Target="Poacher" IfHaveQuest="Combing the Salt Dunes">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
+			<choice Target="Poacher" IfHaveQuest="Brothers_TortoisesPoacherQuest">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
 			<choice GotoID="End">Maybe later. Live and drink, warden.</choice>
 		</node>
 
@@ -651,7 +651,7 @@
 			In that case, you will find there is still a fight in these old bones yet!
 			</text>
 			<choice GotoID="Scared">Wait! I misspoke. Please forgive my pride, warden.</choice>
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
 				<text>Bring it on!</text>
 				<part Name="StartFight" />
 			</choice>
@@ -664,7 +664,7 @@
 			You play dangerous games, =name=. Not all wardens have my patience.
 			</text>
 			<choice GotoID="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
 				<text>Not all wardens are decrepit wrecks either - it's gotta be my lucky day.</text>
 				<part Name="StartFight" />
 			</choice>
@@ -703,7 +703,7 @@
 
 				Maybe you will, =name=. Maybe you will.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">In the meantime, live and drink, warden.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">In the meantime, live and drink, warden.</choice>
 		</node>
 		
 		<node ID="WillNot">
@@ -712,7 +712,7 @@
 
 				Thank you =name=. Live and drink, traveler.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Live and drink, venerable warden.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, venerable warden.</choice>
 		</node>
 		
 		<node ID="NoPromise">
@@ -721,7 +721,7 @@
 				
 				I cannot hold you responsible of an offense not yet committed, and can only hope you find wisdom in your time, =name=. Still, live and drink nonetheless.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="The Scute Child~Consult with Warden Qoruda">Live and drink, warden.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, warden.</choice>
 		</node>		
 
 	</conversation>

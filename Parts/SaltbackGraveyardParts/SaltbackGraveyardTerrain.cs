@@ -23,7 +23,7 @@ namespace XRL.World.Parts
         {
             if (E.ID == "SaltbackGraveyardReveal")
             {
-                this.ParentObject.Render.Tile = "Terrain/map_graveyard.png";
+                this.ParentObject.Render.Tile = "Terrain/tortoises/map_graveyard.png";
                 this.ParentObject.Render.ColorString = "&Y";
                 this.ParentObject.Render.DisplayName = "Saltback Graveyard";
                 this.ParentObject.Render.DetailColor = "W";

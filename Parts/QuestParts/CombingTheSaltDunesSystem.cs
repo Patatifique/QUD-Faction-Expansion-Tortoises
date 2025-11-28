@@ -8,9 +8,9 @@ namespace XRL.World.Quests
     {
         public override void Start()
         {
-            if (!The.Game.HasQuest("The Scute Child"))
+            if (!The.Game.HasQuest("Brothers_TortoisesWardenQuest"))
                 return;
-            The.Game.FinishQuestStep("Combing the Salt Dunes", "Locate the Saltback Graveyard");
+            The.Game.FinishQuestStep("Brothers_TortoisesPoacherQuest", "Visit");
         }
 
         public override GameObject GetInfluencer() =>

@@ -12,11 +12,11 @@
 
   -->
 	<object Name="Finish_CombingTheSaltDunes_EnterTheSaltbackGraveyard" Inherits="Widget">
-		<part Name="QuestStepFinisher" Trigger="Created" Quest="Combing the Salt Dunes" Step="Locate the Saltback Graveyard" />
+		<part Name="QuestStepFinisher" Trigger="Created" Quest="Brothers_TortoisesPoacherQuest" Step="Visit" />
 	</object>
 
 	<object Name="Start_TheScuteChild_EnterTheSaltbackGraveyard" Inherits="Widget">
-		<part Name="QuestStarter" Trigger="Created" Quest="The Scute Child" />
+		<part Name="QuestStarter" Trigger="Created" Quest="Brothers_TortoisesWardenQuest" />
 	</object>
 
 </objects>

@@ -2,7 +2,7 @@
 <objects>
 	<!--Butcherables-->
 	<object Name="Brothers_Tortoises_Tortoise Shield" Inherits="BaseShield">
-		<part Name="Render" DisplayName="tortoise shield" Tile="Items/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
+		<part Name="Render" DisplayName="tortoise shield" Tile="Items/tortoises/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
 		<part Name="Shield" AV="4" DV="-3" WornOn="Hand" />
 		<part Name="Description" Short="Repurposed and retooled, this shell holds the untold promise of avoiding a fate similar to its once-owner." />
 		<part Name="Commerce" Value="50" />
@@ -14,7 +14,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_Saltback Pavise" Inherits="BaseShield">
-		<part Name="Render" DisplayName="saltback pavise" Tile="Items/saltbackpavise.png" RenderString="t" ColorString="&amp;Y" DetailColor="y" />
+		<part Name="Render" DisplayName="saltback pavise" Tile="Items/tortoises/saltbackpavise.png" RenderString="t" ColorString="&amp;Y" DetailColor="y" />
 		<part Name="Shield" AV="6" DV="-4" WornOn="Hand" />
 		<part Name="Description" Short="Vertipacked scutes from a saltback shell, held together by raw ingenuity: a feldspar rampart." />
 		<part Name="Commerce" Value="250" />
@@ -27,7 +27,7 @@
 
 	<object Name="Brothers_Tortoises_Shaile Scale Cloak" Inherits="BaseCloak">
 		<part Name="Armor" AV="0" DV="1" Ego="1" Cold="15" Heat="15" WornOn="Back" />
-		<part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/shailecloak.png" DetailColor="C" />
+		<part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/tortoises/shailecloak.png" DetailColor="C" />
 		<part Name="Commerce" Value="300" />
 		<part Name="Description" Short="Nettings of brinestalk and elastyne support cascading teal scutes, their inner side crisp even to flume-stained fingers." />
 		<part Name="Physics" Weight="6" Organic="true" />
@@ -38,7 +38,7 @@
 
 	<object Name="Brothers_Tortoises_Verdant Sallet" Inherits="BaseHelmet">
 		<part Name="Armor" AV="2" DV="1" WornOn="Head" />
-		<part Name="Render" DisplayName="{{leafy|verdant sallet}}" Tile="Items/verdantsallet.png" ColorString="&amp;w" DetailColor="g" RenderString="]" />
+		<part Name="Render" DisplayName="{{leafy|verdant sallet}}" Tile="Items/tortoises/verdantsallet.png" ColorString="&amp;w" DetailColor="g" RenderString="]" />
 		<part Name="Commerce" Value="85" />
 		<part Name="Description" Short="Growth over a fragment of domed shell fashions a wearable gardegives a self-impression o grow over a domed layer of wearable topsoil." />
 		<part Name="Physics" Weight="6" Organic="true" />
@@ -51,7 +51,7 @@
   
 	<!--Others-->
 	<object Name="Brothers_Tortoises_Honorary Shell" Inherits="BaseCloak">
-		<part Name="Render" DisplayName="honorary shell" Tile="Items/wardenshell.png" RenderString="]" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Render" DisplayName="honorary shell" Tile="Items/tortoises/wardenshell.png" RenderString="]" ColorString="&amp;Y" DetailColor="w" />
 		<part Name="Armor" AV="2" DV="-1" Cold="10" Heat="10" WornOn="Back" />
 		<part Name="Description" Short="Discarded scutes hug a plastifer frame, arranged in a declaration of esteem to all shellbacked pilgrims." />
 		<part Name="Commerce" Value="200" />
@@ -66,7 +66,7 @@
 
 	<!--Guns and Ammos-->
 	<object Name="Brothers_Tortoises_Saltback Culverin" Inherits="Musket">
-		<part Name="Render" DisplayName="saltback culverin" Tile="Items/poacherrifle.png" ColorString="&amp;Y" DetailColor="r" />
+		<part Name="Render" DisplayName="saltback culverin" Tile="Items/tortoises/poacherrifle.png" ColorString="&amp;Y" DetailColor="r" />
 		<part Name="Commerce" Value="350" />
 		<part Name="Physics" Weight="15" />
 		<part Name="MissileWeapon" Skill="Rifle" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
@@ -82,7 +82,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_Saltback Magnum" Inherits="Borderlands Revolver">
-		<part Name="Render" DisplayName="saltback magnum" Tile="Items/poacherpistol.png" ColorString="&amp;Y" DetailColor="r" />
+		<part Name="Render" DisplayName="saltback magnum" Tile="Items/tortoises/poacherpistol.png" ColorString="&amp;Y" DetailColor="r" />
 		<part Name="Commerce" Value="150" />
 		<part Name="Physics" Weight="5" />
 		<part Name="MissileWeapon" AnimationDelay="0" Skill="Pistol" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="4" RangeIncrement="6" />

@@ -4,7 +4,7 @@
 	<!--Shailes-->
 	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
 		<part Name="Description" Short="Volutes of frozen mist seep in-between =pronouns.possessive= polished scutes, water clotting affixed to the creek-dweller." />
-		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/shaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/tortoises/shaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<stat Name="Level" Value="20" />
 		<stat Name="Hitpoints" Value="80" />
 		<stat Name="ColdResistance" Value="100" />
@@ -33,7 +33,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_Baby Shaile" Inherits="BaseTortoise">
-		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/tortoises/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
 		<part Name="Brain" Hostile="false" Factions="Tortoises-100" />
@@ -80,21 +80,21 @@
 	</object>	
 	
 	<object Name="Brothers_Tortoises_VerdantBanana" Inherits="Brothers_Tortoises_VerdantBase">
-		<part Name="Render" Tile="creatures/verdantdomebanana.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="W" />
+		<part Name="Render" Tile="Creatures/tortoises/verdantdomebanana.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="W" />
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Hanging low on a hunched trunk, sunlight is imprisoned in golden ripeness." />
 	    <part Name="Harvestable" OnSuccess="Banana" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;W" RipeTileColor="&amp;g" RipeDetailColor="W" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
 	</object>
 	
 		<object Name="Brothers_Tortoises_VerdantApple" Inherits="Brothers_Tortoises_VerdantBase">
-		<part Name="Render" Tile="creatures/verdantdomeapple.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="R" />
+		<part Name="Render" Tile="Creatures/tortoises/verdantdomeapple.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="R" />
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Hanging proudly on fractal branches, sunlight is imprisoned in crimson hydration." />
 	    <part Name="Harvestable" OnSuccess="Starapple" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;R" RipeTileColor="&amp;g" RipeDetailColor="R" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
 	</object>
 	
 		<object Name="Brothers_Tortoises_VerdantSpinefruit" Inherits="Brothers_Tortoises_VerdantBase">
-		<part Name="Render" Tile="creatures/verdantdomespinefruit.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="M" />
+		<part Name="Render" Tile="Creatures/tortoises/verdantdomespinefruit.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="M" />
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Grown aggressively on fractus trunks, sunlight is imprisoned in purple spines." />
 	    <part Name="Harvestable" OnSuccess="Spine Fruit" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;WM" RipeTileColor="&amp;g" RipeDetailColor="M" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
@@ -105,7 +105,7 @@
 	
 	<object Name="Brothers_Tortoises_Pulshell" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
-		<part Name="Render" Tile="creatures/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" />
+		<part Name="Render" Tile="Creatures/tortoises/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" />
 		<part Name="Description" Short="=pronouns.Subjective= trundles in serenity, metallic shell latticed with humming coils, distorting compass needles. Scrap flocks in presence of an animated figure that once collected it for flushing, now aimless." />
 		<part Name="Brain" Factions="Robots-100" Hostile="false" />
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="High-Powered Magnet" />
@@ -123,13 +123,13 @@
 	</object>
 		
 	<object Name="Brothers_Tortoises_Pulshell_Slam" Inherits="NaturalFist">
-		<part Name="Render" DisplayName="frontal slam" Tile="Creatures/natural-weapon-bands.bmp" ColorString="&amp;C" />
+		<part Name="Render" DisplayName="frontal slam" Tile="Creatures/tortoises/natural-weapon-bands.bmp" ColorString="&amp;C" />
 		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Strength" Slot="Head" />
 	</object>
 	
 	<!-- Other Tortoises-->
 	<object Name="Great Saltback" Load="Merge">
-		<part Name="Render" DisplayName="great saltback" Tile="Creatures/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Render" DisplayName="great saltback" Tile="Creatures/tortoises/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
 		<part Name="Corpse" CorpseChance="50" CorpseBlueprint="Great Saltback Corpse" />
 	</object>
 
@@ -138,7 +138,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
-		<part Name="Render" DisplayName="walking dune" Tile="Creatures/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
+		<part Name="Render" DisplayName="walking dune" Tile="Creatures/tortoises/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
 		<part Name="Corpse" CorpseChance="90" CorpseBlueprint="Brothers_Tortoises_Walking Dune Corpse" />
 		<part Name="Brain" Factions="Tortoises-100,Unshelled Reptiles-100,Birds-100" Hostile="false" Calm="True"/>
 		<stat Name="AV" Value="17" />
@@ -153,7 +153,7 @@
 		<tag Name="Role" Value="Tank" />
 		<tag Name="Gigantic" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
-		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Combing the Salt Dunes" Step="Find a Walking Dune" />
+		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Brothers_TortoisesPoacherQuest" Step="WalkingDune" />
 		<part Name="AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
@@ -209,7 +209,7 @@
 	
 	<!--NPCs-->
 	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="Issachari Rifler">
-		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/poacher.png" RenderString="h" ColorString="&amp;Y" />
+		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/tortoises/poacher.png" RenderString="h" ColorString="&amp;Y" />
 		<part Name="Titles" Primary="Issachari pariah" />
 		<part Name="Description" Short="Saltflakes pepper a wind-carved face, =pronouns.possessive= eyes squinting against the glaring Salt Sun and Beetle Moon. Threadbare patched-up jubbah and traditional Issachari veil conceal weathered skin and loaded bandoleer." />
 		<part Name="Brain" Wanders="false" Hostile="false" Calm="True" Factions="Pariahs-100" />
@@ -235,11 +235,11 @@
 		<inventoryobject Blueprint="Puma Chitin Vest" Number="1" />
 		<inventoryobject Blueprint="Issachari Sun Veil" Number="1" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-		<tag Name="QuestGiver" Value="Combing the Salt Dunes" />
+		<tag Name="QuestGiver" Value="Brothers_TortoisesPoacherQuest" />
 	</object>
 
 	<object Name="Brothers_Tortoises_Warden Qoruda" Inherits="NPC">
-		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
+		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoises/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
 		<part Name="Honorifics" Primary="Warden" />
 		<part Name="Description" Short="Hunched spine cracks under a natural shelldome as saltflies flock to numbing shade cast by a wide-brimmed cap. Leathery skin cracks and flakes where it meets backing keratin, white hairtufts properly groomed and trimed short. =pronouns.Subjective= rests for a while, =pronouns.possessive= eyes surveying =pronouns.possessive= surroundings and the avertable horizon. Years bear heavily on =pronouns.possessive= brow and shake =pronouns.possessive= his frame with a wheezing cough." />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_WardenQoruda" />
@@ -272,10 +272,11 @@
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<tag Name="QuestGiver" Value="Brothers_TortoisesWardenQuest" />
 	</object>
 
 	<object Name="Brothers_Tortoises_Skins-the-Dawnglider" Inherits="Issachari Rifler">
-		<part Name="Render" DisplayName="{{M|Skins-the-Dawnglider, legendary Issachari hunter}}" Tile="Creatures/hunterpistol.png" RenderString="h" ColorString="&amp;M" />
+		<part Name="Render" DisplayName="{{M|Skins-the-Dawnglider, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterpistol.png" RenderString="h" ColorString="&amp;M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal steel cylinders, snarling a disastrous proposition." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
@@ -300,7 +301,7 @@
 	</object>
 	
 	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="Issachari Rifler">
-		<part Name="Render" DisplayName="{{M|Quarters-the-Salt-Kraken, legendary Issachari hunter}}" Tile="Creatures/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
+		<part Name="Render" DisplayName="{{M|Quarters-the-Salt-Kraken, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
