@@ -59,6 +59,13 @@
 
 	</object>
 
+	<object Name="Brothers_Tortoises_Baby_Shaile_Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="{{icy|icy teeth}}" />
+		<part Name="MeleeWeapon" BaseDamage="2d2" />
+		<part Name="ElementalDamage" Damage="1d2+2" Attributes="Cold" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+	
 	<!--Verdant domes-->
 	
 	<object Name="Brothers_Tortoises_VerdantBase" Inherits="BaseTortoise">
