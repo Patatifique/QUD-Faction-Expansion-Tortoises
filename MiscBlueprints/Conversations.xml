@@ -6,341 +6,271 @@
 	
 	<conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
     
-		<node ID="Start" IfFinishedQuest="Brothers_TortoisesPoacherQuest">
-			<text>
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfNotHaveQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
+				{{emote|*The Issachari =verb:squint= at you.*}}
+				
+				You're standing in my shade, lack-salt.				
+			</text>
+			<text IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
+				{{emote|*The Issachari =verb:take= =pronouns.possessive= eyes off =pronouns.possessive= weapon.*}}
+
+				Have you come bearing news of the Saltback Graveyard, lack-salt?
+			</text>
+			<text IfFinishedQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
 				{{emote|*The Issachari does not bother meeting your gaze.*}} 
 				
 				We have nothing more to say to each other, lack-salt.
 			</text>
-			<choice IfNotHaveQuest="Brothers_TortoisesRewardQuest" GotoID="Reward">I have made good use of your gift. Is there any way to get another weapon?</choice>
-			<choice GotoID="Ambush" IfHaveState="HaveBeenAmbushedByPoacher">Issachari using weapon bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
-			<choice GotoID="End">As you say. Live and drink.</choice>
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Reward" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I have made good use of your gift. Is there any way to get another weapon?</choice>
+			<choice Target="Ambush" IfHaveState="HaveBeenAmbushedByPoacher">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
+			<choice Target="QuestChoice" IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
+			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
+			<choice Target="Remind" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
+			<choice Target="Unfair" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Why is it I'm the one looking for the Graveyard while you smoke the hookah here?</choice>
+			<choice Target="Rifle" IfNotHaveQuest="Brothers_TortoisesRewardQuest">That's a nice rifle you've got.</choice>
+			<choice Target="Shade" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What makes this tent "your" shade?</choice>
+			<choice Target="Activity" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What are you doing in the Six Day Stilt?</choice>
+			<choice Target="Salt" IfHaveLiquid="salt" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I'm not a lack-salt: I have some right there.</choice>
+			<choice Target="Pariah" IfNotHaveQuest="Brothers_TortoisesRewardQuest">Why are you called "pariah" when you still bear the red-and-white?</choice>
+			<choice Target="Work" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">I'm in need of work. Do you have any that needs doing?</choice>
+			<choice Target="End">Live and drink, huntress.</choice>
 		</node>
 	
-		<node ID="Reward">
-			<text>
-				{{emote|*The Issachari looks up.*}} 
-				
+		<node ID="Reward" Inherits="Welcome">
+			<text>			
 				Good for you to recognize the worth of the red-and-white, but this was my only gift. Stay...
 
-				{{emote|*The Issachari closes her mouth mid-sentence, only to speak up softly.*}} 
+				{{emote|*=pronouns.Subjective= =verb:close:afterpronoun= =pronouns.possessive= mouth mid-sentence, only to speak softly.*}}
 				
 				Walk in the shade, lack-salt.
 			</text>
-			<choice GotoID="Start">Just one more thing, if you please.</choice>
-			<choice GotoID="End">Live and drink – and walk in the shade, huntress.</choice>
 		</node>
 
 		<node ID="Ambush">
 			<text>
-				{{emote|*The Issachari grins knowingly behind her veil, focused on cleaning her weapon.*}} 
+				{{emote|*=pronouns.Subjective= =verb:grin= knowingly behind =pronouns.possessive= veil, focused on cleaning =pronouns.possessive= weapon.*}} 
 				
 				I owe you nothing, lack-salt. And I trust you will not disturb the Stiltgrounds, so pick a direction and walk.	
 			</text>
-			<choice GotoID="Start">I will not. I have more of your speechwater to waste.</choice>
-			<choice GotoID="End">You trust your life on a risky wager, huntress. Live and drink – for now.</choice>
+			<choice Target="End">You trust your life on a risky wager, huntress. Live and drink – for now.</choice>
 		</node>		
 	
-		<node ID="Start" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">
-			<text>
-				{{emote|*The Issachari takes her eyes off her weapon.*}}
-
-				Have you come bearing news of the Saltback Graveyard, lack-salt?
-			</text>
-			<choice IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" GotoID="QuestChoice">About the Saltback Graveyard...</choice>
-			<choice IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" GotoID="IKnow">I know where the Saltback Graveyard is.</choice>
-			<choice GotoID="Remind">Remind me why you want to find this place again?</choice>
-			<choice GotoID="Unfair">Why is it I'm the one looking for this place why you smoke the hookah here?</choice>
-			<choice GotoID="RifleQuest">No. But is this the rifle you use to take down saltbacks?</choice>
-			<choice GotoID="End">Not yet, but I will. Live and drink, huntress.</choice>
-		</node>
-	
-		<node ID="Start" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">
-			<text>
-				{{emote|*The Issachari squints at you.*}}
-				
-				You're standing in my shade, lack-salt.				
-			</text>
-			<choice Target="Rifle">That's a nice rifle you've got.</choice>
-			<choice Target="Shade">What makes it your shade?</choice>
-			<choice Target="Activity">What are you even doing here?</choice>
-			<choice Target="Salt" IfHaveLiquid="salt">I'm not a lack-salt: I have some right there.</choice>
-			<choice Target="Pariah">Why are you called "pariah" when you still bear the red-and-white?</choice>
-			<choice Target="Work">I'm in need of work. Do you have any that needs doing?</choice>
-			<choice GotoID="End">Live and drink, huntress.</choice>		
-		</node>
-
 		<node ID="Pariah">
 			<text>
-				{{emote|*The Issachari picks her words carefully.*}} 
+				{{emote|*=pronouns.Subjective= =verb:pick= =pronouns.possessive= words carefully.*}} 
 				
 				Season your speechwater with thinkwater, lack-salt. Do you see many Issachari in the Stiltgrounds?	
 			</text>
-			<choice GotoID="Seen">I think I've seen one or two?</choice>
-			<choice GotoID="NotSeen">Come to think of it, I haven't seen any lately.</choice>
+			<choice Target="Seen">I think I've seen one or two?</choice>
+			<choice Target="NotSeen">Come to think of it, I haven't seen any lately.</choice>
 		</node>
 		
-		<node ID="Seen">
+		<node ID="Seen" Inherits="Welcome">
 			<text>
-				{{emote|*The Issachari rolls her eyes above the hem of her veil but stays silent.*}}	
+				{{emote|*=pronouns.Subjective= =verb:roll:afterpronoun= her=pronouns.possessive= eyes above the hem of =pronouns.possessive= veil but =verb:stay:afterpronoun= silent.*}}	
 			</text>
-			<choice GotoID="Start">Alright. I had other questions.</choice>
-			<choice GotoID="End">Huh. Live and drink, pariah.</choice>
 		</node>
 		
-		<node ID="NotSeen">
+		<node ID="NotSeen" Inherits="Welcome">
 			<text>
-				{{emote|*The Issachari leans forward in a conspiring way.*}}
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward in a conspiring way.*}}
 				
 				Well, in that case I am "pariah" for as long as I am in the Stiltgrounds. Makes trading easier, see?
 			</text>
-			<choice GotoID="Start">I see. If you do not mind, I had other questions.</choice>
-			<choice GotoID="End">A canny plan. Live and drink, "pariah".</choice>
 		</node>
 		
 		<node ID="Rifle">
-			<text>
-				{{emote|*The Issachari lays her weapon accross her knees.*}} 
-				
+			<text>			
 				And what do you know of our rifling traditions, lack-salt?	
 			</text>
-			<choice GotoID="Knowledgeable">
+			<choice Target="Knowledgeable">
 				<text>I can strip, clean and reassemble an Issachari rifle under the Beetle Moon.</text>
 				<part Name="Brothers_RequirePart" Part="Rifle_SteadyHands" Render="Bow and Rifle: Steady Hands" />
 			</choice>
-			<choice GotoID="Knowledgeable">
+			<choice Target="Knowledgeable">
 				<text>I favor lighter weapons, but still consider myself a diligent student of lead slugs.</text>
 				<part Name="Brothers_RequirePart" Part="Pistol_SteadyHands" Render="Pistol: Steady Hand" />
 			</choice>
-			<choice GotoID="Knowledgeable">
+			<choice Target="Knowledgeable">
 				<text>Only that I wish they were put to use on heavier armament.</text>
 				<part Name="Brothers_RequirePart" Part="HeavyWeapons_StrappingShoulders" Render="Heavy Weapons: Strapping Shoulders" />
 			</choice>
-			<choice GotoID="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
-			<choice GotoID="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
+			<choice Target="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
+			<choice Target="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
 		</node>
 
-		<node ID="Knowledgeable">
-			<text>
-				{{emote|*The Issachari seems taken aback by your knowledge.*}} 
-				
+		<node ID="Knowledgeable" Inherits="Welcome">
+			<text>			
 				Is that so? In any case, this one here is my doing. Powerful enough to pierce even the hardest shells without trouble.	
 			</text>
-			<choice GotoID="Work">What would it take to obtain such a weapon?</choice>
-			<choice GotoID="Start">Impressive. I had other questions.</choice>
-			<choice GotoID="End">I see. I will let you to your craft then - live and drink.</choice>
+			<choice Target="Work" IfNotHaveQuest="Brothers_TortoisesPoacherQuest" Priority="10">What would it take to obtain such a weapon?</choice>
 		</node>
 		
-		<node ID="ThingOrTwo">
-			<text>
-				{{emote|*The Issachari grips her weapon tighter.*}} 
-				
+		<node ID="ThingOrTwo" Inherits="Welcome">
+			<text>			
 				Nothing worth wasting speechwater over. State your purpose, lack-salt.	
 			</text>
-			<choice GotoID="Start">I was about to.</choice>
-			<choice GotoID="End">Sorry for bothering you. Live and drink, grumpy huntress.</choice>
 		</node>
 		
-		<node ID="NotMuch">
-			<text>
-				{{emote|*The Issachari relaxes somewhat.*}} 
-				
+		<node ID="NotMuch" Inherits="Welcome">
+			<text>				
 				At least you prove honest, lack-salt. This is my own creation, fit for hunting Moghra'yi giants.	
 			</text>
-			<choice GotoID="Start">Thank you for enlightening me. I had other questions.</choice>
-			<choice GotoID="End">Very impressive. Live and drink, gunsmith huntress.</choice>
 		</node>
 		
-		<node ID="Shade">
+		<node ID="Shade" Inherits="Welcome">
 			<text>
 				The early dawnglider gets the worm. Make greater haste across Moghra'yi next time, lack-salt, and you may just secure yourself some shade.
 			</text>
-			<choice GotoID="Start">I will. If you allow it, huntress, I have other questions.</choice>
-			<choice GotoID="End">I see. Live and drink, huntress.</choice>
 		</node>
 		
-		<node ID="Activity">
-			<text>
-				{{emote|*The Issachari pulls her veil higher on her face as to preserve moisture.*}} 
-				
+		<node ID="Activity" Inherits="Welcome">
+			<text>			
 				Wasting speechwater.
 			</text>
-			<choice GotoID="Insist">I must insist, please. I do not often cross the path of talkative Issachari.</choice>
-			<choice GotoID="End">I'll help you save some, then. Live and drink.</choice>
+			<choice Target="Insist" Priority="10">I must insist, please. I do not often cross the path of talkative Issachari.</choice>
 		</node>
 		
-		<node ID="Insist">
+		<node ID="Insist" Inherits="Welcome">
 			<text>
 				And for good reason. But I'll entertain your question: I have come to trade the spoils of hunting.
 			</text>
-			<choice GotoID="Start">Makes sense. If I can waste some more speechwater, I had other questions.</choice>
-			<choice GotoID="End">I will not bother you then. Live and drink, huntress.</choice>
 		</node>
 		
 		<node ID="Salt">
 			<text>
-				{{emote|*The Issachari's smile reaches above her veil.*}} 
+				{{emote|*The Issachari's smile reaches above =pronouns.possessive= veil.*}} 
 				
 				Do you now? Salt isn't enough to make you *not* a lack-salt, lack-salt.
 			</text>
-			<choice GotoID="ItIs">It sort of is, though. Hence the name.</choice>
-			<choice GotoID="LackSalt">Isn't it? What would be enough then?</choice>
+			<choice Target="ItIs">It sort of is, though. Hence the name.</choice>
+			<choice Target="LackSalt">Isn't it? What would be enough then?</choice>
 		</node>
 		
-		<node ID="ItIs">
+		<node ID="ItIs" Inherits="Welcome">
 			<text>
 				Whatever you say, lack-salt.
 				
-				{{emote|*The Issachari settles more comfortably, unbothered.*}}
+				{{emote|*=pronouns.Subjective= =verb:settle= more comfortably, unbothered.*}}
 			</text>
-			<choice GotoID="Start">Since there is no changing your opinion, I have other questions.</choice>
-			<choice GotoID="End">I tire of this. Live and drink.</choice>
 		</node>
 		
-		<node ID="LackSalt">
+		<node ID="LackSalt" Inherits="Welcome">
 			<text>
 				Not asking that question would be a start. 
 				
-				{{emote|*The Issachari seems to ponder for a while before choosing her next words carefully.*}}
+				{{emote|*=pronouns.Subjective= =verb:seem= to ponder for a while before choosing =pronouns.possessive= next words carefully.*}}
 				
 				Behold the red-and-white next time you cross Moghra'yi and maybe you might ensalten yourself yet.
 			</text>
-			<choice GotoID="Start">I will. If you allow it, I have other questions.</choice>
-			<choice GotoID="End">I see. Live and drink, ensaltened huntress.</choice>
 		</node>
 		
 		<node ID="Work">
 			<text>
-				{{emote|*The Issachari's brow furrows as she considers your words.*}}
+				{{emote|*=pronouns.Possessive= brow furrows as =pronouns.subjective= considers your words.*}}
 				
 				It all depends on you, lack-salt. Do you cower from the sun? Is pacing Moghra'yi too much to bear?
 			</text>
-		<choice GotoID="GiveQuest">No to both of those: I am a seasoned traveler.</choice>
-		<choice GotoID="End">I nearly ran out of water already, no way I'm heading there again.</choice>
+		<choice Target="GiveQuest">No to both of those: I am a seasoned traveler.</choice>
+		<choice Target="End">I nearly ran out of water already, no way I'm heading there again.</choice>
 		</node>
 		
 		<node ID="GiveQuest">
 			<text>
 				If you say so, lack-salt, there may be something you could help with. Have you ever came across an old saltback? Tales say, when they feel the pull of their end drawing close, they leave their kind and travel to their final resting place.
-				
-				{{emote|*The Issachari leans forward.*}}
-				
+								
 				This is what I'm after, lack-salt. The fabled Saltback Graveyard.
 			</text>
-		<choice GotoID="GiveQuest2">Why would you even want to find this place?</choice>
-		<choice GotoID="Start">I need some time to consider this. In the meantime, could we talk about something else?</choice>
+		<choice Target="GiveQuest2">Why do you want to find this place?</choice>
+		<choice Target="Start">I need some time to consider this. In the meantime, could we talk about something else?</choice>
 		</node>
     
 		<node ID="GiveQuest2">
 			<text>
-				{{emote|*The Issachari rolls her eyes under salt-flaked brows.*}}
+				{{emote|*=pronouns.Subjective= =verb:roll= =pronouns.possessive= eyes under a salt-flaked brow.*}}
 				
-				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the deads have any use for it. Find the place – if it exists – and I'll make sure to reward you handsomely. What say you?
+				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the dead have any use for it. Find the place – if it exists – and I'll make sure to reward you handsomely. What say you?
 			</text>
-		<choice GotoID="End" StartQuest="Brothers_TortoisesPoacherQuest">Find the Saltback Graveyard, got it. Simple enough - I shall be back soon.</choice>
-		<choice GotoID="End">I will not help you rob the dead – live and drink, for now.</choice>
+		<choice Target="End" StartQuest="Brothers_TortoisesPoacherQuest">Find the Saltback Graveyard, got it. Simple enough -- I shall be back soon.</choice>
+		<choice Target="End">I will not help you rob the dead – live and drink, for now.</choice>
 		</node>
 	
-		<node ID="Remind">
+		<node ID="Remind" Inherits="Welcome">
 			<text>
-				{{emote|*The Issachari shuts her eyes for a moment, gathering patience.*}}
+				{{emote|*=pronouns.Subjective= =verb:shut:afterpronoun= =pronouns.possessive= eyes for a moment, gathering patience.*}}
 				
 				Scutes. Bones. For the taking. Write it down if you must, lack-salt, but stop wasting my speechwater over this.
 			</text>
-			<choice GotoID="Start">I will not forget it this time, I promise. Just another question before I go.</choice>
-			<choice GotoID="End">Thank you for the reminder, but I should get going. Live and drink, huntress.</choice>
 		</node>
 		
-		<node ID="Unfair">
+		<node ID="Unfair" Inherits="Welcome">
 			<text>
 				No one's forcing you, lack-salt. Pick a direction and walk, for all I care. 
-				
-				{{emote|*The Issachari redirects her attention to her rifle.*}}
 			</text>
-			<choice GotoID="Start">This does not sound safe. I have a few other questions for you.</choice>
-			<choice GotoID="End">I will do just that. Live and drink, huntress.</choice>
-		</node>
-	
-		<node ID="RifleQuest">
-			<text>
-				{{emote|*The Issachari carefully chooses her next words.*}}
-				
-				Among other things, lack-salt. Why do you ask?
-			</text>
-			<choice GotoID="Gift">I was wondering what it would take to get one of those.</choice>
-			<choice GotoID="End">Sheer curiosity. Live and drink, sharpshooter.</choice>
-		</node>
-	
-		<node ID="Gift">
-			<text>
-				{{emote|*A smile spreads on the Issachari's wind-carved face.*}}
-				
-				Tell you what, lack-salt: you find the Saltback Graveyard and I'll gift you one of my hunting weapons.
-			</text>
-			<choice GotoID="Start">I will hold you to that. I had another question, if you don't mind.</choice>
-			<choice GotoID="End">Motivation enough – I will return with the Graveyard's location. In the meantime, live and drink.</choice>
 		</node>
 
 		<node ID="IKnow">
 			<text>
-				{{emote|*The Issachari's eyebrows shoot up.*}} 
+				{{emote|*=pronouns.Possessive= eyebrows shoot up.*}} 
 				
 				And how do you know?
 			</text>
-			<choice GotoID="BeenThere">I have my ways, huntress.</choice>
-			<choice GotoID="BeenThere">... A tortoise told me?</choice>
+			<choice Target="BeenThere">I have my ways, huntress.</choice>
+			<choice Target="BeenThere">... A tortoise told me?</choice>
 		</node>
 
 		<node ID="BeenThere">
 			<text>
-				{{emote|*The Issachari sighs heavily behind her veil.*}} 
+				{{emote|*=pronouns.Subjective= =verb:sigh:afterpronoun= heavily behind =pronouns.possessive= veil.*}} 
 				
 				Have you even been there, lack-salt?	
 			</text>
-			<choice GotoID="Go">...</choice>
-			<choice GotoID="End">I'm on my way there, actually. Live and drink.</choice>
+			<choice Target="Go">...</choice>
+			<choice Target="End">I'm on my way there, actually. Live and drink.</choice>
 		</node>
 
 		<node ID="Go">
 			<text>				
 				I would rather you check the reality of rumors before wasting speechwater, lack-salt.	
-				
-				{{emote|*The Issachari reports her attention back to her weapon.*}} 
 			</text>
-			<choice GotoID="End">I will make sure the Saltback Graveyard exists, then. Live and drink.</choice>
+			<choice Target="End">I will make sure the Saltback Graveyard exists, then. Live and drink.</choice>
 		</node>
 		
 		<node ID="QuestChoice">
 			<text>
-				{{emote|*The Issachari leans forward, her intense gaze on you.*}}
+				{{emote|*The Issachari leans forward, =pronouns.possessive= gaze intense.*}}
 				
 				... Yes?
 			</text>
-			<choice GotoID="Found">I may have found it.</choice>
-			<choice GotoID="Lie">
+			<choice Target="Found">I may have found it.</choice>
+			<choice Target="Lie">
 				<text>{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</text>
 				<part Name="Brothers_RequireStat" Stat="Ego" Value="20" />
 			</choice>
-			<choice GotoID="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
+			<choice Target="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
 		</node>
 
 		<node ID="Found">
 			<text>
-				{{emote|*The Issachari's eyes go wide, and her veil nearly slips from her face.*}}
+				{{emote|*=pronouns.Possessive= eyes go wide, and =pronouns.possessive= veil nearly slips from =pronouns.possessive= face.*}}
 				
 				Have you? Where is it?
 			</text>
-			<choice GotoID="Found2">Nestled between wind-carved dunes. {{W|*show her the exact location on your map*}}</choice>
-			<choice GotoID="QuestChoice">On second thought, I may be mistaken...</choice>
+			<choice Target="Found2">Nestled between wind-carved dunes. {{W|*show her the exact location on your map*}}</choice>
+			<choice Target="QuestChoice">On second thought, I may be mistaken...</choice>
 		</node>
 
 		<node ID="Found2" AllowEscape="false">
 			<text>
-				{{emote|*The Issachari nods enthusiastically, already planning her next move.*}}
+				{{emote|*=pronouns.Subjective= =verb:nod:afterpronoun= enthusiastically, already planning =pronouns.possessive= next move.*}}
 				
 				Yes, yes, that's perfect! As promised, lack-salt, here is your payment. Make good use of it.
 			</text>
-			<choice GotoID="Found3" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief">
+			<choice Target="Found3" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief">
 			<text>Thank you for this. What will you do now?</text>
 			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
 			<part Name="Brothers_ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
@@ -351,45 +281,41 @@
 			<text>				
 				What shall I do?
 				
-				{{emote|*The Issachari snorts derisively.*}}
+				{{emote|*=pronouns.Subjective= =verb:snort:afterpronoun= derisively before curtly nodding in your direction.*}}
 				
 				There is much preparation ahead, lack-salt. But we shall strip it bare, fashion armor out of scute and bones and trade the rest. Walk in the shade, lack-salt.
-				
-				{{emote|*The Issachari curtly nods in your direction.*}}
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
 		</node>	
 		
 		<node ID="Lie">
 			<text>
-				{{emote|*The Issachari sits back, visibly disappointed.*}}
+				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= back, visibly disappointed.*}}
 				
 				Just because you didn't find it does not mean it isn't there, lack-salt. Moghra'yi has a way of hiding secrets from unsavvy eyes.
 			</text>
-			<choice GotoID="Lie2">I have spent weeks Brothers_TortoisesPoacherQuest. Disrespect me if you wish, huntress, but do not doubt me.</choice>
-			<choice GotoID="QuestChoice">I should look closer then...</choice>
+			<choice Target="Lie2">I have spent weeks combing the salt dunes. Disrespect me if you wish, huntress, but do not doubt me.</choice>
+			<choice Target="QuestChoice">On second thought...</choice>
 		</node>
 
 		<node ID="Lie2" AllowEscape="false">
 			<text>
-				{{emote|*The Issachari considers you for a moment before speaking up again.*}}
+				{{emote|*=pronouns.Subjective= =verb:consider:afterpronoun= you for a moment before speaking up again.*}}
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
 				<text>Be seeing you. Live and drink.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
 			</choice>
 		</node>
 		
 		<node ID="Protect">
-			<text>
-				{{emote|*The Issachari tenses up.*}}
-				
+			<text>			
 				Choose your next words very carefully, lack-salt.
 			</text>
-			<choice GotoID="Protect2">The only caution to be had is yours, Issachari. I warn you: profane the saltbacks' resting grounds and let your blood soak the salt dunes.</choice>
-			<choice GotoID="QuestChoice">Protection? What protection? I misspoke.</choice>
+			<choice Target="Protect2">The only caution to be had is yours, Issachari. I warn you: profane the saltbacks' resting grounds and let your blood soak the salt dunes.</choice>
+			<choice Target="QuestChoice">Protection? What protection? I misspoke.</choice>
 		</node>
 
 		<node ID="Protect2" AllowEscape="false">
@@ -398,7 +324,7 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice GotoID="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
+			<choice Target="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
 				<text>As your people say: stay warm and stay dry.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
 			</choice>
@@ -411,45 +337,56 @@
 	
 	<conversation ID="Brothers_Tortoises_WardenQoruda">
 
-		<node ID="Start" IfFinishedQuest="Brothers_TortoisesRewardQuest">
-			<text>
-			{{emote|*The warden lifts the brim of his hat with a thumb.*}}
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfFinishedQuest="Brothers_TortoisesRewardQuest" Priority="-1">
+				{{emote|*The warden lifts the brim of =pronouns.possessive= hat with a thumb.*}}
 
-			Greetings =name=! You shall always be welcome on these grounds.
+				Greetings =name=! You shall always be welcome on these grounds.
 			</text>
-			<choice GotoID="Now">What shall you do now, warden?</choice>
-			<choice GotoID="End">Live and drink.</choice>
+			<text IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuest="Brothers_TortoisesRewardQuest" Priority="-1">
+				{{emote|*Another coughing fit shakes the warden's frame.*}}
+				
+				Do you come with news from beyond Moghra'yi?
+			</text>
+			<text IfNotFinishedQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing" Priority="-1">
+				{{emote|*The warden wipes the corners of =pronouns.possessive= mouth.*}}
+				
+				Greetings, =name=. I hope my trust in you is not misplaced.
+			</text>
+			<text IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing" Priority="-1">
+				{{emote|*The warden beckons you closer between two coughing fits.*}}
+				
+				Come closer, traveler, and rest a moment in the shade. I am Warden Qoruda, although such designations matter little in this place.
+			</text>	
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Now" IfFinishedQuest="Brothers_TortoisesRewardQuest">What shall you do now, warden?</choice>
+			<choice Target="Loyal" IfHaveActiveQuest="Brothers_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
+			<choice Target="Betrayed" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">The Issachari shall have this place. Out of my way, old man.</choice>
+			<choice Target="Graveyard" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Thank you for welcoming me, warden. I am =name=. What is this place?</choice>
+			<choice Target="Poacher" IfHaveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
+			<choice Target="Poacher2" IfHaveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice Target="Saltbacks">I have never seen so many saltbacks in the same place. I dare not imagine what they could do, if enraged.</choice>		
+			<choice Target="Warden">I was not expecting a warden here.</choice>
+			<choice Target="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
+			<choice Target="End">Live and drink, warden.</choice>
 		</node>
 
 		<node ID="Now">
-			<text>
-				{{emote|*The warden stiffles a cough.*}}
-				
+			<text>			
 				What do you mean, "now"?
 			</text>	
-			<choice GotoID="Safe">Is this place not safe now?</choice>			
-			<choice GotoID="End">Nothing, actually. Live and drink, warden.</choice>
+			<choice Target="Safe">With the Issachari matter handled, is this place not safe?</choice>			
+			<choice Target="End">Nothing, actually. Live and drink, warden.</choice>
 		</node>
 
-		<node ID="Safe">
+		<node ID="Safe" Inherits="Welcome">
 			<text>
-				{{emote|*The warden's cough worsens, barely allowing for a few words.*}}
+				{{emote|*=pronouns.Possessive= cough worsens, barely allowing for a few words.*}}
 				
 				Greed will always attract the unscrupulous here, =name=. And thus I, its warden, will always be there.
 			</text>	
-			<choice GotoID="Start">At least you have a few calm months ahead. I had other questions, if you do not mind.</choice>			
-			<choice GotoID="End">That is a bit sad, actually. Live and drink, warden.</choice>
-		</node>
-		
-		<node ID="Start" IfFinishedQuest="Brothers_TortoisesPoacherQuest">
-			<text>
-				{{emote|*Another coughing fit shakes the warden's frame.*}}
-				
-				Do you come with news from beyond the Moghra'yi?
-			</text>
-			<choice GotoID="Loyal" IfHaveQuest="Brothers_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
-			<choice GotoID="Betrayed" IfNotHaveQuest="Brothers_TortoisesRewardQuest">The Issachari shall have this place. Out of my way, old man.</choice>
-			<choice GotoID="End">Not now, warden. Live and drink.</choice>
 		</node>
 
 		<node ID="Loyal" AllowEscape="false">
@@ -458,139 +395,99 @@
 				
 				Mightily done, =name=, mightily done. There is no thanking you enough for what you have done.
 			</text>	
-			<choice GotoID="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">I could not bear to imagine this place looted, warden.</choice>			
-			<choice GotoID="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">Guess I dislike tortoises less than Issachari, in the end.</choice>
+			<choice Target="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">I could not bear to imagine this place looted, warden.</choice>			
+			<choice Target="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">Guess I dislike tortoises less than Issachari, in the end.</choice>
 		</node>
 		
 		<node ID="Reward" AllowEscape="false">
-			<text>
-				{{emote|*The warden nods, deep in thoughts.*}}
-				
+			<text>			
 				Whatever your reasons may be, =name=, you have done this place a great service, and shall be appropriately rewarded.
 				
-				{{emote|*The warden starts rummaging through his belongings.*}}
+				{{emote|*The warden =verb:start= rummaging through his belongings.*}}
 			</text>	
-			<choice GotoID="Reward1">There's really no need for it to be...</choice>			
-			<choice GotoID="Reward1">I just hope it will be...</choice>
+			<choice Target="Reward1">There's really no need for it to be...</choice>			
+			<choice Target="Reward1">I just hope it will be...</choice>
 		</node>	
 		
 		<node ID="Reward1" AllowEscape="false">
 			<text>
-				{{emote|*The warden keeps rummaging, trinkets and baubles rolling on the ground.*}}
+				{{emote|*The warden =verb:keep= rummaging, trinkets and baubles rolling on the ground.*}}
 			</text>	
-			<choice GotoID="Reward2">... any sort of...</choice>			
-			<choice GotoID="Reward2">... at least some kind of...</choice>
+			<choice Target="Reward2">... any sort of...</choice>			
+			<choice Target="Reward2">... at least some kind of...</choice>
 		</node>	
-
-		
+	
 		<node ID="Reward2" AllowEscape="false">
 			<text>
-				{{emote|*A diminutive jerboa escapes from the warden's belongings, leaping on his shell in indignation before slipping away, unnoticed by the venerable fighter.*}}
+				{{emote|*A diminutive jerboa escapes from the warden's belongings, leaping on =pronouns.possessive= shell in indignation before slipping away, unnoticed by the venerable fighter.*}}
 			</text>	
-			<choice GotoID="Reward3">... expensive reward?</choice>			
-			<choice GotoID="Reward3">... worthless junk?</choice>
+			<choice Target="Reward3">... expensive reward?</choice>			
+			<choice Target="Reward3">... worthless junk?</choice>
 		</node>	
 
 		<node ID="Reward3" AllowEscape="false">
 			<text>
-				{{emote|*Eventually, the warden produces an assemblage in the shape of a tortoise shell, mounted on a sturdy harness.*}}
+				{{emote|*Eventually, the warden =verb:produce= an assemblage in the shape of a tortoise shell, mounted on a sturdy harness.*}}
 				
 				There, =name=. This shell was worn by saltback carers when I first took watch. Shellbacked memories still recognize it as a garment of honor and station.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
 				<text>Thank you, warden. I shall try to be worthy of it. Live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
 			</choice>			
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
 				<text>... Well at least something came out of it all. Live and drink, warden.</text>
 				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
 			</choice>
 		</node>	
 
-		<node ID="Start" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">
-			<text>
-				{{emote|*The warden wipes the corners of his mouth.*}}
-				
-				Greetings, =name=. I hope my trust in you is not misplaced.
-			</text>
-			<choice GotoID="Saltbacks">I dare not imagine what those saltbacks could do, if enraged.</choice>		
-			<choice GotoID="Warden">I still am amazed to find a warden here.</choice>
-			<choice GotoID="Sick">Has your cough not gotten any better, warden?</choice>
-			<choice Target="Poacher2" IfHaveQuest="Brothers_TortoisesPoacherQuest">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
-			<choice GotoID="End">Live and drink, warden.</choice>
-		</node>
-	
 		<node ID="Betrayed" AllowEscape="false">
 			<text>
-				{{emote|*Rage fills the warden's eyes, and spittles flies out of his mouth as he takes up arms.*}}
+				{{emote|*Rage fills the warden's eyes, and spittle flies out of =pronouns.possessive= mouth as he takes up arms.*}}
 				
-				Fool! Your blood shall stain this land forever!
+				Fool! Your blood shall stain the salt forever!
 			</text>	
-			<choice GotoID="End">
+			<choice Target="End">
 				<text>At long last, a fight!</text>
 				<part Name="StartFight" />
 			</choice>
 		</node>
-		
-		<node ID="Start">
-			<text>
-				{{emote|*The warden beckons you closer between two coughing fits.*}}
-				
-				Come closer, traveler, and rest a moment in the shade. I am Warden Qoruda, although such designations matter little in this place.
-			</text>			
-			<choice GotoID="Graveyard">You have my thanks, warden. I am =name=. What is this place?</choice>
-			<choice GotoID="Saltbacks">I have never seen so many saltbacks in the same place.</choice>		
-			<choice GotoID="Warden">I was not expecting a warden here.</choice>
-			<choice GotoID="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
-			<choice Target="Poacher" IfHaveQuest="Brothers_TortoisesPoacherQuest">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
-			<choice GotoID="End">Maybe later. Live and drink, warden.</choice>
-		</node>
 
-		<node ID="Saltbacks">
+		<node ID="Saltbacks" Inherits="Welcome">
 			<text>
-				{{emote|*The warden smiles faintly.*}}
+				{{emote|*=pronouns.Subjective= =verb:smile:afterpronoun= faintly.*}}
 				
 				Majestic creatures, are they not? This is where their final steps lead - their stomping helps me find sleep, sometimes.
 			</text>	
-			<choice GotoID="Start">Before that, I have more questions to ask.</choice>			
-			<choice GotoID="End">Maybe I will go get some rest myself. Live and drink.</choice>
 		</node>
 
-		<node ID="Warden">
+		<node ID="Warden" Inherits="Welcome">
 			<text>
-				{{emote|*The warden's chuckle turns into a dry, hacking cough before he can speak up again.*}}
+				{{emote|*=pronouns.Possessive= chuckle turns into a dry, hacking cough before =pronouns.subjective= can speak up again.*}}
 				
 				Oh? More lived here, erstwhile - there was a time the saltbacks could find carers here, to ease their final days.
-				
-				{{emote|*The warden's gaze seems lost in reminiscence, looking through you.*}}
 			</text>	
-			<choice GotoID="Left">What happened, warden? I see none here but you and the elder saltbacks.</choice>			
-			<choice GotoID="End">I will do like them and leave, then. Live and drink.</choice>
+			<choice Target="Left" Priority="10">What happened, warden? I see none here but you and the elder saltbacks.</choice>			
 		</node>
 		
-		<node ID="Left">
+		<node ID="Left" Inherits="Welcome">
 			<text>
-				{{emote|*The warden shakes his head, shedding the last remnants of a memory long past.*}}
+				{{emote|*=pronouns.Possessive= gaze is lost in reminiscence, until =pronouns.subjective= =verb:shake= =pronouns.possessive= head, shedding remnants of a memory long past.*}}
 				
 				Time happened. They left, and soon I will leave too. It will only be the saltbacks, then.
 			</text>	
-			<choice GotoID="Old">You would leave? Where?</choice>			
-			<choice GotoID="End">Sorry about that, but I must go. Live and drink.</choice>
+			<choice Target="Old" Priority="10">You would leave? Where?</choice>			
 		</node>
 		
-		<node ID="Old">
+		<node ID="Old" Inherits="Welcome">
 			<text>
 				{{emote|*The warden's smile seems more wretched than joyful.*}}
 				
-				The question would be "when", traveler.
-				
-				{{emote|*Another coughing fit shakes his massive frame.*}}
+				The question is "when", traveler.
 			</text>	
-			<choice GotoID="Sick">You are coughing something fierce. Are you alright?</choice>			
-			<choice GotoID="End">I'll take a few steps back, just in case. Live and drink.</choice>
 		</node>
 		
-		<node ID="Sick">
+		<node ID="Sick" Inherits="Welcome">
 			<text>
 				I'm alr-
 				
@@ -598,60 +495,51 @@
 				
 				... Even the Harvest Sun sets in the evening, traveler. And it is near sundown for me.
 			</text>	
-			<choice GotoID="Help">Is there anything I can do?</choice>			
-			<choice GotoID="End">I won't take more of your time then. Live and drink.</choice>
+			<choice Target="Help" Priority="10">Is there anything I can do?</choice>			
 		</node>
 
-		<node ID="Help">
+		<node ID="Help" Inherits="Welcome">
 			<text>
-				There is no remedy against old age, traveler.
+				There is no remedy against old age.
 			</text>	
-			<choice GotoID="Start">I am sorry. I have other questions if you will allow me, warden.</choice>			
-			<choice GotoID="End">Live and drink then - honey, preferably.</choice>
 		</node>
 		
 		<node ID="Poacher" AllowEscape="false">
 			<text>
-				{{emote|*The warden's gaze meet yours, unperturbed.*}}
+				{{emote|*=pronouns.Possessive= gaze meet yours, unperturbed.*}}
 				
 				And why would you do such a thing? This is a place of peace for fading saltbacks. Disturb its solemnity at your own risks, stranger.
 			</text>	
-			<choice GotoID="NoTrouble">I can see that. Maybe I should reconsider the words of the Issachari then.</choice>			
-			<choice GotoID="Trouble">The risks are all yours, warden - your corpse will not stand out from the others.</choice>		
+			<choice Target="NoTrouble">I can see that. Maybe I should reconsider the words of the Issachari then.</choice>			
+			<choice Target="Trouble">The risks are all yours, warden -- your corpse will not stand out from the others.</choice>		
 		</node>
 		
-		<node ID="Poacher2">
-			<text>
-				{{emote|*The warden's breath is slow and measured, albeit wheezing.*}}
-				
+		<node ID="Poacher2" Inherits="Welcome">
+			<text>			
 				Of her? Nothing, =name=, but I know of people like her. They would leave nothing here but salt and tears, if given the opportunity. Be wise, and keep this place's location secret.				
-			</text>	
-			<choice GotoID="Start">I will do my best. I had other questions, warden.</choice>			
-			<choice GotoID="End">Live and drink, warden.</choice>	
+			</text>		
 		</node>
 		
 		<node ID="Graveyard" AllowEscape="false">
-			<text>
-				{{emote|*The warden wipes his lower lip.*}}
-				
+			<text>			
 				A resting place, =name=, where all elder saltback come in their final moments. I am surprised you even found it, if I may be so honest.
 				
-				{{emote|*The warden slowly straighten his back, standing tall despite his age.*}}
+				{{emote|*=pronouns.Subjective= slowly =verb:straighten:afterpronoun= =pronouns.possessive= back, standing tall despite old age.*}}
 				
 				I trust you have not come to disturb its solemnity.
 			</text>	
-			<choice GotoID="NoTrouble">Be it by luck or by fate I have found my way here, but will respect the place's sanctity, warden.</choice>			
-			<choice GotoID="Trouble">I've come for trouble: out of my way, old man.</choice>
+			<choice Target="NoTrouble">Be it by luck or by fate I have found my way here, but will respect the place's sanctity, warden.</choice>			
+			<choice Target="Trouble">I've come for trouble: out of my way, old man.</choice>
 		</node>
 		
 		<node ID="Trouble" AllowEscape="false">
 			<text>
-			{{emote|*The warden grips his hammer tightly.*}}
+			{{emote|*=pronouns.Subjective= =verb:grip:afterpronoun= =pronouns.possessive= hammer tightly.*}}
 
 			In that case, you will find there is still a fight in these old bones yet!
 			</text>
-			<choice GotoID="Scared">Wait! I misspoke. Please forgive my pride, warden.</choice>
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
+			<choice Target="Scared">Wait! I misspoke. Please forgive my pride, warden.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
 				<text>Bring it on!</text>
 				<part Name="StartFight" />
 			</choice>
@@ -659,12 +547,12 @@
 		
 		<node ID="Scared" AllowEscape="false">
 			<text>
-			{{emote|*The warden squints at you, letting his weapon down - albeit only slightly.*}}
+			{{emote|*=pronouns.Subjective= =verb:squint:afterpronoun= at you, letting =pronouns.possessive= weapon down -- albeit only slightly.*}}
 
 			You play dangerous games, =name=. Not all wardens have my patience.
 			</text>
-			<choice GotoID="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
+			<choice Target="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
 				<text>Not all wardens are decrepit wrecks either - it's gotta be my lucky day.</text>
 				<part Name="StartFight" />
 			</choice>
@@ -672,56 +560,50 @@
 		
 		<node ID="NoTrouble" AllowEscape="false">
 			<text>
-				{{emote|*The warden relaxes somewhat, age returning to his stance as quickly as it left it.*}}
+				{{emote|*=pronouns.Subjective= =verb:relaxe:afterpronoun= somewhat, age returning to =pronouns.possessive= stance as quickly as it left it.*}}
 				
 				Your wisdom is commendable, =name=. I can only trust that you will not foolishly spread word of this place.
 			</text>	
-			<choice GotoID="WhyNot">Why would I not? Why must this place stay hidden?</choice>			
-			<choice GotoID="WillNot">I will not, warden - you have my word.</choice>
-			<choice GotoID="NoPromise">I can make no such promise, warden.</choice>
+			<choice Target="WhyNot">Why would I not? Why must this place stay hidden?</choice>			
+			<choice Target="WillNot">I will not, warden - you have my word.</choice>
+			<choice Target="NoPromise">I can make no such promise, warden.</choice>
 		</node>
 		
 		<node ID="WhyNot" AllowEscape="false">
 			<text>
 				You are astu-
 				
-				{{emote|*The warden is caught by a coughing fit again, his frame shaken by dry hacking.*}}
+				{{emote|*Another coughing fit shakes =pronouns.possessive= frame with dry hacking.*}}
 				
 				... You are astute not to make promises without a full picture, =name=. Look around you: saltbacks come here to expire, leaving a final mark on Qud before passing away. Where you might only see bones, the shellbacked eye wonders at cultural legacy.
 			</text>	
-			<choice GotoID="Carapace">
+			<choice Target="Carapace">
 				<text>I am shellbacked myself, warden. Maybe I will come here in my later days, spend time in the shade.</text>
 				<part Name="Brothers_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
 			</choice>
-			<choice GotoID="WillNot">I see, warden. Rest assured: this place is safe.</choice>
-			<choice GotoID="NoPromise">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
+			<choice Target="WillNot">I see, warden. Rest assured: this place is safe.</choice>
+			<choice Target="NoPromise">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
 		</node>
 		
-		<node ID="Carapace">
+		<node ID="Carapace" AllowEscape="false" >
 			<text>
-				{{emote|*The warden smiles faintly.*}}
-
 				Maybe you will, =name=. Maybe you will.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">In the meantime, live and drink, warden.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">In the meantime, live and drink, warden.</choice>
 		</node>
 		
-		<node ID="WillNot">
+		<node ID="WillNot" AllowEscape="false" >
 			<text>
-				{{emote|*The warden nods slowly.*}}
-
 				Thank you =name=. Live and drink, traveler.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, venerable warden.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, venerable warden.</choice>
 		</node>
 		
-		<node ID="NoPromise">
-			<text>
-				{{emote|*The warden frowns and shakes his head, chasing saltflies away.*}}
-				
+		<node ID="NoPromise" AllowEscape="false">
+			<text>			
 				I cannot hold you responsible of an offense not yet committed, and can only hope you find wisdom in your time, =name=. Still, live and drink nonetheless.
 			</text>	
-			<choice GotoID="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, warden.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, warden.</choice>
 		</node>		
 
 	</conversation>
@@ -738,7 +620,7 @@
 			 {{emote|*Ortolo sneezes snowflakes.*}}~
 			 {{emote|*Ortolo retracts into =pronouns.possessive= shell.*}}~
 		  </text>
-		  <choice GotoID="End">Live and drink, frosty hatchling.</choice>
+		  <choice Target="End">Live and drink, frosty hatchling.</choice>
 		</node>
 	
 	</conversation>
@@ -747,35 +629,41 @@
 	
 	<conversation ID="Brothers_Tortoises_Walking Dune">
 		
-		<node ID="Start">
-			<text>
-				{{emote|*keeps walking silently.*}}
+		<start ID="Welcome">
+			<text IfNotZoneName="Saltback Graveyard">
+				{{emote|*keeps walking silently*}}
 			</text>
-			<choice GotoID="Graveyard" IfNotHaveState="GraveyardKnown">
+			<text IfZoneName="Saltback Graveyard">
+				{{emote|*settles peacefully on the ground and closes =pronouns.possessive= eyes*}}
+			</text>			
+			<choice Target="Graveyard" IfNotHaveState="GraveyardKnown">
 				<text>O great giant, I am a friend to shellbearerers everywhere. What is your destination?</text>
 				<part Name="RequireReputation" Faction="Tortoises" Level="Loved" />
 			</choice>
-			<choice GotoID="Graveyard2" IfNotHaveState="GraveyardKnown">
+			<choice Target="Graveyard2" IfNotHaveState="GraveyardKnown">
 				<text>If you wish to make your trip safely, decrepit giant, you will reveal your destination to me.</text>
 				<part Name="Brothers_RequirePart" Part="Persuasion_MenacingStare" Render="Persuasion: Menacing Stare" />
 			</choice>
-			<choice GotoID="End">Live and drink, wandering giant.</choice>
-		</node>
+			<choice Target="End">Live and drink, wandering giant.</choice>
+		</start>
 		
-		<node ID="Graveyard">
+		<node ID="Graveyard" AllowEscape="false">
 			<text>
 				{{emote|*The gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
 			</text>
 			<part Name="RevealGraveyardLocation" />
-			<choice GotoID="End">I see. Live and drink until then, pilgrim.</choice>
+			<choice Target="End">I see. Live and drink until then, pilgrim.</choice>
 		</node>
 
-		<node ID="Graveyard2">
+		<node ID="Graveyard2" AllowEscape="false">
 			<text>
 				{{emote|*In a moment of panic, the gigantic saltback quickly presses foreheads with you, and clarity strikes your mind: a long pilgrimage to a place of death.*}}
 			</text>
 			<part Name="RevealGraveyardLocation" />
-			<choice GotoID="End">This will do.</choice>
+			<choice Target="End" >
+				<text>This will do.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="-50"/>
+			</choice>
 		</node>
 		
 	</conversation>

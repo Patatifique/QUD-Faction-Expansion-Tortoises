@@ -206,7 +206,7 @@
 	<object Name="Brothers_Tortoises_Walking Dune Corpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="walking dune corpse" />
 		<part Name="Food" Message="Delving in these venerable canyons allows for some dry meat foraging." />
-		<part Name="Description" Short="Lo! Beneath the scute mountains there lays a cavern, saltflies nesting in keratine grooves." />
+		<part Name="Description" Short="Lo! Beneath the scute mountains there lays a cavern, saltflies nesting in keratin grooves." />
 		<part Name="Physics" Weight="40000" />
 		<part Name="Commerce" Value="1500" />
 		<tag Name="Tier" Value="8" />    
@@ -248,7 +248,7 @@
 	<object Name="Brothers_Tortoises_Warden Qoruda" Inherits="NPC">
 		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoises/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
 		<part Name="Honorifics" Primary="Warden" />
-		<part Name="Description" Short="Hunched spine cracks under a natural shelldome as saltflies flock to numbing shade cast by a wide-brimmed cap. Leathery skin cracks and flakes where it meets backing keratin, white hairtufts properly groomed and trimed short. =pronouns.Subjective= rests for a while, =pronouns.possessive= eyes surveying =pronouns.possessive= surroundings and the avertable horizon. Years bear heavily on =pronouns.possessive= brow and shake =pronouns.possessive= his frame with a wheezing cough." />
+		<part Name="Description" Short="Hunched spine cracks under a natural shelldome as saltflies flock to numbing shade cast by a wide-brimmed cap. Leathery skin cracks and flakes where it meets backing keratin, white hair tufts properly groomed and trimmed short. =pronouns.Subjective= rests for a while, =pronouns.possessive= eyes surveying =pronouns.possessive= surroundings and the horizon. Years bear heavily on =pronouns.possessive= brow and shake =pronouns.possessive= frame with a wheezing cough." />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_WardenQoruda" />
 		<part Name="Brain" Wanders="false" Factions="Wardens-100" />
 		<stat Name="Strength" sValue="23" />
@@ -274,7 +274,7 @@
 		<stat Name="Level" Value="30" />
 		<tag Name="Genotype" Value="Mutated Human" />
 		<part Name="GivesRep" />
-		<tag Name="staticFaction1" Value="Tortoises,friend,garding their resting place" />
+		<tag Name="staticFaction1" Value="Tortoises,friend,guarding their resting place" />
 		<tag Name="NoHateFactions" Value="Tortoises" />
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
@@ -284,7 +284,7 @@
 
 	<object Name="Brothers_Tortoises_Skins-the-Dawnglider" Inherits="Issachari Rifler">
 		<part Name="Render" DisplayName="{{M|Skins-the-Dawnglider, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterpistol.png" RenderString="h" ColorString="&amp;M" />
-		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal steel cylinders, snarling a disastrous proposition." />
+		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal steel cylinders, snarling a disastrous proposition." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
 		<stat Name="Level" Value="19" />
@@ -309,7 +309,7 @@
 	
 	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="Issachari Rifler">
 		<part Name="Render" DisplayName="{{M|Quarters-the-Salt-Kraken, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
-		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to the Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
+		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
 		<stat Name="Level" Value="19" />

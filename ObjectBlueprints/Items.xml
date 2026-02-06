@@ -29,7 +29,7 @@
 		<part Name="Armor" AV="0" DV="1" Ego="1" Cold="15" Heat="15" WornOn="Back" />
 		<part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/tortoises/shailecloak.png" DetailColor="C" />
 		<part Name="Commerce" Value="300" />
-		<part Name="Description" Short="Nettings of brinestalk and elastyne support cascading teal scutes, their inner side crisp even to flume-stained fingers." />
+		<part Name="Description" Short="A netting of brinestalk and elastyne supports cascading teal scutes, their inner side crisp even to flume-stained fingers." />
 		<part Name="Physics" Weight="6" Organic="true" />
 		<tag Name="Tier" Value="4" />
 		<tag Name="EquipSound" Value="sfx_equip_armor_organic" />
@@ -40,7 +40,7 @@
 		<part Name="Armor" AV="2" DV="1" WornOn="Head" />
 		<part Name="Render" DisplayName="{{leafy|verdant sallet}}" Tile="Items/tortoises/verdantsallet.png" ColorString="&amp;w" DetailColor="g" RenderString="]" />
 		<part Name="Commerce" Value="85" />
-		<part Name="Description" Short="Growth over a fragment of domed shell fashions a wearable gardegives a self-impression o grow over a domed layer of wearable topsoil." />
+		<part Name="Description" Short="Growth over a fragment of domed shell fashions a layer of wearable garden." />
 		<part Name="Physics" Weight="6" Organic="true" />
 		<part Name="Yurtmat" />
 		<tag Name="Tier" Value="4" />
