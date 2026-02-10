@@ -7,5 +7,7 @@ Faction Expansion: Tortoises
 - XML Formatting: Patatifique
 
 Third party assets used:
-
 - Saltback culverin/magnum firing sound effect: https://freesound.org/people/straget/sounds/410552/
+- Saltback Graveyard OST: "Baud" from Craig Hamilton (https://craigoryhamilton.com/)
+
+Many thanks to the members of the Caves of Qud Discord modding community for their kindness, helpfulness, and reliability.
