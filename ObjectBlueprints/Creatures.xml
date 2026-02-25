@@ -49,7 +49,7 @@
 		<part Name="Chilltouch" />
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="nudges you icily,hiccups misty rime on you,sneezes ice shards at you" />
-		<property Name="Story" Value="Baby Shaile Story" />
+		<property Name="Story" Value="Brothers_CatsDogs_BabyShaileStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Baby Shaile" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
@@ -136,8 +136,8 @@
 	
 	<!-- Other Tortoises-->
 	<object Name="Great Saltback" Load="Merge">
-		<part Name="Render" DisplayName="great saltback" Tile="Creatures/tortoises/saltback.png" RenderString="T" ColorString="&amp;Y" DetailColor="w" />
-		<part Name="Corpse" CorpseChance="50" CorpseBlueprint="Great Saltback Corpse" />
+		<part Name="Render" DisplayName="great saltback" Tile="Creatures/tortoises/saltback.png" />
+		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Great Saltback Corpse" />
 	</object>
 
 	<object Name="IrritableTortoise" Load="Merge">
