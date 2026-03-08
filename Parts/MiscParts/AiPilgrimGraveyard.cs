@@ -11,7 +11,7 @@ using XRL.World.Effects;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class AiPilgrimGraveyard : AIBehaviorPart
+    public class Brothers_Tortoises_AiPilgrimGraveyard : AIBehaviorPart
     {
         public bool FoundTarget;
         public int GraveyardWx = 5;

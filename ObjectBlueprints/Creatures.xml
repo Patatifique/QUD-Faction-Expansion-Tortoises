@@ -161,7 +161,7 @@
 		<tag Name="Gigantic" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Brothers_TortoisesPoacherQuest" Step="WalkingDune" />
-		<part Name="AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
+		<part Name="Brothers_Tortoises_AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 
