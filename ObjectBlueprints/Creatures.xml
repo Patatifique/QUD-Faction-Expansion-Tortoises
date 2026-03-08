@@ -46,7 +46,7 @@
 		<tag Name="Role" Value="Tank" />
 		
 		<!--pet stuff-->
-		<part Name="Chilltouch" />
+		<part Name="Brothers_Tortoises_Chilltouch" />
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="nudges you icily,hiccups misty rime on you,sneezes ice shards at you" />
 		<property Name="Story" Value="Brothers_CatsDogs_BabyShaileStory" />
