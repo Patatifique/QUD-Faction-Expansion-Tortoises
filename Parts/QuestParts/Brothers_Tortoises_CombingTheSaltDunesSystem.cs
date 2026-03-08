@@ -4,7 +4,7 @@
 namespace XRL.World.Quests
 {
     [Serializable]
-    public class CombingTheSaltDunesSystem : IQuestSystem
+    public class Brothers_Tortoises_CombingTheSaltDunesSystem : IQuestSystem
     {
         public override void Start()
         {

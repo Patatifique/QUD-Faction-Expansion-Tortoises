@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace Tortoises.Brothers
 {
     [JoppaWorldBuilderExtension]
-    public class SaltbackGraveyardWorldBuilderExtension : IJoppaWorldBuilderExtension
+    public class Brothers_Tortoises_SaltbackGraveyardWorldBuilderExtension : IJoppaWorldBuilderExtension
     {
         public override void OnAfterBuild(JoppaWorldBuilder builder)
         {
@@ -27,7 +27,7 @@ namespace Tortoises.Brothers
 
             // Set terrain to Saltback Graveyard
             Cell cell = The.ZoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3);
-            cell.GetFirstObjectWithPart("TerrainTravel")?.AddPart<SaltbackGraveyardTerrain>(new SaltbackGraveyardTerrain());
+            cell.GetFirstObjectWithPart("TerrainTravel")?.AddPart<Brothers_Tortoises_SaltbackGraveyardTerrain>(new Brothers_Tortoises_SaltbackGraveyardTerrain());
 
             // Set zone builders and properties
             var zoneManager = The.ZoneManager;
@@ -37,7 +37,7 @@ namespace Tortoises.Brothers
             zoneManager.AddZoneBuilder(zoneID, 6000, "SaltDunes");
             zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "SaltbackGraveyard.rpm");
             zoneManager.AddZonePostBuilder(zoneID, "Music", "Track", "Music/Bey Lah Heritage II");
-            zoneManager.AddZonePostBuilder(zoneID, "AddWidgetBuilder", "Blueprint", "SaltbackGraveyardSurface");
+            zoneManager.AddZonePostBuilder(zoneID, "AddWidgetBuilder", "Blueprint", "Brothers_Tortoises_SaltbackGraveyardSurface");
             zoneManager.AddZonePostBuilder(zoneID, "IsCheckpoint", "Key", zoneID);
 
             zoneManager.SetZoneName(zoneID, "Saltback Graveyard", Proper: true);

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class TerrainTravelIssachariAmbush : IPart
+    public class Brothers_Tortoises_TerrainTravelIssachariAmbush : IPart
     {
         public override bool SameAs(IPart p) => true;
 

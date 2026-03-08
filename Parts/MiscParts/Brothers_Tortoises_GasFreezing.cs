@@ -7,13 +7,13 @@ using System.Collections.Generic;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class GasFreezing : IGasBehavior
+    public class Brothers_Tortoises_GasFreezing : IGasBehavior
     {
         public string GasType = "Freezing";
 
         public override bool SameAs(IPart p)
         {
-            return !((p as GasFreezing).GasType != this.GasType) && base.SameAs(p);
+            return !((p as Brothers_Tortoises_GasFreezing).GasType != this.GasType) && base.SameAs(p);
         }
 
         public override bool WantEvent(int ID, int cascade)

@@ -5,7 +5,7 @@ using System;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class SaltbackGraveyardSurface : IPart
+    public class Brothers_Tortoises_SaltbackGraveyardSurface : IPart
     {
         public string RegionName = "Saltback Graveyard";
         public string RevealString;

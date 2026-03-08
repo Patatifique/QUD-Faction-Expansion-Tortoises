@@ -5,7 +5,7 @@ using System;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class SaltbackGraveyardTerrain : IPart
+    public class Brothers_Tortoises_SaltbackGraveyardTerrain : IPart
     {
         public string secretId = "$saltbackgraveyard";
         public bool revealed;

@@ -14,7 +14,7 @@ namespace XRL.World.AI.GoalHandlers
 
 
     [Serializable]
-    public class GoOnAGraveyardPilgrimage : GoalHandler
+    public class Brothers_Tortoises_GoOnAGraveyardPilgrimage : GoalHandler
     {
         public static int TargetWx = 5;
         public static int TargetWy = 2;
@@ -25,11 +25,11 @@ namespace XRL.World.AI.GoalHandlers
         public string TargetZoneID = "JoppaWorld.5.2.1.1.10";
         public string TargetEntranceZoneID = "JoppaWorld.5.2.1.2.10";
 
-        public GoOnAGraveyardPilgrimage()
+        public Brothers_Tortoises_GoOnAGraveyardPilgrimage()
         {
         }
 
-        public GoOnAGraveyardPilgrimage(
+        public Brothers_Tortoises_GoOnAGraveyardPilgrimage(
           int Wx,
           int Wy,
           int Xx,
@@ -39,11 +39,11 @@ namespace XRL.World.AI.GoalHandlers
           string zoneID,
           string entranceZoneID)
         {
-            GoOnAGraveyardPilgrimage.TargetWx = Wx;
-            GoOnAGraveyardPilgrimage.TargetWy = Wy;
-            GoOnAGraveyardPilgrimage.TargetXx = Xx;
-            GoOnAGraveyardPilgrimage.TargetYx = Yx;
-            GoOnAGraveyardPilgrimage.TargetZx = Zx;
+            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetWx = Wx;
+            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetWy = Wy;
+            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetXx = Xx;
+            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetYx = Yx;
+            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetZx = Zx;
             this.TargetObject = targetObject;
             this.TargetZoneID = zoneID;
             this.TargetEntranceZoneID = entranceZoneID;

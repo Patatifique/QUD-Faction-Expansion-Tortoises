@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <quests>
-	<quest ID="Brothers_TortoisesPoacherQuest" Name="Combing the Salt Dunes" System="CombingTheSaltDunesSystem"
+	<quest ID="Brothers_TortoisesPoacherQuest" Name="Combing the Salt Dunes" System="Brothers_Tortoises_CombingTheSaltDunesSystem"
 	   Accomplishment="You found the final resting place of great saltback tortoises."
 	   Hagiograph="In the month of =month= of =year=, wise =name= knelt by fading giants and sang a solemn dirge in their honor."
 	   HagiographCategory="VisitsLocation"
