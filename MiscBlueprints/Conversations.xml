@@ -651,7 +651,7 @@
 			<text>
 				{{emote|*The gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
 			</text>
-			<part Name="RevealGraveyardLocation" />
+			<part Name="Brothers_Tortoises_RevealGraveyardLocation" />
 			<choice Target="End">I see. Live and drink until then, pilgrim.</choice>
 		</node>
 
@@ -659,7 +659,7 @@
 			<text>
 				{{emote|*In a moment of panic, the gigantic saltback quickly presses foreheads with you, and clarity strikes your mind: a long pilgrimage to a place of death.*}}
 			</text>
-			<part Name="RevealGraveyardLocation" />
+			<part Name="Brothers_Tortoises_RevealGraveyardLocation" />
 			<choice Target="End" >
 				<text>This will do.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="-50"/>
