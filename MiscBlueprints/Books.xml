@@ -2,9 +2,8 @@
 
 <books>
   
-  <book ID="Baby Shaile Story" Title="{{W|Two Watervine Farmers}}">
-    <page>
-"Come on, touch it." The first farmer poked at the egg nestled between fronds with his vinereaper's handle. The thin layer of ice around the ivory sphere rustled and popped before reforming quickly.
+	<book ID="Brothers_Tortoises_BabyShaileStory" Title="{{W|Two Watervine Farmers}}" Format="Auto" Margins="1,2,2,2">
+<page>"Come on, touch it." The first farmer poked at the egg nestled between fronds with his vinereaper's handle. The thin layer of ice around the ivory sphere rustled and popped before reforming quickly.
 
 "Sultans, I already told you! No way. I ain't touching that thing, and that's the end of it. Now come on, we've got a harvest to finish." The second farmer crossed his arms, thinking himself resolute and unwavering.
 
@@ -14,10 +13,8 @@ The first farmer poked the egg again, disturbing the ice once more. Thin cracks 
 
 The second farmer's brow furrowed, his resolve melting quickly when faced with the untold possibilities of a copper nugget. Still, even touching that egg could prove unwise, especially if-
 
-"Actually, make it two copper nuggets. I'm in a generous mood today," the first farmer added, seeing his companion pondering his first offer.
-  </page>
+"Actually, make it two copper nuggets. I'm in a generous mood today," the first farmer added, seeing his companion pondering his initial offer.
 
-  <page>
 That settled it: with a reluctant sigh, the second farmer knelt by the egg, setting his trusty vinereaper down. A moment of hesitation caught him there. 
 
 "Are you sure it's safe?" he probed the first farmer, fishing for any support he could find.
@@ -26,8 +23,13 @@ The answer came a tad too quickly: "Of course it is. Otherwise, I wouldn't be as
 
 Still, two copper nuggets are two copper nuggets. 
 
-{{icy|The second farmer slowly reached out to the egg.}}
-    </page>
-  </book>
-  
+{{icy|The second farmer slowly reached out to the egg.}}</page>
+	</book>
+
+	<book ID="Brothers_Tortoises_TravelerJournal" Title="{{W|Audio Travelog CXXXIX}}" Format="Auto" Margins="1,2,2,2">
+<page>[[{{w|3rd of Simmun Ut}}]]
+
+Speculator Ptodelia reporting.</page>
+	</book>
+
 </books>
