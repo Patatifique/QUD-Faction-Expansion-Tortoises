@@ -215,7 +215,7 @@
 	</object>
 	
 	<!--NPCs-->
-	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="Issachari Rifler">
+	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="NPC">
 		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/tortoises/poacher.png" RenderString="h" ColorString="&amp;Y" />
 		<part Name="Titles" Primary="Issachari pariah" />
 		<part Name="Description" Short="Saltflakes pepper a wind-carved face, =pronouns.possessive= eyes squinting against the glaring Salt Sun and Beetle Moon. Threadbare patched-up jubbah and traditional Issachari veil conceal weathered skin and loaded bandoleer." />
@@ -282,7 +282,7 @@
 		<tag Name="QuestGiver" Value="Brothers_TortoisesWardenQuest" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Skins-the-Dawnglider" Inherits="Issachari Rifler">
+	<object Name="Brothers_Tortoises_Skins-the-Dawnglider" Inherits="NPC">
 		<part Name="Render" DisplayName="{{M|Skins-the-Dawnglider, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterpistol.png" RenderString="h" ColorString="&amp;M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal steel cylinders, snarling a disastrous proposition." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
@@ -307,7 +307,7 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="Issachari Rifler">
+	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="NPC">
 		<part Name="Render" DisplayName="{{M|Quarters-the-Salt-Kraken, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
