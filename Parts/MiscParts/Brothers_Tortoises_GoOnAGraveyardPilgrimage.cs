@@ -87,7 +87,7 @@ namespace XRL.World.AI.GoalHandlers
                 this.TargetObject = this.CurrentZone.GetObjectsWithPart("Brain").GetRandomElement<GameObject>().GetBlueprint().Name;
             if (this.HasAdjacentObject(this.TargetObject))
             {
-                this.ParentObject.GetPart<AiPilgrimGraveyard>().FoundTarget = true;
+                this.ParentObject.GetPart<Brothers_Tortoises_AiPilgrimGraveyard>().FoundTarget = true;
                 this.Pop();
                 this.ParentBrain.PushGoal((GoalHandler)new WanderRandomly(6));
             }
