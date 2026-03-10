@@ -163,6 +163,7 @@
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Brothers_TortoisesPoacherQuest" Step="WalkingDune" />
 		<part Name="Brothers_Tortoises_AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
+		<part Name="LeavesTrail" TrailChance="100" TrailBlueprint="@Brothers_Tortoises_Footprint Table" OnEnter="false" />
 	</object>
 
 	<!--Corpses-->

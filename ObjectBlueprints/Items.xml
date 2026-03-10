@@ -105,4 +105,16 @@
 		<part Name="Projectile" BasePenetration="0" BaseDamage="1d8" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
 	
+	<object Name="Brothers_Tortoises_Footprint" Inherits="Item">
+		<part Name="Render" DisplayName="footprint" Tile="Assets_Content_Textures_Tiles_Tile-7-3.png" RenderString="%" ColorString="&amp;K^k" Occluding="false" />
+		<part Name="Physics" Weight="5" Takeable="false" Solid="false" />
+		<part Name="Description" Short="Pieces of the old and aching world have been shaved off their timepoint and crushed to the vicinity of the present. A few bits of recognition remain:  lens of glass, serif of ink, acid-ate lug, and ribbon of wire." />
+		<builder Name="RandomTile" Tiles="Items/sw_trash_1.bmp,Items/sw_trash_2.bmp,Items/sw_trash_3.bmp,Items/sw_trash_4.bmp" />
+		<tag Name="OverlayColor" Value="&amp;k" />
+		<tag Name="Breakable" Value="*delete"/>
+		<part Name="NoBreak" />
+		<part Name="NoRust" />
+		<part Name="Brothers_DeathObliterateTimer" Timer="20" Obliterate="true"/>
+	</object>
+	
 </objects>

@@ -102,4 +102,11 @@
 		</group>
 	</population>
 
+
+  <population Name="Brothers_Tortoises_Footprint Table">
+    <group Name="Items" Style="pickone">
+      <object Blueprint="Brothers_Tortoises_Footprint" />
+    </group>
+  </population>
+	
 </populations>
