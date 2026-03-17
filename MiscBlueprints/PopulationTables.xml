@@ -7,12 +7,6 @@
 		</group>
 	</population>
 
-	<population Name="LairOwners_Water" Load="Merge">
-		<group Name="Options" Load="Merge">
-			<object Blueprint="Brothers_Tortoises_Shaile"/>
-		</group>
-	</population>
-
 	<population Name="RiversZoneGlobals" Load="Merge">
 		<object Chance="35" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
 	</population>
