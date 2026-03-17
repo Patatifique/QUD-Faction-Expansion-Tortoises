@@ -109,7 +109,7 @@ namespace XRL.World.Parts
             if (!CheckGasCanAffectEvent.Check(GO, this.ParentObject, part) || !GO.PhaseMatches(this.ParentObject))
                 return;
             Event.PinCurrentPool();
-            int num = (int)Math.Ceiling(0.6 * (double)part.Density);
+            int num = (int)Math.Ceiling(0.3 * (double)part.Density);
             if (GO.Physics.Temperature > -num)
                 GO.TemperatureChange(-num, this.ParentObject, Phase: this.ParentObject.GetPhase());
             if (GO.IsPlayer() || !GO.IsFrozen())
