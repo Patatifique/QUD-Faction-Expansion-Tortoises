@@ -33,7 +33,7 @@ namespace XRL.World.Parts
                         int num1 = this.GasDensityStepped() / 2 + 3;
                         if (E.Actor != null)
                         {
-                            int num2 = E.Actor.Stat("ColdResistance");
+                            int num2 = (int)(E.Actor.Stat("ColdResistance")*1.3);
                             if (num2 != 0)
                                 num1 = Math.Max(num1 * (100 - num2) / 100, 0);
                         }
@@ -59,7 +59,7 @@ namespace XRL.World.Parts
                         int num1 = this.GasDensityStepped() / 10 + 1;
                         if (E.Actor != null)
                         {
-                            int num2 = E.Actor.Stat("ColdResistance");
+                            int num2 = (int)(E.Actor.Stat("ColdResistance")*1.3);
                             if (num2 != 0)
                                 num1 = Math.Max(num1 * (100 - num2) / 100, 0);
                         }
@@ -109,7 +109,7 @@ namespace XRL.World.Parts
             if (!CheckGasCanAffectEvent.Check(GO, this.ParentObject, part) || !GO.PhaseMatches(this.ParentObject))
                 return;
             Event.PinCurrentPool();
-            int num = (int)Math.Ceiling(2.5 * (double)part.Density);
+            int num = (int)Math.Ceiling(0.6 * (double)part.Density);
             if (GO.Physics.Temperature > -num)
                 GO.TemperatureChange(-num, this.ParentObject, Phase: this.ParentObject.GetPhase());
             if (GO.IsPlayer() || !GO.IsFrozen())
