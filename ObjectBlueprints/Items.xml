@@ -131,5 +131,16 @@
 		<tag Name="NoSparkingQuest" />
 		<part Name="Brothers_DeathObliterateTimer" Timer="40" Obliterate="true"/>
 	</object>
+
+<!--Others-->
+
+	<object Name="Brothers_Tortoises_Journal" Inherits="Book">
+		<part Name="Render" DisplayName="{{W|audio travelog CXXXIX}}" Tile="items/sw_data_disc.bmp" DetailColor="W" ColorString="&amp;y" RenderString="007" RenderLayer="4" />
+		<part Name="Description" Short="Grooves on a crystalline disk have captured testimony, reluctantly recreated on a finger's prompt." />
+		<part Name="Book" ID="Brothers_Tortoises_TravelerJournal" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<xtagGrammar Proper="false" adjunctNoun="" />
+		<part Name="Commerce" Value="150" />
+	</object> 
 	
 </objects>
