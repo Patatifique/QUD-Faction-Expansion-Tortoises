@@ -34,10 +34,10 @@ namespace XRL.World.Parts
                 {
 
                     // Make sure the player has pissed off the poacher
-                    if (The.Game.GetBooleanGameState("HatedByPoacher"))
+                    if (The.Game.GetBooleanGameState("Brothers_Tortoises_TortoisesEnding"))
                     {
                         // Check that the player has not yet been ambushed
-                        if (!The.Game.HasStringGameState("HaveBeenAmbushedByPoacher"))
+                        if (!The.Game.HasStringGameState("Brothers_Tortoises_Ambushed"))
                         {
                             Cell currentCell = The.Player.CurrentCell;
                             string zoneWorld = currentCell.ParentZone.GetZoneWorld();
@@ -52,7 +52,7 @@ namespace XRL.World.Parts
                             if (The.Player.ApplyEffect((Effect)new Lost(InitialZone: str, World: zoneWorld)))
                             {
                                 // set the already ambushed flag
-                                The.Game.SetStringGameState("HaveBeenAmbushedByPoacher", str);
+                                The.Game.SetStringGameState("Brothers_Tortoises_Ambushed", str);
                                 //regular lost logic
                                 Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
                                 zone.CheckWeather();

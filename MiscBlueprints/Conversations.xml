@@ -26,7 +26,7 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Reward" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I have made good use of your gift. Is there any way to get another weapon?</choice>
-			<choice Target="Ambush" IfHaveState="HaveBeenAmbushedByPoacher">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
+			<choice Target="Ambush" IfHaveState="Brothers_Tortoises_Ambushed">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
 			<choice Target="QuestChoice" IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
 			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
 			<choice Target="Remind" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
@@ -285,7 +285,7 @@
 				
 				There is much preparation ahead, lack-salt. But we shall strip it bare, fashion armor out of scute and bones and trade the rest. Walk in the shade, lack-salt.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice" SetBooleanState="Brothers_Tortoises_PoacherEnding,true">Walk in the shade, huntress.</choice>
 		</node>	
 		
 		<node ID="Lie">
@@ -304,7 +304,7 @@
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
+			<choice Target="End" SetBooleanState="Brothers_Tortoises_NeutralEnding,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
 				<text>Be seeing you. Live and drink.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
 			</choice>
@@ -324,7 +324,7 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice Target="End" SetBooleanState="HatedByPoacher,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
+			<choice Target="End" SetBooleanState="Brothers_Tortoises_TortoisesEnding,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
 				<text>As your people say: stay warm and stay dry.</text>
 				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
 			</choice>
@@ -363,7 +363,7 @@
 		<node ID="DefaultChoices">
 			<choice Target="Now" IfFinishedQuest="Brothers_TortoisesRewardQuest">What shall you do now, warden?</choice>
 			<choice Target="Loyal" IfHaveActiveQuest="Brothers_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
-			<choice Target="Betrayed" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">The Issachari shall have this place. Out of my way, old man.</choice>
+			<choice Target="Betrayed" IfHaveState="Brothers_Tortoises_PoacherEnding">The Issachari shall have this place. Out of my way, old man.</choice>
 			<choice Target="Graveyard" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Thank you for welcoming me, warden. I am =name=. What is this place?</choice>
 			<choice Target="Poacher" IfHaveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
 			<choice Target="Poacher2" IfHaveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
