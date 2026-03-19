@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
-	<!--Creatures-->
-	<!--Shailes-->
+
+
+<!--Creatures-->
+
+
+<!--Shailes-->
+
+
 	<object Name="Brothers_Tortoises_Shaile" Inherits="BaseTortoise">
 		<part Name="Description" Short="Volutes of frozen mist seep in-between =pronouns.possessive= polished scutes, water clotting affixed to the creek-dweller." />
 		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/tortoises/shaile.png" ColorString="&amp;Y" DetailColor="c" />
@@ -43,9 +49,8 @@
 		<stat Name="AV" Value="4" />
 		<inventoryobject Blueprint="Brothers_Tortoises_Baby_Shaile_Bite" Number="1" />
 		<part Name="Description" Short="Jutting out of rippling softshell is a single rotound head on a swivel. =pronouns.Subjective= checks =pronouns.possessive= surroundings, looking for unfortunate crawlfigures whose chitinous appendages crunch comfortably between beaked jaws." />
-		<tag Name="Role" Value="Tank" />
-		
-		<!--pet stuff-->
+		<tag Name="Role" Value="Tank" />		
+<!--pet stuff-->
 		<part Name="Brothers_Tortoises_Chilltouch" />
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="nudges you icily,hiccups misty rime on you,sneezes ice shards at you" />
@@ -66,7 +71,7 @@
 		<tag Name="Gender" Value="plural" />
 	</object>
 	
-	<!--Verdant domes-->
+<!--Verdant domes-->
 	
 	<object Name="Brothers_Tortoises_VerdantBase" Inherits="BaseTortoise">
 		<tag Name="BaseObject" Value="*noinherit" />
@@ -108,7 +113,7 @@
 	</object>
 
 
-	<!--Pulshell-->
+<!--Pulshell-->
 	
 	<object Name="Brothers_Tortoises_Pulshell" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
@@ -133,8 +138,11 @@
 		<part Name="Render" DisplayName="frontal slam" Tile="Creatures/tortoises/natural-weapon-bands.bmp" ColorString="&amp;C" />
 		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Strength" Slot="Head" />
 	</object>
+
 	
-	<!-- Other Tortoises-->
+<!-- Other Tortoises-->
+	
+	
 	<object Name="Great Saltback" Load="Merge">
 		<part Name="Render" DisplayName="great saltback" Tile="Creatures/tortoises/saltback.png" />
 		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Great Saltback Corpse" />
@@ -161,12 +169,13 @@
 		<tag Name="Gigantic" />
 		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Brothers_TortoisesPoacherQuest" Step="WalkingDune" />
-		<part Name="Brothers_Tortoises_AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_Big Stele" Chance="100"/>
+		<part Name="Brothers_Tortoises_AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_BigStele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
 		<part Name="LeavesTrail" TrailChance="100" TrailBlueprint="@Brothers_Tortoises_Footprint Table" OnEnter="false" />
 	</object>
 
-	<!--Corpses-->
+<!--Corpses-->
+	
 	<object Name="Brothers_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="irritable tortoise corpse" />
 		<part Name="Food" Message="Thin ribbons of chewy meat remind one of the irascible disposition of this shell's once-owner." />
@@ -215,8 +224,11 @@
 		<tag Name="DynamicObjectsTable:Corpses" />
 	</object>
 	
-	<!--NPCs-->
-	<object Name="Brothers_Tortoises_Cracks-the-Saltback-Shell" Inherits="NPC">
+	
+<!--NPCs-->
+	
+	
+	<object Name="Brothers_Tortoises_Poacher" Inherits="NPC">
 		<part Name="Render" DisplayName="Cracks-the-Saltback-Shell" Tile="Creatures/tortoises/poacher.png" RenderString="h" ColorString="&amp;Y" DetailColor="R" />
 		<part Name="Titles" Primary="Issachari pariah" />
 		<part Name="Description" Short="Saltflakes pepper a wind-carved face, =pronouns.possessive= eyes squinting against the glaring Salt Sun and Beetle Moon. Threadbare patched-up jubbah and traditional Issachari veil conceal weathered skin and loaded bandoleer." />
@@ -225,7 +237,7 @@
 		<stat Name="Level" Value="19" />
 		<stat Name="Hitpoints" Value="58" />
 		<stat Name="Agility" sValue="26" />
-		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Cracks-the-Saltback-Shell" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Poacher" />
 		<skill Name="Rifle_DrawABead" />
 		<skill Name="Rifle_SteadyHands" />
 		<skill Name="CookingAndGathering_Butchery" />
@@ -246,7 +258,7 @@
 		<tag Name="QuestGiver" Value="Brothers_TortoisesPoacherQuest" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Warden Qoruda" Inherits="NPC">
+	<object Name="Brothers_Tortoises_Warden" Inherits="NPC">
 		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoises/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
 		<part Name="Honorifics" Primary="Warden" />
 		<part Name="Description" Short="Hunched spine cracks under a natural shelldome as saltflies flock to numbing shade cast by a wide-brimmed cap. Leathery skin cracks and flakes where it meets backing keratin, white hair tufts properly groomed and trimmed short. =pronouns.Subjective= rests for a while, =pronouns.possessive= eyes surveying =pronouns.possessive= surroundings and the horizon. Years bear heavily on =pronouns.possessive= brow and shake =pronouns.possessive= frame with a wheezing cough." />
@@ -283,8 +295,10 @@
 		<tag Name="QuestGiver" Value="Brothers_TortoisesWardenQuest" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Skins-the-Dawnglider" Inherits="NPC">
-		<part Name="Render" DisplayName="{{M|Skins-the-Dawnglider, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterpistol.png" RenderString="h" ColorString="&amp;M" />
+	<object Name="Brothers_Tortoises_IssachariPistolHunter" Inherits="NPC">
+		<part Name="Render" DisplayName="Skins-the-Dawnglider" Tile="Creatures/tortoises/hunterpistol.png" RenderString="h" ColorString="&amp;M" DetailColor="R" />
+		<part Name="Titles" Primary="legendary Issachari hunter" />
+		<part Name="DisplayNameColor" Color="M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal steel cylinders, snarling a disastrous proposition." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
@@ -308,8 +322,10 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_Tortoises_Quarters-the-Salt-Kraken" Inherits="NPC">
-		<part Name="Render" DisplayName="{{M|Quarters-the-Salt-Kraken, legendary Issachari hunter}}" Tile="Creatures/tortoises/hunterrifle.png" RenderString="h" ColorString="&amp;M" />
+	<object Name="Brothers_Tortoises_IssachariRifleHunter" Inherits="NPC">
+		<part Name="Render" DisplayName="Quarters-the-Salt-Kraken" Tile="Creatures/tortoises/hunterrifle.png" RenderString="h" ColorString="&amp;M" DetailColor="R" />
+		<part Name="Titles" Primary="legendary Issachari hunter" />
+		<part Name="DisplayNameColor" Color="M" />
 		<part Name="Description" Short="Below a salt-carved brow, =pronouns.possessive= gaze skins and quarters strangers to Moghra'yi. =pronouns.Possessive= jubbah is thrown back to reveal a steel cannon, wailing long-past promises." />
 		<part Name="Brain" Wanders="false" Hostile="false" Factions="Issachari-100" />
 		<stat Name="AV" Value="3" />
@@ -330,6 +346,30 @@
 		<inventoryobject Blueprint="Sandals" Number="1" />
 		<inventoryobject Blueprint="Slate Frock" Number="1" />
 		<inventoryobject Blueprint="Issachari Sun Veil" Number="1" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+
+<!--PoacherEnding Issachari Encampment-->
+
+
+	<object Name="Brothers_Tortoises_IssachariPistolHunterChill" Inherits="Brothers_Tortoises_IssachariPistolHunter">
+		<part Name="Brain" Wanders="false" Hostile="false" Calm="true" Factions="Issachari-100" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+	
+	<object Name="Brothers_Tortoises_IssachariRifleHunterChill" Inherits="Brothers_Tortoises_IssachariRifleHunter">
+		<part Name="Brain" Wanders="false" Hostile="false" Calm="true" Factions="Issachari-100" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+	<object Name="Brothers_Tortoises_IssachariRaiderChill" Inherits="Issachari Raider">
+		<part Name="Brain" Wanders="false" Hostile="false" Calm="true" Factions="Issachari-100" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+	<object Name="Brothers_Tortoises_IssachariRiflerChill" Inherits="Issachari Rifler">
+		<part Name="Brain" Wanders="false" Hostile="false" Calm="true" Factions="Issachari-100" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 

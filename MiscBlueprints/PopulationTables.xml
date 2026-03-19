@@ -79,8 +79,8 @@
 		<group Name="Contents" Style="pickeach">
 			<!--General Commander, will always be there, either gunner, rifler or a very small chance for both-->
 			<group Name="Commander" Style="pickone">
-				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_Quarters-the-Salt-Kraken" />
-				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_Skins-the-Dawnglider" />
+				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_IssachariPistolHunter" />
+				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_IssachariRifleHunter" />
 				<group Chance="10" Name="UnluckyParty" Style="pickeach">
 					<object Number="1" Blueprint="Brothers_Tortoises_Quarters-the-Salt-Kraken" />
 					<object Number="1" Blueprint="Brothers_Tortoises_Skins-the-Dawnglider" />

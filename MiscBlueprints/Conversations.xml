@@ -4,7 +4,7 @@
 
 	<!--Poacher dialogue-->
 	
-	<conversation ID="Brothers_Tortoises_Cracks-the-Saltback-Shell">
+	<conversation ID="Brothers_Tortoises_Poacher">
     
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfNotHaveQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
@@ -335,7 +335,7 @@
 
 	<!--Tortoise Warden dialogue-->
 	
-	<conversation ID="Brothers_Tortoises_WardenQoruda">
+	<conversation ID="Brothers_Tortoises_Warden">
 
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfFinishedQuest="Brothers_TortoisesRewardQuest" Priority="-1">
