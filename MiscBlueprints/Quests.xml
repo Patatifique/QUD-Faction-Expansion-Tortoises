@@ -23,7 +23,7 @@
 	<quest ID="Brothers_TortoisesWardenQuest" Name="The Scute Child">
 
 		<step ID="Briefing" Name="Consult with Warden Qoruda" Optional="true" XP="250">
-			<text>Speak with Warden Qoruda to gain insight into the Saltbacks Graveyard.</text>
+			<text>Speak with Warden Qoruda to gain insight into the Saltback Graveyard.</text>
 		</step>
 
 		<step ID="Choice" Name="Decide the Fate of the Saltback Graveyard" XP="500">
