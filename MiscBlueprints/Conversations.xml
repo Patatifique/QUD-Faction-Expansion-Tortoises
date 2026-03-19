@@ -27,11 +27,11 @@
 		<node ID="DefaultChoices">
 			<choice Target="Reward" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I have made good use of your gift. Is there any way to get another weapon?</choice>
 			<choice Target="Ambush" IfHaveState="Brothers_Tortoises_Ambushed">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
-			<choice Target="QuestChoice" IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
+			<choice Target="QuestChoice" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
 			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
 			<choice Target="Remind" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
 			<choice Target="Unfair" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Why is it I'm the one looking for the Graveyard while you smoke the hookah here?</choice>
-			<choice Target="Rifle" IfNotHaveQuest="Brothers_TortoisesRewardQuest">That's a nice rifle you've got.</choice>
+			<choice Target="Rifle" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">That's a nice rifle you've got.</choice>
 			<choice Target="Shade" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What makes this tent "your" shade?</choice>
 			<choice Target="Activity" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What are you doing in the Six Day Stilt?</choice>
 			<choice Target="Salt" IfHaveLiquid="salt" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I'm not a lack-salt: I have some right there.</choice>
@@ -176,7 +176,7 @@
 				It all depends on you, lack-salt. Do you cower from the sun? Is pacing Moghra'yi too much to bear?
 			</text>
 		<choice Target="GiveQuest">No to both of those: I am a seasoned traveler.</choice>
-		<choice Target="End">I nearly ran out of water already, no way I'm heading there again.</choice>
+		<choice Target="End">I nearly ran out of water already, no way I'm heading there again. Live and drink.</choice>
 		</node>
 		
 		<node ID="GiveQuest">
@@ -193,10 +193,10 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:roll= =pronouns.possessive= eyes under a salt-flaked brow.*}}
 				
-				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the dead have any use for it. Find the place – if it exists – and I'll make sure to reward you handsomely. What say you?
+				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the dead have any use for it. Find the place -- if it exists -- and I'll make sure to reward you handsomely. What say you?
 			</text>
 		<choice Target="End" StartQuest="Brothers_TortoisesPoacherQuest">Find the Saltback Graveyard, got it. Simple enough -- I shall be back soon.</choice>
-		<choice Target="End">I will not help you rob the dead – live and drink, for now.</choice>
+		<choice Target="End">I will not help you rob the dead. Live and drink, for now.</choice>
 		</node>
 	
 		<node ID="Remind" Inherits="Welcome">
@@ -365,8 +365,8 @@
 			<choice Target="Loyal" IfHaveActiveQuest="Brothers_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
 			<choice Target="Betrayed" IfHaveState="Brothers_Tortoises_PoacherEnding">The Issachari shall have this place. Out of my way, old man.</choice>
 			<choice Target="Graveyard" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Thank you for welcoming me, warden. I am =name=. What is this place?</choice>
-			<choice Target="Poacher" IfHaveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
-			<choice Target="Poacher2" IfHaveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice Target="Poacher" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
+			<choice Target="Poacher2" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
 			<choice Target="Saltbacks">I have never seen so many saltbacks in the same place. I dare not imagine what they could do, if enraged.</choice>		
 			<choice Target="Warden">I was not expecting a warden here.</choice>
 			<choice Target="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
@@ -457,7 +457,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:smile:afterpronoun= faintly.*}}
 				
-				Majestic creatures, are they not? This is where their final steps lead - their stomping helps me find sleep, sometimes.
+				Majestic creatures, are they not? This is where their final steps lead -- their stomping helps me find sleep, sometimes.
 			</text>	
 		</node>
 
@@ -465,7 +465,7 @@
 			<text>
 				{{emote|*=pronouns.Possessive= chuckle turns into a dry, hacking cough before =pronouns.subjective= can speak up again.*}}
 				
-				Oh? More lived here, erstwhile - there was a time the saltbacks could find carers here, to ease their final days.
+				Oh? More lived here, erstwhile. There was a time the saltbacks could find carers here, to ease their final days.
 			</text>	
 			<choice Target="Left" Priority="10">What happened, warden? I see none here but you and the elder saltbacks.</choice>			
 		</node>
@@ -553,7 +553,7 @@
 			</text>
 			<choice Target="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
 			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
-				<text>Not all wardens are decrepit wrecks either - it's gotta be my lucky day.</text>
+				<text>Not all wardens are decrepit wrecks either. It's gotta be my lucky day.</text>
 				<part Name="StartFight" />
 			</choice>
 		</node>
@@ -565,7 +565,7 @@
 				Your wisdom is commendable, =name=. I can only trust that you will not foolishly spread word of this place.
 			</text>	
 			<choice Target="WhyNot">Why would I not? Why must this place stay hidden?</choice>			
-			<choice Target="WillNot">I will not, warden - you have my word.</choice>
+			<choice Target="WillNot">I will not, warden -- you have my word.</choice>
 			<choice Target="NoPromise">I can make no such promise, warden.</choice>
 		</node>
 		
