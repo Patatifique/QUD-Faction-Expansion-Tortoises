@@ -106,7 +106,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_ProjectileSaltbackCulverinBall" Inherits="BaseLeadSlugProjectile">
-		<part Name="Projectile" BasePenetration="0" BaseDamage="1d10" Attributes="Vorpal" ColorString="&amp;R"/>
+		<part Name="Projectile" BasePenetration="0" BaseDamage="2d6" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
 	
 	<object Name="Brothers_Tortoises_ProjectileSaltbackMagnumBall" Inherits="BaseLeadSlugProjectile">
@@ -116,9 +116,9 @@
 <!--Cosmetic objects-->
 	
 	<object Name="Brothers_Tortoises_Footprint" Inherits="Object">
-		<part Name="Render" DisplayName="footprints" Tile="Assets_Content_Textures_Tiles_Tile-7-3.png" RenderString="%" ColorString="&amp;y" DetailColor="y" Occluding="false" RenderIfDark="false" />
+		<part Name="Render" DisplayName="footprints" Tile="Terrain/tortoises/tile_footprints1.png" RenderString="%" ColorString="&amp;K" DetailColor="y" Occluding="false" RenderIfDark="false" />
 		<part Name="Physics" Takeable="false" Solid="false" Category="Terrain" />
-		<builder Name="RandomTile" Tiles="Items/sw_trash_1.bmp,Items/sw_trash_2.bmp,Items/sw_trash_3.bmp,Items/sw_trash_4.bmp" />
+		<builder Name="RandomTile" Tiles="Terrain/tortoises/tile_footprints1.png,Terrain/tortoises/tile_footprints2.png,Terrain/tortoises/tile_footprints3.png,Terrain/tortoises/tile_footprints4.png,Terrain/tortoises/tile_footprints5.png,Terrain/tortoises/tile_footprints6.png,Terrain/tortoises/tile_footprints7.png,Terrain/tortoises/tile_footprints8.png" />
 		<part Name="NoDamage" />
 		<tag Name="NoEffects" />
 		<tag Name="Cosmetic" />
@@ -129,7 +129,7 @@
 		<tag Name="Gender" Value="plural" />
 		<tag Name="Immutable" />
 		<tag Name="NoSparkingQuest" />
-		<part Name="Brothers_DeathObliterateTimer" Timer="40" Obliterate="true"/>
+		<part Name="Brothers_DeathObliterateTimer" Timer="80" Obliterate="true"/>
 	</object>
 
 <!--Others-->
