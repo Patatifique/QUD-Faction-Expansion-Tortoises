@@ -106,7 +106,7 @@
 	</object>
 
 	<object Name="Brothers_Tortoises_ProjectileSaltbackCulverinBall" Inherits="BaseLeadSlugProjectile">
-		<part Name="Projectile" BasePenetration="0" BaseDamage="2d6" Attributes="Vorpal" ColorString="&amp;R"/>
+		<part Name="Projectile" BasePenetration="0" BaseDamage="2d8" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
 	
 	<object Name="Brothers_Tortoises_ProjectileSaltbackMagnumBall" Inherits="BaseLeadSlugProjectile">
