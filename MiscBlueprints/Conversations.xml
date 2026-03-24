@@ -2,7 +2,7 @@
 <conversations>
 	
 
-	<!--Poacher dialogue-->
+<!--NPC dialogue-->
 	
 	<conversation ID="Brothers_Tortoises_Poacher">
     
@@ -332,14 +332,28 @@
 		
   </conversation>
 
-
-	<!--Tortoise Warden dialogue-->
 	
 	<conversation ID="Brothers_Tortoises_Warden">
 
+		<start ID="BadWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured">
+			<text>
+				{{emote|*The warden =verb:lift= =pronouns.possessive= weapon.*}}
+
+				You will meet a fool's death for not killing me when you had the chance!
+			</text>
+			<choice Target="End">
+				<text>Wait, can we talk about it?</text>
+				<part Name="StartFight" />
+			</choice>			
+			<choice Target="End">
+				<text>Bring it on, warden!</text>
+				<part Name="StartFight" />
+			</choice>	
+		</start>
+
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfFinishedQuest="Brothers_TortoisesRewardQuest" Priority="-1">
-				{{emote|*The warden lifts the brim of =pronouns.possessive= hat with a thumb.*}}
+				{{emote|*The warden =verb:lift= the brim of =pronouns.possessive= hat with a thumb.*}}
 
 				Greetings =name=! You shall always be welcome on these grounds.
 			</text>
@@ -349,12 +363,12 @@
 				Do you come with news from beyond Moghra'yi?
 			</text>
 			<text IfNotFinishedQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing" Priority="-1">
-				{{emote|*The warden wipes the corners of =pronouns.possessive= mouth.*}}
+				{{emote|*The warden =verb:wipe= the corners of =pronouns.possessive= mouth.*}}
 				
 				Greetings, =name=. I hope my trust in you is not misplaced.
 			</text>
 			<text IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing" Priority="-1">
-				{{emote|*The warden beckons you closer between two coughing fits.*}}
+				{{emote|*The warden =verb:beckon= you closer between two coughing fits.*}}
 				
 				Come closer, traveler, and rest a moment in the shade. I am Warden Qoruda, although such designations matter little in this place.
 			</text>	
@@ -608,9 +622,78 @@
 
 	</conversation>
 
-	<!--Pet dialogue-->
+
+	<conversation ID="Brothers_Tortoises_PistolHunter">
+			
+		<start ID="GoodWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured" Inherits="DefaultChoices">
+			<text Priority="-1">
+				{{emote|*Above =pronouns.possessive= sun veil, an appreciative gaze find yours.*}}
+				
+				Word on the wind says you're the one to thank for this find, lack-salt. Good one.
+			</text>
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Gun">That is a very impressive revolver. Where did you get it?</choice>
+			<choice Target="WhatNow">What shall happen with this place now?</choice>
+			<choice Target="End">Live and drink, hunter.</choice>
+		</node>
+
+		<start ID="Welcome">
+			<text>I could use some target practice, lack-salt.</text>
+			<choice Target="End">Live and drink, hunter.</choice>
+		</start>
+
+		<start ID="Gun" Inherits="GoodWelcome">
+			<text>
+				You already know where, lack-salt. Have your feet forgotten the way to the Stiltgrounds yet?
+			</text>
+		</start>
+
+		<start ID="WhatNow" Inherits="GoodWelcome">
+			<text>The red-and-white will know this as a place to rest, trade and divvy up water.</text>
+		</start>
+		
+	</conversation>
+
+	<conversation ID="Brothers_Tortoises_RifleHunter">
+			
+		<start ID="GoodWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured" Inherits="DefaultChoices">
+			<text Priority="-1">
+				{{emote|*=pronouns.Subjective= =verb:clean:afterpronoun= the barrel of =pronouns.possessive= rifle, scraping saltflakes away.*}}
+				
+				Hmm? By the sun, what now?
+			</text>
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Gun">Your rifle looks impressive. Where did you get it?</choice>
+			<choice Target="WhereTurtles">What happened to the warden and walking dunes who were here?</choice>
+			<choice Target="End">Live and drink, hunter.</choice>
+		</node>
+
+		<start ID="Welcome">
+			<text>Please run away, lack-salt -- I *love* tracking shots.</text>
+			<choice Target="End">Live and drink, hunter.</choice>
+		</start>
+
+		<start ID="Gun" Inherits="GoodWelcome">
+			<text>
+				Ha! Such a prize is not easily won, lack-salt. But you already know our gunsmith, don't you?
+			</text>
+		</start>
+
+		<start ID="WhereTurtles" Inherits="GoodWelcome">
+			<text>Don't ask questions you don't want an answer to, lack-salt.</text>
+		</start>
+		
+	</conversation>
+
+
+<!--Pet dialogue-->
+
 	
-	<conversation ID="Brothers_Tortoises_Baby Shaile">
+	<conversation ID="Brothers_Tortoises_BabyShaile">
 		
 		<node ID="Start">
 		  <text>
@@ -624,10 +707,12 @@
 		</node>
 	
 	</conversation>
+
   
-  <!--walking dune dialogue-->
+<!--walking dune dialogue-->
+
 	
-	<conversation ID="Brothers_Tortoises_Walking Dune">
+	<conversation ID="Brothers_Tortoises_WalkingDune">
 		
 		<start ID="Welcome">
 			<text IfNotZoneName="Saltback Graveyard">

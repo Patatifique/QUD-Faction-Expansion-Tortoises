@@ -55,7 +55,7 @@
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="nudges you icily,hiccups misty rime on you,sneezes ice shards at you" />
 		<property Name="Story" Value="Brothers_CatsDogs_BabyShaileStory" />
-		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Baby Shaile" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_BabyShaile" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
 		<tag Name="Gender" Value="male" />
@@ -155,7 +155,7 @@
 	<object Name="Brothers_Tortoises_Walking Dune" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="walking dune" Tile="Creatures/tortoises/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
 		<part Name="Corpse" CorpseChance="90" CorpseBlueprint="Brothers_Tortoises_Walking Dune Corpse" />
-		<part Name="Brain" Factions="Tortoises-100,Unshelled Reptiles-100,Birds-100" Hostile="false" Calm="True"/>
+		<part Name="Brain" Factions="Tortoises-100" Hostile="false" Calm="True" />
 		<stat Name="AV" Value="17" />
 		<stat Name="DV" Value="-10" />
 		<stat Name="Strength" Boost="2" />
@@ -167,7 +167,7 @@
 		<inventoryobject Blueprint="Saltback_Stomp" Number="1" />
 		<tag Name="Role" Value="Tank" />
 		<tag Name="Gigantic" />
-		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Walking Dune" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_WalkingDune" />
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Brothers_TortoisesPoacherQuest" Step="WalkingDune" />
 		<part Name="Brothers_Tortoises_AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_BigStele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
@@ -312,6 +312,7 @@
 		<tag Name="staticFaction1" Value="Birds,disliked,leading hunting parties against them" />
 		<tag Name="NoSleep" />
 		<tag Name="Gender" Value="female" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_PistolHunter" />
 		<xtagGrammar Proper="true" />
 		<inventoryobject Blueprint="Brothers_Tortoises_Saltback Magnum" Number="1" />
 		<inventoryobject Blueprint="Lead Slug" Number="24" />
@@ -339,6 +340,7 @@
 		<tag Name="staticFaction1" Value="Prey,disliked,taking down Moghra'yi giants" />
 		<tag Name="NoSleep" />
 		<tag Name="Gender" Value="male" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_RifleHunter" />
 		<xtagGrammar Proper="true" />
 		<inventoryobject Blueprint="Brothers_Tortoises_Saltback Culverin" Number="1" />
 		<inventoryobject Blueprint="Lead Slug" Number="24" />
