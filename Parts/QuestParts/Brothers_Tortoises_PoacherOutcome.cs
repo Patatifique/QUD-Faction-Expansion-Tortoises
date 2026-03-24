@@ -30,7 +30,7 @@ namespace XRL.World.Parts
         private void ApplyOutcome()
         {
             Popup.Show("debug: applying poacher outcome");
-            RemovePart(this);
+            this.ParentObject.RemovePart(this);
         }
     }
 }
