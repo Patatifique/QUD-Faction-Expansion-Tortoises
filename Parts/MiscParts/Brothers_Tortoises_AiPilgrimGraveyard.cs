@@ -33,7 +33,11 @@ namespace XRL.World.Parts
 
         public override bool HandleEvent(AIBoredEvent E)
         {
-            return !this.CheckStartPilgrimage() && base.HandleEvent(E);
+            if (The.Game.GetBooleanGameState("Brothers_Tortoises_PoacherEnding_Occured"))
+            // no pilgrimage if there's no graveyard left...
+                return base.HandleEvent(E);
+            else
+                return !this.CheckStartPilgrimage() && base.HandleEvent(E);
         }
 
         public override bool HandleEvent(GetItemElementsEvent E)
