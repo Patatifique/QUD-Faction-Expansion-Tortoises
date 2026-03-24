@@ -713,6 +713,13 @@
 
 	
 	<conversation ID="Brothers_Tortoises_WalkingDune">
+
+		<start ID="BadWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured">
+			<text>
+				{{emote|*aimlessly wanders around*}}
+			</text>
+			<choice Target="End">Live and drink, drifting elder.</choice>
+		</start>
 		
 		<start ID="Welcome">
 			<text IfNotZoneName="Saltback Graveyard">
