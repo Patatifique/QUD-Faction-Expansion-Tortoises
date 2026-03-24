@@ -18,14 +18,15 @@ namespace XRL.World.Parts
         {
             if (The.Game.GetBooleanGameState("Brothers_Tortoises_PoacherEnding_Occured"))
             {
-                 string zoneBaseDisplayName = The.ZoneManager.GetZoneBaseDisplayName(The.ActiveZone.ZoneID, false);
-                 if (zoneBaseDisplayName != null && zoneBaseDisplayName.Contains("Saltback Graveyard"))
+                string zoneID = The.Game.GetStringGameState("SaltbackGraveyardZoneID");
+                 if (E.Zone.ZoneID == zoneID)
                  {
                     this.ApplyOutcome();
                  }       
             }
             return base.HandleEvent(E);
         }
+
 
         private void ApplyOutcome()
         {
