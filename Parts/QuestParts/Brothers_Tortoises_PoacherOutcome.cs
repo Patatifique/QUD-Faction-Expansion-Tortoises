@@ -17,15 +17,20 @@ namespace XRL.World.Parts
         public override bool HandleEvent(ZoneActivatedEvent E)
         {
             if (The.Game.GetBooleanGameState("Brothers_Tortoises_PoacherEnding_Occured"))
-            {       
-                this.ApplyOutcome();
+            {
+                 string zoneBaseDisplayName = The.ZoneManager.GetZoneBaseDisplayName(The.ActiveZone.ZoneID, false);
+                 if (zoneBaseDisplayName != null && zoneBaseDisplayName.Contains("Saltback Graveyard"))
+                 {
+                    this.ApplyOutcome();
+                 }       
             }
             return base.HandleEvent(E);
         }
 
         private void ApplyOutcome()
         {
-            Popup.Show("debug");
+            Popup.Show("debug: applying poacher outcome");
+            RemovePart(this);
         }
     }
 }
