@@ -24,7 +24,7 @@ namespace XRL.World.Quests
                 var timerPart = new Brothers_BoolStateTimer();
                 timerPart.startTurn = Calendar.TotalTimeTicks;
                 timerPart.state = "Brothers_Tortoises_PoacherEnding_Occured";
-                timerPart.targetTurns = 3000L; // a few moments later
+                timerPart.targetTurns = 6000L; // a few moments later
                 The.Player.AddPart(timerPart);
 
                 // Attach Outcome Part to the player
