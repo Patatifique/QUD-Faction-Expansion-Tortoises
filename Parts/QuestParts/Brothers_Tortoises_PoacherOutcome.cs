@@ -9,11 +9,30 @@ namespace XRL.World.Parts
 {
     [Serializable]
     public class Brothers_Tortoises_PoacherOutcome : IPart
-    {  
+    {
         public override bool WantEvent(int ID, int cascade)
         {
             return base.WantEvent(ID, cascade)
                 || ID == ZoneActivatedEvent.ID;
+        }
+
+        // change parent contingency 
+        public override void Register(GameObject Object, IEventRegistrar Registrar)
+        {
+            Registrar.Register("BeginTakeAction");
+            base.Register(Object, Registrar);
+        }
+                public override bool FireEvent(Event E)
+        {
+            if (E.ID == "BeginTakeAction")
+            {
+                if (!this.ParentObject.IsPlayer())
+                    {
+                        this.ParentObject.RemovePart(this);
+                        The.Player.AddPart(this);
+                    }   
+            }
+            return true;
         }
 
 
