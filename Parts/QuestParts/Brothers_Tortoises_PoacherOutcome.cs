@@ -65,7 +65,8 @@ namespace XRL.World.Parts
                 o.HasTag("Brothers_Tortoises_DestroyedOnEnding")))
             {
                 if (gameObject.HasPart<Brain>())
-                    continue;
+                    if (gameObject.Blueprint != "Brothers_Tortoises_Walking Dune" && gameObject.Blueprint != "Brothers_Tortoises_Warden" )
+                        continue;
 
                 if (gameObject.HasTag("Brothers_Tortoises_DestroyedOnEnding"))
                 {
