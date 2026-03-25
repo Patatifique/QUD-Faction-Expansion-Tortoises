@@ -172,6 +172,7 @@
 		<part Name="Brothers_Tortoises_AiPilgrimGraveyard" TargetObject="Brothers_Tortoises_BigStele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
 		<part Name="LeavesTrail" TrailChance="100" TrailBlueprint="@Brothers_Tortoises_Footprint Table" OnEnter="false" />
+		<tag Name="Brothers_Tortoises_DestroyedOnEnding" />
 	</object>
 
 <!--Corpses-->
@@ -293,6 +294,7 @@
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="QuestGiver" Value="Brothers_TortoisesWardenQuest" />
+		<tag Name="Brothers_Tortoises_DestroyedOnEnding" />
 	</object>
 
 	<object Name="Brothers_Tortoises_IssachariPistolHunter" Inherits="NPC">
