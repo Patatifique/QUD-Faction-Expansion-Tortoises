@@ -50,6 +50,10 @@ namespace XRL.World.Parts
             // Add the camp
             this.ParentObject.CurrentZone.GetCell(12, 4).AddObject("Brothers_Tortoises_IssachariCamp");
             
+            // Add a few random issachari to the camp 
+            PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRaiderChill");
+            PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRiflerChill");
+
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
         }
@@ -95,6 +99,12 @@ namespace XRL.World.Parts
             }
         }
 
+        public void PopulateRandomly(int min, int max, string blueprint)
+        {
+                int num1 = 0;
+                for (int index = Stat.Random(min, max); num1 < index; ++num1)
+                    ((IEnumerable<Cell>) this.ParentObject.CurrentZone.GetEmptyCellsShuffled()).First<Cell>().AddObject(blueprint);
+        }
 
     }
 }
