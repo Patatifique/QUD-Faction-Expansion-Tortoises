@@ -30,8 +30,28 @@ namespace XRL.World.Parts
 
         private void ApplyOutcome()
         {
+            // Debug message
             Popup.Show("debug: applying poacher outcome");
+
+            // Change Terrain Data
+            ReplaceTerrainData(
+                "r",
+                "new sad description");
+
+            // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
         }
+        
+        public void ReplaceTerrainData(string newDetail, string newDescription)
+        {
+            Cell cell = The.ZoneManager.GetZone("JoppaWorld").GetCell(this.ParentObject.CurrentZone.wX, this.ParentObject.CurrentZone.wY);
+            var terrain = cell.GetFirstObjectWithPart("TerrainTravel");
+            if (terrain != null)
+            {
+                terrain.Render.DetailColor = newDetail;
+                terrain.GetPart<Description>().Short = newDescription;
+            }
+        }
+
     }
 }
