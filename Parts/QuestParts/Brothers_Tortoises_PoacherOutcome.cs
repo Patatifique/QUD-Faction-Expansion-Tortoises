@@ -39,8 +39,8 @@ namespace XRL.World.Parts
             // Change Terrain Data
             ReplaceTerrainData(
                 "r",
-                "new sad name",
-                "new sad description");
+                "looted graveyard",
+                "Nestled between wind-shaped dunes, ingenious hunters have drunk an ocean of bones dry.");
 
             // Destroy everything that should be destroyed
             DestroyOnEnding();
@@ -56,7 +56,7 @@ namespace XRL.World.Parts
             PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRiflerChill");
 
             // Change zone name
-            The.ZoneManager.SetZoneName(this.ParentObject.CurrentZone.ZoneID, "Sad Name", Proper: true);
+            The.ZoneManager.SetZoneName(this.ParentObject.CurrentZone.ZoneID, "looted graveyard", Proper: false);
 
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
