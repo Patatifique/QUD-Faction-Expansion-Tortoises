@@ -283,7 +283,7 @@
 				
 				{{emote|*=pronouns.Subjective= =verb:snort:afterpronoun= derisively before curtly nodding in your direction.*}}
 				
-				There is much preparation ahead, lack-salt. But we shall strip it bare, fashion armor out of scute and bones and trade the rest. Walk in the shade, lack-salt.
+				There is some preparation ahead, lack-salt. But we shall strip it bare, fashion armor out of scute and bones and trade the rest. Walk in the shade, lack-salt.
 			</text>
 			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
 		</node>	
