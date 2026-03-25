@@ -1,6 +1,9 @@
 using System;
 using XRL.World;
 using XRL.UI;
+using XRL.Rules;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace XRL.World.Parts
 {
@@ -38,6 +41,9 @@ namespace XRL.World.Parts
                 "r",
                 "new sad description");
 
+            // Destroy bones
+            DestroyOnEnding();
+
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
         }
@@ -52,6 +58,22 @@ namespace XRL.World.Parts
                 terrain.GetPart<Description>().Short = newDescription;
             }
         }
+
+        public void DestroyOnEnding()
+        {
+            foreach (GameObject gameObject in this.ParentObject.CurrentZone.GetObjects(o =>
+                o.HasTag("Brothers_Tortoises_DestroyedOnEnding")))
+            {
+                if (gameObject.HasPart<Brain>())
+                    continue;
+
+                if (gameObject.HasTag("Brothers_Tortoises_DestroyedOnEnding"))
+                {
+                    gameObject.Obliterate();
+                }
+            }
+        }
+
 
     }
 }
