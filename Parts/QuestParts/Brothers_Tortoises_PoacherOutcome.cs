@@ -41,8 +41,11 @@ namespace XRL.World.Parts
                 "r",
                 "new sad description");
 
-            // Destroy bones
+            // Destroy everything that should be destroyed
             DestroyOnEnding();
+
+            // Replace the stele
+            ReplaceObject("Brothers_Tortoises_BigStele", "Brothers_Tortoises_RuinedStele");
 
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
@@ -71,6 +74,20 @@ namespace XRL.World.Parts
                 if (gameObject.HasTag("Brothers_Tortoises_DestroyedOnEnding"))
                 {
                     gameObject.Obliterate();
+                }
+            }
+        }
+
+        public void ReplaceObject(string oldObjectBlueprint, string newObjectBlueprint)
+        {
+
+            foreach (GameObject gameObject in this.ParentObject.CurrentZone.GetObjects(o => o.Blueprint == oldObjectBlueprint))
+            {
+                var cell = gameObject.Physics?.CurrentCell;
+                if (cell != null)
+                {
+                    cell.RemoveObject(gameObject);
+                    cell.AddObject(newObjectBlueprint);
                 }
             }
         }
