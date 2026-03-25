@@ -34,7 +34,7 @@ namespace XRL.World.Parts
         private void ApplyOutcome()
         {
             // Debug message
-            Popup.Show("debug: applying poacher outcome");
+            //Popup.Show("debug: applying poacher outcome");
 
             // Change Terrain Data
             ReplaceTerrainData(
