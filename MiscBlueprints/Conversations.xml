@@ -28,7 +28,7 @@
 			<choice Target="Reward" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I have made good use of your gift. Is there any way to get another weapon?</choice>
 			<choice Target="Ambush" IfHaveState="Brothers_Tortoises_Ambushed">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
 			<choice Target="QuestChoice" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
-			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
+			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
 			<choice Target="Remind" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
 			<choice Target="Unfair" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Why is it I'm the one looking for the Graveyard while you smoke the hookah here?</choice>
 			<choice Target="Rifle" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">That's a nice rifle you've got.</choice>
