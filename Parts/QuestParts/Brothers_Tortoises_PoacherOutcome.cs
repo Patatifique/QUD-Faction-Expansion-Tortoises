@@ -47,6 +47,9 @@ namespace XRL.World.Parts
             // Replace the stele
             ReplaceObject("Brothers_Tortoises_BigStele", "Brothers_Tortoises_RuinedStele");
 
+            // Add the camp
+            this.ParentObject.CurrentZone.GetCell(12, 4).AddObject("Brothers_Tortoises_IssachariCamp");
+            
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
         }
