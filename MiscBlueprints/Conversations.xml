@@ -31,12 +31,12 @@
 			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
 			<choice Target="Remind" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
 			<choice Target="Unfair" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Why is it I'm the one looking for the Graveyard while you smoke the hookah here?</choice>
+			<choice Target="Work" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">I'm in need of work. Do you have any that needs doing?</choice>
 			<choice Target="Rifle" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">That's a nice rifle you've got.</choice>
 			<choice Target="Shade" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What makes this tent "your" shade?</choice>
 			<choice Target="Activity" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What are you doing in the Six Day Stilt?</choice>
 			<choice Target="Salt" IfHaveLiquid="salt" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I'm not a lack-salt: I have some right there.</choice>
 			<choice Target="Pariah" IfNotHaveQuest="Brothers_TortoisesRewardQuest">Why are you called "pariah" when you still bear the red-and-white?</choice>
-			<choice Target="Work" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">I'm in need of work. Do you have any that needs doing?</choice>
 			<choice Target="End">Live and drink, huntress.</choice>
 		</node>
 	

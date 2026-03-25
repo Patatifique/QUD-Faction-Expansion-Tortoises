@@ -263,7 +263,7 @@
 		<part Name="Render" DisplayName="Qoruda" Tile="Creatures/tortoises/tortoisewarden.png" ColorString="&amp;B" RenderString="w" DetailColor="y" />
 		<part Name="Honorifics" Primary="Warden" />
 		<part Name="Description" Short="Hunched spine cracks under a natural shelldome as saltflies flock to numbing shade cast by a wide-brimmed cap. Leathery skin cracks and flakes where it meets backing keratin, white hair tufts properly groomed and trimmed short. =pronouns.Subjective= rests for a while, =pronouns.possessive= eyes surveying =pronouns.possessive= surroundings and the horizon. Years bear heavily on =pronouns.possessive= brow and shake =pronouns.possessive= frame with a wheezing cough." />
-		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_WardenQoruda" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Warden" />
 		<part Name="Brain" Wanders="false" Factions="Wardens-100" />
 		<stat Name="Strength" sValue="23" />
 		<stat Name="Agility" sValue="24" />
