@@ -19,4 +19,12 @@
 		<part Name="QuestStarter" Trigger="Created" Quest="Brothers_TortoisesWardenQuest" />
 	</object>
 
+
+<!-- Map chunks -->
+
+	<object Name="Brothers_Tortoises_IssachariCamp" Inherits="Widget">
+		<part Name="MapChunkPlacement" Map="Brothers_ChunkIssachariCamp.rpm" Width="15" Height="6" />
+	</object>
+
+
 </objects>
