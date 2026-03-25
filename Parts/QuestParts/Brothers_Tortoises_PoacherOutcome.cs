@@ -39,6 +39,7 @@ namespace XRL.World.Parts
             // Change Terrain Data
             ReplaceTerrainData(
                 "r",
+                "new sad name",
                 "new sad description");
 
             // Destroy everything that should be destroyed
@@ -54,19 +55,22 @@ namespace XRL.World.Parts
             PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRaiderChill");
             PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRiflerChill");
 
+            // Change zone name
+            The.ZoneManager.SetZoneName(this.ParentObject.CurrentZone.ZoneID, "Sad Name", Proper: true);
+
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
         }
         
-        public void ReplaceTerrainData(string newDetail, string newDescription)
+        public void ReplaceTerrainData(string newDetail, string newName, string newDescription)
         {
             Cell cell = The.ZoneManager.GetZone("JoppaWorld").GetCell(this.ParentObject.CurrentZone.wX, this.ParentObject.CurrentZone.wY);
             var terrain = cell.GetFirstObjectWithPart("TerrainTravel");
             if (terrain != null)
             {
                 terrain.Render.DetailColor = newDetail;
-                terrain.GetPart<Description>().Short = newDescription;
-            }
+                terrain.Render.DisplayName = newName;
+                terrain.GetPart<Description>().Short = newDescription;}
         }
 
         public void DestroyOnEnding()
