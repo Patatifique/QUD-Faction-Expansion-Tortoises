@@ -36,7 +36,7 @@ namespace Tortoises.Brothers
             zoneManager.SetZoneProperty(zoneID, "SkipTerrainBuilders", true);
             zoneManager.AddZoneBuilder(zoneID, 6000, "SaltDunes");
             zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Brothers_SaltbackGraveyard.rpm");
-            zoneManager.AddZonePostBuilder(zoneID, "Music", "Track", "Music/Bey Lah Heritage II");
+            zoneManager.AddZonePostBuilder(zoneID, "Music", "Track", "Music/tortoises/Baud.mp3");
             zoneManager.AddZonePostBuilder(zoneID, "AddWidgetBuilder", "Blueprint", "Brothers_Tortoises_SaltbackGraveyardSurface");
             zoneManager.AddZonePostBuilder(zoneID, "IsCheckpoint", "Key", zoneID);
 
