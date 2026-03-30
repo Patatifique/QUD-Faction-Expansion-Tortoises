@@ -249,7 +249,7 @@
 			<choice Target="Found">I may have found it.</choice>
 			<choice Target="Lie">
 				<text>{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</text>
-				<part Name="Sibs_RequireStat" Stat="Ego" Value="20" />
+				<part Name="Sibs_RequireStat" Stat="Ego" Value="19" />
 			</choice>
 			<choice Target="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
 		</node>
