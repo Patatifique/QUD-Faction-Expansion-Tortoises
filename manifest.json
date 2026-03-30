@@ -2,7 +2,7 @@
     "id": "Github_Sibs_Tortoises",
     "title": "(Github) Faction Expansion: Tortoises",
     "description": "Expands the 'tortoises' faction by updating sprites, adding more creatures, loot and a short questline between the Stiltgrounds and the salt dunes.",
-    "version": "2.0",
+    "version": "2.1",
     "dependency": "Github_Sibs_Library",
     "author": "{{tarnished|Balthichou}} and {{lovesickness|Patatifique}}",
     "tags": "Faction",
