@@ -48,7 +48,7 @@
   <cell X="42" Y="0"></cell>
   <cell X="43" Y="0"></cell>
   <cell X="44" Y="0">
-    <object Name="Brothers_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_Walking Dune"></object>
   </cell>
   <cell X="45" Y="0"></cell>
   <cell X="46" Y="0"></cell>
@@ -119,14 +119,14 @@
   <cell X="29" Y="1"></cell>
   <cell X="30" Y="1"></cell>
   <cell X="31" Y="1">
-    <object Name="Brothers_Tortoises_Big_Bones1"></object>
+    <object Name="Sibs_Tortoises_Big_Bones1"></object>
   </cell>
   <cell X="32" Y="1"></cell>
   <cell X="33" Y="1"></cell>
   <cell X="34" Y="1"></cell>
   <cell X="35" Y="1"></cell>
   <cell X="36" Y="1">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="37" Y="1"></cell>
   <cell X="38" Y="1"></cell>
@@ -192,14 +192,14 @@
   <cell X="16" Y="2"></cell>
   <cell X="17" Y="2"></cell>
   <cell X="18" Y="2">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="19" Y="2"></cell>
   <cell X="20" Y="2"></cell>
   <cell X="21" Y="2"></cell>
   <cell X="22" Y="2"></cell>
   <cell X="23" Y="2">
-    <object Name="Brothers_Tortoises_Big_Bones3"></object>
+    <object Name="Sibs_Tortoises_Big_Bones3"></object>
   </cell>
   <cell X="24" Y="2"></cell>
   <cell X="25" Y="2"></cell>
@@ -220,16 +220,16 @@
   <cell X="38" Y="2"></cell>
   <cell X="39" Y="2"></cell>
   <cell X="40" Y="2">
-    <object Name="Brothers_Tortoises_Big_Bones3"></object>
+    <object Name="Sibs_Tortoises_Big_Bones3"></object>
   </cell>
   <cell X="41" Y="2"></cell>
   <cell X="42" Y="2"></cell>
   <cell X="43" Y="2">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="2"></cell>
   <cell X="45" Y="2">
-    <object Name="Brothers_Tortoises_Big_Bones4"></object>
+    <object Name="Sibs_Tortoises_Big_Bones4"></object>
   </cell>
   <cell X="46" Y="2"></cell>
   <cell X="47" Y="2"></cell>
@@ -293,11 +293,11 @@
   <cell X="25" Y="3"></cell>
   <cell X="26" Y="3"></cell>
   <cell X="27" Y="3">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="28" Y="3"></cell>
   <cell X="29" Y="3">
-    <object Name="Brothers_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_Walking Dune"></object>
   </cell>
   <cell X="30" Y="3"></cell>
   <cell X="31" Y="3"></cell>
@@ -325,7 +325,7 @@
   <cell X="49" Y="3"></cell>
   <cell X="50" Y="3"></cell>
   <cell X="51" Y="3">
-    <object Name="Brothers_Tortoises_Big_Bones6"></object>
+    <object Name="Sibs_Tortoises_Big_Bones6"></object>
   </cell>
   <cell X="52" Y="3"></cell>
   <cell X="53" Y="3"></cell>
@@ -372,13 +372,13 @@
   <cell X="14" Y="4"></cell>
   <cell X="15" Y="4"></cell>
   <cell X="16" Y="4">
-    <object Name="Brothers_Tortoises_Big_Bones2"></object>
+    <object Name="Sibs_Tortoises_Big_Bones2"></object>
   </cell>
   <cell X="17" Y="4"></cell>
   <cell X="18" Y="4"></cell>
   <cell X="19" Y="4"></cell>
   <cell X="20" Y="4">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="21" Y="4"></cell>
   <cell X="22" Y="4"></cell>
@@ -412,7 +412,7 @@
   <cell X="38" Y="4"></cell>
   <cell X="39" Y="4"></cell>
   <cell X="40" Y="4">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="41" Y="4"></cell>
   <cell X="42" Y="4"></cell>
@@ -422,7 +422,7 @@
   <cell X="46" Y="4"></cell>
   <cell X="47" Y="4"></cell>
   <cell X="48" Y="4">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="49" Y="4"></cell>
   <cell X="50" Y="4"></cell>
@@ -479,13 +479,13 @@
   <cell X="21" Y="5"></cell>
   <cell X="22" Y="5"></cell>
   <cell X="23" Y="5">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="24" Y="5"></cell>
   <cell X="25" Y="5"></cell>
   <cell X="26" Y="5"></cell>
   <cell X="27" Y="5">
-    <object Name="Brothers_Tortoises_Big_Bones5"></object>
+    <object Name="Sibs_Tortoises_Big_Bones5"></object>
   </cell>
   <cell X="28" Y="5"></cell>
   <cell X="29" Y="5"></cell>
@@ -522,7 +522,7 @@
   <cell X="43" Y="5"></cell>
   <cell X="44" Y="5"></cell>
   <cell X="45" Y="5">
-    <object Name="Brothers_Tortoises_Big_Bones2"></object>
+    <object Name="Sibs_Tortoises_Big_Bones2"></object>
   </cell>
   <cell X="46" Y="5"></cell>
   <cell X="47" Y="5"></cell>
@@ -574,7 +574,7 @@
   <cell X="13" Y="6"></cell>
   <cell X="14" Y="6"></cell>
   <cell X="15" Y="6">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="16" Y="6"></cell>
   <cell X="17" Y="6"></cell>
@@ -582,7 +582,7 @@
   <cell X="19" Y="6"></cell>
   <cell X="20" Y="6"></cell>
   <cell X="21" Y="6">
-    <object Name="Brothers_Tortoises_Big_Bones4"></object>
+    <object Name="Sibs_Tortoises_Big_Bones4"></object>
   </cell>
   <cell X="22" Y="6"></cell>
   <cell X="23" Y="6"></cell>
@@ -606,7 +606,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="34" Y="6">
-    <object Name="Brothers_Tortoises_BigStele"></object>
+    <object Name="Sibs_Tortoises_BigStele"></object>
     <object Name="SaltPath"></object>
   </cell>
   <cell X="35" Y="6">
@@ -638,7 +638,7 @@
   <cell X="50" Y="6"></cell>
   <cell X="51" Y="6"></cell>
   <cell X="52" Y="6">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="53" Y="6"></cell>
   <cell X="54" Y="6"></cell>
@@ -689,7 +689,7 @@
   <cell X="19" Y="7"></cell>
   <cell X="20" Y="7"></cell>
   <cell X="21" Y="7">
-    <object Name="Brothers_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_Walking Dune"></object>
   </cell>
   <cell X="22" Y="7"></cell>
   <cell X="23" Y="7"></cell>
@@ -730,14 +730,14 @@
   <cell X="41" Y="7"></cell>
   <cell X="42" Y="7"></cell>
   <cell X="43" Y="7">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="7"></cell>
   <cell X="45" Y="7"></cell>
   <cell X="46" Y="7"></cell>
   <cell X="47" Y="7"></cell>
   <cell X="48" Y="7">
-    <object Name="Brothers_Tortoises_Big_Bones5"></object>
+    <object Name="Sibs_Tortoises_Big_Bones5"></object>
   </cell>
   <cell X="49" Y="7"></cell>
   <cell X="50" Y="7"></cell>
@@ -800,7 +800,7 @@
   <cell X="23" Y="8"></cell>
   <cell X="24" Y="8"></cell>
   <cell X="25" Y="8">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="26" Y="8"></cell>
   <cell X="27" Y="8"></cell>
@@ -829,14 +829,14 @@
   <cell X="38" Y="8"></cell>
   <cell X="39" Y="8"></cell>
   <cell X="40" Y="8">
-    <object Name="Brothers_Tortoises_Big_Bones1"></object>
+    <object Name="Sibs_Tortoises_Big_Bones1"></object>
   </cell>
   <cell X="41" Y="8"></cell>
   <cell X="42" Y="8"></cell>
   <cell X="43" Y="8"></cell>
   <cell X="44" Y="8"></cell>
   <cell X="45" Y="8">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="46" Y="8"></cell>
   <cell X="47" Y="8"></cell>
@@ -907,13 +907,13 @@
   <cell X="17" Y="9"></cell>
   <cell X="18" Y="9"></cell>
   <cell X="19" Y="9">
-    <object Name="Brothers_Tortoises_Big_Bones1"></object>
+    <object Name="Sibs_Tortoises_Big_Bones1"></object>
   </cell>
   <cell X="20" Y="9"></cell>
   <cell X="21" Y="9"></cell>
   <cell X="22" Y="9"></cell>
   <cell X="23" Y="9">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="24" Y="9"></cell>
   <cell X="25" Y="9"></cell>
@@ -939,7 +939,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="37" Y="9">
-    <object Name="Brothers_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_Walking Dune"></object>
   </cell>
   <cell X="38" Y="9"></cell>
   <cell X="39" Y="9">
@@ -957,7 +957,7 @@
   <cell X="49" Y="9"></cell>
   <cell X="50" Y="9"></cell>
   <cell X="51" Y="9">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="52" Y="9"></cell>
   <cell X="53" Y="9"></cell>
@@ -1030,7 +1030,7 @@
   <cell X="26" Y="10"></cell>
   <cell X="27" Y="10"></cell>
   <cell X="28" Y="10">
-    <object Name="Brothers_Tortoises_Big_Bones2"></object>
+    <object Name="Sibs_Tortoises_Big_Bones2"></object>
   </cell>
   <cell X="29" Y="10"></cell>
   <cell X="30" Y="10"></cell>
@@ -1056,13 +1056,13 @@
   <cell X="38" Y="10"></cell>
   <cell X="39" Y="10"></cell>
   <cell X="40" Y="10">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="41" Y="10"></cell>
   <cell X="42" Y="10"></cell>
   <cell X="43" Y="10"></cell>
   <cell X="44" Y="10">
-    <object Name="Brothers_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_Walking Dune"></object>
   </cell>
   <cell X="45" Y="10"></cell>
   <cell X="46" Y="10"></cell>
@@ -1170,14 +1170,14 @@
   <cell X="40" Y="11"></cell>
   <cell X="41" Y="11"></cell>
   <cell X="42" Y="11">
-    <object Name="Brothers_Tortoises_Big_Bones3"></object>
+    <object Name="Sibs_Tortoises_Big_Bones3"></object>
   </cell>
   <cell X="43" Y="11"></cell>
   <cell X="44" Y="11"></cell>
   <cell X="45" Y="11"></cell>
   <cell X="46" Y="11"></cell>
   <cell X="47" Y="11">
-    <object Name="Brothers_Tortoises_Big_Bones6"></object>
+    <object Name="Sibs_Tortoises_Big_Bones6"></object>
   </cell>
   <cell X="48" Y="11"></cell>
   <cell X="49" Y="11"></cell>
@@ -1253,7 +1253,7 @@
   <cell X="21" Y="12"></cell>
   <cell X="22" Y="12"></cell>
   <cell X="23" Y="12">
-    <object Name="Brothers_Tortoises_Big_Bones5"></object>
+    <object Name="Sibs_Tortoises_Big_Bones5"></object>
   </cell>
   <cell X="24" Y="12"></cell>
   <cell X="25" Y="12"></cell>
@@ -1261,7 +1261,7 @@
   <cell X="27" Y="12"></cell>
   <cell X="28" Y="12"></cell>
   <cell X="29" Y="12">
-    <object Name="Brothers_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_Walking Dune"></object>
   </cell>
   <cell X="30" Y="12">
     <object Name="SaltPath"></object>
@@ -1298,7 +1298,7 @@
   <cell X="48" Y="12"></cell>
   <cell X="49" Y="12"></cell>
   <cell X="50" Y="12">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="51" Y="12"></cell>
   <cell X="52" Y="12"></cell>
@@ -1375,14 +1375,14 @@
   <cell X="25" Y="13"></cell>
   <cell X="26" Y="13"></cell>
   <cell X="27" Y="13">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="28" Y="13"></cell>
   <cell X="29" Y="13"></cell>
   <cell X="30" Y="13"></cell>
   <cell X="31" Y="13"></cell>
   <cell X="32" Y="13">
-    <object Name="Brothers_Tortoises_Big_Bones4"></object>
+    <object Name="Sibs_Tortoises_Big_Bones4"></object>
   </cell>
   <cell X="33" Y="13"></cell>
   <cell X="34" Y="13">
@@ -1403,13 +1403,13 @@
   </cell>
   <cell X="39" Y="13"></cell>
   <cell X="40" Y="13">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="41" Y="13"></cell>
   <cell X="42" Y="13"></cell>
   <cell X="43" Y="13"></cell>
   <cell X="44" Y="13">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="13"></cell>
   <cell X="46" Y="13"></cell>
@@ -1498,13 +1498,13 @@
   <cell X="29" Y="14"></cell>
   <cell X="30" Y="14"></cell>
   <cell X="31" Y="14">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="32" Y="14">
     <object Name="Halite"></object>
   </cell>
   <cell X="33" Y="14">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="34" Y="14">
     <object Name="SaltPath"></object>
@@ -1523,14 +1523,14 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="39" Y="14">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="40" Y="14">
     <object Name="Halite"></object>
   </cell>
   <cell X="41" Y="14">
     <object Name="SaltPath"></object>
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="42" Y="14"></cell>
   <cell X="43" Y="14"></cell>
@@ -1538,11 +1538,11 @@
   <cell X="45" Y="14"></cell>
   <cell X="46" Y="14"></cell>
   <cell X="47" Y="14">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="14"></cell>
   <cell X="49" Y="14">
-    <object Name="Brothers_Tortoises_Big_Bones2"></object>
+    <object Name="Sibs_Tortoises_Big_Bones2"></object>
   </cell>
   <cell X="50" Y="14"></cell>
   <cell X="51" Y="14"></cell>
@@ -1630,7 +1630,7 @@
   <cell X="31" Y="15"></cell>
   <cell X="32" Y="15">
     <object Name="SaltPath"></object>
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="33" Y="15"></cell>
   <cell X="34" Y="15"></cell>
@@ -1650,7 +1650,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="40" Y="15">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="41" Y="15"></cell>
   <cell X="42" Y="15"></cell>
@@ -1737,7 +1737,7 @@
   <cell X="27" Y="16"></cell>
   <cell X="28" Y="16"></cell>
   <cell X="29" Y="16">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="30" Y="16"></cell>
   <cell X="31" Y="16"></cell>
@@ -1864,7 +1864,7 @@
   <cell X="30" Y="17"></cell>
   <cell X="31" Y="17"></cell>
   <cell X="32" Y="17">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="33" Y="17"></cell>
   <cell X="34" Y="17">
@@ -2027,7 +2027,7 @@
   <cell X="43" Y="18"></cell>
   <cell X="44" Y="18"></cell>
   <cell X="45" Y="18">
-    <object Name="Brothers_Tortoises_Warden"></object>
+    <object Name="Sibs_Tortoises_Warden"></object>
   </cell>
   <cell X="46" Y="18">
     <object Name="SaltPath"></object>
@@ -2130,7 +2130,7 @@
   <cell X="27" Y="19"></cell>
   <cell X="28" Y="19"></cell>
   <cell X="29" Y="19">
-    <object Name="Brothers_Tortoises_Big_Bones1"></object>
+    <object Name="Sibs_Tortoises_Big_Bones1"></object>
   </cell>
   <cell X="30" Y="19"></cell>
   <cell X="31" Y="19"></cell>
@@ -2258,7 +2258,7 @@
   <cell X="29" Y="20"></cell>
   <cell X="30" Y="20"></cell>
   <cell X="31" Y="20">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="32" Y="20"></cell>
   <cell X="33" Y="20"></cell>
@@ -2427,7 +2427,7 @@
   </cell>
   <cell X="50" Y="21">
     <object Name="DirtPath"></object>
-    <object Name="Brothers_Tortoises_Journal"></object>
+    <object Name="Sibs_Tortoises_Journal"></object>
   </cell>
   <cell X="51" Y="21">
     <object Name="DirtPath"></object>
@@ -2506,7 +2506,7 @@
   <cell X="31" Y="22"></cell>
   <cell X="32" Y="22"></cell>
   <cell X="33" Y="22">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="34" Y="22"></cell>
   <cell X="35" Y="22">
@@ -2606,7 +2606,7 @@
   <cell X="23" Y="23"></cell>
   <cell X="24" Y="23"></cell>
   <cell X="25" Y="23">
-    <object Name="Brothers_Tortoises_Big_Bones2"></object>
+    <object Name="Sibs_Tortoises_Big_Bones2"></object>
   </cell>
   <cell X="26" Y="23"></cell>
   <cell X="27" Y="23"></cell>
@@ -2619,7 +2619,7 @@
   <cell X="34" Y="23"></cell>
   <cell X="35" Y="23"></cell>
   <cell X="36" Y="23">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="37" Y="23">
     <object Name="SaltPath"></object>
@@ -2637,7 +2637,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="42" Y="23">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="43" Y="23"></cell>
   <cell X="44" Y="23"></cell>
@@ -2645,7 +2645,7 @@
   <cell X="46" Y="23"></cell>
   <cell X="47" Y="23"></cell>
   <cell X="48" Y="23">
-    <object Name="Brothers_Tortoises_Big_Bones1"></object>
+    <object Name="Sibs_Tortoises_Big_Bones1"></object>
   </cell>
   <cell X="49" Y="23"></cell>
   <cell X="50" Y="23"></cell>
@@ -2716,7 +2716,7 @@
   </cell>
   <cell X="34" Y="24"></cell>
   <cell X="35" Y="24">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="36" Y="24">
     <object Name="Halite"></object>
@@ -2740,7 +2740,7 @@
     <object Name="Halite"></object>
   </cell>
   <cell X="43" Y="24">
-    <object Name="Brothers_Tortoises_BonesDestroyedOnEnding"></object>
+    <object Name="Sibs_Tortoises_BonesDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="24"></cell>
   <cell X="45" Y="24">

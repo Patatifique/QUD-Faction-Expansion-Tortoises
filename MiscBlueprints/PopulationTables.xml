@@ -3,69 +3,69 @@
 	<!--Existing Populations modification to include new Creatures-->
 	<population Name="WaterCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="5" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
+			<object Weight="5" Number="1d2" Blueprint="Sibs_Tortoises_Shaile" />
 		</group>
 	</population>
 
 	<population Name="RiversZoneGlobals" Load="Merge">
-		<object Chance="35" Number="1d2" Blueprint="Brothers_Tortoises_Shaile" />
+		<object Chance="35" Number="1d2" Blueprint="Sibs_Tortoises_Shaile" />
 	</population>
 
 	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
-		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_VerdantBanana" />
-		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_VerdantApple" />
-		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_VerdantSpinefruit" />
+		<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_VerdantBanana" />
+		<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_VerdantApple" />
+		<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_VerdantSpinefruit" />
 	</population>
 
 	<population Name="SaltDuneCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="6" Number="2d2" Blueprint="Brothers_Tortoises_Walking Dune" />
+			<object Weight="6" Number="2d2" Blueprint="Sibs_Tortoises_Walking Dune" />
 		</group>
 	</population>
 
 	<population Name="SaltDesertZoneGlobals" Load="Merge">
-		<object Number="2d2" Chance="5" Blueprint="Brothers_Tortoises_Walking Dune" />
+		<object Number="2d2" Chance="5" Blueprint="Sibs_Tortoises_Walking Dune" />
 	</population>
 
 	<population Name="Garbage Bots" Load="Merge">
-		<object Chance="15" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />
+		<object Chance="15" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />
 	</population>
 
 	<population Name="RuinsZoneGlobals-Robots" Load="Merge">
-		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+		<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />    
 	</population>
 	
 	<population Name="RuinsZoneGlobals-Creatures" Load="Merge">
-		<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+		<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />    
 	</population>
 	
 	<population Name="Tier3RuinsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+			<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />    
 		</group>
 	</population>
 	
 	<population Name="Tier3RuinsRobots" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+			<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />    
 		</group>
 	</population>
 
 	<population Name="Tier4RuinsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+			<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />    
 		</group>
 	</population>
 	
 	<population Name="Tier4RuinsRobots" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Chance="5" Number="1" Blueprint="Brothers_Tortoises_Pulshell" />    
+			<object Chance="5" Number="1" Blueprint="Sibs_Tortoises_Pulshell" />    
 		</group>
 	</population>
 
 	<!--Ambush Population for the Issachari Ambush-->
 
-	<population Name="Brothers_Tortoises_IssachariPartyAmbush">
+	<population Name="Sibs_Tortoises_IssachariPartyAmbush">
 		<group Name="Creatures" Style="pickeach">
 			<object Chance="50" Number="1-3" Blueprint="Issachari Raider" />
 			<object Chance="90" Number="1-4" Blueprint="Issachari Rifler" />
@@ -75,31 +75,31 @@
 
 
 	<!--Main Ambush Population-->
-	<population Name="Brothers_Tortoises_Issachari Ambushers">
+	<population Name="Sibs_Tortoises_Issachari Ambushers">
 		<group Name="Contents" Style="pickeach">
 			<!--General Commander, will always be there, either gunner, rifler or a very small chance for both-->
 			<group Name="Commander" Style="pickone">
-				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_IssachariPistolHunter" />
-				<object Chance="50" Number="1" Blueprint="Brothers_Tortoises_IssachariRifleHunter" />
+				<object Chance="50" Number="1" Blueprint="Sibs_Tortoises_IssachariPistolHunter" />
+				<object Chance="50" Number="1" Blueprint="Sibs_Tortoises_IssachariRifleHunter" />
 				<group Chance="10" Name="UnluckyParty" Style="pickeach">
-					<object Number="1" Blueprint="Brothers_Tortoises_Quarters-the-Salt-Kraken" />
-					<object Number="1" Blueprint="Brothers_Tortoises_Skins-the-Dawnglider" />
+					<object Number="1" Blueprint="Sibs_Tortoises_Quarters-the-Salt-Kraken" />
+					<object Number="1" Blueprint="Sibs_Tortoises_Skins-the-Dawnglider" />
 				</group>
 			</group>
 			
 			<!--Rest of the party gets chosen here-->
 			<group Name="Types" Style="pickeach">
 				<group Name="Raiders" Style="pickeach">
-					<table Number="3" Name="Brothers_Tortoises_IssachariPartyAmbush" />
+					<table Number="3" Name="Sibs_Tortoises_IssachariPartyAmbush" />
 				</group>
 			</group>
 		</group>
 	</population>
 
 
-  <population Name="Brothers_Tortoises_Footprint Table">
+  <population Name="Sibs_Tortoises_Footprint Table">
     <group Name="Items" Style="pickone">
-      <object Blueprint="Brothers_Tortoises_Footprint" />
+      <object Blueprint="Sibs_Tortoises_Footprint" />
     </group>
   </population>
 	

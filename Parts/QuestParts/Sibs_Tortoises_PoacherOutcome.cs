@@ -8,7 +8,7 @@ using System.Linq;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_Tortoises_PoacherOutcome : IPart
+    public class Sibs_Tortoises_PoacherOutcome : IPart
     {
         public override bool WantEvent(int ID, int cascade)
         {
@@ -38,7 +38,7 @@ namespace XRL.World.Parts
 
         public override bool HandleEvent(ZoneActivatedEvent E)
         {
-            if (The.Game.GetBooleanGameState("Brothers_Tortoises_PoacherEnding_Occured"))
+            if (The.Game.GetBooleanGameState("Sibs_Tortoises_PoacherEnding_Occured"))
             {
                 string zoneID = The.Game.GetStringGameState("SaltbackGraveyardZoneID");
                  if (E.Zone.ZoneID == zoneID)
@@ -65,14 +65,14 @@ namespace XRL.World.Parts
             DestroyOnEnding();
 
             // Replace the stele
-            ReplaceObject("Brothers_Tortoises_BigStele", "Brothers_Tortoises_RuinedStele");
+            ReplaceObject("Sibs_Tortoises_BigStele", "Sibs_Tortoises_RuinedStele");
 
             // Add the camp
-            this.ParentObject.CurrentZone.GetCell(12, 4).AddObject("Brothers_Tortoises_IssachariCamp");
+            this.ParentObject.CurrentZone.GetCell(12, 4).AddObject("Sibs_Tortoises_IssachariCamp");
             
             // Add a few random issachari to the camp 
-            PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRaiderChill");
-            PopulateRandomly(1, 3, "Brothers_Tortoises_IssachariRiflerChill");
+            PopulateRandomly(1, 3, "Sibs_Tortoises_IssachariRaiderChill");
+            PopulateRandomly(1, 3, "Sibs_Tortoises_IssachariRiflerChill");
 
             // Change zone name
             The.ZoneManager.SetZoneName(this.ParentObject.CurrentZone.ZoneID, "looted graveyard", Proper: false);
@@ -95,13 +95,13 @@ namespace XRL.World.Parts
         public void DestroyOnEnding()
         {
             foreach (GameObject gameObject in this.ParentObject.CurrentZone.GetObjects(o =>
-                o.HasTag("Brothers_Tortoises_DestroyedOnEnding")))
+                o.HasTag("Sibs_Tortoises_DestroyedOnEnding")))
             {
                 if (gameObject.HasPart<Brain>())
-                    if (gameObject.Blueprint != "Brothers_Tortoises_Walking Dune" && gameObject.Blueprint != "Brothers_Tortoises_Warden" )
+                    if (gameObject.Blueprint != "Sibs_Tortoises_Walking Dune" && gameObject.Blueprint != "Sibs_Tortoises_Warden" )
                         continue;
 
-                if (gameObject.HasTag("Brothers_Tortoises_DestroyedOnEnding"))
+                if (gameObject.HasTag("Sibs_Tortoises_DestroyedOnEnding"))
                 {
                     gameObject.Obliterate();
                 }

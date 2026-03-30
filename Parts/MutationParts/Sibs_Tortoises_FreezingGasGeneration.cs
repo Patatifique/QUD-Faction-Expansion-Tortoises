@@ -4,10 +4,10 @@ using System;
 namespace XRL.World.Parts.Mutation
 {
     [Serializable]
-    public class Brothers_Tortoises_FreezingGasGeneration : GasGeneration
+    public class Sibs_Tortoises_FreezingGasGeneration : GasGeneration
     {
-        public Brothers_Tortoises_FreezingGasGeneration()
-          : base("Brothers_Tortoises_FreezingGas")
+        public Sibs_Tortoises_FreezingGasGeneration()
+          : base("Sibs_Tortoises_FreezingGas")
         {
         }
 

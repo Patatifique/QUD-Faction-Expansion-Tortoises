@@ -219,14 +219,14 @@
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="6" Y="2">
-    <object Name="Brothers_Tortoises_IssachariRaiderChill"></object>
+    <object Name="Sibs_Tortoises_IssachariRaiderChill"></object>
     <object Name="SaltPath"></object>
   </cell>
   <cell X="7" Y="2">
     <object Name="SaltPath"></object>
   </cell>
   <cell X="8" Y="2">
-    <object Name="Brothers_Tortoises_IssachariPistolHunterChill"></object>
+    <object Name="Sibs_Tortoises_IssachariPistolHunterChill"></object>
     <object Name="SaltPath"></object>
   </cell>
   <cell X="9" Y="2">
@@ -241,7 +241,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="12" Y="2">
-    <object Name="Brothers_Tortoises_IssachariRiflerChill"></object>
+    <object Name="Sibs_Tortoises_IssachariRiflerChill"></object>
     <object Name="SaltPath"></object>
   </cell>
   <cell X="13" Y="2">
@@ -343,7 +343,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="10" Y="3">
-    <object Name="Brothers_Tortoises_IssachariRiflerChill"></object>
+    <object Name="Sibs_Tortoises_IssachariRiflerChill"></object>
     <object Name="SaltPath"></object>
   </cell>
   <cell X="11" Y="3">
@@ -430,7 +430,7 @@
   </cell>
   <cell X="4" Y="4">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_Tortoises_IssachariRaiderChill"></object>
+    <object Name="Sibs_Tortoises_IssachariRaiderChill"></object>
   </cell>
   <cell X="5" Y="4">
     <object Name="DirtFloor"></object>
@@ -454,7 +454,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="14" Y="4">
-    <object Name="Brothers_Tortoises_IssachariRifleHunterChill"></object>
+    <object Name="Sibs_Tortoises_IssachariRifleHunterChill"></object>
   </cell>
   <cell X="15" Y="4"></cell>
   <cell X="16" Y="4"></cell>
