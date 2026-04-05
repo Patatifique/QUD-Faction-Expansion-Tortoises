@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
-	<object Name="Brothers_Tortoises_SaltbackGraveyardSurface" Inherits="Widget">
-		<part Name="Brothers_Tortoises_SaltbackGraveyardSurface" />
+	<object Name="Sibs_Tortoises_SaltbackGraveyardSurface" Inherits="Widget">
+		<part Name="Sibs_Tortoises_SaltbackGraveyardSurface" />
 	</object>
 
 	<!--
@@ -12,18 +12,18 @@
 
   -->
 	<object Name="Finish_CombingTheSaltDunes_EnterTheSaltbackGraveyard" Inherits="Widget">
-		<part Name="QuestStepFinisher" Trigger="Created" Quest="Brothers_TortoisesPoacherQuest" Step="Visit" />
+		<part Name="QuestStepFinisher" Trigger="Created" Quest="Sibs_TortoisesPoacherQuest" Step="Visit" />
 	</object>
 
 	<object Name="Start_TheScuteChild_EnterTheSaltbackGraveyard" Inherits="Widget">
-		<part Name="QuestStarter" Trigger="Created" Quest="Brothers_TortoisesWardenQuest" />
+		<part Name="QuestStarter" Trigger="Created" Quest="Sibs_TortoisesWardenQuest" />
 	</object>
 
 
 <!-- Map chunks -->
 
-	<object Name="Brothers_Tortoises_IssachariCamp" Inherits="Widget">
-		<part Name="MapChunkPlacement" Map="Brothers_ChunkIssachariCamp.rpm" Width="15" Height="6" />
+	<object Name="Sibs_Tortoises_IssachariCamp" Inherits="Widget">
+		<part Name="MapChunkPlacement" Map="Sibs_ChunkIssachariCamp.rpm" Width="15" Height="6" />
 	</object>
 
 

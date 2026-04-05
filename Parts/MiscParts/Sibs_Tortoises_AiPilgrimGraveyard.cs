@@ -11,7 +11,7 @@ using XRL.World.Effects;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_Tortoises_AiPilgrimGraveyard : AIBehaviorPart
+    public class Sibs_Tortoises_AiPilgrimGraveyard : AIBehaviorPart
     {
         public bool FoundTarget;
         public int GraveyardWx = 5;
@@ -21,7 +21,7 @@ namespace XRL.World.Parts
         public int GraveyardZx = 10;
         public string GraveyardZoneID = The.Game.GetStringGameState("SaltbackGraveyardZoneID");
         public string GraveyardEntranceZoneID = The.Game.GetStringGameState("SaltbackGraveyardZoneID");
-        public string TargetObject = "Brothers_Tortoises_BigStele";
+        public string TargetObject = "Sibs_Tortoises_BigStele";
         public string MapNoteAttributes;
         public int Chance = 100;
         public bool Ignore;
@@ -33,7 +33,7 @@ namespace XRL.World.Parts
 
         public override bool HandleEvent(AIBoredEvent E)
         {
-            if (The.Game.GetBooleanGameState("Brothers_Tortoises_PoacherEnding_Occured"))
+            if (The.Game.GetBooleanGameState("Sibs_Tortoises_PoacherEnding_Occured"))
             // no pilgrimage if there's no graveyard left...
                 return base.HandleEvent(E);
             else
@@ -75,7 +75,7 @@ namespace XRL.World.Parts
                 this.GraveyardZoneID = randomElement.ZoneID;
                 this.GraveyardEntranceZoneID = randomElement.ZoneID;
             }
-            this.ParentObject.Brain.PushGoal((GoalHandler)new Brothers_Tortoises_GoOnAGraveyardPilgrimage(this.GraveyardWx, this.GraveyardWy, this.GraveyardXx, this.GraveyardYx, this.GraveyardZx, this.TargetObject, this.GraveyardZoneID, this.GraveyardEntranceZoneID));
+            this.ParentObject.Brain.PushGoal((GoalHandler)new Sibs_Tortoises_GoOnAGraveyardPilgrimage(this.GraveyardWx, this.GraveyardWy, this.GraveyardXx, this.GraveyardYx, this.GraveyardZx, this.TargetObject, this.GraveyardZoneID, this.GraveyardEntranceZoneID));
             return true;
         }
     }

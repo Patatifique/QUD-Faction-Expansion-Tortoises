@@ -14,7 +14,7 @@ namespace XRL.World.AI.GoalHandlers
 
 
     [Serializable]
-    public class Brothers_Tortoises_GoOnAGraveyardPilgrimage : GoalHandler
+    public class Sibs_Tortoises_GoOnAGraveyardPilgrimage : GoalHandler
     {
         public static int TargetWx = 5;
         public static int TargetWy = 2;
@@ -25,11 +25,11 @@ namespace XRL.World.AI.GoalHandlers
         public string TargetZoneID = "JoppaWorld.5.2.1.1.10";
         public string TargetEntranceZoneID = "JoppaWorld.5.2.1.2.10";
 
-        public Brothers_Tortoises_GoOnAGraveyardPilgrimage()
+        public Sibs_Tortoises_GoOnAGraveyardPilgrimage()
         {
         }
 
-        public Brothers_Tortoises_GoOnAGraveyardPilgrimage(
+        public Sibs_Tortoises_GoOnAGraveyardPilgrimage(
           int Wx,
           int Wy,
           int Xx,
@@ -39,11 +39,11 @@ namespace XRL.World.AI.GoalHandlers
           string zoneID,
           string entranceZoneID)
         {
-            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetWx = Wx;
-            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetWy = Wy;
-            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetXx = Xx;
-            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetYx = Yx;
-            Brothers_Tortoises_GoOnAGraveyardPilgrimage.TargetZx = Zx;
+            Sibs_Tortoises_GoOnAGraveyardPilgrimage.TargetWx = Wx;
+            Sibs_Tortoises_GoOnAGraveyardPilgrimage.TargetWy = Wy;
+            Sibs_Tortoises_GoOnAGraveyardPilgrimage.TargetXx = Xx;
+            Sibs_Tortoises_GoOnAGraveyardPilgrimage.TargetYx = Yx;
+            Sibs_Tortoises_GoOnAGraveyardPilgrimage.TargetZx = Zx;
             this.TargetObject = targetObject;
             this.TargetZoneID = zoneID;
             this.TargetEntranceZoneID = entranceZoneID;
@@ -87,7 +87,7 @@ namespace XRL.World.AI.GoalHandlers
                 this.TargetObject = this.CurrentZone.GetObjectsWithPart("Brain").GetRandomElement<GameObject>().GetBlueprint().Name;
             if (this.HasAdjacentObject(this.TargetObject))
             {
-                this.ParentObject.GetPart<Brothers_Tortoises_AiPilgrimGraveyard>().FoundTarget = true;
+                this.ParentObject.GetPart<Sibs_Tortoises_AiPilgrimGraveyard>().FoundTarget = true;
                 this.Pop();
                 this.ParentBrain.PushGoal((GoalHandler)new WanderRandomly(6));
             }

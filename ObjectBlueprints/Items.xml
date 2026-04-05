@@ -3,7 +3,7 @@
 	
 <!--Butcherables-->
 	
-	<object Name="Brothers_Tortoises_Tortoise Shield" Inherits="BaseShield">
+	<object Name="Sibs_Tortoises_Tortoise Shield" Inherits="BaseShield">
 		<part Name="Render" DisplayName="tortoise shell" Tile="Items/tortoises/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
 		<part Name="Shield" AV="4" DV="-3" WornOn="Hand" />
 		<part Name="Description" Short="Repurposed and retooled, this shell holds the untold promise of avoiding a fate similar to its once-owner." />
@@ -15,7 +15,7 @@
 		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Saltback Pavise" Inherits="BaseShield">
+	<object Name="Sibs_Tortoises_Saltback Pavise" Inherits="BaseShield">
 		<part Name="Render" DisplayName="saltback pavise" Tile="Items/tortoises/saltbackpavise.png" RenderString="t" ColorString="&amp;Y" DetailColor="y" />
 		<part Name="Shield" AV="6" DV="-4" WornOn="Hand" />
 		<part Name="Description" Short="Vertipacked scutes from a saltback shell, held together by raw ingenuity: a feldspar rampart." />
@@ -27,7 +27,7 @@
 		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Shaile Scale Cloak" Inherits="BaseCloak">
+	<object Name="Sibs_Tortoises_Shaile Scale Cloak" Inherits="BaseCloak">
 		<part Name="Armor" AV="0" DV="1" Ego="1" Cold="15" Heat="15" WornOn="Back" />
 		<part Name="Render" DisplayName="{{C|shaile}} scale cloak" ColorString="&amp;Y" RenderString="]" Tile="Items/tortoises/shailecloak.png" DetailColor="C" />
 		<part Name="Commerce" Value="300" />
@@ -38,7 +38,7 @@
 		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Verdant Sallet" Inherits="BaseHelmet">
+	<object Name="Sibs_Tortoises_Verdant Sallet" Inherits="BaseHelmet">
 		<part Name="Armor" AV="2" DV="1" WornOn="Head" />
 		<part Name="Render" DisplayName="{{leafy|verdant sallet}}" Tile="Items/tortoises/verdantsallet.png" ColorString="&amp;w" DetailColor="g" RenderString="]" />
 		<part Name="Commerce" Value="85" />
@@ -53,7 +53,7 @@
   
 <!--Others-->
 	
-	<object Name="Brothers_Tortoises_Honorary Shell" Inherits="BaseCloak">
+	<object Name="Sibs_Tortoises_Honorary Shell" Inherits="BaseCloak">
 		<part Name="Render" DisplayName="honorary shell" Tile="Items/tortoises/wardenshell.png" RenderString="]" ColorString="&amp;Y" DetailColor="w" />
 		<part Name="Armor" AV="2" DV="-1" Cold="10" Heat="10" WornOn="Back" />
 		<part Name="Description" Short="Discarded scutes hug a plastifer frame, arranged in a declaration of esteem to all shellbacked pilgrims." />
@@ -69,12 +69,12 @@
 
 <!--Guns and Ammos-->
 	
-	<object Name="Brothers_Tortoises_Saltback Culverin" Inherits="BaseMagazineRifle">
+	<object Name="Sibs_Tortoises_Saltback Culverin" Inherits="BaseMagazineRifle">
 		<part Name="Render" DisplayName="saltback culverin" Tile="Items/tortoises/poacherrifle.png" ColorString="&amp;Y" DetailColor="r" />
 		<part Name="Commerce" Value="350" />
 		<part Name="Physics" Weight="25" UsesTwoSlots="true" />
 		<part Name="MissileWeapon" Skill="Rifle" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
-		<part Name="MagazineAmmoLoader" ProjectileObject="Brothers_Tortoises_ProjectileSaltbackCulverinBall" AmmoPart="AmmoSlug" MaxAmmo="1" />
+		<part Name="MagazineAmmoLoader" ProjectileObject="Sibs_Tortoises_ProjectileSaltbackCulverinBall" AmmoPart="AmmoSlug" MaxAmmo="1" />
 		<part Name="Metal" />
 		<part Name="Description" Short="Issachari know-how has warped steel in a killing shape, a far-flung fang sunk deep in shellbacked prey." />
 		<part Name="MakersMark" Mark="&#8776;" Color="R" CrafterName="Cracks-the-Saltback-Shell" />
@@ -87,12 +87,12 @@
 		<tag Name="ExcludeFromDynamicEncounters" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Saltback Magnum" Inherits="BaseMagazinePistol">
+	<object Name="Sibs_Tortoises_Saltback Magnum" Inherits="BaseMagazinePistol">
 		<part Name="Render" DisplayName="saltback magnum" Tile="Items/tortoises/poacherpistol.png" ColorString="&amp;Y" DetailColor="r" />
 		<part Name="Commerce" Value="150" />
 		<part Name="Physics" Weight="5" />
 		<part Name="MissileWeapon" AnimationDelay="0" Skill="Pistol" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="4" RangeIncrement="6" />
-		<part Name="MagazineAmmoLoader" ProjectileObject="Brothers_Tortoises_ProjectileSaltbackMagnumBall" AmmoPart="AmmoSlug" MaxAmmo="6" />
+		<part Name="MagazineAmmoLoader" ProjectileObject="Sibs_Tortoises_ProjectileSaltbackMagnumBall" AmmoPart="AmmoSlug" MaxAmmo="6" />
 		<part Name="Description" Short="Slugged as numbers on a dice, ceremonial Issachari armament ponders the mind: do you feel lucky, lack-salt?" />
 		<part Name="MakersMark" Mark="&#8776;" Color="R" CrafterName="Cracks-the-Saltback-Shell" />
 		<part Name="TinkerItem" Bits="0005" CanDisassemble="true" CanBuild="false" />
@@ -105,17 +105,17 @@
 		<stag Name="Contemporary" />
 	</object>
 
-	<object Name="Brothers_Tortoises_ProjectileSaltbackCulverinBall" Inherits="BaseLeadSlugProjectile">
+	<object Name="Sibs_Tortoises_ProjectileSaltbackCulverinBall" Inherits="BaseLeadSlugProjectile">
 		<part Name="Projectile" BasePenetration="0" BaseDamage="2d8" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
 	
-	<object Name="Brothers_Tortoises_ProjectileSaltbackMagnumBall" Inherits="BaseLeadSlugProjectile">
+	<object Name="Sibs_Tortoises_ProjectileSaltbackMagnumBall" Inherits="BaseLeadSlugProjectile">
 		<part Name="Projectile" BasePenetration="0" BaseDamage="1d8" Attributes="Vorpal" ColorString="&amp;R"/>
 	</object>
 
 <!--Cosmetic objects-->
 	
-	<object Name="Brothers_Tortoises_Footprint" Inherits="Object">
+	<object Name="Sibs_Tortoises_Footprint" Inherits="Object">
 		<part Name="Render" DisplayName="footprints" Tile="Terrain/tortoises/tile_footprints1.png" RenderString="%" ColorString="&amp;K" DetailColor="y" Occluding="false" RenderIfDark="false" />
 		<part Name="Physics" Takeable="false" Solid="false" Category="Terrain" />
 		<builder Name="RandomTile" Tiles="Terrain/tortoises/tile_footprints1.png,Terrain/tortoises/tile_footprints2.png,Terrain/tortoises/tile_footprints3.png,Terrain/tortoises/tile_footprints4.png,Terrain/tortoises/tile_footprints5.png,Terrain/tortoises/tile_footprints6.png,Terrain/tortoises/tile_footprints7.png,Terrain/tortoises/tile_footprints8.png" />
@@ -129,15 +129,15 @@
 		<tag Name="Gender" Value="plural" />
 		<tag Name="Immutable" />
 		<tag Name="NoSparkingQuest" />
-		<part Name="Brothers_DeathObliterateTimer" Timer="80" Obliterate="true"/>
+		<part Name="Sibs_DeathObliterateTimer" Timer="80" Obliterate="true"/>
 	</object>
 
 <!--Others-->
 
-	<object Name="Brothers_Tortoises_Journal" Inherits="Book">
+	<object Name="Sibs_Tortoises_Journal" Inherits="Book">
 		<part Name="Render" DisplayName="{{W|audio travelog CXXXIX}}" Tile="items/sw_data_disc.bmp" DetailColor="W" ColorString="&amp;y" RenderString="007" RenderLayer="4" />
 		<part Name="Description" Short="Grooves on a crystalline disk have captured testimony, reluctantly recreated on a finger's prompt." />
-		<part Name="Book" ID="Brothers_Tortoises_TravelerJournal" />
+		<part Name="Book" ID="Sibs_Tortoises_TravelerJournal" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<xtagGrammar Proper="false" adjunctNoun="" />
 		<part Name="Commerce" Value="150" />

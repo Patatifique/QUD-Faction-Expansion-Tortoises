@@ -4,20 +4,20 @@
 
 <!--NPC dialogue-->
 	
-	<conversation ID="Brothers_Tortoises_Poacher">
+	<conversation ID="Sibs_Tortoises_Poacher">
     
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfNotHaveQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
+			<text IfNotHaveQuest="Sibs_TortoisesPoacherQuest" Priority="-1">
 				{{emote|*The Issachari =verb:squint= at you.*}}
 				
 				You're standing in my shade, lack-salt.				
 			</text>
-			<text IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
+			<text IfHaveActiveQuest="Sibs_TortoisesPoacherQuest" Priority="-1">
 				{{emote|*The Issachari =verb:take= =pronouns.possessive= eyes off =pronouns.possessive= weapon.*}}
 
 				Have you come bearing news of the Saltback Graveyard, lack-salt?
 			</text>
-			<text IfFinishedQuest="Brothers_TortoisesPoacherQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_TortoisesPoacherQuest" Priority="-1">
 				{{emote|*The Issachari does not bother meeting your gaze.*}} 
 				
 				We have nothing more to say to each other, lack-salt.
@@ -25,18 +25,18 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Reward" IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I have made good use of your gift. Is there any way to get another weapon?</choice>
-			<choice Target="Ambush" IfHaveState="Brothers_Tortoises_Ambushed">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
-			<choice Target="QuestChoice" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
-			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
-			<choice Target="Remind" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
-			<choice Target="Unfair" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest">Why is it I'm the one looking for the Graveyard while you smoke the hookah here?</choice>
-			<choice Target="Work" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">I'm in need of work. Do you have any that needs doing?</choice>
-			<choice Target="Rifle" IfNotHaveQuest="Brothers_TortoisesPoacherQuest">That's a nice rifle you've got.</choice>
-			<choice Target="Shade" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What makes this tent "your" shade?</choice>
-			<choice Target="Activity" IfNotHaveQuest="Brothers_TortoisesRewardQuest">What are you doing in the Six Day Stilt?</choice>
-			<choice Target="Salt" IfHaveLiquid="salt" IfNotHaveQuest="Brothers_TortoisesRewardQuest">I'm not a lack-salt: I have some right there.</choice>
-			<choice Target="Pariah" IfNotHaveQuest="Brothers_TortoisesRewardQuest">Why are you called "pariah" when you still bear the red-and-white?</choice>
+			<choice Target="Reward" IfFinishedQuest="Sibs_TortoisesPoacherQuest" IfNotHaveQuest="Sibs_TortoisesRewardQuest">I have made good use of your gift. Is there any way to get another weapon?</choice>
+			<choice Target="Ambush" IfHaveState="Sibs_Tortoises_Ambushed">Issachari using weapons bearing your mark attacked me in the salt dunes. I believe you owe me an explanation.</choice>
+			<choice Target="QuestChoice" IfHaveActiveQuest="Sibs_TortoisesPoacherQuest" IfFinishedQuestStep="Sibs_TortoisesPoacherQuest~Visit">About the Saltback Graveyard...</choice>
+			<choice Target="IKnow" IfHaveState="GraveyardKnown" IfHaveActiveQuest="Sibs_TortoisesPoacherQuest" IfNotFinishedQuestStep="Sibs_TortoisesPoacherQuest~Visit" >I know where the Saltback Graveyard is.</choice>
+			<choice Target="Remind" IfHaveActiveQuest="Sibs_TortoisesPoacherQuest">Remind me why you want to find the Graveyard again?</choice>
+			<choice Target="Unfair" IfHaveActiveQuest="Sibs_TortoisesPoacherQuest">Why is it I'm the one looking for the Graveyard while you smoke the hookah here?</choice>
+			<choice Target="Work" IfNotHaveQuest="Sibs_TortoisesPoacherQuest">I'm in need of work. Do you have any that needs doing?</choice>
+			<choice Target="Rifle" IfNotHaveQuest="Sibs_TortoisesPoacherQuest">That's a nice rifle you've got.</choice>
+			<choice Target="Shade" IfNotHaveQuest="Sibs_TortoisesRewardQuest">What makes this tent "your" shade?</choice>
+			<choice Target="Activity" IfNotHaveQuest="Sibs_TortoisesRewardQuest">What are you doing in the Six Day Stilt?</choice>
+			<choice Target="Salt" IfHaveLiquid="salt" IfNotHaveQuest="Sibs_TortoisesRewardQuest">I'm not a lack-salt: I have some right there.</choice>
+			<choice Target="Pariah" IfNotHaveQuest="Sibs_TortoisesRewardQuest">Why are you called "pariah" when you still bear the red-and-white?</choice>
 			<choice Target="End">Live and drink, huntress.</choice>
 		</node>
 	
@@ -89,15 +89,15 @@
 			</text>
 			<choice Target="Knowledgeable">
 				<text>I can strip, clean and reassemble an Issachari rifle under the Beetle Moon.</text>
-				<part Name="Brothers_RequirePart" Part="Rifle_SteadyHands" Render="Bow and Rifle: Steady Hands" />
+				<part Name="Sibs_RequirePart" Part="Rifle_SteadyHands" Render="Bow and Rifle: Steady Hands" />
 			</choice>
 			<choice Target="Knowledgeable">
 				<text>I favor lighter weapons, but still consider myself a diligent student of lead slugs.</text>
-				<part Name="Brothers_RequirePart" Part="Pistol_SteadyHands" Render="Pistol: Steady Hand" />
+				<part Name="Sibs_RequirePart" Part="Pistol_SteadyHands" Render="Pistol: Steady Hand" />
 			</choice>
 			<choice Target="Knowledgeable">
 				<text>Only that I wish they were put to use on heavier armament.</text>
-				<part Name="Brothers_RequirePart" Part="HeavyWeapons_StrappingShoulders" Render="Heavy Weapons: Strapping Shoulders" />
+				<part Name="Sibs_RequirePart" Part="HeavyWeapons_StrappingShoulders" Render="Heavy Weapons: Strapping Shoulders" />
 			</choice>
 			<choice Target="ThingOrTwo">I know a thing or two about rifles, and this one's pretty unusual.</choice>
 			<choice Target="NotMuch">Not much, but it's still an impressive weapon nonetheless.</choice>
@@ -107,7 +107,7 @@
 			<text>			
 				Is that so? In any case, this one here is my doing. Powerful enough to pierce even the hardest shells without trouble.	
 			</text>
-			<choice Target="Work" IfNotHaveQuest="Brothers_TortoisesPoacherQuest" Priority="10">What would it take to obtain such a weapon?</choice>
+			<choice Target="Work" IfNotHaveQuest="Sibs_TortoisesPoacherQuest" Priority="10">What would it take to obtain such a weapon?</choice>
 		</node>
 		
 		<node ID="ThingOrTwo" Inherits="Welcome">
@@ -195,7 +195,7 @@
 				
 				Think for a second, lack-salt: scutes and bones worth ten times their weight in water, left there for the taking. Not like the dead have any use for it. Find the place -- if it exists -- and I'll make sure to reward you handsomely. What say you?
 			</text>
-		<choice Target="End" StartQuest="Brothers_TortoisesPoacherQuest">Find the Saltback Graveyard, got it. Simple enough -- I shall be back soon.</choice>
+		<choice Target="End" StartQuest="Sibs_TortoisesPoacherQuest">Find the Saltback Graveyard, got it. Simple enough -- I shall be back soon.</choice>
 		<choice Target="End">I will not help you rob the dead. Live and drink, for now.</choice>
 		</node>
 	
@@ -249,7 +249,7 @@
 			<choice Target="Found">I may have found it.</choice>
 			<choice Target="Lie">
 				<text>{{R|*lie*}} I have looked far and wide, huntress: the Saltback Graveyard is a myth.</text>
-				<part Name="Brothers_RequireStat" Stat="Ego" Value="20" />
+				<part Name="Sibs_RequireStat" Stat="Ego" Value="19" />
 			</choice>
 			<choice Target="Protect">Give up your search, huntress. The Saltback Graveyard is under my protection.</choice>
 		</node>
@@ -270,10 +270,10 @@
 				
 				Yes, yes, that's perfect! As promised, lack-salt, here is your payment. Make good use of it.
 			</text>
-			<choice Target="Found3" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" SetBooleanState="Brothers_Tortoises_PoacherEnding,true">
+			<choice Target="Found3" CompleteQuestStep="Sibs_TortoisesPoacherQuest~Debrief" SetBooleanState="Sibs_Tortoises_PoacherEnding,true">
 			<text>Thank you for this. What will you do now?</text>
-			<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Saltback Culverin,Brothers_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
-			<part Name="Brothers_ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
+			<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Saltback Culverin,Sibs_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
+			<part Name="Sibs_ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
 			</choice>
 		</node>
 		
@@ -285,7 +285,7 @@
 				
 				There is some preparation ahead, lack-salt. But we shall strip it bare, fashion armor out of scute and bones and trade the rest. Walk in the shade, lack-salt.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice">Walk in the shade, huntress.</choice>
 		</node>	
 		
 		<node ID="Lie">
@@ -304,9 +304,9 @@
 				
 				Perhaps you are telling the truth, and it is just another myth. So be it then! I have wasted enough speechwater on hunting folk tales – let my next target be flesh and blood. Go now, lack-salt.
 			</text>
-			<choice Target="End" SetBooleanState="Brothers_Tortoises_NeutralEnding,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
+			<choice Target="End" SetBooleanState="Sibs_Tortoises_NeutralEnding,true" CompleteQuestStep="Sibs_TortoisesPoacherQuest~Debrief" StartQuest="Sibs_TortoisesRewardQuest">
 				<text>Be seeing you. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Tortoises" Value="200" Faction2="Issachari" Value2="-100" Shown="False" />
 			</choice>
 		</node>
 		
@@ -324,18 +324,18 @@
 				
 				So be it, then. In your idiocy you confirm the place's very existence, lack-salt. Keep your eyes on your back when crossing the desert: the red-and-white is everywhere.
 			</text>
-			<choice Target="End" SetBooleanState="Brothers_Tortoises_TortoisesEnding,true" CompleteQuestStep="Brothers_TortoisesPoacherQuest~Debrief" StartQuest="Brothers_TortoisesRewardQuest">
+			<choice Target="End" SetBooleanState="Sibs_Tortoises_TortoisesEnding,true" CompleteQuestStep="Sibs_TortoisesPoacherQuest~Debrief" StartQuest="Sibs_TortoisesRewardQuest">
 				<text>As your people say: stay warm and stay dry.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Tortoises" Value="400" Faction2="Issachari" Value2="-200" Shown="False" />
 			</choice>
 		</node>
 		
   </conversation>
 
 	
-	<conversation ID="Brothers_Tortoises_Warden">
+	<conversation ID="Sibs_Tortoises_Warden">
 
-		<start ID="BadWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured">
+		<start ID="BadWelcome" IfHaveState="Sibs_Tortoises_PoacherEnding_Occured">
 			<text>
 				{{emote|*The warden =verb:lift= =pronouns.possessive= weapon.*}}
 
@@ -352,22 +352,22 @@
 		</start>
 
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfFinishedQuest="Brothers_TortoisesRewardQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_TortoisesRewardQuest" Priority="-1">
 				{{emote|*The warden =verb:lift= the brim of =pronouns.possessive= hat with a thumb.*}}
 
 				Greetings =name=! You shall always be welcome on these grounds.
 			</text>
-			<text IfFinishedQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuest="Brothers_TortoisesRewardQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_TortoisesPoacherQuest" IfNotFinishedQuest="Sibs_TortoisesRewardQuest" Priority="-1">
 				{{emote|*Another coughing fit shakes the warden's frame.*}}
 				
 				Do you come with news from beyond Moghra'yi?
 			</text>
-			<text IfNotFinishedQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing" Priority="-1">
+			<text IfNotFinishedQuest="Sibs_TortoisesPoacherQuest" IfFinishedQuestStep="Sibs_TortoisesWardenQuest~Briefing" Priority="-1">
 				{{emote|*The warden =verb:wipe= the corners of =pronouns.possessive= mouth.*}}
 				
 				Greetings, =name=. I hope my trust in you is not misplaced.
 			</text>
-			<text IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing" Priority="-1">
+			<text IfNotFinishedQuestStep="Sibs_TortoisesWardenQuest~Briefing" Priority="-1">
 				{{emote|*The warden =verb:beckon= you closer between two coughing fits.*}}
 				
 				Come closer, traveler, and rest a moment in the shade. I am Warden Qoruda, although such designations matter little in this place.
@@ -375,12 +375,12 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Now" IfFinishedQuest="Brothers_TortoisesRewardQuest">What shall you do now, warden?</choice>
-			<choice Target="Loyal" IfHaveActiveQuest="Brothers_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
-			<choice Target="Betrayed" IfHaveState="Brothers_Tortoises_PoacherEnding">The Issachari shall have this place. Out of my way, old man.</choice>
-			<choice Target="Graveyard" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Thank you for welcoming me, warden. I am =name=. What is this place?</choice>
-			<choice Target="Poacher" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfNotFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
-			<choice Target="Poacher2" IfHaveActiveQuest="Brothers_TortoisesPoacherQuest" IfFinishedQuestStep="Brothers_TortoisesWardenQuest~Briefing">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
+			<choice Target="Now" IfFinishedQuest="Sibs_TortoisesRewardQuest">What shall you do now, warden?</choice>
+			<choice Target="Loyal" IfHaveActiveQuest="Sibs_TortoisesRewardQuest">These burial grounds are safe from the Issachari for now, warden.</choice>
+			<choice Target="Betrayed" IfHaveState="Sibs_Tortoises_PoacherEnding">The Issachari shall have this place. Out of my way, old man.</choice>
+			<choice Target="Graveyard" IfNotFinishedQuestStep="Sibs_TortoisesWardenQuest~Briefing">Thank you for welcoming me, warden. I am =name=. What is this place?</choice>
+			<choice Target="Poacher" IfHaveActiveQuest="Sibs_TortoisesPoacherQuest" IfNotFinishedQuestStep="Sibs_TortoisesWardenQuest~Briefing">Stand aside, warden: this is the place I've been tasked to find for the red-and-white.</choice>
+			<choice Target="Poacher2" IfHaveActiveQuest="Sibs_TortoisesPoacherQuest" IfFinishedQuestStep="Sibs_TortoisesWardenQuest~Briefing">An Issachari huntress is looking for this place, warden. What do you know of her?</choice>
 			<choice Target="Saltbacks">I have never seen so many saltbacks in the same place. I dare not imagine what they could do, if enraged.</choice>		
 			<choice Target="Warden">I was not expecting a warden here.</choice>
 			<choice Target="Sick">That cough sounds dreadful. Are you holding up alright, warden?</choice>
@@ -409,8 +409,8 @@
 				
 				Mightily done, =name=, mightily done. There is no thanking you enough for what you have done.
 			</text>	
-			<choice Target="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">I could not bear to imagine this place looted, warden.</choice>			
-			<choice Target="Reward" CompleteQuestStep="Brothers_TortoisesRewardQuest~Reward">Guess I dislike tortoises less than Issachari, in the end.</choice>
+			<choice Target="Reward" CompleteQuestStep="Sibs_TortoisesRewardQuest~Reward">I could not bear to imagine this place looted, warden.</choice>			
+			<choice Target="Reward" CompleteQuestStep="Sibs_TortoisesRewardQuest~Reward">Guess I dislike tortoises less than Issachari, in the end.</choice>
 		</node>
 		
 		<node ID="Reward" AllowEscape="false">
@@ -445,13 +445,13 @@
 				
 				There, =name=. This shell was worn by saltback carers when I first took watch. Shellbacked memories still recognize it as a garment of honor and station.
 			</text>	
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice">
 				<text>Thank you, warden. I shall try to be worthy of it. Live and drink.</text>
-				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
+				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Honorary Shell" />
 			</choice>			
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Choice">
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice">
 				<text>... Well at least something came out of it all. Live and drink, warden.</text>
-				<part Name="ReceiveItem" Blueprints="Brothers_Tortoises_Honorary Shell" />
+				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Honorary Shell" />
 			</choice>
 		</node>	
 
@@ -553,7 +553,7 @@
 			In that case, you will find there is still a fight in these old bones yet!
 			</text>
 			<choice Target="Scared">Wait! I misspoke. Please forgive my pride, warden.</choice>
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Briefing">
 				<text>Bring it on!</text>
 				<part Name="StartFight" />
 			</choice>
@@ -566,7 +566,7 @@
 			You play dangerous games, =name=. Not all wardens have my patience.
 			</text>
 			<choice Target="NoTrouble">Indeed they do not. I shall not disrespect this sacred place then, warden.</choice>
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Briefing">
 				<text>Not all wardens are decrepit wrecks either. It's gotta be my lucky day.</text>
 				<part Name="StartFight" />
 			</choice>
@@ -593,7 +593,7 @@
 			</text>	
 			<choice Target="Carapace">
 				<text>I am shellbacked myself, warden. Maybe I will come here in my later days, spend time in the shade.</text>
-				<part Name="Brothers_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
+				<part Name="Sibs_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
 			</choice>
 			<choice Target="WillNot">I see, warden. Rest assured: this place is safe.</choice>
 			<choice Target="NoPromise">Life in Qud is cruel, warden, and I cannot afford promises I am not sure to keep.</choice>
@@ -603,29 +603,29 @@
 			<text>
 				Maybe you will, =name=. Maybe you will.
 			</text>	
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">In the meantime, live and drink, warden.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Briefing">In the meantime, live and drink, warden.</choice>
 		</node>
 		
 		<node ID="WillNot" AllowEscape="false" >
 			<text>
 				Thank you =name=. Live and drink, traveler.
 			</text>	
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, venerable warden.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Briefing">Live and drink, venerable warden.</choice>
 		</node>
 		
 		<node ID="NoPromise" AllowEscape="false">
 			<text>			
 				I cannot hold you responsible of an offense not yet committed, and can only hope you find wisdom in your time, =name=. Still, live and drink nonetheless.
 			</text>	
-			<choice Target="End" CompleteQuestStep="Brothers_TortoisesWardenQuest~Briefing">Live and drink, warden.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Briefing">Live and drink, warden.</choice>
 		</node>		
 
 	</conversation>
 
 
-	<conversation ID="Brothers_Tortoises_PistolHunter">
+	<conversation ID="Sibs_Tortoises_PistolHunter">
 			
-		<start ID="GoodWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured" Inherits="DefaultChoices">
+		<start ID="GoodWelcome" IfHaveState="Sibs_Tortoises_PoacherEnding_Occured" Inherits="DefaultChoices">
 			<text Priority="-1">
 				{{emote|*Above =pronouns.possessive= sun veil, an appreciative gaze find yours.*}}
 				
@@ -656,9 +656,9 @@
 		
 	</conversation>
 
-	<conversation ID="Brothers_Tortoises_RifleHunter">
+	<conversation ID="Sibs_Tortoises_RifleHunter">
 			
-		<start ID="GoodWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured" Inherits="DefaultChoices">
+		<start ID="GoodWelcome" IfHaveState="Sibs_Tortoises_PoacherEnding_Occured" Inherits="DefaultChoices">
 			<text Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:clean:afterpronoun= the barrel of =pronouns.possessive= rifle, scraping saltflakes away.*}}
 				
@@ -693,7 +693,7 @@
 <!--Pet dialogue-->
 
 	
-	<conversation ID="Brothers_Tortoises_BabyShaile">
+	<conversation ID="Sibs_Tortoises_BabyShaile">
 		
 		<node ID="Start">
 		  <text>
@@ -712,9 +712,9 @@
 <!--walking dune dialogue-->
 
 	
-	<conversation ID="Brothers_Tortoises_WalkingDune">
+	<conversation ID="Sibs_Tortoises_WalkingDune">
 
-		<start ID="BadWelcome" IfHaveState="Brothers_Tortoises_PoacherEnding_Occured">
+		<start ID="BadWelcome" IfHaveState="Sibs_Tortoises_PoacherEnding_Occured">
 			<text>
 				{{emote|*aimlessly wanders around*}}
 			</text>
@@ -734,7 +734,7 @@
 			</choice>
 			<choice Target="Graveyard2" IfNotHaveState="GraveyardKnown">
 				<text>If you wish to make your trip safely, decrepit giant, you will reveal your destination to me.</text>
-				<part Name="Brothers_RequirePart" Part="Persuasion_MenacingStare" Render="Persuasion: Menacing Stare" />
+				<part Name="Sibs_RequirePart" Part="Persuasion_MenacingStare" Render="Persuasion: Menacing Stare" />
 			</choice>
 			<choice Target="End">Live and drink, wandering giant.</choice>
 		</start>
@@ -743,7 +743,7 @@
 			<text>
 				{{emote|*The gigantic elderly saltback presses foreheads with you, and clarity strikes your mind: one last pilgrimage to a final resting place.*}}
 			</text>
-			<part Name="Brothers_Tortoises_RevealGraveyardLocation" />
+			<part Name="Sibs_Tortoises_RevealGraveyardLocation" />
 			<choice Target="End">I see. Live and drink until then, pilgrim.</choice>
 		</node>
 
@@ -751,10 +751,10 @@
 			<text>
 				{{emote|*In a moment of panic, the gigantic saltback quickly presses foreheads with you, and clarity strikes your mind: a long pilgrimage to a place of death.*}}
 			</text>
-			<part Name="Brothers_Tortoises_RevealGraveyardLocation" />
+			<part Name="Sibs_Tortoises_RevealGraveyardLocation" />
 			<choice Target="End" >
 				<text>This will do.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="-50"/>
+				<part Name="Sibs_ModifyReputation" Faction="Tortoises" Value="-50"/>
 			</choice>
 		</node>
 		

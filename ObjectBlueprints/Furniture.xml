@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
   
-	<object Name="Brothers_Tortoises_BigStele" Inherits="MountedFurniture">
+	<object Name="Sibs_Tortoises_BigStele" Inherits="MountedFurniture">
 		<part Name="Physics" Weight="2000" Takeable="false" Solid="true" FlameTemperature="99999" VaporTemperature="1500" />
 		<part Name="Description" Short="Shellbacked glyphs carved into saltstone recount histories of travel and pilgrimage. Contemplating the coarse plane, the arms of time recede until gaze faces the early scutes of Qud." />
 		<part Name="Render" DisplayName="funerary stele" Tile="Terrain/tortoises/tile_bigstele.png" DetailColor="C" RenderString="007" ColorString="&amp;Y" />
@@ -15,7 +15,7 @@
 		<stag Name="Contemporary" />
 	</object>
   
-  	<object Name="Brothers_Tortoises_RuinedStele" Inherits="MountedFurniture">
+  	<object Name="Sibs_Tortoises_RuinedStele" Inherits="MountedFurniture">
 		<part Name="Physics" Weight="2000" Takeable="false" Solid="true" FlameTemperature="99999" VaporTemperature="1500" />
 		<part Name="Description" Short="Salt-caked chisels have etched tradition out of coarse saltstone." />
 		<part Name="Render" DisplayName="{{K|desecrated}} stele" Tile="Terrain/tortoises/tile_ruinedstele.png" DetailColor="r" RenderString="007" ColorString="&amp;K" />
@@ -30,7 +30,7 @@
 		<part Name="RulesDescription" Text="Desecrated: This object has been desecrated by vandals." />
 	</object>	
 	
-	<object Name="Brothers_Tortoises_Big_BonesBase" Inherits="MountedFurniture">
+	<object Name="Sibs_Tortoises_Big_BonesBase" Inherits="MountedFurniture">
 		<part Name="Physics" Weight="2000" Takeable="false" Solid="false" FlameTemperature="99999" VaporTemperature="1500" />
 		<part Name="Render" DisplayName="{{W|colossal bones}}" ColorString="&amp;Y" DetailColor="R" RenderString="156" />
 		<part Name="Description" Short="A forest of calcified history sprouts from the ground, sheltering saltflies. No fruits do they bear but lo, in their shade new life may yet be planted." />
@@ -39,43 +39,43 @@
 		<tag Name="NoSparkingQuest" />
 		<tag Name="Tier" Value="4" />
 		<tag Name="Gender" Value="plural" />
-		<tag Name="Brothers_Tortoises_DestroyedOnEnding" />
+		<tag Name="Sibs_Tortoises_DestroyedOnEnding" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="BaseObject" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Big_Bones1" Inherits="Brothers_Tortoises_Big_BonesBase">
+	<object Name="Sibs_Tortoises_Big_Bones1" Inherits="Sibs_Tortoises_Big_BonesBase">
 		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones1" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_Tortoises_Big_Bones2" Inherits="Brothers_Tortoises_Big_BonesBase">
+	<object Name="Sibs_Tortoises_Big_Bones2" Inherits="Sibs_Tortoises_Big_BonesBase">
 		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones2" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
   
-	<object Name="Brothers_Tortoises_Big_Bones3" Inherits="Brothers_Tortoises_Big_BonesBase">
+	<object Name="Sibs_Tortoises_Big_Bones3" Inherits="Sibs_Tortoises_Big_BonesBase">
 		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones3" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
  
-	<object Name="Brothers_Tortoises_Big_Bones4" Inherits="Brothers_Tortoises_Big_BonesBase">
+	<object Name="Sibs_Tortoises_Big_Bones4" Inherits="Sibs_Tortoises_Big_BonesBase">
 		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones4" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Big_Bones5" Inherits="Brothers_Tortoises_Big_BonesBase">
+	<object Name="Sibs_Tortoises_Big_Bones5" Inherits="Sibs_Tortoises_Big_BonesBase">
 		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones5" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_Tortoises_Big_Bones6" Inherits="Brothers_Tortoises_Big_BonesBase">
+	<object Name="Sibs_Tortoises_Big_Bones6" Inherits="Sibs_Tortoises_Big_BonesBase">
 		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones6" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>  
 
-	<object Name="Brothers_Tortoises_BonesDestroyedOnEnding" Inherits="Bones">
-		<tag Name="Brothers_Tortoises_DestroyedOnEnding" />
+	<object Name="Sibs_Tortoises_BonesDestroyedOnEnding" Inherits="Bones">
+		<tag Name="Sibs_Tortoises_DestroyedOnEnding" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>  
 	

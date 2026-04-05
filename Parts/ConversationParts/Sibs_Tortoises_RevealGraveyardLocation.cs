@@ -4,7 +4,7 @@ using XRL.World;
 
 namespace XRL.World.Conversations.Parts
 {
-    public class Brothers_Tortoises_RevealGraveyardLocation : IConversationPart
+    public class Sibs_Tortoises_RevealGraveyardLocation : IConversationPart
     {
         public override bool WantEvent(int ID, int Propagation)
         {

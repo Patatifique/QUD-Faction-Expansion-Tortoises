@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <quests>
-	<quest ID="Brothers_TortoisesPoacherQuest" Name="Combing the Salt Dunes" System="Brothers_Tortoises_CombingTheSaltDunesSystem"
+	<quest ID="Sibs_TortoisesPoacherQuest" Name="Combing the Salt Dunes" System="Sibs_Tortoises_CombingTheSaltDunesSystem"
 	   Accomplishment="You found the final resting place of great saltback tortoises."
 	   Hagiograph="In the month of =month= of =year=, wise =name= knelt by fading giants and sang a solemn dirge in their honor."
 	   HagiographCategory="VisitsLocation"
@@ -20,7 +20,7 @@
 		</step>
 	</quest>
 
-	<quest ID="Brothers_TortoisesWardenQuest" Name="The Scute Child">
+	<quest ID="Sibs_TortoisesWardenQuest" Name="The Scute Child">
 
 		<step ID="Briefing" Name="Consult with Warden Qoruda" Optional="true" XP="250">
 			<text>Speak with Warden Qoruda to gain insight into the Saltback Graveyard.</text>
@@ -32,7 +32,7 @@
 
 	</quest>
 	
-	<quest ID="Brothers_TortoisesRewardQuest" Name="Return to Warden Qoruda"
+	<quest ID="Sibs_TortoisesRewardQuest" Name="Return to Warden Qoruda"
 	   Accomplishment="You vowed to protect the location of the saltback's final resting place."
 	   Hagiograph="=name=, Keeper of Secrets, opted to protect the location of sacred places everywhere, and became forever known as Custodian of Salt Mausoleums."
 	   HagiographCategory="VisitsLocation"

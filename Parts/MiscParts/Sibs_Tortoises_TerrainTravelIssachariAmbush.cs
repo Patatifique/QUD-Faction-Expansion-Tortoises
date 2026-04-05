@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_Tortoises_TerrainTravelIssachariAmbush : IPart
+    public class Sibs_Tortoises_TerrainTravelIssachariAmbush : IPart
     {
         public override bool SameAs(IPart p) => true;
 
@@ -34,10 +34,10 @@ namespace XRL.World.Parts
                 {
 
                     // Make sure the player has pissed off the poacher
-                    if (The.Game.GetBooleanGameState("Brothers_Tortoises_TortoisesEnding"))
+                    if (The.Game.GetBooleanGameState("Sibs_Tortoises_TortoisesEnding"))
                     {
                         // Check that the player has not yet been ambushed
-                        if (!The.Game.HasStringGameState("Brothers_Tortoises_Ambushed"))
+                        if (!The.Game.HasStringGameState("Sibs_Tortoises_Ambushed"))
                         {
                             Cell currentCell = The.Player.CurrentCell;
                             string zoneWorld = currentCell.ParentZone.GetZoneWorld();
@@ -52,7 +52,7 @@ namespace XRL.World.Parts
                             if (The.Player.ApplyEffect((Effect)new Lost(InitialZone: str, World: zoneWorld)))
                             {
                                 // set the already ambushed flag
-                                The.Game.SetStringGameState("Brothers_Tortoises_Ambushed", str);
+                                The.Game.SetStringGameState("Sibs_Tortoises_Ambushed", str);
                                 //regular lost logic
                                 Zone zone = The.ZoneManager.SetActiveZone(The.ZoneManager.GetZone(str));
                                 zone.CheckWeather();
@@ -66,7 +66,7 @@ namespace XRL.World.Parts
                                 Cell currentCellPostLost = The.Player.CurrentCell;
 
                                 // This is where we set the Population to spawn
-                                List<PopulationResult> party = PopulationManager.Generate("Brothers_Tortoises_Issachari Ambushers");
+                                List<PopulationResult> party = PopulationManager.Generate("Sibs_Tortoises_Issachari Ambushers");
 
                                 // create a list to track used spawn cells
                                 List<Cell> usedSpawnCells = new List<Cell>();
