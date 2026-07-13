@@ -445,11 +445,11 @@
 				
 				There, =name=. This shell was worn by saltback carers when I first took watch. Shellbacked memories still recognize it as a garment of honor and station.
 			</text>	
-			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice">
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice" Achievement="ACH_SIBS_TORTOISES_TORTOISES_ENDING">
 				<text>Thank you, warden. I shall try to be worthy of it. Live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Honorary Shell" />
 			</choice>			
-			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice">
+			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice" Achievement="ACH_SIBS_TORTOISES_TORTOISES_ENDING">
 				<text>... Well at least something came out of it all. Live and drink, warden.</text>
 				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Honorary Shell" />
 			</choice>

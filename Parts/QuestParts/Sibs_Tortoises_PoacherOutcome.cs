@@ -77,6 +77,9 @@ namespace XRL.World.Parts
             // Change zone name
             The.ZoneManager.SetZoneName(this.ParentObject.CurrentZone.ZoneID, "looted graveyard", Proper: false);
 
+            // Apply achivement
+            AchievementManager.SetAchievement("ACH_SIBS_TORTOISES_POACHER_ENDING");
+
             // Remove this part after applying the outcome
             this.ParentObject.RemovePart(this);
         }
