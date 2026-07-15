@@ -1,5 +1,6 @@
 Faction Expansion: Tortoises
 
+- Achievement Art: Balthichou & Patatifique
 - Concept and Design: Balthichou & Patatifique
 - C# Coding: Patatifique
 - Spritework: Balthichou
@@ -11,4 +12,4 @@ Third party assets used:
 - Saltback culverin/magnum firing sound effect: https://freesound.org/people/straget/sounds/410552/
 - Saltback Graveyard OST: "Baud" from Craig Hamilton (https://craigoryhamilton.com/)
 
-Many thanks to the members of the Qudcord modding community for their patience, kindness, helpfulness, and reliability! A lot of that project would not have been possible without them.
+Many thanks to the members of the Qudcord modding community for their patience, kindness, helpfulness, and reliability! That project could not have happened without them.
