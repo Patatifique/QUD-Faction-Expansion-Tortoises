@@ -7,7 +7,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_TORTOISES_TORTOISES_ENDING = new AchievementInfo(
       "ACH_SIBS_TORTOISES_TORTOISES_ENDING", 
       "FE - Tortoises: Shell Of A Friend", 
-      "welcome.png", 
+      "UI/Achievements/tortoises/tortoisesending.png", 
       "Protect the sanctity of the Saltback Graveyard.");
 
     public static readonly AchievementInfo SIBS_TORTOISES_POACHER_ENDING = new AchievementInfo(
