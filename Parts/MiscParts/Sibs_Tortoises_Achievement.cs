@@ -6,15 +6,15 @@ namespace XRL
   {
     public static readonly AchievementInfo SIBS_TORTOISES_TORTOISES_ENDING = new AchievementInfo(
       "ACH_SIBS_TORTOISES_TORTOISES_ENDING", 
-      "FE - Tortoises : Shell of a friend", 
+      "FE - Tortoises: Shellbacked Friend", 
       "welcome.png", 
-      "do not keep that name I beg of you.");
+      "Protect the sanctity of the Saltback Graveyard.");
 
     public static readonly AchievementInfo SIBS_TORTOISES_POACHER_ENDING = new AchievementInfo(
       "ACH_SIBS_TORTOISES_POACHER_ENDING", 
-      "FE - Tortoises : Crack the Saltback's Shell", 
+      "FE - Tortoises: Cracking The Saltback Shell", 
       "welcome.png", 
-      "Witness the ruins of a once peacefull Saltback Graveyard.");
+      "Witness the ruin of the once peaceful Saltback Graveyard.");
 
     [ModSensitiveCacheInit]
     public static void Init()
