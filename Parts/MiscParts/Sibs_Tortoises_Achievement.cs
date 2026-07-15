@@ -13,7 +13,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_TORTOISES_POACHER_ENDING = new AchievementInfo(
       "ACH_SIBS_TORTOISES_POACHER_ENDING", 
       "FE - Tortoises: Cracking The Saltback Shell", 
-      "welcome.png", 
+      "UI/Achievements/tortoises/poacherending.png", 
       "Witness the ruin of the once peaceful Saltback Graveyard.");
 
     [ModSensitiveCacheInit]
