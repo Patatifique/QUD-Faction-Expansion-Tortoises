@@ -82,8 +82,8 @@
 				<object Chance="50" Number="1" Blueprint="Sibs_Tortoises_IssachariPistolHunter" />
 				<object Chance="50" Number="1" Blueprint="Sibs_Tortoises_IssachariRifleHunter" />
 				<group Chance="10" Name="UnluckyParty" Style="pickeach">
-					<object Number="1" Blueprint="Sibs_Tortoises_Quarters-the-Salt-Kraken" />
-					<object Number="1" Blueprint="Sibs_Tortoises_Skins-the-Dawnglider" />
+					<object Number="1" Blueprint="Sibs_Tortoises_IssachariPistolHunter" />
+					<object Number="1" Blueprint="Sibs_Tortoises_IssachariRifleHunter" />
 				</group>
 			</group>
 			
