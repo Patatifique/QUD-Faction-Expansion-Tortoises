@@ -19,12 +19,12 @@
 
 	<population Name="SaltDuneCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="6" Number="2d2" Blueprint="Sibs_Tortoises_Walking Dune" />
+			<object Weight="6" Number="2d2" Blueprint="Sibs_Tortoises_WalkingDune" />
 		</group>
 	</population>
 
 	<population Name="SaltDesertZoneGlobals" Load="Merge">
-		<object Number="2d2" Chance="5" Blueprint="Sibs_Tortoises_Walking Dune" />
+		<object Number="2d2" Chance="5" Blueprint="Sibs_Tortoises_WalkingDune" />
 	</population>
 
 	<population Name="Garbage Bots" Load="Merge">
@@ -97,7 +97,7 @@
 	</population>
 
 
-  <population Name="Sibs_Tortoises_Footprint Table">
+  <population Name="Sibs_Tortoises_FootprintTable">
     <group Name="Items" Style="pickone">
       <object Blueprint="Sibs_Tortoises_Footprint" />
     </group>

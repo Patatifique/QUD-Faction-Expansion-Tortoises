@@ -24,21 +24,21 @@
 		<part Name="Aquatic" />
 		<skill Name="Endurance_Swimming" />
 		<part Name="SpawnWithLiquid" />
-		<inventoryobject Blueprint="Sibs_Tortoises_Shaile_Bite" />
+		<inventoryobject Blueprint="Sibs_Tortoises_ShaileBite" />
 		<tag Name="DynamicObjectsTable:Water_Creatures" />
 		<tag Name="PlacementHint" Value="Aquatic" />
 		<tag Name="LairAmbientBed" Value="Sounds/Ambiences/amb_creature_fish" />
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_Shaile Corpse" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_ShaileCorpse" />
 	</object>
 
-	<object Name="Sibs_Tortoises_Shaile_Bite" Inherits="Bite">
+	<object Name="Sibs_Tortoises_ShaileBite" Inherits="Bite">
 		<part Name="Render" DisplayName="{{icy|icy teeth}}" />
 		<part Name="MeleeWeapon" BaseDamage="2d2" />
-		<part Name="ElementalDamage" Damage="1d10+5" Attributes="Cold" />
+		<part Name="ElementalDamage" Damage="1d6+2" Attributes="Cold" />
 		<tag Name="Gender" Value="plural" />
 	</object>
 
-	<object Name="Sibs_Tortoises_Baby Shaile" Inherits="BaseTortoise">
+	<object Name="Sibs_Tortoises_BabyShailePet" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/tortoises/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
@@ -47,15 +47,15 @@
 		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
 		<stat Name="Level" Value="5" />
 		<stat Name="AV" Value="4" />
-		<inventoryobject Blueprint="Sibs_Tortoises_Baby_Shaile_Bite" Number="1" />
+		<inventoryobject Blueprint="Sibs_Tortoises_BabyShailePetBite" Number="1" />
 		<part Name="Description" Short="Jutting out of rippling softshell is a single rotound head on a swivel. =pronouns.Subjective= checks =pronouns.possessive= surroundings, looking for unfortunate crawlfigures whose chitinous appendages crunch comfortably between beaked jaws." />
 		<tag Name="Role" Value="Tank" />		
 <!--pet stuff-->
 		<part Name="Sibs_Tortoises_Chilltouch" />
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="nudges you icily,hiccups misty rime on you,sneezes ice shards at you" />
-		<property Name="Story" Value="Sibs_CatsDogs_BabyShaileStory" />
-		<part Name="ConversationScript" ConversationID="Sibs_Tortoises_BabyShaile" />
+		<property Name="Story" Value="Sibs_CatsDogs_BabyShailePetStory" />
+		<part Name="ConversationScript" ConversationID="Sibs_Tortoises_BabyShailePetStory" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
 		<tag Name="Gender" Value="male" />
@@ -64,7 +64,7 @@
 
 	</object>
 
-	<object Name="Sibs_Tortoises_Baby_Shaile_Bite" Inherits="Bite">
+	<object Name="Sibs_Tortoises_BabyShailePetBite" Inherits="Bite">
 		<part Name="Render" DisplayName="{{icy|icy teeth}}" />
 		<part Name="MeleeWeapon" BaseDamage="2d2" />
 		<part Name="ElementalDamage" Damage="1d2+2" Attributes="Cold" />
@@ -83,11 +83,11 @@
 		<mutation Name="Carapace" Level="10" />
 		<mutation Name="NightVision" Level="4" />
 		<mutation Name="PhotosyntheticSkin" Level="1" />
-		<inventoryobject Blueprint="Sibs_Tortoises_Verdant_Bite" />
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_Verdant Dome Corpse" />
+		<inventoryobject Blueprint="Sibs_Tortoises_VerdantBite" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_VerdantCorpse" />
 	</object>
 	
-	<object Name="Sibs_Tortoises_Verdant_Bite" Inherits="Bite">
+	<object Name="Sibs_Tortoises_VerdantBite" Inherits="Bite">
 		<part Name="MeleeWeapon" BaseDamage="4d3" Skill="Cudgel" />
 	</object>	
 	
@@ -131,10 +131,10 @@
 		<stat Name="AV" Value="10" />
 		<stat Name="Level" Value="12" />
 		<stat Name="Speed" Value="60" />
-		<inventoryobject Blueprint="Sibs_Tortoises_Pulshell_Slam" />
+		<inventoryobject Blueprint="Sibs_Tortoises_PulshellSlam" />
 	</object>
 		
-	<object Name="Sibs_Tortoises_Pulshell_Slam" Inherits="NaturalFist">
+	<object Name="Sibs_Tortoises_PulshellSlam" Inherits="NaturalFist">
 		<part Name="Render" DisplayName="frontal slam" Tile="Creatures/tortoises/natural-weapon-bands.bmp" ColorString="&amp;C" />
 		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Strength" Slot="Head" />
 	</object>
@@ -149,12 +149,12 @@
 	</object>
 
 	<object Name="IrritableTortoise" Load="Merge">
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_IrritableTortoise Corpse" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_IrritableTortoiseCorpse" />
 	</object>
 
-	<object Name="Sibs_Tortoises_Walking Dune" Inherits="BaseTortoise">
+	<object Name="Sibs_Tortoises_WalkingDune" Inherits="BaseTortoise">
 		<part Name="Render" DisplayName="walking dune" Tile="Creatures/tortoises/walkingdune.png" RenderString="T" ColorString="&amp;y" DetailColor="w" />
-		<part Name="Corpse" CorpseChance="90" CorpseBlueprint="Sibs_Tortoises_Walking Dune Corpse" />
+		<part Name="Corpse" CorpseChance="90" CorpseBlueprint="Sibs_Tortoises_WalkingDuneCorpse" />
 		<part Name="Brain" Factions="Tortoises-100" Hostile="false" Calm="True" />
 		<stat Name="AV" Value="17" />
 		<stat Name="DV" Value="-10" />
@@ -171,50 +171,50 @@
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Sibs_TortoisesPoacherQuest" Step="WalkingDune" />
 		<part Name="Sibs_Tortoises_AiPilgrimGraveyard" TargetObject="Sibs_Tortoises_BigStele" Chance="100"/>
 		<tag Name="ExcludeFromVillagePopulations" />
-		<part Name="LeavesTrail" TrailChance="100" TrailBlueprint="@Sibs_Tortoises_Footprint Table" OnEnter="false" />
+		<part Name="LeavesTrail" TrailChance="100" TrailBlueprint="@Sibs_Tortoises_FootprintTable" OnEnter="false" />
 		<tag Name="Sibs_Tortoises_DestroyedOnEnding" />
 	</object>
 
 <!--Corpses-->
 	
-	<object Name="Sibs_Tortoises_IrritableTortoise Corpse" Inherits="Animal Corpse">
+	<object Name="Sibs_Tortoises_IrritableTortoiseCorpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="irritable tortoise corpse" />
 		<part Name="Food" Message="Thin ribbons of chewy meat remind one of the irascible disposition of this shell's once-owner." />
 		<part Name="Description" Short="A massive cracked tortoise shell, fills the mind with unanswered pondering as to what lays within." />
 		<part Name="Physics" Weight="50" />
 		<part Name="Commerce" Value="5" />
 		<tag Name="Tier" Value="2" />
-		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_Tortoise Shield" />
+		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_TortoiseShield" />
 		<tag Name="DynamicObjectsTable:Corpses" />
 	</object>
 
-	<object Name="Sibs_Tortoises_Shaile Corpse" Inherits="Animal Corpse">
+	<object Name="Sibs_Tortoises_ShaileCorpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="{{C|shaile}} corpse" />
 		<part Name="Food" Message="It feels like chewing on limp ice." />
 		<part Name="Description" Short="Even now cold mist creeps along the ground, memory-tendrils of a bygone being." />
 		<part Name="Physics" Weight="70" />
 		<part Name="Commerce" Value="20" />
 		<tag Name="Tier" Value="4" />
-		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_Shaile Scale Cloak" />
+		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_ShaileCloak" />
 		<tag Name="DynamicObjectsTable:Corpses" />
 	</object>
 
-	<object Name="Sibs_Tortoises_Verdant Dome Corpse" Inherits="Animal Corpse">
+	<object Name="Sibs_Tortoises_VerdantCorpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="{{g|verdant dome}} corpse" />
 		<part Name="Food" Message="Fruity goodness soaks the tongue." />
 		<part Name="Description" Short="Life creeps forth from the shell to conquer arable flesh." />
 		<part Name="Physics" Weight="70" />
 		<part Name="Commerce" Value="20" />
 		<tag Name="Tier" Value="4" />
-		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_Verdant Sallet" />
+		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_VerdantHelm" />
 		<tag Name="DynamicObjectsTable:Corpses" />
 	</object>
 	
 	<object Name="Great Saltback Corpse" Load="Merge">
-		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_Saltback Pavise" />
+		<part Name="Butcherable" OnSuccess="Sibs_Tortoises_SaltbackPavise" />
 	</object>
 
-	<object Name="Sibs_Tortoises_Walking Dune Corpse" Inherits="Animal Corpse">
+	<object Name="Sibs_Tortoises_WalkingDuneCorpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="walking dune corpse" />
 		<part Name="Food" Message="Delving in these venerable canyons allows for some dry meat foraging." />
 		<part Name="Description" Short="Lo! Beneath the scute mountains there lays a cavern, saltflies nesting in keratin grooves." />
@@ -241,7 +241,10 @@
 		<part Name="ConversationScript" ConversationID="Sibs_Tortoises_Poacher" />
 		<skill Name="Rifle_DrawABead" />
 		<skill Name="Rifle_SteadyHands" />
-		<skill Name="CookingAndGathering_Butchery" />
+		<skill Name="Tinkering" />
+		<skill Name="Tinkering_Repair" />
+		<skill Name="Tinkering_Tinker1" />
+		<skill Name="Tinkering_Disassemble" />
 		<part Name="GivesRep" />
 		<tag Name="NoHateFactions" Value="Mechanimists,Pariahs,Wardens" />
 		<tag Name="staticFaction1" Value="Issachari,friend,crafting hunting weapons" />
@@ -255,6 +258,9 @@
 		<inventoryobject Blueprint="Sandals" Number="1" />
 		<inventoryobject Blueprint="Puma Chitin Vest" Number="1" />
 		<inventoryobject Blueprint="Issachari Sun Veil" Number="1" />
+		<inventoryobject Blueprint="Steel Utility Knife" />
+		<inventoryobject Blueprint="Basic Toolkit" Number="1" />
+		<inventoryobject Blueprint="@Junk 1" Number="1-3" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="QuestGiver" Value="Sibs_TortoisesPoacherQuest" />
 	</object>
@@ -316,7 +322,7 @@
 		<tag Name="Gender" Value="female" />
 		<part Name="ConversationScript" ConversationID="Sibs_Tortoises_PistolHunter" />
 		<xtagGrammar Proper="true" />
-		<inventoryobject Blueprint="Sibs_Tortoises_Saltback Magnum" Number="1" />
+		<inventoryobject Blueprint="Sibs_Tortoises_SaltbackMagnum" Number="1" />
 		<inventoryobject Blueprint="Lead Slug" Number="24" />
 		<inventoryobject Blueprint="Dagger" Number="1" />
 		<inventoryobject Blueprint="Sandals" Number="1" />
@@ -344,7 +350,7 @@
 		<tag Name="Gender" Value="male" />
 		<part Name="ConversationScript" ConversationID="Sibs_Tortoises_RifleHunter" />
 		<xtagGrammar Proper="true" />
-		<inventoryobject Blueprint="Sibs_Tortoises_Saltback Culverin" Number="1" />
+		<inventoryobject Blueprint="Sibs_Tortoises_SaltbackCulverin" Number="1" />
 		<inventoryobject Blueprint="Lead Slug" Number="24" />
 		<inventoryobject Blueprint="Dagger" Number="1" />
 		<inventoryobject Blueprint="Sandals" Number="1" />

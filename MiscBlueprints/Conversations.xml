@@ -272,7 +272,7 @@
 			</text>
 			<choice Target="Found3" CompleteQuestStep="Sibs_TortoisesPoacherQuest~Debrief" SetBooleanState="Sibs_Tortoises_PoacherEnding,true">
 			<text>Thank you for this. What will you do now?</text>
-			<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Saltback Culverin,Sibs_Tortoises_Saltback Magnum" Pick="true" Identify="All" />
+			<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_SaltbackCulverin,Sibs_Tortoises_SaltbackMagnum" Pick="true" Identify="All" />
 			<part Name="Sibs_ModifyReputation" Faction="Issachari" Value="400" Faction2="Tortoises" Value2="-200" Shown="False" />
 			</choice>
 		</node>
@@ -447,11 +447,11 @@
 			</text>	
 			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice" Achievement="ACH_SIBS_TORTOISES_TORTOISES_ENDING">
 				<text>Thank you, warden. I shall try to be worthy of it. Live and drink.</text>
-				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Honorary Shell" />
+				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_HonoraryShell" />
 			</choice>			
 			<choice Target="End" CompleteQuestStep="Sibs_TortoisesWardenQuest~Choice" Achievement="ACH_SIBS_TORTOISES_TORTOISES_ENDING">
 				<text>... Well at least something came out of it all. Live and drink, warden.</text>
-				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_Honorary Shell" />
+				<part Name="ReceiveItem" Blueprints="Sibs_Tortoises_HonoraryShell" />
 			</choice>
 		</node>	
 
@@ -693,7 +693,7 @@
 <!--Pet dialogue-->
 
 	
-	<conversation ID="Sibs_Tortoises_BabyShaile">
+	<conversation ID="Sibs_Tortoises_BabyShailePetStory">
 		
 		<node ID="Start">
 		  <text>

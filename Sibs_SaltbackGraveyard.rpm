@@ -48,7 +48,7 @@
   <cell X="42" Y="0"></cell>
   <cell X="43" Y="0"></cell>
   <cell X="44" Y="0">
-    <object Name="Sibs_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_WalkingDune"></object>
   </cell>
   <cell X="45" Y="0"></cell>
   <cell X="46" Y="0"></cell>
@@ -297,7 +297,7 @@
   </cell>
   <cell X="28" Y="3"></cell>
   <cell X="29" Y="3">
-    <object Name="Sibs_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_WalkingDune"></object>
   </cell>
   <cell X="30" Y="3"></cell>
   <cell X="31" Y="3"></cell>
@@ -689,7 +689,7 @@
   <cell X="19" Y="7"></cell>
   <cell X="20" Y="7"></cell>
   <cell X="21" Y="7">
-    <object Name="Sibs_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_WalkingDune"></object>
   </cell>
   <cell X="22" Y="7"></cell>
   <cell X="23" Y="7"></cell>
@@ -939,7 +939,7 @@
     <object Name="SaltPath"></object>
   </cell>
   <cell X="37" Y="9">
-    <object Name="Sibs_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_WalkingDune"></object>
   </cell>
   <cell X="38" Y="9"></cell>
   <cell X="39" Y="9">
@@ -1062,7 +1062,7 @@
   <cell X="42" Y="10"></cell>
   <cell X="43" Y="10"></cell>
   <cell X="44" Y="10">
-    <object Name="Sibs_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_WalkingDune"></object>
   </cell>
   <cell X="45" Y="10"></cell>
   <cell X="46" Y="10"></cell>
@@ -1261,7 +1261,7 @@
   <cell X="27" Y="12"></cell>
   <cell X="28" Y="12"></cell>
   <cell X="29" Y="12">
-    <object Name="Sibs_Tortoises_Walking Dune"></object>
+    <object Name="Sibs_Tortoises_WalkingDune"></object>
   </cell>
   <cell X="30" Y="12">
     <object Name="SaltPath"></object>
