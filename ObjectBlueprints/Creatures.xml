@@ -27,8 +27,7 @@
 		<inventoryobject Blueprint="Sibs_Tortoises_ShaileBite" />
 		<tag Name="DynamicObjectsTable:Water_Creatures" />
 		<tag Name="PlacementHint" Value="Aquatic" />
-		<tag Name="LairAmbientBed" Value="Sounds/Ambiences/amb_creature_fish" />
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_ShaileCorpse" />
+		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Sibs_Tortoises_ShaileCorpse" />
 	</object>
 
 	<object Name="Sibs_Tortoises_ShaileBite" Inherits="Bite">
@@ -47,9 +46,11 @@
 		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
 		<stat Name="Level" Value="5" />
 		<stat Name="AV" Value="4" />
+		<stat Name="Speed" Value="100" />
 		<inventoryobject Blueprint="Sibs_Tortoises_BabyShailePetBite" Number="1" />
 		<part Name="Description" Short="Jutting out of rippling softshell is a single rotound head on a swivel. =pronouns.Subjective= checks =pronouns.possessive= surroundings, looking for unfortunate crawlfigures whose chitinous appendages crunch comfortably between beaked jaws." />
-		<tag Name="Role" Value="Tank" />		
+		<tag Name="Role" Value="Tank" />	
+		<skill Name="Endurance_Swimming" />		
 <!--pet stuff-->
 		<part Name="Sibs_Tortoises_Chilltouch" />
 		<part Name="Pettable" />
@@ -84,10 +85,11 @@
 		<mutation Name="NightVision" Level="4" />
 		<mutation Name="PhotosyntheticSkin" Level="1" />
 		<inventoryobject Blueprint="Sibs_Tortoises_VerdantBite" />
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_Tortoises_VerdantCorpse" />
+		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Sibs_Tortoises_VerdantCorpse" />
 	</object>
 	
 	<object Name="Sibs_Tortoises_VerdantBite" Inherits="Bite">
+		<part Name="Render" DisplayName="dull bite" />
 		<part Name="MeleeWeapon" BaseDamage="4d3" Skill="Cudgel" />
 	</object>	
 	
@@ -158,10 +160,11 @@
 		<part Name="Brain" Factions="Tortoises-100" Hostile="false" Calm="True" />
 		<stat Name="AV" Value="17" />
 		<stat Name="DV" Value="-10" />
-		<stat Name="Strength" Boost="2" />
+		<stat Name="Strength" Boost="1" />
+		<stat Name="Toughness" Boost="2" />
 		<stat Name="Agility" Boost="-3" />
 		<stat Name="Hitpoints" Value="900" />
-		<stat Name="Level" Value="31" />
+		<stat Name="Level" Value="34" />
 		<part Name="Description" Short="Deep grooves run on age-stained leather, scutes peeling from a weathered shelldome. Gargantuan limbs scatter saltdust with each hammering step, a constant soothing walkrythm that will only end when =pronouns.subjective= reaches =pronouns.possessive= final resting place." />
 		<mutation Name="MentalMirror" Level="4" />
 		<inventoryobject Blueprint="Saltback_Stomp" Number="1" />
