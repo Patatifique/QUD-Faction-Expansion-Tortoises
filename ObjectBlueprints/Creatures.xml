@@ -120,7 +120,7 @@
 	<object Name="Sibs_Tortoises_Pulshell" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
 		<part Name="Render" Tile="Creatures/tortoises/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" RenderString="t" />
-		<part Name="Description" Short="=pronouns.Subjective= trundles in serenity, metallic shell latticed with humming coils, distorting compass needles. Scrap flocks in presence of an animated figure that once collected it for flushing, now aimless." />
+		<part Name="Description" Short="=pronouns.Subjective= =verb:trundle:afterprounoun= in serenity, metallic shell latticed with humming coils, distorting compass needles. Scrap flocks in presence of an animated figure that once collected it for flushing, now aimless." />
 		<part Name="Brain" Factions="Robots-100" Hostile="false" />
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="High-Powered Magnet" />
 		<tag Name="Gender" Value="neuter" />
