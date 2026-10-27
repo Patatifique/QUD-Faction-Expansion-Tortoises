@@ -10,7 +10,7 @@
 
 	<object Name="Sibs_Tortoises_Shaile" Inherits="BaseTortoise">
 		<part Name="Description" Short="Volutes of frozen mist seep in-between =pronouns.possessive= polished scutes, water clotting affixed to the creek-dweller." />
-		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/tortoises/shaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/tortoises/shaile.png" ColorString="&amp;Y" DetailColor="c" RenderString="t" />
 		<stat Name="Level" Value="20" />
 		<stat Name="Hitpoints" Value="60" />
 		<stat Name="ColdResistance" Value="100" />
@@ -39,7 +39,7 @@
 	</object>
 
 	<object Name="Sibs_Tortoises_BabyShailePet" Inherits="BaseTortoise">
-		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/tortoises/babyshaile.png" ColorString="&amp;Y" DetailColor="c" />
+		<part Name="Render" DisplayName="{{M|Ortolo, shaile hatchling}}" Tile="Creatures/tortoises/babyshaile.png" ColorString="&amp;Y" DetailColor="c" RenderString="t" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
 		<part Name="Brain" Hostile="false" Factions="Tortoises-100" />
@@ -92,21 +92,21 @@
 	</object>	
 	
 	<object Name="Sibs_Tortoises_VerdantBanana" Inherits="Sibs_Tortoises_VerdantBase">
-		<part Name="Render" Tile="Creatures/tortoises/verdantdomebanana.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="W" />
+		<part Name="Render" Tile="Creatures/tortoises/verdantdomebanana.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="W" RenderString="t" />
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Hanging low on a hunched trunk, sunlight is imprisoned in golden ripeness." />
 	    <part Name="Harvestable" OnSuccess="Banana" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;W" RipeTileColor="&amp;g" RipeDetailColor="W" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
 	</object>
 	
 		<object Name="Sibs_Tortoises_VerdantApple" Inherits="Sibs_Tortoises_VerdantBase">
-		<part Name="Render" Tile="Creatures/tortoises/verdantdomeapple.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="R" />
+		<part Name="Render" Tile="Creatures/tortoises/verdantdomeapple.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="R" RenderString="t" />
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Hanging proudly on fractal branches, sunlight is imprisoned in crimson hydration." />
 	    <part Name="Harvestable" OnSuccess="Starapple" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;R" RipeTileColor="&amp;g" RipeDetailColor="R" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
 	</object>
 	
 		<object Name="Sibs_Tortoises_VerdantSpinefruit" Inherits="Sibs_Tortoises_VerdantBase">
-		<part Name="Render" Tile="Creatures/tortoises/verdantdomespinefruit.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="M" />
+		<part Name="Render" Tile="Creatures/tortoises/verdantdomespinefruit.png" DisplayName="{{leafy|verdant dome}}" ColorString="&amp;g" DetailColor="M" RenderString="t" />
 		<part Name="Description" Short="A thriving garden grows on =pronouns.possessive= domed shell, years crawled and nestled in keratin grooves as leaves sway like a pilgrim's crown. Grown aggressively on fractus trunks, sunlight is imprisoned in purple spines." />
 	    <part Name="Harvestable" OnSuccess="Spine Fruit" OnSuccessAmount="1-2" DestroyOnHarvest="false" StartRipeChance="1:6" RipeColor="&amp;WM" RipeTileColor="&amp;g" RipeDetailColor="M" UnripeColor="&amp;g" UnripeTileColor="&amp;g" UnripeDetailColor="G" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
@@ -117,7 +117,7 @@
 	
 	<object Name="Sibs_Tortoises_Pulshell" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
-		<part Name="Render" Tile="Creatures/tortoises/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" />
+		<part Name="Render" Tile="Creatures/tortoises/pulshell.png"  DisplayName="{{c|pulshell}}" ColorString="&amp;C" DetailColor="W" RenderString="t" />
 		<part Name="Description" Short="=pronouns.Subjective= trundles in serenity, metallic shell latticed with humming coils, distorting compass needles. Scrap flocks in presence of an animated figure that once collected it for flushing, now aimless." />
 		<part Name="Brain" Factions="Robots-100" Hostile="false" />
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="High-Powered Magnet" />
