@@ -12,7 +12,7 @@
 		<part Name="Description" Short="Volutes of frozen mist seep in-between =pronouns.possessive= polished scutes, water clotting affixed to the creek-dweller." />
 		<part Name="Render" DisplayName="{{C|shaile}}" Tile="Creatures/tortoises/shaile.png" ColorString="&amp;Y" DetailColor="c" />
 		<stat Name="Level" Value="20" />
-		<stat Name="Hitpoints" Value="80" />
+		<stat Name="Hitpoints" Value="60" />
 		<stat Name="ColdResistance" Value="100" />
 		<part Name="Brain" Hostile="True" Factions="Tortoises-100" />
 		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
