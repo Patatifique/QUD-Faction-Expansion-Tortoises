@@ -45,32 +45,32 @@
 	</object>
 
 	<object Name="Sibs_Tortoises_Big_Bones1" Inherits="Sibs_Tortoises_Big_BonesBase">
-		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones1" />
+		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones1.png" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Sibs_Tortoises_Big_Bones2" Inherits="Sibs_Tortoises_Big_BonesBase">
-		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones2" />
+		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones2.png" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
   
 	<object Name="Sibs_Tortoises_Big_Bones3" Inherits="Sibs_Tortoises_Big_BonesBase">
-		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones3" />
+		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones3.png" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
  
 	<object Name="Sibs_Tortoises_Big_Bones4" Inherits="Sibs_Tortoises_Big_BonesBase">
-		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones4" />
+		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones4.png" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Sibs_Tortoises_Big_Bones5" Inherits="Sibs_Tortoises_Big_BonesBase">
-		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones5" />
+		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones5.png" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Sibs_Tortoises_Big_Bones6" Inherits="Sibs_Tortoises_Big_BonesBase">
-		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones6" />
+		<part Name="Render" Tile="Terrain/tortoises/tile_bigbones6.png" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>  
 
