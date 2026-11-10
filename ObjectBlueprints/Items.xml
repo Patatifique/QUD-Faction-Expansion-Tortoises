@@ -4,7 +4,7 @@
 <!--Butcherables-->
 	
 	<object Name="Sibs_Tortoises_TortoiseShield" Inherits="BaseShield">
-		<part Name="Render" DisplayName="tortoise shell" Tile="Items/tortoises/tortoiseshield.png" RenderString="t" ColorString="&amp;g" DetailColor="w" />
+		<part Name="Render" DisplayName="tortoise shell" Tile="Items/tortoises/tortoiseshield.png" ColorString="&amp;g" DetailColor="w" />
 		<part Name="Shield" AV="4" DV="-3" WornOn="Hand" />
 		<part Name="Description" Short="Repurposed and retooled, this shell holds the untold promise of avoiding a fate similar to its once-owner." />
 		<part Name="Commerce" Value="50" />
@@ -16,12 +16,12 @@
 	</object>
 
 	<object Name="Sibs_Tortoises_SaltbackPavise" Inherits="BaseShield">
-		<part Name="Render" DisplayName="saltback pavise" Tile="Items/tortoises/saltbackpavise.png" RenderString="t" ColorString="&amp;Y" DetailColor="y" />
+		<part Name="Render" DisplayName="saltback pavise" Tile="Items/tortoises/saltbackpavise.png" ColorString="&amp;Y" DetailColor="y" />
 		<part Name="Shield" AV="6" DV="-4" WornOn="Hand" />
 		<part Name="Description" Short="Vertipacked scutes from a saltback shell, held together by raw ingenuity: a feldspar rampart." />
 		<part Name="Commerce" Value="250" />
 		<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
-		<part Name="Physics" Weight="25" Organic="true"/>
+		<part Name="Physics" Weight="40" Organic="true"/>
 		<removepart Name="Metal" />
 		<tag Name="Tier" Value="5" />
 		<part Name="AddsRep" Faction="Tortoises" Value="-100" />
