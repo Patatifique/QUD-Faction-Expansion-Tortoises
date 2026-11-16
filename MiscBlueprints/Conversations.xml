@@ -574,7 +574,7 @@
 		
 		<node ID="NoTrouble" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:relaxe:afterpronoun= somewhat, age returning to =pronouns.possessive= stance as quickly as it left it.*}}
+				{{emote|*=pronouns.Possessive= body relaxes somewhat, age returning to =pronouns.possessive= stance as quickly as it left it.*}}
 				
 				Your wisdom is commendable, =name=. I can only trust that you will not foolishly spread word of this place.
 			</text>	
@@ -729,7 +729,7 @@
 				{{emote|*settles peacefully on the ground and closes =pronouns.possessive= eyes*}}
 			</text>			
 			<choice Target="Graveyard" IfNotHaveState="GraveyardKnown">
-				<text>O great giant, I am a friend to shellbearerers everywhere. What is your destination?</text>
+				<text>O great giant, I am a friend to shell bearers everywhere. What is your destination?</text>
 				<part Name="RequireReputation" Faction="Tortoises" Level="Loved" />
 			</choice>
 			<choice Target="Graveyard2" IfNotHaveState="GraveyardKnown">
